@@ -1,0 +1,41 @@
+
+### 查看状态
+GET 43.143.232.133:9200
+
+### 新增-struct01
+PUT 43.143.232.133:9200/wqd/struct01/1
+Content-Type: application/json
+
+{
+  "result": true,
+  "code": 0,
+  "msg": "",
+  "data": {
+    "state": 2
+  }
+}
+
+### 新增-struct02
+PUT 43.143.232.133:9200/wqd/struct01/2
+Content-Type: application/json
+
+{
+  "result": true,
+  "code": 0,
+  "msg": "",
+  "data": [
+    {
+      "state": 1
+    },
+    {
+      "state": 2
+    }
+  ]
+}
+
+### 查询
+### /everforcc/wqd/struct01/1?pretty=true
+GET 43.143.232.133:9200/wqd/struct01/1?pretty=true
+
+### 查询
+GET 43.143.232.133:9200/wqd/struct01/2?pretty=true
