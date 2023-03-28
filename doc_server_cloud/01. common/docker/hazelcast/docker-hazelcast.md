@@ -13,7 +13,7 @@ docker pull hazelcast/hazelcast:5.2.0-SNAPSHOT
 - 后台启动,带端口
 
 ~~~
-docker run -d --name hazelcast520  -p 5701:5701 hazelcast/hazelcast:5.2.0-SNAPSHOT
+docker run -d --name hazelcast520 --restart=always -p 5701:5701 hazelcast/hazelcast:5.2.0-SNAPSHOT
 ~~~
 
 - 管理界面
