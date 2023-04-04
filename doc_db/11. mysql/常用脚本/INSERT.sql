@@ -40,3 +40,8 @@ UNION
 SELECT '1','2' FROM DUAL WHERE NOT EXISTS (SELECT 1 FROM cc_website e WHERE e.`id` = '3' )
 UNION
 SELECT '3','4' FROM DUAL WHERE NOT EXISTS (SELECT 1 FROM cc_website e WHERE e.`id` = '3' );
+
+-- 4. not exists
+
+INSERT INTO table2 (c1,c2,c3...)
+select val1,val2,val3... from dual where not exists(select * from table2 where c1 = 'val1')
