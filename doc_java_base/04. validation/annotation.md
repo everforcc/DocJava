@@ -57,4 +57,10 @@ ConstraintValidator
     }
 ~~~
 
+### @Pattern(value)
+
+- 可以配合 @NotEmpty
+- 或者正则表达式限制长度
+- 根据业务情况处理
+
 </span>
