@@ -6,6 +6,7 @@
 - 否则用 #{id} 取数
 - 刚开始999条加一个 OR,后来1000条
 
+- 经测试，这种有问题，使用下面那种
 ~~~xml
 
 <select id="whereIn" resultType="java.lang.String">
@@ -16,6 +17,24 @@
             ) OR e.`id` IN(
         </if>
         #{bean.id},#{bean.uuid}
+    </foreach>
+</select>
+~~~
+- 这种
+~~~xml
+<select id="whereIn" resultType="java.lang.String">
+    SELECT e.`orderno` FROM cc_t_order e
+    WHERE e.`id` IN
+    <foreach collection="stringList" index="index" open="(" close=")" item="id">
+        <if test="index != 0">
+            <choose>
+                  <when test="(index % 1000) == 999">
+                      ) OR e.`id` IN(
+                  </when>
+                  <otherwise> , </otherwise>
+            </choose>
+        </if>
+        #{id}
     </foreach>
 </select>
 ~~~
