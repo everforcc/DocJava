@@ -17,7 +17,7 @@
 docker build -t mysql8.0 -f Dockerfile-mysql8.0 .
 
 # 2.  正确 没有命名 --name mysql-8.0
-docker run -p 3308:3306 -d --name mysql8.0 --restart=always -e MYSQL_ROOT_PASSWORD=c.c.5664  -v /home/data/mysql/mysql8.0/var/lib/mysql:/var/lib/mysql mysql8.0 
+docker run -p 3308:3306 -d --name mysql-8.0 --restart=always -e MYSQL_ROOT_PASSWORD=c.c.5664  -v /home/data/mysql/mysql8.0/var/lib/mysql:/var/lib/mysql mysql8.0 
 
 # 3. 进入容器
 docker exec -it b5e5c6b9888c bash

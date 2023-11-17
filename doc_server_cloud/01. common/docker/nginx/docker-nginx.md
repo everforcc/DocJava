@@ -40,7 +40,7 @@ cp -r /home/test/nginx/. /home/data/nginx/nginx80/conf
 /etc/nginx
 -- log
 /var/log/nginx
--- confd/暂时不需要
+-- confd/暂时不需要 里面什么也没有
 /etc/nginx/conf.d
 ~~~
 
