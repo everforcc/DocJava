@@ -27,6 +27,7 @@ mysql  -u root -pc.c.5664
 #c.c.5664/ 本地不需要密码
 
 # 5. 执行恢复数据脚本
+use oneforall;
 source /mysql/privileges.sql;
 source /mysql/backup.sql;
 ~~~
@@ -48,6 +49,7 @@ mysql  -u root -p
 c.c.5664
 
 # 5. 执行恢复数据脚本
+use oneforall;
 source /mysql/privileges.sql
 source /mysql/backup.sql
 ~~~
