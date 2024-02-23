@@ -29,17 +29,39 @@ docker pull rabbitmq:3.10-rc-management
 
 ### 启动
 
+- 可以成功启动
 - 还没映射目录
-
 ~~~
 docker run -d --name rabbitmq310 -p 5672:5672 -p 15672:15672 -v `pwd`/data:/var/lib/rabbitmq --hostname myRabbit -e RABBITMQ_DEFAULT_VHOST=my_vhost  -e RABBITMQ_DEFAULT_USER=c.c. -e RABBITMQ_DEFAULT_PASS=c.c.c.c. rabbitmq:3.10-rc-management
 ~~~
-
-- err
-
+- 没映射目录
 ~~~
-docker run -d --name rabbitmq310 -p 5672:5672 -p 15672:15672   \
+docker run -d --name rabbitmq310  \
+-p 5672:5672 -p 15672:15672  \
+-v `pwd`/data:/var/lib/rabbitmq  \
+--hostname myRabbit  \
+-e RABBITMQ_DEFAULT_VHOST=my_vhost   \
+-e RABBITMQ_DEFAULT_USER=c.c.   \
+-e RABBITMQ_DEFAULT_PASS=c.c.c.c.   \
+rabbitmq:3.10-rc-management
+~~~
+
+- 启动报错
+~~~
+docker run -d --name rabbitmq310 -p 5672:5672 -p 15672:15672 --privileged=true  \
 -v /home/rabbitmq/etc/rabbitmq:/etc/rabbitmq -v /home/rabbitmq/lib/rabbitmq:/var/lib/rabbitmq -v /home/rabbitmq/log/rabbitmq/:/var/log/rabbitmq --hostname myRabbit -e RABBITMQ_DEFAULT_VHOST=my_vhost  -e RABBITMQ_DEFAULT_USER=cc -e RABBITMQ_DEFAULT_PASS=c.c.c.c. rabbitmq:3.10-rc-management
+~~~
+- 格式化
+~~~
+docker run -d --name rabbitmq310 -p 5672:5672 -p 15672:15672 --privileged=true  \
+-v /home/rabbitmq/etc/rabbitmq:/etc/rabbitmq   \
+-v /home/rabbitmq/lib/rabbitmq:/var/lib/rabbitmq   \
+-v /home/rabbitmq/log/rabbitmq/:/var/log/rabbitmq   \
+--hostname myRabbit \ 
+-e RABBITMQ_DEFAULT_VHOST=my_vhost    \
+-e RABBITMQ_DEFAULT_USER=cc   \
+-e RABBITMQ_DEFAULT_PASS=c.c.c.c.   \
+rabbitmq:3.10-rc-management
 ~~~
 
 ### 访问
