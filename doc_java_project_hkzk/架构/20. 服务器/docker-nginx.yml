@@ -1,0 +1,16 @@
+version: '3.7'
+# 设置nginx服务
+services:
+  redis:
+    container_name: nginx1232
+    image: nginx:1.23.2
+    restart: 'always'
+    ports:
+      - 80:80
+    volumes:
+      - "/mnt/hkzk/nginx/nginx80/html:/usr/share/nginx/html "
+      - "/mnt/hkzk/nginx/nginx80/conf:/etc/nginx "
+      - "/mnt/hkzk/nginx/nginx80/logs:/var/log/nginx "
+    environment:
+      TZ: 'Asia/Shanghai'
+    network_mode: bridge
