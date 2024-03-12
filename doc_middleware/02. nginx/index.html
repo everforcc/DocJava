@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<button>button</button>
+
+<script src="https://cdn.staticfile.net/jquery/1.10.2/jquery.min.js"></script>
+<script>
+
+    $("button").click(function(){
+        $.ajax({url:"/back1/open",success:function(result){
+                alert(result)
+            }});
+    });
+
+</script>
+
+</body>
+</html>
