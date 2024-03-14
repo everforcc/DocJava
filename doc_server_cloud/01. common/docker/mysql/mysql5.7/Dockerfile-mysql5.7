@@ -8,6 +8,7 @@ ENV MYSQL_ALLOW_EMPTY_PASSWORD yes
 COPY backup.sql /mysql/backup.sql
 COPY privileges.sql /mysql/privileges.sql
 
+# 备份文件，需要配置文件的位置
 #VOLUME ["/var/lib/mysql","/etc/mysql"]
 #设置容器启动时执行的命令
 #CMD ["sh", "/mysql/setup.sh"]
