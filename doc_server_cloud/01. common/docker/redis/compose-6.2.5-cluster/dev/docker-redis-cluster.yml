@@ -1,0 +1,86 @@
+version: '3.7'
+
+services:
+  redis5201:
+    image: 'redis:6.2.5'
+    container_name: redis5201
+    network_mode: host
+    restart: always
+    command:
+      ["redis-server", "/usr/local/etc/redis/redis.conf"]
+    volumes:
+      - /mnt/hkzk/redis/redis5201/conf/redis5201.conf:/usr/local/etc/redis/redis.conf
+      - /mnt/hkzk/redis/redis5201/data:/data
+    environment:
+      # 设置时区为上海，否则时间会有问题
+      - TZ=Asia/Shanghai
+
+  redis5202:
+    image: 'redis:6.2.5'
+    container_name: redis5202
+    network_mode: host
+    restart: always
+    command:
+      ["redis-server", "/usr/local/etc/redis/redis.conf"]
+    volumes:
+      - /mnt/hkzk/redis/redis5202/conf/redis5202.conf:/usr/local/etc/redis/redis.conf
+      - /mnt/hkzk/redis/redis5202/data:/data
+    environment:
+      # 设置时区为上海，否则时间会有问题
+      - TZ=Asia/Shanghai
+
+  redis5203:
+    image: 'redis:6.2.5'
+    container_name: redis5203
+    network_mode: host
+    restart: always
+    command:
+      ["redis-server", "/usr/local/etc/redis/redis.conf"]
+    volumes:
+      - /mnt/hkzk/redis/redis5203/conf/redis5203.conf:/usr/local/etc/redis/redis.conf
+      - /mnt/hkzk/redis/redis5203/data:/data
+    environment:
+      # 设置时区为上海，否则时间会有问题
+      - TZ=Asia/Shanghai
+
+  redis5204:
+    image: 'redis:6.2.5'
+    container_name: redis5204
+    network_mode: host
+    restart: always
+    command:
+      ["redis-server", "/usr/local/etc/redis/redis.conf"]
+    volumes:
+      - /mnt/hkzk/redis/redis5204/conf/redis5204.conf:/usr/local/etc/redis/redis.conf
+      - /mnt/hkzk/redis/redis5204/data:/data
+    environment:
+      # 设置时区为上海，否则时间会有问题
+      - TZ=Asia/Shanghai
+
+  redis5205:
+    image: 'redis:6.2.5'
+    container_name: redis5205
+    network_mode: host
+    restart: always
+    command:
+      ["redis-server", "/usr/local/etc/redis/redis.conf"]
+    volumes:
+      - /mnt/hkzk/redis/redis5205/conf/redis5205.conf:/usr/local/etc/redis/redis.conf
+      - /mnt/hkzk/redis/redis5205/data:/data
+    environment:
+      # 设置时区为上海，否则时间会有问题
+      - TZ=Asia/Shanghai
+
+  redis5206:
+    image: 'redis:6.2.5'
+    container_name: redis5206
+    network_mode: host
+    restart: always
+    command:
+      ["redis-server", "/usr/local/etc/redis/redis.conf"]
+    volumes:
+      - /mnt/hkzk/redis/redis5206/conf/redis5206.conf:/usr/local/etc/redis/redis.conf
+      - /mnt/hkzk/redis/redis5206/data:/data
+    environment:
+      # 设置时区为上海，否则时间会有问题
+      - TZ=Asia/Shanghai

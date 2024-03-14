@@ -1,0 +1,15 @@
+version: '3.7'
+# 设置nginx服务
+services:
+  nginx:
+    container_name: nginx1232
+    image: nginx:1.23.2
+    build:
+      context: ./
+    ports:
+      - "80:80"
+    volumes:
+      - /mnt/hkzk/nginx/nginx80/html:/usr/share/nginx/html
+      - /mnt/hkzk/nginx/nginx80/conf/nginx.conf:/etc/nginx/nginx.conf
+      - /mnt/hkzk/nginx/nginx80/logs:/var/log/nginx
+      - /mnt/hkzk/nginx/nginx80/conf.d:/etc/nginx/conf.d

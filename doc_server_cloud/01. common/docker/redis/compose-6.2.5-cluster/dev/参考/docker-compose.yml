@@ -1,0 +1,34 @@
+version: '3.7'
+
+services:
+  redis5201:
+    image: 'redis:6.2.5'
+    container_name: redis5201
+    network_mode: host
+    restart: always
+    command:
+      ["redis-server", "/usr/local/etc/redis/redis.conf"]
+    volumes:
+      - ./conf/redis5201.conf:/usr/local/etc/redis/redis.conf
+      - ./redis5201data:/data
+      - /etc/hosts:/etc/hosts:ro
+      - /etc/localtime:/etc/localtime:ro
+    environment:
+      # 设置时区为上海，否则时间会有问题
+      - TZ=Asia/Shanghai
+
+  redis5202:
+    image: 'redis:6.2.5'
+    container_name: redis5202
+    network_mode: host
+    restart: always
+    command:
+      ["redis-server", "/usr/local/etc/redis/redis.conf"]
+    volumes:
+      - ./conf/redis5202.conf:/usr/local/etc/redis/redis.conf
+      - ./redis5202data:/data
+      - /etc/hosts:/etc/hosts:ro
+      - /etc/localtime:/etc/localtime:ro
+    environment:
+      # 设置时区为上海，否则时间会有问题
+      - TZ=Asia/Shanghai

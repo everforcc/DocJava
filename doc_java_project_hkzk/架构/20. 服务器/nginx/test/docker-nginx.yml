@@ -1,7 +1,7 @@
 version: '3.7'
 # 设置nginx服务
 services:
-  redis:
+  nginx:
     container_name: nginx1232
     image: nginx:1.23.2
     restart: 'always'
