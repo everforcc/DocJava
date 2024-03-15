@@ -9,3 +9,4 @@
 # 第6列要运行的命令
 crontab -e
 0 2 * * * /path/to/backup.sh
+* * * * * data >> /var/log/time.log

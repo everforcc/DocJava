@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# 备份脚本
 # MySQL连接信息
 DB_HOST="localhost"
 DB_PORT=3306
@@ -18,6 +18,11 @@ DATE=$(date +%Y-%m-%d_%H:%M:%S)
 # 创建子级目录
 mkdir -p BACKUP_DIR/${YEAR}/${MONTH}
 FILE="${BACKUP_DIR}/${YEAR}/${MONTH}/${DATE}.sql"
+FILELOG="${BACKUP_DIR}/${YEAR}/${MONTH}/${DATE}.log"
 
+echo "Backup start at $(date)" >> $FILELOG
+# linux
 mysqldump -h $DB_HOST -P $DB_PORT -u $DB_USERNAME -p$DB_PASSWORD --databases ${DATABASES[@]} > $FILE
-echo "Backup completed at $(date)" >> $FILE
+# docker
+# docker exec mysql-8.0  /bin/bash -c 'mysqldump -h localhost -P 3306 -u root -phkzkdevback --databases crcc' > $FILE
+echo "Backup completed at $(date)" >> $FILELOG

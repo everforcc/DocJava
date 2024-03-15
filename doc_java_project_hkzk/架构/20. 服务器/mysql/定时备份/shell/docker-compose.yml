@@ -1,0 +1,26 @@
+version : '3.8'
+services:
+  mysql:
+    container_name: mysql57
+    image: mysql:5.7
+    build:
+      context: ./
+    ports:
+      - "3313:3306"
+    volumes:
+      - /mnt/hkzk/mysql/conf:/etc/mysql/conf.d
+      - /mnt/hkzk/mysql/logs:/logs
+      - /mnt/hkzk/mysql/data:/var/lib/mysql
+#      - /mnt/hkzk/mysql/backup:/mnt/hkzk/mysql/backup
+#      - /var/spool/cron/crontabs:/var/spool/cron/crontabs
+    command: [
+        'mysqld',
+        '--innodb-buffer-pool-size=80M',
+        '--character-set-server=utf8mb4',
+        '--collation-server=utf8mb4_unicode_ci',
+        '--default-time-zone=+8:00',
+        '--lower-case-table-names=1'
+    ]
+    environment:
+      MYSQL_DATABASE: 'crccdev'
+      MYSQL_ROOT_PASSWORD: hkzkdevback
