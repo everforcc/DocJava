@@ -24,5 +24,5 @@ echo "Backup start at $(date)" >> $FILELOG
 # linux
 mysqldump -h $DB_HOST -P $DB_PORT -u $DB_USERNAME -p$DB_PASSWORD --databases ${DATABASES[@]} > $FILE
 # docker
-# docker exec mysql-8.0  /bin/bash -c 'mysqldump -h localhost -P 3306 -u root -phkzkdevback --databases crcc' > $FILE
+# docker exec mysql-8.0  /bin/bash -c 'mysqldump -h localhost -P 3306 -u root -pccdevback --databases oneforall' > $FILE
 echo "Backup completed at $(date)" >> $FILELOG

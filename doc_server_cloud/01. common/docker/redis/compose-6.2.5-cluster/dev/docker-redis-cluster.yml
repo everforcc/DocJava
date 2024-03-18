@@ -9,8 +9,8 @@ services:
     command:
       ["redis-server", "/usr/local/etc/redis/redis.conf"]
     volumes:
-      - /mnt/hkzk/redis/redis5201/conf/redis5201.conf:/usr/local/etc/redis/redis.conf
-      - /mnt/hkzk/redis/redis5201/data:/data
+      - /mnt/cc/redis/redis5201/conf/redis5201.conf:/usr/local/etc/redis/redis.conf
+      - /mnt/cc/redis/redis5201/data:/data
     environment:
       # 设置时区为上海，否则时间会有问题
       - TZ=Asia/Shanghai
@@ -23,8 +23,8 @@ services:
     command:
       ["redis-server", "/usr/local/etc/redis/redis.conf"]
     volumes:
-      - /mnt/hkzk/redis/redis5202/conf/redis5202.conf:/usr/local/etc/redis/redis.conf
-      - /mnt/hkzk/redis/redis5202/data:/data
+      - /mnt/cc/redis/redis5202/conf/redis5202.conf:/usr/local/etc/redis/redis.conf
+      - /mnt/cc/redis/redis5202/data:/data
     environment:
       # 设置时区为上海，否则时间会有问题
       - TZ=Asia/Shanghai
@@ -37,8 +37,8 @@ services:
     command:
       ["redis-server", "/usr/local/etc/redis/redis.conf"]
     volumes:
-      - /mnt/hkzk/redis/redis5203/conf/redis5203.conf:/usr/local/etc/redis/redis.conf
-      - /mnt/hkzk/redis/redis5203/data:/data
+      - /mnt/cc/redis/redis5203/conf/redis5203.conf:/usr/local/etc/redis/redis.conf
+      - /mnt/cc/redis/redis5203/data:/data
     environment:
       # 设置时区为上海，否则时间会有问题
       - TZ=Asia/Shanghai
@@ -51,8 +51,8 @@ services:
     command:
       ["redis-server", "/usr/local/etc/redis/redis.conf"]
     volumes:
-      - /mnt/hkzk/redis/redis5204/conf/redis5204.conf:/usr/local/etc/redis/redis.conf
-      - /mnt/hkzk/redis/redis5204/data:/data
+      - /mnt/cc/redis/redis5204/conf/redis5204.conf:/usr/local/etc/redis/redis.conf
+      - /mnt/cc/redis/redis5204/data:/data
     environment:
       # 设置时区为上海，否则时间会有问题
       - TZ=Asia/Shanghai
@@ -65,8 +65,8 @@ services:
     command:
       ["redis-server", "/usr/local/etc/redis/redis.conf"]
     volumes:
-      - /mnt/hkzk/redis/redis5205/conf/redis5205.conf:/usr/local/etc/redis/redis.conf
-      - /mnt/hkzk/redis/redis5205/data:/data
+      - /mnt/cc/redis/redis5205/conf/redis5205.conf:/usr/local/etc/redis/redis.conf
+      - /mnt/cc/redis/redis5205/data:/data
     environment:
       # 设置时区为上海，否则时间会有问题
       - TZ=Asia/Shanghai
@@ -79,8 +79,8 @@ services:
     command:
       ["redis-server", "/usr/local/etc/redis/redis.conf"]
     volumes:
-      - /mnt/hkzk/redis/redis5206/conf/redis5206.conf:/usr/local/etc/redis/redis.conf
-      - /mnt/hkzk/redis/redis5206/data:/data
+      - /mnt/cc/redis/redis5206/conf/redis5206.conf:/usr/local/etc/redis/redis.conf
+      - /mnt/cc/redis/redis5206/data:/data
     environment:
       # 设置时区为上海，否则时间会有问题
       - TZ=Asia/Shanghai

@@ -1,0 +1,32 @@
+version : '3.8'
+services:
+  mysqlslave:
+    container_name: mysql57slave
+    network_mode: bridge
+    restart: always
+    image: mysql:5.7
+    build:
+      context: ./
+    ports:
+      - "3311:3306"
+    volumes:
+      - /path/mysql/slave/conf:/etc/mysql/conf.d
+      - /path/mysql/slave/logs:/logs
+      - /path/mysql/slave/data:/var/lib/mysql
+#      - /path/mysql/backup:/path/mysql/backup
+#      - /var/spool/cron/crontabs:/var/spool/cron/crontabs
+    command: [
+        'mysqld',
+        '--server-id=2',
+        '--log-bin=mysql-bin',
+        '--expire_logs_days=10',
+        '--read-only=1',
+        '--innodb-buffer-pool-size=80M',
+        '--character-set-server=utf8mb4',
+        '--collation-server=utf8mb4_unicode_ci',
+        '--default-time-zone=+8:00',
+        '--lower-case-table-names=1'
+    ]
+    environment:
+      MYSQL_DATABASE: 'oneforall'
+      MYSQL_ROOT_PASSWORD: ccdevslaveroot

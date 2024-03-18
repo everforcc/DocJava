@@ -9,7 +9,7 @@ services:
     ports:
       - "80:80"
     volumes:
-      - /mnt/hkzk/nginx/nginx80/html:/usr/share/nginx/html
-      - /mnt/hkzk/nginx/nginx80/conf/nginx.conf:/etc/nginx/nginx.conf
-      - /mnt/hkzk/nginx/nginx80/logs:/var/log/nginx
-      - /mnt/hkzk/nginx/nginx80/conf.d:/etc/nginx/conf.d
+      - /mnt/cc/nginx/nginx80/html:/usr/share/nginx/html
+      - /mnt/cc/nginx/nginx80/conf/nginx.conf:/etc/nginx/nginx.conf
+      - /mnt/cc/nginx/nginx80/logs:/var/log/nginx
+      - /mnt/cc/nginx/nginx80/conf.d:/etc/nginx/conf.d
