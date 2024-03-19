@@ -4,6 +4,7 @@ services:
   nginx:
     container_name: nginx1232
     image: nginx:1.23.2
+    restart: always
     build:
       context: ./
     ports:

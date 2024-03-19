@@ -1,0 +1,18 @@
+version : '3.8'
+
+services:
+  nacos:
+    container_name: nacos220single
+    image: nacos/nacos-server:2.2.0
+    build:
+      context: .
+    environment:
+      - MODE=standalone
+      - TZ=Asia/Shanghai
+    volumes:
+      - ./logs/:/home/nacos/logs
+      - ./conf/application.properties:/home/nacos/conf/application.properties
+    ports:
+      - "8848:8848"
+      - "9848:9848"
+      - "9849:9849"

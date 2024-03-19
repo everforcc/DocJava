@@ -1,5 +1,5 @@
 version: '3.7'
-# 设置nginx服务
+
 services:
   nacos:
     container_name: nacos220
@@ -8,9 +8,10 @@ services:
       context: ./
     environment:
       - MODE=standalone
+      - TZ=Asia/Shanghai
     volumes:
-      - ./nacos/logs/:/home/nacos/logs
-      - ./nacos/conf/application.properties:/home/nacos/conf/application.properties
+      - /mnt/hkzk/nacos/single/logs/:/home/nacos/logs
+      - /mnt/hkzk/nacos/single/conf/application.properties:/home/nacos/conf/application.properties
     ports:
       - "8848:8848"
       - "9848:9848"

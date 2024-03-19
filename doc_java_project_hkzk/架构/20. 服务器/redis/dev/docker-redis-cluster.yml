@@ -9,7 +9,7 @@ services:
     command:
       ["redis-server", "/usr/local/etc/redis/redis.conf"]
     volumes:
-      - /mnt/hkzk/redis/redis5201/conf/redis5201.conf:/usr/local/etc/redis/redis.conf
+      - /mnt/hkzk/redis/redis5201/conf/redisSingle.conf:/usr/local/etc/redis/redis.conf
       - /mnt/hkzk/redis/redis5201/data:/data
     environment:
       # 设置时区为上海，否则时间会有问题

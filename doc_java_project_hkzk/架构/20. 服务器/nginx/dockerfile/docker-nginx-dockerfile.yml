@@ -13,3 +13,6 @@ services:
       - /mnt/hkzk/nginx/nginx80/conf/nginx.conf:/etc/nginx/nginx.conf
       - /mnt/hkzk/nginx/nginx80/logs:/var/log/nginx
       - /mnt/hkzk/nginx/nginx80/conf.d:/etc/nginx/conf.d
+    environment:
+      # 设置时区为上海，否则时间会有问题
+      - TZ=Asia/Shanghai

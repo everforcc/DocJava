@@ -19,6 +19,7 @@ services:
         '--log-bin=mysql-bin',
         '--expire_logs_days=10',
         '--binlog-do-db=crccdev',
+        '--binlog-do-db=crccconfigdev',
         '--innodb-buffer-pool-size=80M',
         '--character-set-server=utf8mb4',
         '--collation-server=utf8mb4_unicode_ci',
@@ -26,5 +27,5 @@ services:
         '--lower-case-table-names=1'
     ]
     environment:
-      MYSQL_DATABASE: 'crccdev'
+      #MYSQL_DATABASE: 'crccdev'
       MYSQL_ROOT_PASSWORD: hkzkdevmasterroot

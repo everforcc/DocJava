@@ -9,7 +9,7 @@ services:
     command:
       ["redis-server", "/usr/local/etc/redis/redis.conf"]
     volumes:
-      - ./conf/redis5201.conf:/usr/local/etc/redis/redis.conf
+      - ./conf/redisSingle.conf:/usr/local/etc/redis/redis.conf
       - ./redis5201data:/data
       - /etc/hosts:/etc/hosts:ro
       - /etc/localtime:/etc/localtime:ro
