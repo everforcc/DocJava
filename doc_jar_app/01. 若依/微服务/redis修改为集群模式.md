@@ -1,9 +1,5 @@
 <span  style="font-family: Simsun,serif; font-size: 17px; ">
 
-- 集群命令行
-
-~~~
-redis-cli -c -h 127.0.0.1 -p 6386
-~~~
+- 单体修改为集群模式
 
 </span>
