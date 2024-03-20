@@ -15,4 +15,8 @@ startup.cmd -m standalone
 
 - [nacos-web界面](http://localhost:8848/nacos)
 
+### 鉴权
+
+- [nacos-鉴权](https://nacos.io/zh-cn/docs/v2/guide/user/auth.html)
+
 </span>
