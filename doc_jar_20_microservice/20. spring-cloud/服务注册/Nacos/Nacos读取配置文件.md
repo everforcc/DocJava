@@ -2,6 +2,8 @@
 
 ### 配置文件读取流程
 
+- [Spring Cloud 拉取 Nacos 中配置文件](https://blog.csdn.net/qq_37778018/article/details/126779477)
+
 #### 1. bootstarp.yml
 
 - 程序启动首先读取应用中bootstarp.yml配置文件
