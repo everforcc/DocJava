@@ -1,5 +1,8 @@
 <span  style="font-family: Simsun,serif; font-size: 17px; ">
 
-- µ¥ÌåÐÞ¸ÄÎª¼¯ÈºÄ£Ê½
+~~~sql
+-- é…ç½®è¡¨
+SELECT * FROM `config_info` e
+~~~
 
 </span>
