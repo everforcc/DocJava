@@ -1,5 +1,15 @@
 <span  style="font-family: Simsun,serif; font-size: 17px; ">
 
+- 参考gitee代码
+- RYCloudGeneral
+
+### 版本
+
+- 和版本有关系
+- 缓存
+- 日志
+- 邮件
+- actuator的功能
 
 ### 技术点
 
