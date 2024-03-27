@@ -1,0 +1,1 @@
+docker-compose -f docker-nacos-dockerfile.yml up -d --build
