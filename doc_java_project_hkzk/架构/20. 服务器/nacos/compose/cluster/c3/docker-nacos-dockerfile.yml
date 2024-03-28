@@ -4,6 +4,7 @@ services:
   nacos:
     container_name: nacos220c3
     network_mode: host
+    restart: always
     image: nacos/nacos-server:2.2.0
     environment:
       - TZ=Asia/Shanghai

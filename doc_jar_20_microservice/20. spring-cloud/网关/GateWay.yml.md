@@ -62,4 +62,27 @@ routes:
         - Path=/demo/**
 ~~~
 
+### filters
+
+- 网关过滤器
+
+#### StripPrefix 过滤器
+
+~~~
+filters:
+- StripPrefix=1
+~~~
+- 我们访问网关地址http://host:port/lbs/hello时
+- 若无StripPrefix过滤器时，gateway 发送请求到后台服务bds-lbs-service的url就是http://bds-lbs-service/lbs/hello
+- 若有StripPrefix过滤器时，gateway会根据StripPrefix=1所配的值（这里是1）去掉URL路径中的部分前缀（这里去掉一个前缀，即去掉lbs）
+- 发送请求到后台服务spring-cloud-producer的url变成http://bds-lbs-service/hello
+
+#### PrefixPath 过滤器
+
+~~~
+filters:
+- PrefixPath=/lbs
+~~~
+- 对/hello的请求将会被发送到/lbs/hello。
+
 </span>
