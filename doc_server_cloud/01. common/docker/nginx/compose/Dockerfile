@@ -1,7 +1,7 @@
 # 基础镜像
 FROM nginx
 # author
-MAINTAINER hkzk
+MAINTAINER cc
 
 # 相对路径
 # 复制conf文件到路径 参数一 本地路径 参数二 docker内路径

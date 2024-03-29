@@ -16,7 +16,7 @@ docker pull nginx:1.23.2
 - 1.普通启动
 
 ~~~
-docker run  --name nginx -m 200m -p 80:80  -d nginx
+docker run  --name nginx1232 -m 200m -p 80:80  -d nginx:1.23.2
 ~~~
 
 - 2.copy生成配置文件
