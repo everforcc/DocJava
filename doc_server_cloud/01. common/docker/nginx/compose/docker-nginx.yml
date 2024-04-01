@@ -13,4 +13,4 @@ services:
       - /home/everforcc/data/nginx80/logs:/var/log/nginx
     environment:
       - TZ=Asia/Shanghai
-    network_mode: bridge
+    network_mode: host
