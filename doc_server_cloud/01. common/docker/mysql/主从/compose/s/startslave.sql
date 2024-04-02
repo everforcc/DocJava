@@ -16,4 +16,7 @@ stop slave;
 reset slave;
 
 -- 4. 查看从库状态
-show slave status;
+show slave status\G;
+
+-- 5. 从master节点看 用户正在运行的线程
+show processlist\G;

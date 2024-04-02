@@ -4,7 +4,7 @@ services:
     container_name: mysql57
     image: mysql:5.7
     build:
-      context: ..
+      context: ../../../../../../../doc_java_project_hkzk/架构/20. 服务器/mysql/定时备份/shell
     ports:
       - "3313:3306"
     volumes:

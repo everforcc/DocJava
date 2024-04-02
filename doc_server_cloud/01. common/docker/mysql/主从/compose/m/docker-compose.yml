@@ -28,5 +28,5 @@ services:
         '--lower-case-table-names=1'
     ]
     environment:
-      MYSQL_DATABASE: 'oneforall'
+      #MYSQL_DATABASE: 'oneforall'
       MYSQL_ROOT_PASSWORD: ccdevmasterroot

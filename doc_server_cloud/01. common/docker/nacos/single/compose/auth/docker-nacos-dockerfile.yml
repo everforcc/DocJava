@@ -1,0 +1,20 @@
+version: '3.7'
+
+services:
+  nacos:
+    container_name: nacos220auth
+    image: nacos/nacos-server:2.2.0
+    build:
+      context: .
+    environment:
+      - MODE=standalone
+      - TZ=Asia/Shanghai
+      - NACOS_AUTH_ENABLE=true
+    volumes:
+      - /mnt/hkzk/nacos/single-auth/logs/:/home/nacos/logs
+      # 需要把 文件复制到对应宿主机的位置
+      - /mnt/hkzk/nacos/single-auth/conf/application.properties:/home/nacos/conf/application.properties
+    ports:
+      - "8848:8848"
+      - "9848:9848"
+      - "9849:9849"
