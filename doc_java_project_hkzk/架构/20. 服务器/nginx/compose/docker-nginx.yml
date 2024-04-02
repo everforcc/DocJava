@@ -6,7 +6,7 @@ services:
     restart: always
     image: nginx:1.23.2
     ports:
-      - "80:80"
+      - 80:80
     volumes:
       - /mnt/hkzk/nginx/nginx80/html:/usr/share/nginx/html
       - /mnt/hkzk/nginx/nginx80/conf/nginx.conf:/etc/nginx/nginx.conf
@@ -15,3 +15,4 @@ services:
     environment:
       # 设置时区为上海，否则时间会有问题
       - TZ=Asia/Shanghai
+    network_mode: host

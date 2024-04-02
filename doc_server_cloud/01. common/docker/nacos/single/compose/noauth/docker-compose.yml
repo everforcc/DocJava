@@ -5,7 +5,7 @@ services:
     container_name: nacos220single
     image: nacos/nacos-server:2.2.0
     build:
-      context: ""
+      context: ..
     environment:
       - MODE=standalone
       - TZ=Asia/Shanghai

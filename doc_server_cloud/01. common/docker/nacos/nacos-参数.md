@@ -8,4 +8,9 @@
 - docker volumes 挂载位置
 - 端口
 
+### 详细文档
+
+- 参考
+- doc_jar_20_microservice/20. spring-cloud/Nacos/01. 开启鉴权.md
+
 </span>
