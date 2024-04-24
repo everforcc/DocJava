@@ -1,0 +1,18 @@
+version: '3.7'
+
+services:
+  redisSingle:
+    image: 'redis:6.2.5'
+    container_name: redisSingle
+    network_mode: host
+    restart: always
+    command:
+      [ "redis-server", "/usr/local/etc/redis/redis.conf" ]
+    ports:
+      - 5200:6379
+    volumes:
+      - /mnt/cc/redis/redis-singleton/conf/redisSingle.conf:/usr/local/etc/redis/redis.conf
+      - /mnt/cc/redis/redis-singleton/data:/data
+    environment:
+      # 设置时区为上海，否则时间会有问题
+      - TZ=Asia/Shanghai
