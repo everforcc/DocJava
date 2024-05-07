@@ -1,0 +1,98 @@
+version: '3.7'
+
+services:
+  redis5201:
+    image: 'redis:6.2.5'
+    container_name: redis5201
+    restart: always
+    command:
+      ["redis-server", "/usr/local/etc/redis/redis.conf"]
+    ports:
+      - 5201:5201
+      - 15201:15201
+    volumes:
+      - D:/cache/docker/redis/redis5201/conf/redis5201.conf:/usr/local/etc/redis/redis.conf
+      - D:/cache/docker/redis/redis5201/data:/data
+    environment:
+      # 设置时区为上海，否则时间会有问题
+      - TZ=Asia/Shanghai
+
+  redis5202:
+    image: 'redis:6.2.5'
+    container_name: redis5202
+    restart: always
+    command:
+      ["redis-server", "/usr/local/etc/redis/redis.conf"]
+    ports:
+      - 5202:5202
+      - 15202:15202
+    volumes:
+      - D:/cache/docker/redis/redis5202/conf/redis5202.conf:/usr/local/etc/redis/redis.conf
+      - D:/cache/docker/redis/redis5202/data:/data
+    environment:
+      # 设置时区为上海，否则时间会有问题
+      - TZ=Asia/Shanghai
+
+  redis5203:
+    image: 'redis:6.2.5'
+    container_name: redis5203
+    restart: always
+    command:
+      ["redis-server", "/usr/local/etc/redis/redis.conf"]
+    ports:
+      - 5203:5203
+      - 15203:15203
+    volumes:
+      - D:/cache/docker/redis/redis5203/conf/redis5203.conf:/usr/local/etc/redis/redis.conf
+      - D:/cache/docker/redis/redis5203/data:/data
+    environment:
+      # 设置时区为上海，否则时间会有问题
+      - TZ=Asia/Shanghai
+
+  redis5204:
+    image: 'redis:6.2.5'
+    container_name: redis5204
+    restart: always
+    command:
+      ["redis-server", "/usr/local/etc/redis/redis.conf"]
+    ports:
+      - 5204:5204
+      - 15204:15204
+    volumes:
+      - D:/cache/docker/redis/redis5204/conf/redis5204.conf:/usr/local/etc/redis/redis.conf
+      - D:/cache/docker/redis/redis5204/data:/data
+    environment:
+      # 设置时区为上海，否则时间会有问题
+      - TZ=Asia/Shanghai
+
+  redis5205:
+    image: 'redis:6.2.5'
+    container_name: redis5205
+    restart: always
+    command:
+      ["redis-server", "/usr/local/etc/redis/redis.conf"]
+    ports:
+      - 5205:5205
+      - 15205:15205
+    volumes:
+      - D:/cache/docker/redis/redis5205/conf/redis5205.conf:/usr/local/etc/redis/redis.conf
+      - D:/cache/docker/redis/redis5205/data:/data
+    environment:
+      # 设置时区为上海，否则时间会有问题
+      - TZ=Asia/Shanghai
+
+  redis5206:
+    image: 'redis:6.2.5'
+    container_name: redis5206
+    restart: always
+    command:
+      ["redis-server", "/usr/local/etc/redis/redis.conf"]
+    ports:
+      - 5206:5206
+      - 15206:15206
+    volumes:
+      - D:/cache/docker/redis/redis5206/conf/redis5206.conf:/usr/local/etc/redis/redis.conf
+      - D:/cache/docker/redis/redis5206/data:/data
+    environment:
+      # 设置时区为上海，否则时间会有问题
+      - TZ=Asia/Shanghai
