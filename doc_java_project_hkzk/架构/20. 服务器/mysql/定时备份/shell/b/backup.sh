@@ -14,5 +14,7 @@ FILE="${BACKUP_DIR}/${YEAR}/${MONTH}/${DATE}.sql"
 FILELOG="${BACKUP_DIR}/${YEAR}/${MONTH}/${DATE}.log"
 
 echo "Backup start     at $(date)" >> $FILELOG
-docker exec mysql57back  /bin/bash -c 'mysqldump -h localhost -P 3306 -u root -phkzkdevbackroot --databases crccdev crccconfigdev' > $FILE
+docker exec mysql-8.0  /bin/bash -c 'mysqldump -h 121.89.198.243 -P 3306 -u devmaster -pdevmaster2024 --databases crccdev crccconfigdev' > $FILE
 echo "Backup completed at $(date)" >> $FILELOG
+
+# docker exec mysql-8.0  /bin/bash -c 'mysqldump -h 121.89.198.243 -P 3306 -u devmaster -pdevmaster2024 --databases crccdev crccconfigdev' > /mnt/hkzk/mysql/backup/2024-0514-0947.sql
