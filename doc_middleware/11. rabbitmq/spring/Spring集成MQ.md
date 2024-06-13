@@ -11,4 +11,6 @@
 </dependency>
 ~~~
 
+- 底层默认的就是 spring-rabbit
+
 </span> 
