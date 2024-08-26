@@ -17,12 +17,11 @@
 - 按照目录从上到下安装
 - 改名
 - everforcc
+- [选择笔记本型号](https://www.mi.com/service/notebook/drivers?display=showall)
 
----
+### 分区
 
-- 分区
 - 我的电脑》》管理 》》 磁盘管理
 - 压缩 》》 计算大小 》》
--
 
 </span>
