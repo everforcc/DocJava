@@ -1,3 +1,4 @@
+# 导出的完整脚本，交给定时任务执行
 #!/bin/bash
 # 备份脚本
 # MySQL连接信息
@@ -25,4 +26,8 @@ echo "Backup start at $(date)" >> $FILELOG
 mysqldump -h $DB_HOST -P $DB_PORT -u $DB_USERNAME -p$DB_PASSWORD --databases ${DATABASES[@]} > $FILE
 # docker
 # docker exec mysql-8.0  /bin/bash -c 'mysqldump -h localhost -P 3306 -u root -pccdevback --databases oneforall' > $FILE
+# company
+# docker exec mysql-8.0  /bin/bash -c 'mysqldump -h 121.89.198.243 -P 3306 -u devmaster -pdevmaster2024 --databases crccdev crccconfigdev' > $FILE
+# everforcc
+# docker exec mysql-8.0  /bin/bash -c 'mysqldump -h localhost -P 3306 -u root -pc.c.5664 --databases hkzkcrcc nacosconfig oneforall rycloud' > $FILE
 echo "Backup completed at $(date)" >> $FILELOG

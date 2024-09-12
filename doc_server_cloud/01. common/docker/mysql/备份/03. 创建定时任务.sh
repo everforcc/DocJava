@@ -1,3 +1,5 @@
+# 创建定时任务的脚本
+
 # 使用crontab命令创建定时任务
 # 表达式说明看看
 # 分，时，日，月，周，用户，命令
@@ -9,4 +11,5 @@
 # 第6列要运行的命令
 crontab -e
 0 2 * * * /path/to/backup.sh
-* * * * * data >> /var/log/time.log
+# 输出异常日志
+* * * * * data >> /var/log/cron.log 2>&1
