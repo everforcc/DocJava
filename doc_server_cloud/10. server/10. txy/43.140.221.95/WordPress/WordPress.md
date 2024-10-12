@@ -1,6 +1,6 @@
 <span  style="font-family: Simsun,serif; font-size: 17px; ">
 
-### 系统
+### WordPress
 
 - 腾讯云安装WordPress
 - 文件和各种服务路径在云上能看
