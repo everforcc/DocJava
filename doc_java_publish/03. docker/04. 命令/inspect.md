@@ -1,5 +1,7 @@
 <span  style="font-family: Simsun,serif; font-size: 17px; ">
 
+- [docker inspect](https://docs.docker.com/reference/cli/docker/inspect/)
+
 ### 查看某个镜像的文件挂载目录
 
 ~~~

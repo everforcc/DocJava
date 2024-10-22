@@ -95,3 +95,7 @@ select 16380-1500-3300 from dual; -- 11580
 -- 03
 
 -- 04
+
+
+SELECT *
+FROM mt_cart WHERE status = 'A' AND user_id = 40 AND hang_no = ? AND merchant_id = ?
