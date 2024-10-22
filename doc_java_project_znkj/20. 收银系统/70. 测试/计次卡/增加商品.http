@@ -1,0 +1,29 @@
+### 测试新增 理发计次卡商品名
+POST http://127.0.0.1:8082/clientApi/cart/save
+content-type: application/json;charset=utf-8
+
+{
+  "goodsId": 578,
+  "name": "理发计次卡商品名",
+  "logo": "https://zn-fuint-file.eos.zhengzhou-4.cmecloud.cn/uploads/20240927/169609c1a1c24a5987ee4a7551a259b3.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20241022T012807Z&X-Amz-SignedHeaders=host&X-Amz-Expires=1800&X-Amz-Credential=HKCXMN0RVK94Y9R3PR7P%2F20241022%2Fzhengzhou4%2Fs3%2Faws4_request&X-Amz-Signature=fc52a59c099f488b636c820e00b9bf1d0f5853e3d0e7c0d39b569c32c8d9c8af",
+  "price": 10,
+  "skuId": 0,
+  "userId": "40",
+  "hangNo": "",
+  "buyNum": 1
+}
+
+### 测试新增 理发计次卡商品名
+POST http://127.0.0.1:8082/clientApi/cart/save
+content-type: application/json;charset=utf-8
+
+{
+  "goodsId": 602,
+  "name": "测试计次卡商品名",
+  "logo": "https://zn-fuint-file.eos.zhengzhou-4.cmecloud.cn/uploads/20241021/9214ebde926840afb61dfd0fcc03d506.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20241021T115823Z&X-Amz-SignedHeaders=host&X-Amz-Expires=1800&X-Amz-Credential=HKCXMN0RVK94Y9R3PR7P%2F20241021%2Fzhengzhou4%2Fs3%2Faws4_request&X-Amz-Signature=0b85cad98ca5f0341516f7f8f67e8671e14d891e7cadfccbaf5fe9eb9e0ef43b",
+  "price": 11,
+  "skuId": 0,
+  "userId": "40",
+  "hangNo": "",
+  "buyNum": 2
+}
