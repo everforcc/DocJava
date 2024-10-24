@@ -1,0 +1,79 @@
+### 测试新增 理发计次卡商品名
+POST http://127.0.0.1:8082/backendApi/coupon/save
+content-type: application/json;charset=utf-8
+
+{
+  "id": 5,
+  "groupId": 1,
+  "merchantId": 1,
+  "storeId": 4,
+  "type": "T",
+  "name": "理发计次卡",
+  "isGive": "0",
+  "point": 10,
+  "applyGoods": "allGoods",
+  "receiveCode": "",
+  "useFor": "",
+  "expireType": "flex",
+  "expireTime": 365,
+  "beginTime": null,
+  "endTime": null,
+  "amount": 0,
+  "sendWay": "backend",
+  "sendNum": 1,
+  "total": 0,
+  "limitNum": 1,
+  "exceptTime": "",
+  "storeIds": "4",
+  "gradeIds": "",
+  "description": "理发5次卡，有效期领取后365天内有效，领取需要10积分。",
+  "image": "",
+  "remarks": "",
+  "inRule": "",
+  "outRule": "5",
+  "createTime": 1727451318000,
+  "updateTime": 1727451335000,
+  "operator": "zhangsan",
+  "status": "A",
+  "goodsIds": "578"
+}
+
+### 测试新增 服务项目1计次卡
+POST http://127.0.0.1:8082/backendApi/coupon/save
+content-type: application/json;charset=utf-8
+
+{
+  "groupId": 1,
+  "merchantId": 1,
+  "storeId": 4,
+  "type": "T",
+  "name": "服务项目1计次卡",
+  "isGive": "0",
+  "point": 10,
+  "applyGoods": "allGoods",
+  "receiveCode": "",
+  "useFor": "",
+  "expireType": "flex",
+  "expireTime": 365,
+  "beginTime": null,
+  "endTime": null,
+  "amount": 0,
+  "sendWay": "backend",
+  "sendNum": 1,
+  "total": 0,
+  "limitNum": 1,
+  "exceptTime": "",
+  "storeIds": "4",
+  "gradeIds": "",
+  "description": "服务项目1计次卡5次卡，有效期领取后365天内有效，领取需要10积分。",
+  "image": "",
+  "remarks": "",
+  "inRule": "",
+  "outRule": "5",
+  "createTime": 1727451318000,
+  "updateTime": 1727451335000,
+  "operator": "zhangsan",
+  "status": "A",
+  "goodsIds": "576"
+}
+
