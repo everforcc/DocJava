@@ -11,6 +11,7 @@ select 576/9000 from dual;
 -- 6800
 select 8500 * 0.8 from dual;
 -- 1001-1031
+-- 19 / (31-7 = 24)
 -- 5383
 select 19/24*6800 from dual;
 
