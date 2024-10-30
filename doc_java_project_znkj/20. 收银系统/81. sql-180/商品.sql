@@ -20,3 +20,9 @@ order by e.UPDATE_TIME desc;
 
 select * from t_action_log e
 where e.ID = 2497;
+
+select * from mt_goods e
+where e.GOODS_NO = '158902473496013';
+
+select * from mt_goods_sku e
+where e.SKU_NO = '1605888067777721';

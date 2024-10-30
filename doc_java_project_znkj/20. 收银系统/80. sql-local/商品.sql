@@ -17,3 +17,21 @@ select * from mt_cart e;
 select count(*) from mt_cart e
 where e.HANG_NO = '#02';
 delete from mt_cart where HANG_NO='';
+
+select * from mt_goods_cate e;
+
+SELECT e.STATUS,e.*
+FROM mt_goods e
+where e.CATE_ID = 5;
+
+
+SELECT distinct e.STATUS
+FROM mt_goods e;
+
+SELECT e.*
+FROM mt_goods e
+where e.ID = 595;
+
+select distinct e.account_status
+from t_account e;
+
