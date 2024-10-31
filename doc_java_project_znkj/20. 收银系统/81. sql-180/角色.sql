@@ -17,3 +17,6 @@ where ad.ACCT_ID = 32;
 
 select * from t_account_duty ad
 where ad.ACCT_ID = 32 ;
+
+select d.*
+from t_duty d;

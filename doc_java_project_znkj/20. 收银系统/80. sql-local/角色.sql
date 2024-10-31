@@ -32,3 +32,14 @@ select * from t_duty e;
 
 select d.*
 from t_duty d;
+
+select d.*
+from t_duty d;
+
+SELECT * FROM t_duty_source WHERE duty_id = 2;
+select * from t_account_duty ad
+    left join t_duty d
+        on d.DUTY_ID = ad.DUTY_ID
+where ad.DUTY_ID = 16 and d.status = 'A';
+select * from t_account e
+where e.acct_id = 151;
