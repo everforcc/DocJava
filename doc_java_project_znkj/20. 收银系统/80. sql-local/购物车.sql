@@ -31,3 +31,17 @@ where e.id = 602;
 
 select e.id,e.CREATE_TIME,e.NUM,e.* from mt_cart e
 order by e.CREATE_TIME desc;
+
+select * from mt_goods_sku e where e.ID = 944 ;
+select e.SKU_ID,e.GOODS_ID, e.* from mt_cart e
+where e.SKU_ID != 0;
+
+select * from mt_goods e where e.ID = 569;
+
+select * from mt_goods_sku e where e.GOODS_ID = 569 ;
+
+select e.num,e.* from mt_cart e
+where e.GOODS_ID = 569;
+
+select * from t_account e;
+
