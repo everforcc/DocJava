@@ -69,7 +69,26 @@ where e.COUPON_ID = 29;
 
 
 select * from mt_staff e
-where e.id in (35,36,37,38);
+where e.id in (34,35,36,37,38);
 
 SELECT *
 FROM mt_staff WHERE audited_status <> 'D' ORDER BY ID DESC LIMIT 10;
+
+
+select * from mt_merchant e
+where e.STATUS = 'A';
+
+select * from mt_merchant t where t.STATUS = 'A' order by t.UPDATE_TIME desc limit 1 ;
+
+select * from mt_user e
+where e.MOBILE = 15136126776;
+
+select * from mt_user t where t.MOBILE LIKE concat('%',15136126776,'%') AND t.status != 'D' AND t.MERCHANT_ID = 1;
+
+select * from mt_coupon e
+where e.STATUS = 'A' ;
+
+select * from mt_store t
+where t.STATUS = 'A' order by t.UPDATE_TIME desc limit 1;
+
+

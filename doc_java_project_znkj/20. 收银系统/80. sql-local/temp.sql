@@ -27,3 +27,11 @@ select e.merchant_id,e.store_id,e.acct_id,e.* from t_account e
 where e.account_name = 'admin';
 update t_account set merchant_id = 0,store_id = 0
 where acct_id = 2;
+
+select e.* from mt_goods e
+where e.ID = 606;
+
+SELECT ID,sku_no,logo,goods_id,spec_ids,stock,price,line_price,weight,status
+FROM mt_goods_sku WHERE ID= 1014;
+
+insert into t_account value ();
