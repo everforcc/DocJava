@@ -36,3 +36,6 @@ select e.USER_ID,e.* from mt_cart e;
 -- 如果传 userid，就切换给这个用户，否则就切换给收银员
 -- 如果不传，不切换，单纯查询
 select * from mt_user e where e.ID = 56;
+
+select e.MERCHANT_ID, e.* from mt_user e
+where e.MERCHANT_ID = 1;
