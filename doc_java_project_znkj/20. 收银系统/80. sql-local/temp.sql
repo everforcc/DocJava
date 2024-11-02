@@ -35,3 +35,6 @@ SELECT ID,sku_no,logo,goods_id,spec_ids,stock,price,line_price,weight,status
 FROM mt_goods_sku WHERE ID= 1014;
 
 insert into t_account value ();
+
+select * from mt_goods e
+where e.ID = 610;
