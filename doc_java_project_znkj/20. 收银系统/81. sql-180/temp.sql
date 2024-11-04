@@ -91,4 +91,15 @@ where e.STATUS = 'A' ;
 select * from mt_store t
 where t.STATUS = 'A' order by t.UPDATE_TIME desc limit 1;
 
+select e.SPEC_IDS,e.* from mt_goods_sku e
+where e.SKU_NO like '124247097326183%';
+-- 124247097326183
+-- 964-967
+select * from mt_goods_spec e
+where e.ID in (964, 967);
 
+select ee.STATUS,ee.* from mt_user ee
+where ee.MOBILE = '18424545445';
+
+select ee.STATUS,ee.* from mt_user ee
+where ee.NAME in ('едгъ', '8279535869038');

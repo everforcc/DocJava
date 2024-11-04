@@ -38,3 +38,9 @@ insert into t_account value ();
 
 select * from mt_goods e
 where e.ID = 610;
+
+select ee.STATUS,ee.* from mt_user ee
+where ee.MOBILE = '18953214599';
+
+select * from mt_user_group e ;
+
