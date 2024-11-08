@@ -39,3 +39,8 @@ select * from mt_user e where e.ID = 56;
 
 select e.MERCHANT_ID, e.* from mt_user e
 where e.MERCHANT_ID = 1;
+
+-- 公共所有
+select e.STATUS,e.* from mt_user e
+where e.STORE_ID = 0;
+-- update mt_user set STATUS = 'D' WHERE STORE_ID = 0;
