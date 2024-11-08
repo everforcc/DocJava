@@ -1,46 +1,43 @@
-select e.acct_id,e.is_active,e.account_status,e.account_name,e.real_name,e.* from t_account e
+select * from mt_balance e
+order by e.ID desc;
+select * from mt_goods ;
+-- WEIGHT             decimal(10, 2)          default 0.00      null comment '重量',
+select * from mt_stock_item e
+where e.;
+
+select e.role_ids,e.* from t_account e;
+select * from t_account_duty e
 where e.acct_id = 14;
 
-SELECT t.MERCHANT_ID,t.* FROM mt_user t;
+select * from t_duty_source e
+where e.source_id = 125;
 
-SELECT t.MOBILE,t.* FROM mt_user t WHERE t.MOBILE like '%4578%';
+select * from t_source e
+where e.source_name like '%收银%' ;
 
--- uploads/20241011/efd0e07fa00141d999224990c2f6f59b.png
--- ["uploads/20241011/efd0e07fa00141d999224990c2f6f59b.png"]
-select * from mt_goods e
-where e.LOGO like '%efd0e07fa00141d999224990c2f6f59b.png%';
+update t_source e set e.status = 'A'
+where e.parent_id = 125;
+update t_source e set e.source_name = '收银台'
+where e.source_id = 125;
 
-SELECT *
-FROM mt_goods_sku
-WHERE goods_id = 605 AND status = 'A';
+select * from t_duty e;
 
-select e.merchant_id,e.* from t_account e
-where e.account_name = 'admin';
-
-select * from t_account_duty e;
+select e.* from t_account e;
 
 
-SELECT distinct e.merchant_id FROM `t_source` e
-where e.source_id = 188;
+select distinct t.source_id from t_duty_source t left join t_account_duty d
+                                                           on t.duty_id = d.duty_id
+where d.acct_id = 14;
 
-select e.merchant_id,e.store_id,e.acct_id,e.* from t_account e
-where e.account_name = 'admin';
-update t_account set merchant_id = 0,store_id = 0
-where acct_id = 2;
 
-select e.* from mt_goods e
-where e.ID = 606;
+-- 订单
+select e.PAY_AMOUNT,e.AMOUNT,e.CREATE_TIME,e.PAY_TYPE,e.USER_ID,e.* from mt_order e
+order by e.CREATE_TIME desc;
 
-SELECT ID,sku_no,logo,goods_id,spec_ids,stock,price,line_price,weight,status
-FROM mt_goods_sku WHERE ID= 1014;
+-- 余额相关信息
+SELECT * FROM mt_balance e
+order by e.CREATE_TIME desc;
 
-insert into t_account value ();
-
-select * from mt_goods e
-where e.ID = 610;
-
-select ee.STATUS,ee.* from mt_user ee
-where ee.MOBILE = '18953214599';
-
-select * from mt_user_group e ;
-
+-- 会员余额
+select e.BALANCE,e.* from mt_user e
+where e.ID = 69;
