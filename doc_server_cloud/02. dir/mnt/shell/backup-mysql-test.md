@@ -2,18 +2,6 @@
 
 [TOC]
 
-### 测试docker备份脚本
-
-~~~shell
-docker exec mysql-8.0  /bin/bash -c 'mysqldump -h localhost -P 3306 -u root -pc.c.5664 --databases oneforall' > /mnt/test_`date +%Y%m%d_%H_%M_%S`.sql
-~~~
-
-### 测试hkzk
-
-~~~shell
-docker exec mysql-8.0  /bin/bash -c 'mysqldump -h 121.89.198.243 -P 3306 -u devmaster -pdevmaster2024 --databases crccdev crccconfigdev' > $FILE
-~~~
-
 ### 完整备份多库脚本
 
 ~~~shell
