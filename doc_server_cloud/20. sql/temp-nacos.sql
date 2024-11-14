@@ -1,1 +1,0 @@
-SELECT * FROM config_info e;

@@ -1,1 +1,0 @@
-SELECT * FROM oneforall.cc_website e;
