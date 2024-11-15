@@ -1,0 +1,1 @@
+docker-compose -f docker-minio.yml up -d --build
