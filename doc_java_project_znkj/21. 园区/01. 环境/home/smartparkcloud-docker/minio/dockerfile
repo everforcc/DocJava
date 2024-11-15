@@ -1,0 +1,8 @@
+# 基础镜像
+#FROM minio/minio:RELEASE.2023-12-23T07-19-11Z
+FROM docker.io/minio/minio
+# author
+MAINTAINER ruoyi
+
+# 执行sql脚本
+
