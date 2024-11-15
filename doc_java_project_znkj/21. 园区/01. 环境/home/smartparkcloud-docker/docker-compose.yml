@@ -1,0 +1,273 @@
+version : '3.8'
+
+networks:
+  default:
+    external:
+      name: smartparkcloud
+
+services:
+  ruoyi-nacos:
+    container_name: ruoyi-nacos
+    image: nacos/nacos-server:v2.0.4
+    build:
+      context: ./nacos
+    environment:
+      - MODE=standalone
+    volumes:
+      - /data/smartparkcloud-data/nacos/logs/:/data/nacos/logs
+      - /data/smartparkcloud-data/nacos/conf/application.properties:/data/nacos/conf/application.properties:ro
+    ports:
+      - "8848:8848"
+      - "9848:9848"
+      - "9849:9849"
+    depends_on:
+      - ruoyi-mysql
+
+  ruoyi-mysql:
+    container_name: ruoyi-mysql
+    image: mysql:5.7
+    build:
+      context: ./mysql
+    ports:
+      - "3306:3306"
+    deploy:
+      resources:
+        limits:
+          memory: 1024M
+        reservations:
+          memory: 512M
+    volumes:
+      - /data/smartparkcloud-data/mysql/conf:/etc/mysql/conf.d
+      - /data/smartparkcloud-data/mysql/logs:/logs
+      - /data/smartparkcloud-data/mysql/data:/var/lib/mysql
+    command: [
+          'mysqld',
+          '--innodb-buffer-pool-size=80M',
+          '--character-set-server=utf8mb4',
+          '--collation-server=utf8mb4_unicode_ci',
+          '--default-time-zone=+8:00',
+          '--lower-case-table-names=1'
+        ]
+    environment:
+      MYSQL_DATABASE: 'smart_park'
+      MYSQL_ROOT_PASSWORD: znkj123456 
+
+  rabbitmq:
+    container_name: rabbitmq 
+    image: rabbitmq:3.13.0-management
+    build:
+      context: ./rabbitmq
+    ports:
+      - "1883:1883"
+      - "5672:5672"
+      - "15672:15672"
+      - "15692:15692"
+    deploy:
+      resources:
+        limits:
+          memory: 500M
+        reservations:
+          memory: 500M
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+
+  ruoyi-redis:
+    container_name: ruoyi-redis
+    image: redis:6.2.11
+    build:
+      context: ./redis
+    ports:
+      - "6379:6379"
+    deploy:
+      resources:
+        limits:
+          memory: 500M
+        reservations:
+          memory: 500M
+    volumes:
+      - /data/smartparkcloud-data/redis/conf:/data/ruoyi/redis
+      - /data/smartparkcloud-data/redis/data:/data
+    command: ["redis-server","/data/ruoyi/redis/redis.conf"]
+
+  ruoyi-nginx:
+    container_name: ruoyi-nginx
+    image: nginx
+    build:
+      context: ./nginx
+    ports:
+      - "80:80"
+    deploy:
+      resources:
+        limits:
+          memory: 50M
+        reservations:
+          memory: 50M
+    volumes:
+      - /data/smartparkcloud-data/nginx/html/dist:/home/ruoyi/projects/ruoyi-ui
+      - /data/smartparkcloud-data/nginx/html:/home/ruoyi/projects
+      - /data/smartparkcloud-data/nginx/html/smartparkbigscreen/dist:/home/ruoyi/projects/smartparkbigscreen
+      - /data/smartparkcloud-data/nginx/conf/nginx.conf:/etc/nginx/nginx.conf
+      - /data/smartparkcloud-data/nginx/logs:/var/log/nginx
+      - /data/smartparkcloud-data/nginx/conf.d:/etc/nginx/conf.d
+      - /data/smartparkcloud-data/uploadPath:/home/uploadPath
+      - /data/smartparkcloud-data/logs:/logs
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/resolv.conf:/etc/resolv.conf:ro
+    depends_on:
+      - ruoyi-gateway
+    links:
+      - ruoyi-gateway
+
+  minio:
+    image: minio/minio:RELEASE.2023-12-23T07-19-11Z
+    container_name: minio
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    environment:
+      TZ: Asia/Shanghai
+      MINIO_ROOT_USER: ruoyi
+      MINIO_ROOT_PASSWORD: ruoyi123
+      MINIO_COMPRESS: "off"
+      MINIO_COMPRESS_EXTENSIONS: ""
+      MINIO_COMPRESS_MIME_TYPES: ""
+    build:
+      context: ./minio
+    volumes:
+      - /data/smartparklocal-data/minio/data:/data
+      - /data/smartparklocal-data/minio/config:/root/.minio/
+    command: server --address ':9000' --console-address ':9001' /data  # 指定容器中的目录 /data
+    privileged: true
+
+
+
+  ruoyi-gateway:
+    container_name: ruoyi-gateway
+    build:
+      context: ./ruoyi/gateway
+      dockerfile: dockerfile
+    ports:
+      - "8080:8080"
+    deploy:
+      resources:
+        limits:
+          memory: 1024M
+        reservations:
+          memory: 512M
+    volumes:
+      - /data/smartparkcloud-data/logs:/logs
+      - /etc/localtime:/etc/localtime:ro
+    depends_on:
+      - ruoyi-nacos 
+      - ruoyi-redis
+    links:
+      - ruoyi-redis
+    environment:
+      - NACOS_HOST=192.168.1.136
+      - NACOS_PORT=8848
+      - NETWORK_IP=192.168.1.136
+      - TZ=Asia/Shanghai
+
+  ruoyi-auth:
+    container_name: ruoyi-auth
+    build:
+      context: ./ruoyi/auth
+      dockerfile: dockerfile
+    ports:
+      - "9200:9200"
+    deploy:
+      resources:
+        limits:
+          memory: 1024M
+        reservations:
+          memory: 512M
+    volumes:
+      - /data/smartparkcloud-data/logs:/logs
+      - /etc/localtime:/etc/localtime:ro
+    depends_on:
+      - ruoyi-redis
+      - ruoyi-nacos 
+    links:
+      - ruoyi-redis
+    environment:
+      - NACOS_HOST=192.168.1.136
+      - NACOS_PORT=8848
+      - NETWORK_IP=192.168.1.136
+      - TZ=Asia/Shanghai
+
+  ruoyi-modules-system:
+    container_name: ruoyi-modules-system
+    build:
+      context: ./ruoyi/modules/system
+      dockerfile: dockerfile
+    ports:
+      - "9201:9201"
+    deploy:
+      resources:
+        limits:
+          memory: 1024M
+        reservations:
+          memory: 512M
+    volumes:
+      - /data/smartparkcloud-data/logs:/logs
+      - /etc/localtime:/etc/localtime:ro
+    depends_on:
+      - ruoyi-redis
+      - ruoyi-nacos 
+      - ruoyi-mysql
+    links:
+      - ruoyi-redis
+      - ruoyi-mysql
+    environment:
+      - NACOS_HOST=192.168.1.136
+      - NACOS_PORT=8848
+      - NETWORK_IP=192.168.1.136
+      - TZ=Asia/Shanghai
+
+  ruoyi-modules-file:
+    container_name: ruoyi-modules-file
+    build:
+      context: ./ruoyi/modules/file
+      dockerfile: dockerfile
+    ports:
+      - "9300:9300"
+    deploy:
+      resources:
+        limits:
+          memory: 1024M
+        reservations:
+          memory: 512M
+    volumes:
+    - /data/smartparkcloud-data/uploadPath:/data/ruoyi/uploadPath
+    environment:
+      - NACOS_HOST=192.168.1.136
+      - NACOS_PORT=8848
+      - NETWORK_IP=192.168.1.136
+      - TZ=Asia/Shanghai
+    depends_on:
+      - ruoyi-redis
+      - ruoyi-nacos 
+
+  ruoyi-visual-monitor:
+    container_name: ruoyi-visual-monitor
+    build:
+      context: ./ruoyi/visual/monitor
+      dockerfile: dockerfile
+    ports:
+      - "9100:9100"
+    deploy:
+      resources:
+        limits:
+          memory: 1024M
+        reservations:
+          memory: 512M
+    volumes:
+      - /data/smartparkcloud-data/logs:/logs
+    environment:
+      - NACOS_HOST=192.168.1.136
+      - NACOS_PORT=8848
+      - NETWORK_IP=192.168.1.136
+      - TZ=Asia/Shanghai
+    depends_on:
+      - ruoyi-redis
+      - ruoyi-nacos 
