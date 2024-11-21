@@ -1,12 +1,12 @@
+-- 1. 查看创建脚本
+show create table mt_merchant;
 
-show create table mt_cart;
-
--- 商户id
+-- 2. 组装关联商户id脚本
 SELECT concat('ALTER TABLE ', TABLE_NAME, ' MODIFY `MERCHANT_ID` bigint  DEFAULT ''0'' COMMENT ''商户ID'';') as s
 FROM INFORMATION_SCHEMA.Columns
 WHERE COLUMN_NAME = 'merchant_id';
 
--- modify
+-- 3. modify脚本
 ALTER TABLE mt_article MODIFY `MERCHANT_ID` bigint  DEFAULT '0' COMMENT '商户ID';
 ALTER TABLE mt_balance MODIFY `MERCHANT_ID` bigint  DEFAULT '0' COMMENT '所属商户ID';
 ALTER TABLE mt_banner MODIFY `MERCHANT_ID` bigint  DEFAULT '0' COMMENT '所属商户ID';
