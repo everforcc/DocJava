@@ -1,20 +1,40 @@
+SELECT id,
+       minimum_purchase_quantity,
+       product_name,
+       product_status,
+       up_status,
+       category_id,
+       category_name,
+       series_id,
+       series_name,
+       kind_id,
+       kind_name,
+       product_img,
+       product_price,
+       product_size,
+       product_weight,
+       product_unit,
+       up_time,
+       stock_quantity,
+       product_desc,
+       product_config_json,
+       record_json,
+       type,
+       prepayment,
+       annual_fee,
+       product_introduction,
+       create_id,
+       create_by,
+       create_time,
+       update_id,
+       update_by,
+       update_time,
+       remark,
+       del_flag
+FROM znkj_product
+WHERE del_flag = 0
+  AND (type = 1)
+ORDER BY create_time DESC
+LIMIT 10;
 
--- 1000 1200 0.8
--- 1500.0000
-select 1200/0.8 from dual;
-
--- 250.0000
-select 200/0.8 from dual;
--- 500 600 0.9
--- 666.6667
-select 600/0.9 from dual;
--- 2500
--- ож╫П 334
-select 2500-1500-666 from dual;
-
-select 2500-1500-666 from dual;
-
--- 400 400*1 200 200
-select 400-250 from dual;
---
-select 150 * 0.9 from dual;
+select * from znkj_product ;
