@@ -1,10 +1,8 @@
 <span  style="font-family: Simsun,serif; font-size: 17px; ">
 
-[TOC]
+### 20. 引入配置文件参数
 
-- ~~ssh~~
-- ~~ssm~~
-- springboot
-- ~~spring-security~~
+- @ConfigurationProperties
+- @Value
 
 </span>

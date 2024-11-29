@@ -2,8 +2,6 @@
 
 ## yml参数配置
 
-
-
 ### 1. url 参数
 
 | key               | value             |
@@ -17,22 +15,22 @@
 - GMT
 - UTC
 
-
 ### 2. driver
 
 - 8以及以上版本有两个driver
 - 8版本的com.mysql.cj.jdbc.Driver
-- 
+-
 
 ### 3. druid
 
 - 读取yml的属性类
+
 ~~~
 com.alibaba.druid.pool.DruidAbstractDataSource
 
 ~~~
 
-### 4. mabatis
+### 4. mybatis
 
 ~~~
 mybatis:
