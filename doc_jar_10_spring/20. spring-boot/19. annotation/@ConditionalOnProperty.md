@@ -1,0 +1,10 @@
+<span  style="font-family: Simsun,serif; font-size: 17px; ">
+
+- @ConditionalOnProperty
+
+~~~
+ÅÐ¶ÏÌõ¼þ
+@ConditionalOnProperty(value = "app.files.type", havingValue = "WINDOWS")
+~~~
+
+</span>

@@ -1,8 +1,9 @@
 <span  style="font-family: Simsun,serif; font-size: 17px; ">
 
-### 20. å¼•å…¥é…ç½®æ–‡ä»¶å‚æ•°
+- @EnableAutoConfiguration
 
-- @ConfigurationProperties
-- @Value
+~~~
+×Ô¶¯ÅäÖÃ
+~~~
 
 </span>
