@@ -1,8 +1,13 @@
 <span  style="font-family: Simsun,serif; font-size: 17px; ">
 
+[TOC]
+
+## 全局
+
+- @SpringBootConfiguration
+
 ~~~
-@size
-@Value("${spring.app.healtbless.secretKey}")
+springboot的配置
 ~~~
 
 </span>

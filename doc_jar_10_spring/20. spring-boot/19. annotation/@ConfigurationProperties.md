@@ -1,7 +1,9 @@
 <span  style="font-family: Simsun,serif; font-size: 17px; ">
 
-- åŸºç¡€çš„ HttpURLConnection
-- apache httpclient
-- spring Feign
+- @ConfigurationProperties
+
+~~~
+¶ÁÈ¡ÅäÖÃÎÄ¼şµÄÅäÖÃ,¸øÊôĞÔ¸³Öµ
+~~~
 
 </span>

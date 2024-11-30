@@ -1,5 +1,11 @@
 <span  style="font-family: Simsun,serif; font-size: 17px; ">
 
+- @Component
+
+~~~
+组件
+~~~
+
 ~~~
 @Component下无法使用@Autowired
 /**
