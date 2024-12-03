@@ -1,0 +1,9 @@
+
+-- DEFAULT_CHARACTER_SET_NAME
+SELECT SCHEMA_NAME, DEFAULT_CHARACTER_SET_NAME 字符集, DEFAULT_COLLATION_NAME, SQL_PATH
+FROM information_schema.SCHEMATA;
+
+-- 查看某个表中的所有字段属性
+-- SHOW FULL COLUMNS FROM tab_user.`nickname`;
+SHOW FULL COLUMNS FROM fuint_food.mt_coupon;
+

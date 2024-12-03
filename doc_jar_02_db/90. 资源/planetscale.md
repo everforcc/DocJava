@@ -4,6 +4,10 @@
 
 - [官网-planetscale](https://app.planetscale.com/everforcc/oneforall)
 - 用户名密码
+~~~
+2212355809@qq.com
+c.c.C.C.566411
+~~~
 
 ~~~
 Username:a0yhrwlul53j
@@ -21,5 +25,10 @@ Connection conn = DriverManager.getConnection(
 ~~~
 
 - plsql没配置好,可以用idea
+
+### 登录
+
+- [官网-planetscale](https://app.planetscale.com/718497737/welcome)
+- github
 
 </span>
