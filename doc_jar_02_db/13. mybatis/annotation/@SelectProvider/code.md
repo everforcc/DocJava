@@ -1,72 +1,55 @@
 <span  style="font-family: Simsun,serif; font-size: 17px; ">
 
-[TOC]
-
-### 同类的注解
-
-~~~
-@SelectProvider：用于构建动态查询SQL。
-@InsertProvider：用于构建动态新增SQL。
-@UpdateProvider：用于构建动态更新SQL。
-@DeleteProvider：用于构建动态删除SQL。
-~~~
-
-### @SelectProvider
-
-- 动态拼接
-
 ### 示例代码
 
+- 写过的
 - SpringIOSpringBoot
     - ITestProvider
 
-- copy crud
+### copy crud
+
 ~~~java
 import com.pjb.entity.UserInfo;
 import org.apache.ibatis.annotations.*;
 import org.apache.ibatis.jdbc.SQL;
 import org.springframework.stereotype.Repository;
- 
+
 /**
  * 用户信息Mapper动态代理接口
  * @author pan_junbiao
  **/
 @Mapper
 @Repository
-public interface UserMapper
-{
+public interface UserMapper {
     /**
      * 根据用户ID，获取用户信息
      */
     @SelectProvider(type = UserSqlBuilder.class, method = "buildGetUserByIdSql")
     public UserInfo getUserById(@Param("userId") int userId);
- 
+
     /**
      * 新增用户，并获取自增主键
      */
     @InsertProvider(type = UserSqlBuilder.class, method = "buildInsertUserSql")
     @Options(useGeneratedKeys = true, keyColumn = "user_id", keyProperty = "userId")
     public int insertUser(UserInfo user);
- 
+
     /**
      * 修改用户
      */
     @UpdateProvider(type = UserSqlBuilder.class, method = "buildUpdateUserSql")
     public int updateUser(UserInfo user);
- 
+
     /**
      * 删除用户
      */
     @DeleteProvider(type = UserSqlBuilder.class, method = "buildDeleteUserSql")
     public int deleteUser(@Param("userId") int userId);
- 
+
     //建议将SQL Builder以映射器接口内部类的形式进行定义
-    public class UserSqlBuilder
-    {
-        public String buildGetUserByIdSql(@Param("userId") int userId)
-        {
-            return new SQL()
-            {
+    public class UserSqlBuilder {
+        public String buildGetUserByIdSql(@Param("userId") int userId) {
+            return new SQL() {
                 {
                     SELECT("*");
                     FROM("tb_user");
@@ -74,11 +57,9 @@ public interface UserMapper
                 }
             }.toString();
         }
- 
-        public String buildInsertUserSql(UserInfo user)
-        {
-            return new SQL()
-            {
+
+        public String buildInsertUserSql(UserInfo user) {
+            return new SQL() {
                 {
                     INSERT_INTO("tb_user");
                     VALUES("user_name", "#{userName}");
@@ -87,11 +68,9 @@ public interface UserMapper
                 }
             }.toString();
         }
- 
-        public String buildUpdateUserSql(UserInfo user)
-        {
-            return new SQL()
-            {
+
+        public String buildUpdateUserSql(UserInfo user) {
+            return new SQL() {
                 {
                     UPDATE("tb_user");
                     SET("user_name = #{userName} ,blog_url=#{blogUrl} ,blog_remark=#{blogRemark}");
@@ -99,11 +78,9 @@ public interface UserMapper
                 }
             }.toString();
         }
- 
-        public String buildDeleteUserSql(@Param("userId") int userId)
-        {
-            return new SQL()
-            {
+
+        public String buildDeleteUserSql(@Param("userId") int userId) {
+            return new SQL() {
                 {
                     DELETE_FROM("tb_user");
                     WHERE("user_id = #{userId}");
