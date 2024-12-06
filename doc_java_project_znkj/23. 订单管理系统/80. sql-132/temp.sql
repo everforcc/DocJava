@@ -11,4 +11,12 @@ where zt.del_flag = 0
 
 select *
 from znkj_shopping_trolley zt
-where zt.id in (1833801129650032642,1862786666091556865,1863769716279521281);
+where zt.id in (1833801129650032642, 1862786666091556865, 1863769716279521281);
+
+--
+
+SELECT *
+FROM znkj_product
+WHERE del_flag = 0
+  AND (type = 1 AND product_status = 1 AND up_status = 1 AND product_name LIKE '%ËãÀýºËÐÄ5101%')
+LIMIT 10;
