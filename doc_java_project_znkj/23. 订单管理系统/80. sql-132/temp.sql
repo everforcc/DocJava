@@ -20,3 +20,12 @@ FROM znkj_product
 WHERE del_flag = 0
   AND (type = 1 AND product_status = 1 AND up_status = 1 AND product_name LIKE '%ËãÀýºËÐÄ5101%')
 LIMIT 10;
+
+
+select *
+from znkj_app_banner e
+where e.del_flag = 0;
+
+SELECT e.create_time, e.*
+FROM znkj_app_banner e
+WHERE del_flag=0 AND (status = '0') ORDER BY create_time DESC;
