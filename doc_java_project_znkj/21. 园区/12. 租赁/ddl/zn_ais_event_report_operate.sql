@@ -1,9 +1,13 @@
+-- del
+-- 错了不用这个
+
+
 -- 同步表
 select * from zn_ais_event_report e ;
 -- show create table zn_ais_event_report;
 -- 操作表
-select * from zn_ais_event_report_operate;
-
+# select * from zn_ais_event_report_operate;
+# drop table zn_ais_event_report_operate;
 --
 insert into zn_ais_event_report_operate(id, zn_device_sn_var, group_name, report_type, report_content_json, report_camera_json, report_algorithm_json, report_algorithm_camera_json, report_user_json, statistics_interval, statistics_time_json, remark, create_id, create_by, create_time, create_dept, update_id, update_by, update_time, del_flag, up_flag, up_count, up_msg, up_id)
 select id, zn_device_sn_var, group_name, report_type, report_content_json, report_camera_json, report_algorithm_json, report_algorithm_camera_json, report_user_json, statistics_interval, statistics_time_json, remark, create_id, create_by, create_time, create_dept, update_id, update_by, update_time, del_flag, up_flag, up_count, up_msg, up_id from zn_ais_event_report;
