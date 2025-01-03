@@ -1,0 +1,1 @@
+select * from zn_machine_camera e where e.nvm_camera_id = 1107 ;
