@@ -16,7 +16,7 @@ left join sys_user su on zdl.dealer_id = su.user_id;
 -- 2. 经销商名下的所有sn
 -- 可能未激活
 -- group_id
-select e.group_id,e.dealer_id,e.* from zn_device_lease e;
+select e.group_id,e.zn_device_sn_var,e.dealer_id,e.* from zn_device_lease e;
 -- 已激活
 -- select e.* from zn_device_sn e;
 -- select * from sys_user e ;
@@ -24,13 +24,17 @@ select e.group_id,e.dealer_id,e.* from zn_device_lease e;
 -- 3. 事件处理人员表
 -- 使用sn相关联
 -- ,zeps.group_id
-select zeps.group_id,zeps.zn_device_sn_var,zeps.dealer_Id,zeps.* from zn_event_process_staff zeps ;
+select zeps.* from zn_event_process_staff zeps ;
+
+select zeps.* from zn_event_process_staff zeps
+order by rand();
+
 -- 移除设备sn
 -- select zepsg.* from zn_event_process_staff_group zepsg ;
 -- select * from zn_device_lease;
 
 -- 4. 事件表
-select zaedd.algorithm_id,zaedd.* from zn_ais_event_data_details_operate zaedd;
+select zaedd.* from zn_ais_event_data_details_operate zaedd;
 -- zn_ais_event_data_details_operate
 --
 -- select zed.algorithm_id,zed.* from zn_event_data zed;
@@ -40,3 +44,5 @@ select zaedd.algorithm_id,zaedd.* from zn_ais_event_data_details_operate zaedd;
 -- 设备租赁相关
 -- select zdl.dealer_id,zdl.* from zn_device_lease zdl ;
 -- select zdlr.* from zn_device_lease_record zdlr ;
+
+select * from zn_event_process_rule e ;
