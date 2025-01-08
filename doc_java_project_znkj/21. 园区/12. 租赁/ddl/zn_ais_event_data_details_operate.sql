@@ -65,3 +65,10 @@ CREATE TABLE `zn_ais_event_data_details_operate`
     KEY `algorithm_camera_cetime` (`algorithm_id`, `camera_id`, `create_time`)
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4 COMMENT ='告警事件详情表';
+
+-- zn_device_sn_var       varchar(255) collate utf8mb4_unicode_ci null comment '设备编号',
+-- zn_device_sn_var       varchar(255)                    DEFAULT NULL COMMENT '设备编号',
+ALTER TABLE zn_ais_event_data_details_operate
+MODIFY zn_device_sn_var       varchar(255) collate utf8mb4_unicode_ci null comment '设备编号';
+
+
