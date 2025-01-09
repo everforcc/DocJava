@@ -38,6 +38,7 @@ select zepsg.* from zn_event_process_staff_group zepsg ;
 select zaedd.* from zn_ais_event_data_details_operate zaedd
 where zaedd.process_id = 1;
 
+-- 重置测试数据为可查询
 update zn_ais_event_data_details_operate
 set status = 0,
     create_time=now()
@@ -60,8 +61,13 @@ select 60*24 from dual;
 -- dealer_id
 -- 123456789 派单
 -- 人员
+    -- 11111111111
+    -- 11111111112
+    -- 11111111113
 -- 987654321 抢单
 -- 人员
+    -- 11111111114
+    -- 11111111115
 
 -- zn_ais_camera
 select e.* from zn_machine_camera e
