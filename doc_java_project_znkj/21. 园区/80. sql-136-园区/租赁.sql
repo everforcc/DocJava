@@ -35,7 +35,7 @@ select zepsg.* from zn_event_process_staff_group zepsg ;
 -- select * from zn_device_lease;
 
 -- 4. 事件表
-select zaedd.* from zn_ais_event_data_details_operate zaedd
+select zaedd.zn_device_sn_var,zaedd.* from zn_ais_event_data_details_operate zaedd
 where zaedd.process_id = 1;
 
 -- 重置测试数据为可查询
