@@ -1,0 +1,27 @@
+{
+  "data": {
+    "acquireTime": "2025-01-10T14:41:35",
+    "algorithmName": "事件名称",
+    "boxLocation": "测试事件抢单盒子位置",
+    "createTime": "2025-01-10T15:28:58",
+    "delFlag": 0,
+    "evaluateLevel": 0,
+    "eventAddress": "事件发生位置",
+    "eventBeginEnd": 1,
+    "id": 1,
+    "leaseName": "cll",
+    "leasePhone": "17637989590",
+    "mistakeFlag": 1,
+    "processId": 4,
+    "processName": "抢单-01",
+    "processTime": "2025-01-10T14:43:21",
+    "status": 0,
+    "upCount": 0,
+    "upFlag": 0,
+    "updateBy": "-",
+    "updateId": 0,
+    "updateTime": "2025-01-10T14:43:21",
+    "znDeviceSnVar": "csqd001"
+  },
+  "type": 1
+}
