@@ -70,5 +70,5 @@ select 60*24 from dual;
     -- 11111111115
 
 -- zn_ais_camera
-select e.* from zn_machine_camera e
+select e.longitude,e.latitude,e.* from zn_machine_camera e
 where e.id in (1869664776612081666);
