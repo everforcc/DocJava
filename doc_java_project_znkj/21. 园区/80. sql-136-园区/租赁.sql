@@ -17,7 +17,7 @@ left join sys_user su on zdl.dealer_id = su.user_id;
 -- 可能未激活
 -- group_id
 select e.group_id,e.zn_device_sn_var,e.dealer_id,e.contact_person '联系人',e.phone '手机号',e.* from zn_device_lease e;
-select e.* from zn_device_lease e;
+select e.group_id,e.* from zn_device_lease e;
 -- 已激活
 -- select e.* from zn_device_sn e;
 -- select * from sys_user e ;
@@ -27,7 +27,7 @@ select e.* from zn_device_lease e;
 -- ,zeps.group_id
 select zeps.* from zn_event_process_staff zeps ;
 
-select zeps.* from zn_event_process_staff zeps
+select zeps.group_id,zeps.dealer_Id,zeps.* from zn_event_process_staff zeps
 order by rand();
 
 -- 移除设备sn

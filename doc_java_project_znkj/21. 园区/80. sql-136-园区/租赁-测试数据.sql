@@ -4,7 +4,8 @@ select * from zn_event_process_rule e ;
 select e.group_id,e.* from zn_device_lease e;
 
 -- 重置测试数据为可查询
-select zaedd.* from zn_ais_event_data_details_operate zaedd;
+select zaedd.* from zn_ais_event_data_details_operate zaedd
+where zaedd.zn_device_sn_var = 'csff001';
 
 -- 抢单数据
 update zn_ais_event_data_details_operate
@@ -14,11 +15,11 @@ set zn_device_sn_var = 'csqd001',
 where id in (1,2,3,4,5,6,7,8,9,10);
 
 update zn_ais_event_data_details_operate
-set process_id=1,
+set process_id= null,
     zn_device_sn_var = 'csff001',
-    status = 1,
+    status = 0,
     create_time=now()
-where id in (11,12,13);
+where id in (11,12,13,14,15,16,17,18,19,20,21);
 
 -- 分发数据
 update zn_ais_event_data_details_operate
@@ -28,7 +29,7 @@ set process_id=null,
     create_time=now()
 where id in (11,12,13,14,15,16,17,18,19,20,21);
 
-select e.group_id,e.* from zn_event_process_staff e
+select e.* from zn_event_process_staff e
 where e.user_phone in
       ('11111111111', '11111111112', '11111111113',
                        '11111111114', '11111111115','13133333331','14444444444');
