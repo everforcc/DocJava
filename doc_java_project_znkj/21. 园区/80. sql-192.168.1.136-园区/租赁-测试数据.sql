@@ -4,8 +4,15 @@ select * from zn_event_process_rule e ;
 select e.group_id,e.* from zn_device_lease e;
 
 -- 重置测试数据为可查询
-select zaedd.* from zn_ais_event_data_details_operate zaedd
+select zaedd.status,zaedd.create_time,zaedd.process_id,zaedd.* from zn_ais_event_data_details_operate zaedd
 where zaedd.zn_device_sn_var = 'csff001';
+
+--
+update zn_ais_event_data_details_operate
+set process_id=null,
+    status = 0,
+    create_time=now()
+where zn_device_sn_var = 'csff001';
 
 -- 抢单数据
 update zn_ais_event_data_details_operate

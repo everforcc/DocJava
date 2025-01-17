@@ -1,5 +1,5 @@
 
--- 132 退款的表
+--  订单 192.168.1.132 退款
 select e.hf_seq_id,e.trans_amt,e.create_by,e.req_date,e.* from znkj_huifu_info e
 where e.req_date = '20250116'
 order by e.create_time desc;
