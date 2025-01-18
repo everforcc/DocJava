@@ -1,8 +1,8 @@
 
 rem 数据库地址
-set url=192.168.1.134
+set url=192.168.3.13
 rem 数据库名
-set db=smartparklocal
+set db=anm_db
 
 set day=%date:~0,4%-%date:~5,2%-%date:~8,2%
 set db_name=%db%_%day%-%time:~0,2%%time:~3,2%%time:~6,2%
