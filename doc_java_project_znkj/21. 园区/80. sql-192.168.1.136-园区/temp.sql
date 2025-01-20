@@ -12,10 +12,19 @@ select e.other_data
 FROM zn_pay_order_record e
 WHERE e.req_date = '20241107';
 
-
-
 -- 设备信息
 select * from zn_local e ;
+
+-- 重置 事件 为原始状态
+update zn_ais_event_data_details_operate
+set
+    acquire_time = NULL,
+    process_time = NULL,
+    create_time=now(),
+    update_time=now()
+where cloud_id = 103;
+
+select e.acquire_time,e.process_time,e.* from zn_ais_event_data_details_operate e where e.cloud_id = 103;
 
 
 SELECT
