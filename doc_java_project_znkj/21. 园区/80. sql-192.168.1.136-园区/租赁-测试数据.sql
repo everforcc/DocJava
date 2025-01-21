@@ -2,8 +2,7 @@
 select * from zn_event_process_rule e ;
 
 select e.group_id,e.manual_watch,e.del_flag,e.* from zn_device_lease e
-where e.zn_device_sn_var = 'csff001'
-;
+where e.zn_device_sn_var = 'csff001';
 
 -- 重置测试数据为可查询
 select zaedd.status,zaedd.create_time,zaedd.process_id,zaedd.* from zn_ais_event_data_details_operate zaedd
