@@ -42,3 +42,8 @@ WHERE del_flag=0 AND zn_device_sn_var = 'csff001' AND status = 1 AND acquire_tim
 
 SELECT COUNT(*) AS total FROM zn_ais_event_data_details_operate
 WHERE del_flag = 0 AND status = 0 AND zn_device_sn_var IN ('csqd001') AND create_time > ?;
+
+select * from zn_event_process_staff e where e.user_phone = '15222222222';
+select e.evaluate_level,count(e.evaluate_level) from zn_ais_event_data_details_operate e
+where e.process_id = 1079454918504488960
+group by e.evaluate_level;
