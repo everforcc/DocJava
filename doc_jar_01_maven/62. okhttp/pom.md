@@ -1,24 +1,15 @@
 <span  style="font-family: Simsun,serif; font-size: 17px; ">
 
-1. URLConnection.md
-2. httpclient
-3. selenium
-4. FeignClient
-5. okhttp
-6. webservie / axis
+### okhttp
 
----
+- 主要是安卓客户端使用
 
-- okhttp
-~~~
+~~~xml
 <dependency>
     <groupId>com.squareup.okhttp3</groupId>
     <artifactId>okhttp</artifactId>
     <version>4.9.0</version>
 </dependency>
-
 ~~~
-- work offline 勾选去掉
-
 
 </span>
