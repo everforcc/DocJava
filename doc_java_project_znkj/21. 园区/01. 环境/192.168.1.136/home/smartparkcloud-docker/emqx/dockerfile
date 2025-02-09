@@ -1,0 +1,5 @@
+# 基础镜像
+FROM emqx/emqx:latest
+# author
+MAINTAINER ruoyi
+
