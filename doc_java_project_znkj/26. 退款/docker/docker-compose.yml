@@ -1,0 +1,9 @@
+version : '3.8'
+services:
+  tui-kuan:
+    container_name: smartparkcloud-docker_ruoyi-tuikuan
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8888:8888"
