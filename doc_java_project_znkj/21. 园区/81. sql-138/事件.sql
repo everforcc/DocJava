@@ -28,3 +28,23 @@ and e.manual_watch = 0;
 select e.create_time,e.* from zn_ais_event_data_details_operate e where
 e.id = 1891415101289725952;
 
+select e.create_time,e.del_flag,e.* from zn_ais_event_data_details_operate e
+where e.id = 1892960327564312576
+order by e.create_time desc;
+
+select e.create_time,e.del_flag,e.* from zn_ais_event_data_details e
+where e.id = 1892960327564312576;
+
+select e.create_time,e.update_time,e.del_flag,e.* from zn_ais_event_data_details e
+where e.id = 1892960327564312576;
+
+select e.create_time,e.update_time,e.del_flag,e.* from zn_ais_event_data_details e
+where e.zn_device_sn_var = 'ZL20250207000' order by e.create_time desc;
+
+
+
+select e.create_time,e.update_time,e.up_flag,e.up_count,e.del_flag,e.* from zn_ais_event_data_details e
+order by e.create_time asc ;
+
+select * from zn_ais_event_data_details e
+where e.up_flag = 2;
