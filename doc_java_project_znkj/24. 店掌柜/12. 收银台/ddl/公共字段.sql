@@ -43,3 +43,24 @@ ALTER TABLE `zn_dzg_order_refund` ADD     update_by     varchar(60)  null commen
 ALTER TABLE `zn_dzg_order_refund` ADD     update_time   datetime     null comment '更新时间';
 ALTER TABLE `zn_dzg_order_refund` ADD     del_flag      tinyint(1)   null comment '删除标记';
 
+-- zn_dzg_cart
+ALTER TABLE `zn_dzg_cart` ADD     remark     varchar(200)       null comment '备注';
+ALTER TABLE `zn_dzg_cart` ADD     create_id     bigint       null comment '创建人id';
+ALTER TABLE `zn_dzg_cart` ADD     create_by     varchar(60)  null comment '创建人';
+ALTER TABLE `zn_dzg_cart` ADD     create_dept   bigint       null comment '创建部门';
+ALTER TABLE `zn_dzg_cart` ADD     create_time   datetime     null comment '创建时间';
+ALTER TABLE `zn_dzg_cart` ADD     update_id     bigint       null comment '更新人id';
+ALTER TABLE `zn_dzg_cart` ADD     update_by     varchar(60)  null comment '更新人';
+ALTER TABLE `zn_dzg_cart` ADD     update_time   datetime     null comment '更新时间';
+ALTER TABLE `zn_dzg_cart` ADD     del_flag      tinyint(1)   null comment '删除标记';
+
+-- zn_dzg_cart_goods
+ALTER TABLE `zn_dzg_cart_goods` ADD     remark     varchar(200)       null comment '备注';
+ALTER TABLE `zn_dzg_cart_goods` ADD     create_id     bigint       null comment '创建人id';
+ALTER TABLE `zn_dzg_cart_goods` ADD     create_by     varchar(60)  null comment '创建人';
+ALTER TABLE `zn_dzg_cart_goods` ADD     create_dept   bigint       null comment '创建部门';
+ALTER TABLE `zn_dzg_cart_goods` ADD     create_time   datetime     null comment '创建时间';
+ALTER TABLE `zn_dzg_cart_goods` ADD     update_id     bigint       null comment '更新人id';
+ALTER TABLE `zn_dzg_cart_goods` ADD     update_by     varchar(60)  null comment '更新人';
+ALTER TABLE `zn_dzg_cart_goods` ADD     update_time   datetime     null comment '更新时间';
+ALTER TABLE `zn_dzg_cart_goods` ADD     del_flag      tinyint(1)   null comment '删除标记';
