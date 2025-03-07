@@ -4,9 +4,13 @@ select *
 from zn_dzg_product e
 where e.id = 1894221408124956674
   and e.barcode = '123456789';
+
+select * from zn_dzg_card_member e ;
 SELECT *
 FROM zn_dzg_product e
-WHERE e.name = '可口可乐';
+WHERE e.name like '%可乐%';
+
+select * from zn_dzg_card_member_product e ;
 
 -- 价签
 -- 8795687210500
