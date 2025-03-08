@@ -24,6 +24,9 @@ select * from zn_dzg_card_member_product e ;
 select * from zn_dzg_cart_goods e
 where e.cart_id = 1897214504005689346;
 
-
-
+-- ÑÛÌù
+-- 2.66
+select 93.1/35 from dual;
+-- 2.8
+select 112/40 from dual;
 
