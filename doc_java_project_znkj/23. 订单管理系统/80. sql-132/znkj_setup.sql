@@ -1,0 +1,1 @@
+select * from znkj_setup e ;
