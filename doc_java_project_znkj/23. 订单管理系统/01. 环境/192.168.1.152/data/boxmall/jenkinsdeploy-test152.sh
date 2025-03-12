@@ -4,7 +4,7 @@ curdir=$(cd `dirname $0`;pwd)
 path="${curdir}/boxmall-services_test/boxmall-services"
 deployjarpath="/data/boxmall-docker/ruoyi/"
 dockcomposepath="/data/boxmall-docker/"
-copyscript="${curdir}/copy-dev.sh"
+copyscript="${curdir}/copy-test.sh"
 jarnames="ruoyi-admin ruoyi-monitor-admin ruoyi-xxl-job-admin"
 
 function pullcode {
