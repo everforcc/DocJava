@@ -1,13 +1,13 @@
-select * from znkj_applicant e where e.mobile = '15738573601';
-select * from znkj_dealer e where e.mobile = '15738573601';
-
+select * from znkj_applicant e where e.mobile = '15136126776';
+select * from znkj_dealer e where e.mobile = '15136126776';
+-- 15136126776
 select * from znkj_applicant e
 where e.location_code = '130300';
 select * from znkj_dealer e
 where e.location_code = '130300';
 
 
-DELETE from znkj_applicant e where e.mobile = '15738573602';
+DELETE from znkj_applicant e where e.mobile = '15738573601';
 DELETE from znkj_dealer e where e.mobile = '15738573602';
 
 update znkj_applicant set mobile = '15738573602' where mobile = '15738573601';

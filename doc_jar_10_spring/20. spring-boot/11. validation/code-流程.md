@@ -40,8 +40,11 @@ IDelete
 #### 4.1 @Validated
 
 ~~~
-1. controller 方法参数
-(@Validated @RequestBody Dto dto)
+1. controller 
+
+类注解 @Validated
+
+方法参数 (@Validated @RequestBody Dto dto)
 ~~~
 
 #### 4.2 @Valid
