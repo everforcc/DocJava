@@ -54,3 +54,6 @@ SELECT COUNT(*) AS total FROM znkj_product
 WHERE del_flag = 0 AND
       (kind_id IN (select e.id from znkj_kind e where e.series_id = 1829419517248278530)
            AND type = 1);
+--
+
+
