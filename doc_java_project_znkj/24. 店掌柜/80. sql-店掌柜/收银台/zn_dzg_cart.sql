@@ -38,7 +38,7 @@ from zn_dzg_cart_goods e;
 
 -- 新增购物车商品，计算价格
 UPDATE zn_dzg_cart_goods
-SET goods_price = goods_unit_price * (goods_num + 1),
+SET goods_end_price = goods_unit_price * (goods_num + 1),
     goods_num   = goods_num + 1
 WHERE goods_id = 1894221408124956674
   AND cart_id = 1894217513076158466;
