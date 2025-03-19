@@ -1,0 +1,1 @@
+select e.manager_flag,e.* from zn_user e where e.id = 1901880487426248706 ;

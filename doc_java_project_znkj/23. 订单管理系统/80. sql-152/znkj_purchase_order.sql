@@ -1,0 +1,1 @@
+select * from znkj_purchase_order e where e.sn like '%LW03AF140031%' ;
