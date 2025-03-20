@@ -1,9 +1,19 @@
-
-select * from zn_pay_order e
+select e.order_type, e.order_small_type, e.status, e.price, e.order_json, e.*
+from zn_pay_order e
 order by e.create_time desc;
 
-select * from zn_pay_order_record e
+select e.*
+from zn_pay_order_record e
 order by e.create_time desc;
 
-SELECT json_unquote(JSON_EXTRACT(e.other_data,'$.hf_seq_id')) as otherDataHfSeqId,e.pay_amt,e.req_date,e.create_time,e.other_data,e.* FROM zn_pay_order_record e
+-- http://125.40.67.238:8996/system/pay/notify/notify
+SELECT json_unquote(JSON_EXTRACT(e.other_data, '$.hf_seq_id')) as otherDataHfSeqId,
+       e.pay_amt,
+       e.huifuId,
+       e.req_date,
+       e.create_time,
+       e.other_data,
+       e.*
+FROM zn_pay_order_record e
+where e.pay_amt is not null
 order by e.create_time desc;
