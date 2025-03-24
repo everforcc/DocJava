@@ -17,3 +17,13 @@ SELECT json_unquote(JSON_EXTRACT(e.other_data, '$.hf_seq_id')) as otherDataHfSeq
 FROM zn_pay_order_record e
 where e.pay_amt is not null
 order by e.create_time desc;
+
+-- orderJson
+
+select e.order_json, e.create_time, e.*
+from zn_pay_order e
+where e.zn_device_sn_var = 'ZL0123456788'
+--  and e.status = 1
+  and e.order_type = 0
+order by e.create_time desc
+;
