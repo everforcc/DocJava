@@ -5,6 +5,9 @@ where e.zn_device_sn_var = 'ZL0123456788';
 select * from zn_deposit_fee_record e
 where e.id = 1901976822777577474;
 
+select e.payment_status,e.*
+from zn_deposit_fee_record e
+order by e.create_time desc;
 
 -- 1901976822777577474
 select e.payment_status,e.payment_time,e.total_amount,e.* from zn_rental_fee_record e
