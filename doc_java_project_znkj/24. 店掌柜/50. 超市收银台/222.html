@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=114201066479129&bvid=BV1GPX1YpErE&cid=28993847393&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+
+<iframe src="http://127.0.0.1/111.html" ></iframe>
+
+<script>
+
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'http://127.0.0.1:8080/open/async/count', true);
+
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            // 请求成功，处理响应
+            console.log(xhr.responseText);
+        }
+    };
+
+    xhr.send();
+
+</script>
+
+</body>
+</html>

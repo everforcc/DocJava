@@ -27,3 +27,7 @@ where e.zn_device_sn_var = 'ZL0123456788'
   and e.order_type = 0
 order by e.create_time desc
 ;
+
+select e.order_json, e.create_time, e.*
+from zn_pay_order e
+order by e.create_time desc;
