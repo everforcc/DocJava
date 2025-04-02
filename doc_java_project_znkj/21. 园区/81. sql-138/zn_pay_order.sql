@@ -1,5 +1,6 @@
 select e.order_type, e.order_small_type, e.status, e.price, e.order_json, e.*
 from zn_pay_order e
+where e.order_type = 5
 order by e.create_time desc;
 
 select e.*
