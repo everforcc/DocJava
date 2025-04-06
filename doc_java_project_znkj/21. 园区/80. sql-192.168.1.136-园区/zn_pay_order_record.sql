@@ -7,7 +7,7 @@ select distinct e.order_type from zn_pay_order e ;
 select e.* from zn_pay_order e
 where e.order_type = 3;
 
-select e.status,e.* from zn_pay_order e
+select e.status,e.create_time,e.* from zn_pay_order e
 where e.order_type = 5
 order by e.create_time desc
 ;

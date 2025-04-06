@@ -49,7 +49,7 @@ where zdog.order_id in
   and zdom.order_type = 2
 group by zdog.goods_id;
 
--- 卡券，线上，线下
+-- 卡券，线上，线下 CASE when
 select zdog.goods_name,
        zdog.goods_id,
        sum(zdog.goods_num)    '销售数量',
