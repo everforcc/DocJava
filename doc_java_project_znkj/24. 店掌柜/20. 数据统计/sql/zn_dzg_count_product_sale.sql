@@ -1,4 +1,5 @@
 -- 商品销售记录
+-- zn_dzg_count_product_sale
 
 -- 订单
 select * from zn_dzg_order zdo
@@ -9,7 +10,8 @@ select * from zn_dzg_order_goods zdog
 where zdog.order_id in
       (select zdo.id
        from zn_dzg_order zdo
-       where zdo.status = 2);
+       where zdo.status = 2 and zdo.del_flag = 0 and zdo.type = 1
+         and zdo.create_time between '2025-04-07 17:00:00' and '2025-04-08 19:00:00');
 -- 订单金额
 select * from zn_dzg_order_money zdom;
 
@@ -34,6 +36,8 @@ select zdog.goods_name product_name,
        zdog.goods_id product_id,
        zdp.inventory as inventory,
        zdp.spec_name as spec_name,
+       zdp.image_url as image_url,
+       zdp.sale_type as sale_type,
        sum(zdog.goods_num)    sale_num,
        sum(zdog.goods_weight) sale_weight,
        sum(zdog.end_price)    sale_amount,
@@ -52,8 +56,9 @@ from zn_dzg_order_goods zdog
 where zdog.order_id in
       (select zdo.id
        from zn_dzg_order zdo
-       where zdo.status = 2)
-  and zdom.order_type = 1
+       where zdo.status = 2 and zdo.del_flag = 0 and zdo.type = 1
+         and zdo.create_time between '2025-04-07 17:00:00' and '2025-04-08 19:00:00'
+          )
 group by zdog.goods_id;
 
 -- 库存， 规格，
