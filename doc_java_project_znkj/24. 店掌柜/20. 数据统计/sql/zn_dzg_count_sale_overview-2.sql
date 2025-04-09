@@ -22,4 +22,21 @@ select
            as order_visitor_count
 from zn_dzg_order_money zdom
          left join zn_dzg_order zdo on zdo.id = zdom.order_id
-where zdo.status = 2 and zdo.del_flag = 0
+where zdo.status = 2 and zdo.del_flag = 0;
+
+select sum(pay_count),
+       sum(pay_card),
+       sum(pay_outline),
+       sum(pay_online),
+       sum(pay_refund),
+       sum(card_sale_num),
+       sum(card_sale_money),
+       sum(card_recharge_money),
+       sum(order_count),
+       sum(order_member_count),
+       sum(order_visitor_count)
+from zn_dzg_count_sale_overview zdcso
+where zdcso.count_time between  '2025-04-05' and '2025-04-05';
+
+select *
+from zn_dzg_count_sale_overview zdcso;

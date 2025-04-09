@@ -43,3 +43,13 @@ where zdo.id in (1909502340430348289,1909524288883441666,1909545710670364674,190
 select * from zn_dzg_order_money zdom
 where zdom.order_id = 1909546181757812738;
 
+--
+select * from (
+select zdcmc.member_id,zdcmc.member_phone,zdcmc.member_gender, sum(zdcmc.count_amount) count_amount from zn_dzg_count_member_consume zdcmc
+order by zdcmc.member_id
+    ) e
+order by e.count_amount desc;
+
+select * from
+zn_dzg_count_member_consume e;
+

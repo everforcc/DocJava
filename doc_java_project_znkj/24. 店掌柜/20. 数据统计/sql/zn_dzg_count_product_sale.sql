@@ -62,3 +62,13 @@ where zdog.order_id in
 group by zdog.goods_id;
 
 -- ¿â´æ£¬ ¹æ¸ñ£¬
+
+select zdcps.*
+from zn_dzg_count_product_sale zdcps;
+
+select * from(
+select zdcps.product_id ,zdcps.product_name,zdcps.spec_name,zdcps.salt_type, sum(zdcps.sale_num) sale_num, sum(zdcps.sale_weight) sale_weight, sum(zdcps.sale_amount) sale_amount
+from zn_dzg_count_product_sale zdcps
+
+group by zdcps.product_id ) e
+order by e.sale_amount desc;

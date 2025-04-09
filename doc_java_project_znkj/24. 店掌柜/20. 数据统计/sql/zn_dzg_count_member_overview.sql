@@ -25,3 +25,9 @@ where zdo.status = 2
 
 --
 
+select count(zdcmo.count_new),count(zdcmo.count_amount), count(zdcmo.count_order_num)
+from zn_dzg_count_member_overview zdcmo;
+
+select *
+from zn_dzg_count_member_overview zdcmo;
+
