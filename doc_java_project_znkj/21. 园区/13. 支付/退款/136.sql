@@ -12,10 +12,18 @@ SELECT e.other_data,e.create_time,e.* FROM zn_pay_order_record e
 where e.del_flag = 0
 ORDER BY e.create_time DESC;
 
---
+-- 1109167979989442560
 select e.create_time,e.* from zn_pay_order e
 order by e.create_time desc;
 
 SELECT json_unquote(JSON_EXTRACT(e.other_data,'$.hf_seq_id')) as other_data,e.req_date,e.huifuId FROM zn_pay_order_record e
 WHERE    e.pay_amt is not null
 ORDER BY e.create_time DESC;
+
+SELECT json_unquote(JSON_EXTRACT(e.other_data,'$.hf_seq_id')) as other_data,e.req_date,e.huifuId,e.id FROM zn_pay_order_record e
+ORDER BY e.create_time DESC;
+
+-- 1109121844079894528
+select * from zn_pay_order_record zpor
+where zpor.id = 993275434709951409;
+
