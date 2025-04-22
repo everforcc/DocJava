@@ -1,0 +1,9 @@
+delete from zn_dzg_count_card_sale;
+delete from zn_dzg_count_member_consume;
+delete from zn_dzg_count_member_overview;
+delete from zn_dzg_count_product_category;
+delete from zn_dzg_count_product_sale;
+delete from zn_dzg_count_product_stock;
+delete from zn_dzg_count_sale_overview;
+delete from zn_dzg_count_sale_total;
+delete from zn_dzg_count_time;
