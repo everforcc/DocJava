@@ -16,4 +16,12 @@ JSON_INSERT(json_doc, path, val)：向JSON文档中插入数据，但如果路�
 JSON_REMOVE(json_doc, path)：从JSON文档中删除指定路径下的数据。
 ~~~
 
+### 中文key
+
+~~~sql
+select sum(JSON_UNQUOTE(JSON_EXTRACT(data,'$.\"缴费金额\"')))
+from zn_fee_dynamic_data
+where id = 1915755135479365634;
+~~~
+
 </span>

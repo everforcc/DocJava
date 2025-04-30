@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=hardware
+Comment=hardware
+Exec=java -jar /home/znkj/hardware-server-admin.jar
+
+Terminal=false
+MultipulArgs=false
+Type=Application
+Categories=Application;Development;
+StartupNotify=ture
