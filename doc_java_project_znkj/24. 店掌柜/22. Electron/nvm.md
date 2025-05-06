@@ -45,7 +45,7 @@ nvm install 14.17.0
 ~~~
 - 例如
 ~~~
-nvm install 18.20.8
+nvm install 20.19.1
 ~~~
 
 ### 使用指定版本的 Node.js
@@ -56,7 +56,7 @@ nvm install 18.20.8
  nvm use 14.17.0
 ~~~
 ~~~
- nvm use 18.20.8
+ nvm use 20.19.1
 ~~~
 
 ### 6. 验证安装
