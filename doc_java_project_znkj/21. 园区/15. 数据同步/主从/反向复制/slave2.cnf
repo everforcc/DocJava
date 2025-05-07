@@ -1,0 +1,10 @@
+[mysqld]
+server-id=3
+log-bin=mysql-bin
+relay-log=slave-relay-log
+read-only=0
+gtid-mode=ON
+enforce-gtid-consistency=ON
+auto-increment-offset=2
+auto-increment-increment=2
+bind-address=0.0.0.0

@@ -1,0 +1,94 @@
+version: '2.2'
+
+services:
+  mysql-master:
+    image: mysql:8.0
+    container_name: mysql-master
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+    ports:
+      - "3305:3306"
+    volumes:
+      - master_data:/var/lib/mysql
+      - ./master.cnf:/etc/mysql/conf.d/master.cnf
+      - ./init.sh:/docker-entrypoint-initdb.d/init.sh
+    command:
+      [
+          "mysqld",
+          "--server-id=1",
+          "--log-bin=mysql-bin",
+          "--gtid-mode=ON",
+          "--enforce-gtid-consistency=ON",
+          "--bind-address=0.0.0.0",
+          "--character-set-server=utf8mb4",
+          "--collation-server=utf8mb4_unicode_ci",
+          "--default-time-zone=+8:00",
+          "--lower-case-table-names=1"
+      ]
+
+  mysql-slave1:
+    image: mysql:8.0
+    container_name: mysql-slave1
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+    ports:
+      - "3307:3306"
+    volumes:
+      - slave1_data:/var/lib/mysql
+      - ./slave1.cnf:/etc/mysql/conf.d/slave1.cnf
+    depends_on:
+      - mysql-master
+
+    command:
+      [
+          "mysqld",
+          "--server-id=2",
+          "--log-bin=mysql-bin",
+          "--gtid-mode=ON",
+          "--enforce-gtid-consistency=ON",
+          "--relay-log=slave-relay-log",
+          "--read-only=0",
+          "--auto-increment-offset=1",
+          "--auto-increment-increment=2",
+          "--bind-address=0.0.0.0",
+          "--character-set-server=utf8mb4",
+          "--collation-server=utf8mb4_unicode_ci",
+          "--default-time-zone=+8:00",
+          "--lower-case-table-names=1"
+      ]
+
+  mysql-slave2:
+    image: mysql:8.0
+    container_name: mysql-slave2
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+    ports:
+      - "3308:3306"
+    volumes:
+      - slave2_data:/var/lib/mysql
+      - ./slave2.cnf:/etc/mysql/conf.d/slave2.cnf
+    depends_on:
+      - mysql-master
+
+    command:
+      [
+          "mysqld",
+          "--server-id=3",
+          "--log-bin=mysql-bin",
+          "--gtid-mode=ON",
+          "--enforce-gtid-consistency=ON",
+          "--relay-log=slave-relay-log",
+          "--read-only=0",
+          "--auto-increment-offset=2",
+          "--auto-increment-increment=2",
+          "--bind-address=0.0.0.0",
+          "--character-set-server=utf8mb4",
+          "--collation-server=utf8mb4_unicode_ci",
+          "--default-time-zone=+8:00",
+          "--lower-case-table-names=1"
+      ]
+
+volumes:
+  master_data:
+  slave1_data:
+  slave2_data:
