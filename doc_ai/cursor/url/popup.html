@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>请求修改器</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      min-width: 450px;
+      max-width: 650px;
+      padding: 15px;
+      margin: 0;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 15px;
+      background-color: #f5f5f5;
+      padding: 10px;
+      border-radius: 5px;
+      border-bottom: 2px solid #2196F3;
+    }
+    .header h2 {
+      margin: 0;
+      color: #2196F3;
+    }
+    .instruction {
+      background-color: #e3f2fd;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      font-size: 13px;
+      color: #0d47a1;
+    }
+    .rule-item {
+      display: flex;
+      margin-bottom: 15px;
+      align-items: center;
+      flex-wrap: wrap;
+      background-color: #f9f9f9;
+      padding: 10px;
+      border-radius: 5px;
+      border-left: 3px solid #4285f4;
+    }
+    .rule-type-selector {
+      width: 100%;
+      margin-bottom: 8px;
+    }
+    .rule-inputs {
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+    .rule-path-inputs {
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+    input, select {
+      padding: 6px;
+      margin-right: 5px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+    .source-ip, .target-ip {
+      width: 120px;
+    }
+    .source-path, .target-url {
+      flex: 1;
+    }
+    button {
+      padding: 8px 12px;
+      background-color: #4285f4;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      white-space: nowrap;
+      font-weight: 500;
+    }
+    button:hover {
+      background-color: #2b68cc;
+    }
+    button:disabled {
+      background-color: #b0bec5;
+      cursor: not-allowed;
+    }
+    .delete-btn {
+      background-color: #f44336;
+      margin-left: 5px;
+    }
+    .delete-btn:hover {
+      background-color: #d32f2f;
+    }
+    .add-rule {
+      margin-top: 15px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    #save-rules-btn {
+      margin-left: auto;
+      background-color: #4caf50;
+    }
+    #save-rules-btn:hover {
+      background-color: #388e3c;
+    }
+    .status {
+      margin-top: 15px;
+      background-color: #f5f5f5;
+      padding: 10px;
+      border-radius: 5px;
+      min-height: 20px;
+    }
+    /* 开关样式 */
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 40px;
+      height: 20px;
+      margin-right: 10px;
+    }
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: .4s;
+      border-radius: 20px;
+    }
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 16px;
+      width: 16px;
+      left: 2px;
+      bottom: 2px;
+      background-color: white;
+      transition: .4s;
+      border-radius: 50%;
+    }
+    input:checked + .slider {
+      background-color: #2196F3;
+    }
+    input:checked + .slider:before {
+      transform: translateX(20px);
+    }
+    .keep-path {
+      display: flex;
+      align-items: center;
+      margin-left: 10px;
+    }
+    .keep-path input {
+      margin-right: 3px;
+    }
+    code {
+      background-color: #f1f1f1;
+      padding: 2px 4px;
+      border-radius: 3px;
+      font-size: 12px;
+    }
+    .footer {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 12px;
+      color: #757575;
+    }
+    .highlight {
+      font-weight: bold;
+      color: #d32f2f;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h2>请求修改器</h2>
+  </div>
+  
+  <div class="instruction">
+    <strong>使用步骤:</strong>
+    <ol style="margin: 5px 0; padding-left: 25px;">
+      <li>添加路径规则，填写源路径和目标URL</li>
+      <li><span class="highlight">保留路径选项:</span>
+        <ul style="margin: 5px 0;">
+          <li><strong>不勾选</strong> - 仅使用目标URL（如 http://127.0.0.1:8080/xxx）</li>
+          <li><strong>勾选</strong> - 将源路径部分(/prod-api)添加到目标URL（如 http://127.0.0.1:8080/prod-api/xxx）</li>
+        </ul>
+      </li>
+      <li>点击"保存所有规则"应用更改</li>
+      <li><strong style="color: #d32f2f;">重要:</strong> 完全关闭并重新打开浏览器</li>
+    </ol>
+    <div style="margin-top: 8px; border-top: 1px dashed #90caf9; padding-top: 8px;">
+      <strong>问题:</strong> 如果URL显示为 http://127.0.0.1:8080/prod-api/xxx 但您想要 http://127.0.0.1:8080/xxx，请<strong class="highlight">取消勾选</strong>"保留路径"选项。
+    </div>
+  </div>
+  
+  <div id="rules-container">
+    <!-- 规则将在这里动态添加 -->
+  </div>
+  
+  <div class="add-rule">
+    <button id="add-ip-rule-btn">添加IP规则</button>
+    <button id="add-path-rule-btn">添加路径规则</button>
+    <button id="save-rules-btn">保存所有规则</button>
+  </div>
+  
+  <div id="status" class="status"></div>
+  
+  <div class="footer">
+    请求修改器 v1.1 - 支持路径重定向和跨域处理
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html> 

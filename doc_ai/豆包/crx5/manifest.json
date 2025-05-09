@@ -1,0 +1,13 @@
+{
+    "manifest_version": 3,
+    "name": "请求拦截替换插件",
+    "version": "1.0",
+    "description": "拦截并替换请求地址",
+    "permissions": ["webRequest", "storage", "<all_urls>"],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "popup.html"
+    }
+}    
