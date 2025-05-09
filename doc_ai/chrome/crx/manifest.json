@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Request Interceptor",
+  "version": "1.0",
+  "description": "Intercepts and redirects specific requests.",
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "storage",
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  }
+}

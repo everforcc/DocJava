@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>请求修改器</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 20px;
+      width: 500px;
+      height: 500px;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    }
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #2c3e50;
+      text-align: center;
+    }
+    .rule {
+      border: 1px solid #ddd;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      background: white;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .rule h3 {
+      margin-top: 0;
+      color: #34495e;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      color: #666;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 12px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      transition: border-color 0.3s ease;
+    }
+    input[type="text"]:focus {
+      border-color: #3498db;
+      outline: none;
+    }
+    button {
+      padding: 10px 20px;
+      background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+      color: white;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      white-space: nowrap;
+      margin-right: 10px;
+      margin-bottom: 10px; /* 新增：增加按钮之间的垂直间距 */
+      width: 140px;
+      line-height: 20px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    #confirm-rule {
+      background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+    }
+    #confirm-rule:hover {
+      background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+    }
+    .remove-rule {
+      background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+      width: auto;
+      padding: 6px 12px;
+      font-size: 12px;
+    }
+    .remove-rule:hover {
+      background: linear-gradient(135deg, #c0392b 0%, #e74c3c 100%);
+    }
+  </style>
+</head>
+<body>
+  <h1>请求修改器</h1>
+  <div id="rules-container">
+    <!-- Rules will be dynamically added here -->
+  </div>
+  <button id="add-ip-rule">添加IP规则</button>
+  <button id="add-path-rule">添加路径规则</button>
+  <button id="save-rules">保存所有规则</button>
+  <button id="confirm-rule" style="display: none;">确定</button>
+  <script src="popup.js"></script>
+</body>
+</html>

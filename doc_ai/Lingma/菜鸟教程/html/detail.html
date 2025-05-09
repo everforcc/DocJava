@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Runoob.com - Detail</title>
+    <link rel="stylesheet" href="https://unpkg.com/antd/dist/antd.min.css">
+    <style>
+        .container {
+            display: flex;
+            padding: 20px;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #f0f2f5;
+            padding: 10px;
+        }
+        .content {
+            flex: 1;
+            padding-left: 20px;
+        }
+        .card {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@latest/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@latest/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@ant-design/icons/dist/antd.icons.js"></script>
+    <script src="https://unpkg.com/antd/dist/antd.min.js"></script>
+    <script type="text/babel">
+        const { Layout, Menu, Card, Typography } = antd;
+        const { Title, Paragraph } = Typography;
+        const { Header, Sider, Content } = Layout;
+
+        class DetailPage extends React.Component {
+            render() {
+                return (
+                    <Layout style={{ minHeight: '100vh' }}>
+                        <Sider theme="light">
+                            <Menu mode="inline" defaultSelectedKeys={['1']}>
+                                <Menu.Item key="1">HTML 教程</Menu.Item>
+                                <Menu.Item key="2">HTML 简介</Menu.Item>
+                                <Menu.Item key="3">HTML 编辑器</Menu.Item>
+                                {/* ... existing code ... */}
+                            </Menu>
+                        </Sider>
+                        <Layout>
+                            <Header style={{ background: '#7cb342', padding: 0 }}>
+                                <h1 style={{ color: 'white', textAlign: 'center' }}>RUNOOB.COM</h1>
+                            </Header>
+                            <Content style={{ margin: '24px 16px 0' }}>
+                                <div className="site-layout-background" style={{ padding: 24, minHeight: 360 }}>
+                                    <Title level={3}>HTML 教程 - (HTML5 标准)</Title>
+                                    <Paragraph>
+                                        超文本标记语言（英语：HyperText Markup Language，简称：HTML）是一种用于创建网页的标准标记语言。
+                                        您可以使用 HTML 来建立自己的 WEB 站点。HTML 运行在浏览器上，由浏览器来解析。
+                                    </Paragraph>
+                                    {/* ... existing code ... */}
+                                    <Card title="HTML 实例">
+                                        {/* ... existing code ... */}
+                                    </Card>
+                                </div>
+                            </Content>
+                        </Layout>
+                    </Layout>
+                );
+            }
+        }
+
+        ReactDOM.render(<DetailPage />, document.getElementById('root'));
+    </script>
+</body>
+</html>
