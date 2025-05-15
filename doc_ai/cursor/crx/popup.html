@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      width: 500px;
+      min-height: 400px;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .section {
+      background: #fff;
+      border-radius: 8px;
+      padding: 15px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .section-title {
+      font-size: 16px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #eee;
+    }
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 15px;
+    }
+    .input-group:last-child {
+      margin-bottom: 0;
+    }
+    label {
+      font-weight: 500;
+      color: #555;
+      font-size: 14px;
+    }
+    input {
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 14px;
+      transition: border-color 0.3s;
+    }
+    input:focus {
+      outline: none;
+      border-color: #4CAF50;
+      box-shadow: 0 0 0 2px rgba(76,175,80,0.1);
+    }
+    .header-rules {
+      margin-top: 10px;
+    }
+    .header-rule {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+      align-items: center;
+    }
+    .header-rule input {
+      flex: 1;
+    }
+    .header-rule button {
+      padding: 8px 12px;
+      background-color: #dc3545;
+      min-width: 60px;
+    }
+    .add-header-btn {
+      background-color: #007bff;
+      margin-top: 10px;
+      width: 100%;
+    }
+    .add-header-btn:hover {
+      background-color: #0056b3;
+    }
+    .save-btn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 0.3s;
+      width: 100%;
+    }
+    .save-btn:hover {
+      background-color: #45a049;
+      transform: translateY(-1px);
+    }
+    .status {
+      margin-top: 15px;
+      padding: 12px;
+      border-radius: 6px;
+      display: none;
+      font-size: 14px;
+    }
+    .success {
+      background-color: #d4edda;
+      color: #155724;
+      display: block;
+    }
+    .error {
+      background-color: #f8d7da;
+      color: #721c24;
+      display: block;
+    }
+    .example {
+      font-size: 12px;
+      color: #666;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="section">
+      <div class="section-title">URL转发设置</div>
+      <div class="input-group">
+        <label for="sourceUrl">源地址：</label>
+        <input type="text" id="sourceUrl" placeholder="http://192.168.3.8/prod-api/">
+        <div class="example">例如：http://192.168.3.8/prod-api/</div>
+      </div>
+      <div class="input-group">
+        <label for="targetUrl">目标地址：</label>
+        <input type="text" id="targetUrl" placeholder="http://127.0.0.1/">
+        <div class="example">例如：http://127.0.0.1/</div>
+      </div>
+    </div>
+    
+    <div class="section">
+      <div class="section-title">请求头替换规则</div>
+      <div class="header-rules">
+        <div id="headerRulesContainer">
+          <!-- 请求头规则将在这里动态添加 -->
+        </div>
+        <button id="addHeaderBtn" class="add-header-btn">添加请求头规则</button>
+      </div>
+    </div>
+
+    <button id="saveButton" class="save-btn">保存设置</button>
+    <div id="status" class="status"></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html> 
