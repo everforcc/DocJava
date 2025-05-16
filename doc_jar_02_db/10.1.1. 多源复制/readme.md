@@ -1,5 +1,3 @@
-<span  style="font-family: Simsun,serif; font-size: 17px; ">
-
 - 功能
 - mysql多源复制
 
@@ -24,5 +22,4 @@
 - 字段 name varchar(255)
 
 - 脚本放到当前目录
-
-</span>
+- 用10.1.1. 这个版本
