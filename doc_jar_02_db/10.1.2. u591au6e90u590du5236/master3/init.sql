@@ -16,8 +16,5 @@ GRANT REPLICATION SLAVE ON *.* TO 'everforcc'@'%';
 GRANT ALL PRIVILEGES ON db_test_sync.* TO 'everforcc'@'%';
 FLUSH PRIVILEGES;
 
--- u8bbeu7f6eu81eau589eu503cu4ece2000u5f00u59cbuff0cu907fu514du4e0eu5176u4ed6u4e3bu5e93u51b2u7a81
-ALTER TABLE test_sync AUTO_INCREMENT = 2000;
-
 -- u6d4bu8bd5u6570u636e
-INSERT INTO db_test_sync.test_sync (name) VALUES ('master2-data1'); 
+INSERT INTO db_test_sync.test_sync (name) VALUES ('master3-data1'); 

@@ -20,7 +20,7 @@ docker ps | grep mysql
 
 # 设置手动复制
 echo "Setting up replication manually..."
-docker exec mysql-slave mysql -uroot -proot -e "RESET REPLICA ALL; RESET MASTER;"
+docker exec mysql-slave mysql -uroot -proot -e "RESET SLAVE ALL; RESET MASTER;"
 
 # 设置各个通道的复制
 for MASTER in master1 master2 master3; do
@@ -37,14 +37,6 @@ echo "Checking replication status..."
 for MASTER in master1 master2 master3; do
   echo "Status for channel $MASTER:"
   docker exec mysql-slave mysql -uroot -proot -e "SHOW REPLICA STATUS FOR CHANNEL '$MASTER'\G"
-  
-  # 如果发现复制错误，尝试跳过事务
-  IS_ERROR=$(docker exec mysql-slave mysql -uroot -proot -s -e "SELECT COUNT(1) FROM performance_schema.replication_applier_status_by_worker WHERE channel_name='$MASTER' AND last_error_number=1062")
-  if [ "$IS_ERROR" -gt "0" ]; then
-    echo "Detected duplicate key error for channel $MASTER, trying to skip transaction..."
-    docker exec mysql-slave mysql -uroot -proot -e "STOP REPLICA FOR CHANNEL '$MASTER'; SET GLOBAL sql_slave_skip_counter = 1; START REPLICA FOR CHANNEL '$MASTER';"
-    sleep 2
-  fi
 done
 
 # 检查复制数据
