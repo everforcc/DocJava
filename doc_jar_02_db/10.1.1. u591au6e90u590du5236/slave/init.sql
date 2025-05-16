@@ -1,0 +1,32 @@
+-- 创建测试数据库和表
+CREATE DATABASE IF NOT EXISTS db_test_sync;
+USE db_test_sync;
+
+CREATE TABLE IF NOT EXISTS test_sync (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255)
+);
+
+-- 等待主库准备就绪
+system sleep 10;
+
+-- 设置三个主库的复制通道
+CHANGE REPLICATION SOURCE TO SOURCE_HOST='mysql-master1', SOURCE_PORT=3306, 
+    SOURCE_USER='everforcc', SOURCE_PASSWORD='everforcc', 
+    SOURCE_AUTO_POSITION=1 
+FOR CHANNEL 'master1';
+
+CHANGE REPLICATION SOURCE TO SOURCE_HOST='mysql-master2', SOURCE_PORT=3306, 
+    SOURCE_USER='everforcc', SOURCE_PASSWORD='everforcc', 
+    SOURCE_AUTO_POSITION=1 
+FOR CHANNEL 'master2';
+
+CHANGE REPLICATION SOURCE TO SOURCE_HOST='mysql-master3', SOURCE_PORT=3306, 
+    SOURCE_USER='everforcc', SOURCE_PASSWORD='everforcc', 
+    SOURCE_AUTO_POSITION=1 
+FOR CHANNEL 'master3';
+
+-- 启动所有复制通道
+START REPLICA FOR CHANNEL 'master1';
+START REPLICA FOR CHANNEL 'master2';
+START REPLICA FOR CHANNEL 'master3'; 

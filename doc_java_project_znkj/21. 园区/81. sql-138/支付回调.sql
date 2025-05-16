@@ -15,3 +15,7 @@ order by e.create_time desc;
 select e.payment_status,e.zn_device_sn_var,e.paid_amount,e.* from zn_rental_fee_record e
 where e.id = 1901976822777577474;
 
+
+select e.id,count(e.id) from zn_dzg_count_sale_total e group by e.id;
+select  e.id,count(e.id) from zn_dzg_count_product_sale e  group by e.id;
+select  e.id,count(e.id) from zn_dzg_count_card_sale e  group by e.id;
