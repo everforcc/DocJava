@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "MAX_AI - Request Interceptor",
+  "version": "1.0",
+  "description": "Intercepts and redirects requests, supports header replacement",
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
