@@ -16,4 +16,5 @@ GRANT ALL PRIVILEGES ON `ApolloPortalDB`.* TO 'cceverfor'@'%' ;
 GRANT ALL PRIVILEGES ON `rycloud`.* TO 'cceverfor'@'%' ;
 -- nacos
 GRANT ALL PRIVILEGES ON `nacosconfig`.* TO 'cceverfor'@'%' ;
+GRANT ALL PRIVILEGES ON `ai_test`.* TO 'cceverfor'@'%' ;
 flush privileges;
