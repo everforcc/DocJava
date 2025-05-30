@@ -19,7 +19,7 @@ create table zn_pay_huifu_msg
     legal_cert_back_pic        varchar(64)            null comment '法人身份证国徽面',
     legal_cert_back_pic_url    varchar(500)           null comment '法人身份证国徽面url',
     legal_cert_front_pic       varchar(64)            null comment '法人身份证人像面',
-    legal_cert_front_pic_url   varchar(64)            null comment '法人身份证人像面url',
+    legal_cert_front_pic_url   varchar(500)            null comment '法人身份证人像面url',
     contact_name               varchar(32)            null comment '联系人姓名',
     contact_mobile_no          varchar(11)            null comment '联系人手机号',
     contact_email              varchar(32)            null comment '联系人电子邮箱',
