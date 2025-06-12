@@ -1,6 +1,6 @@
 -- 查询哪一天支付要退款的数据
 SELECT e.other_data,e.* FROM zn_pay_order_record e
-WHERE e.req_date = '20241108'
+WHERE e.req_date = '20250611'
 ORDER BY e.create_time DESC;
 
 -- 没有 wm_concat
@@ -14,7 +14,7 @@ SELECT  JSON_EXTRACT(e.other_data, '$.req_seq_id') AS a,
        e.pay_amt
         -- ,e.create_time
 FROM zn_pay_order_record e
--- WHERE e.req_date = '20241108'
+ WHERE e.req_date = '20250611'
 order by e.create_time desc;
 
 -- 联合查询，暂时没用

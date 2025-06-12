@@ -1,0 +1,46 @@
+{
+
+  "regName":"郭凯龙",
+  "mcc":"4814",
+  "sceneType":"OFFLINE",
+  "provId":"410000",
+  "prov":"河南省",
+  "areaId":"410100",
+  "area":"郑州市",
+  "districtId":"410104",
+  "district":"管城回族区",
+  "cardProvId":"410000",
+  "cardProv":"河南省",
+  "detailAddr":"河南省郑州市管城回族区正商华祥国际大厦B座19楼",
+  "legalCertNo":"41018219960126531x",
+  "legalCertBeginDate":"20170619",
+  "legalCertValidityType":"0",
+  "legalCertEndDate":"20270619",
+  "legalAddr": "河南省新密市袁庄乡青河村沟东002号",
+  "legalCertBackPic":"7c15494a-544b-351f-810e-2713b83071fc",
+  "legalCertBackPicUrl":"http://192.168.1.136:9000/test/A0/default/2025/05/28/20250528103819A602.jpg",
+  "legalCertFrontPic":"ead9f625-a40d-3b3d-8ce7-6429de85298f",
+  "legalCertFrontPicUrl":"http://192.168.1.136:9000/test/A0/default/2025/05/28/20250528103819A602.jpg",
+
+  "contactMobileNo":"15738573601",
+  "contactEmail":"718497737@qq.com",
+
+  "loginName":"guokailong07",
+  "contactName":"guokailong",
+
+  "cardName":"郭凯龙",
+  "cardNo":"6217898000003447322",
+  "cardAreaId":"410100",
+  "cardCertType":"00",
+  "cardCertNo":"41018219960126531x",
+  "cardCertValidityType":"0",
+  "cardCertBeginDate":"20170619",
+  "cardCertEndDate":"20270619",
+
+  "storeCashierDeskPic":"881366c7-7be8-3a07-aec8-c9ec8c7607f4",
+  "storeCashierDeskPicUrl":"http://192.168.1.136:9000/test/A0/default/2025/05/28/20250528103819A602.jpg",
+  "storeHeaderPic":"507da3d0-53aa-35f9-a643-fdc16f685a0d",
+  "storeHeaderPicUrl":"http://192.168.1.136:9000/test/A0/default/2025/05/28/20250528103819A602.jpg",
+  "storeIndoorPic":"6ecb4693-7e66-3027-a599-3a3805a2e266",
+  "storeIndoorPicUrl":"http://192.168.1.136:9000/test/A0/default/2025/05/28/20250528103819A602.jpg"
+}
