@@ -46,7 +46,7 @@ where zmc.id in (
     select distinct zaed.camera_id
     from zn_ais_event_data zaed);
 
--- aiot
+
 
 -- plateid
 -- 绑定iot设备和相机
