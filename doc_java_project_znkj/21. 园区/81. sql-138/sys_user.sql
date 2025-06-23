@@ -10,10 +10,22 @@ group by e.phonenumber
 -- 17665222565
 -- 18012345678
 
+-- 1899798393156841474
 select e.*
 from sys_user e
-where e.phonenumber = '15738573601';
+where e.phonenumber = '18511251127' or e.user_name like '%18511251127%' ;
 
+select e.create_time,sur.role_id,e.*
+from sys_user e left join sys_user_role sur on e.user_id = sur.user_id
+order by e.create_time desc;
+
+select e.*
+from sys_user e
+where e.user_id = 1899798393156841474;
+
+select * from sys_role e ;
+select * from sys_user_role sur
+where sur.user_id = 1899798393156841474;
 
 select e.pay_time,e.create_time,e.update_time,e.* from zn_pay_order e
 where

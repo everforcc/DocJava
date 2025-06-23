@@ -24,3 +24,8 @@ select distinct e.camera_id from zn_ais_event_data e;
 
 select zaed.camera_id, count(zaed.camera_id)
 from zn_ais_event_data zaed group by zaed.camera_id;
+
+
+
+
+
