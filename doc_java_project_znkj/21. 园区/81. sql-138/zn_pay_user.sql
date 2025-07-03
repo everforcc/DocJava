@@ -2,14 +2,14 @@
 -- 123456789
 select e.manager_phone,e.* from zn_device_sn e where e.zn_device_sn_var = 'PRE758294763';
 
--- ËÎÀöçæ
+-- å®‹ä¸½ç‚
 -- 1834419293488418817
 -- 6666000154267351
 -- 18012345678
 -- 1027007357944733696
 -- sys_user.id = zn_pay_user.id
 select e.user_id,e.* from sys_user e where e.user_name like '%13103785939';
--- »ã¸¶ ÓÃÕâ¸öid 6666000151824676
+-- æ±‡ä»˜ ç”¨è¿™ä¸ªid 6666000151824676
 --
 
 select e.user_id,e.* from sys_user e
@@ -17,12 +17,12 @@ where e.user_id in (select a.id from zn_pay_user a);
 
 select * from zn_pay_user e where e.id = 1087736343771095040 ;
 -- 18012345678
--- ÖĞÄÏ¿Æ¼¼-ËÎÀöçæ
+-- ä¸­å—ç§‘æŠ€-å®‹ä¸½ç‚
 -- 6666000151824676
 -- 6666000155050910
 -- 6666000154267351
 select * from zn_pay_user e where e.id = 1077596090997547008;
--- ÖĞÄÏ¿Æ¼¼
+-- ä¸­å—ç§‘æŠ€
 select * from zn_pay_user e where e.id = 1027007357944733696 ;
 
 select * from zn_device_sn e  where e.userid in (select a.id from zn_pay_user a) ;
@@ -38,7 +38,7 @@ select * from zn_pay_user e
 where
 e.huifu_id like '6666000154267351%';
 
--- {"resp_desc":"ÉÌ»§[6666000164541083]Î´ÅäÖÃÄ¬ÈÏÕË»§","req_seq_id":"1104139131493163008","req_date":"20250331","resp_code":"22000003","huifu_id":"6666000151824676"}
+-- {"resp_desc":"å•†æˆ·[6666000164541083]æœªé…ç½®é»˜è®¤è´¦æˆ·","req_seq_id":"1104139131493163008","req_date":"20250331","resp_code":"22000003","huifu_id":"6666000151824676"}
 
 -- 6666000155050910
 -- 6666000154267351

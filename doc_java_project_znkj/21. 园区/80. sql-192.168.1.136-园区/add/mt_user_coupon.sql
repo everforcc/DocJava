@@ -1,29 +1,29 @@
 -- auto-generated definition
 create table mt_user_coupon
 (
-    ID               int								comment '×ÔÔöID',
-    sn      varchar(255) collate utf8mb4_unicode_ci null comment 'Éè±¸±àºÅ',
-    CODE        varchar(32)    default ''   not null comment '±àÂë',
-    TYPE        char           default 'C'  not null comment 'È¯ÀàĞÍ£¬CÓÅ»İÈ¯£»PÔ¤´æ¿¨£»T¼¯´Î¿¨',
-    IMAGE       text                        null comment 'Ğ§¹ûÍ¼',
-    GROUP_ID    int            default 0    not null comment 'È¯×éID',
-    COUPON_ID   int            default 0    not null comment 'È¯ID',
-    MOBILE      varchar(20)    default ''   null comment 'ÓÃ»§ÊÖ»úºÅÂë',
-    USER_ID     int            default 0    null comment 'ÓÃ»§ID',
-    MERCHANT_ID int            default 0    null comment 'ÉÌ»§ID',
-    STORE_ID    int            default 0    null comment 'Ê¹ÓÃµêÆÌID',
-    AMOUNT      decimal(10, 2) default 0.00 null comment 'Ãæ¶î',
-    BALANCE     decimal(10, 2) default 0.00 null comment 'Óà¶î',
-    STATUS      char           default '1'  not null comment '×´Ì¬£ºA£ºÎ´Ê¹ÓÃ£»B£ºÒÑÊ¹ÓÃ£»C£ºÒÑ¹ıÆÚ; D£ºÒÑÉ¾³ı£»E£ºÎ´ÁìÈ¡',
-    USED_TIME   datetime                    null comment 'Ê¹ÓÃÊ±¼ä',
-    CREATE_TIME datetime                    null comment '´´½¨Ê±¼ä',
-    UPDATE_TIME datetime                    null comment '¸üĞÂÊ±¼ä',
-    EXPIRE_TIME datetime                    null comment '¹ıÆÚÊ±¼ä',
-    OPERATOR    varchar(30)    default ''   null comment '×îºó²Ù×÷ÈË',
-    UUID        varchar(50)    default ''   null comment 'µ¼ÈëUUID',
-    ORDER_ID    int            default 0    null comment '¶©µ¥ID'
+    ID               int								comment 'è‡ªå¢ID',
+    sn      varchar(255) collate utf8mb4_unicode_ci null comment 'è®¾å¤‡ç¼–å·',
+    CODE        varchar(32)    default ''   not null comment 'ç¼–ç ',
+    TYPE        char           default 'C'  not null comment 'åˆ¸ç±»å‹ï¼ŒCä¼˜æƒ åˆ¸ï¼›Pé¢„å­˜å¡ï¼›Té›†æ¬¡å¡',
+    IMAGE       text                        null comment 'æ•ˆæœå›¾',
+    GROUP_ID    int            default 0    not null comment 'åˆ¸ç»„ID',
+    COUPON_ID   int            default 0    not null comment 'åˆ¸ID',
+    MOBILE      varchar(20)    default ''   null comment 'ç”¨æˆ·æ‰‹æœºå·ç ',
+    USER_ID     int            default 0    null comment 'ç”¨æˆ·ID',
+    MERCHANT_ID int            default 0    null comment 'å•†æˆ·ID',
+    STORE_ID    int            default 0    null comment 'ä½¿ç”¨åº—é“ºID',
+    AMOUNT      decimal(10, 2) default 0.00 null comment 'é¢é¢',
+    BALANCE     decimal(10, 2) default 0.00 null comment 'ä½™é¢',
+    STATUS      char           default '1'  not null comment 'çŠ¶æ€ï¼šAï¼šæœªä½¿ç”¨ï¼›Bï¼šå·²ä½¿ç”¨ï¼›Cï¼šå·²è¿‡æœŸ; Dï¼šå·²åˆ é™¤ï¼›Eï¼šæœªé¢†å–',
+    USED_TIME   datetime                    null comment 'ä½¿ç”¨æ—¶é—´',
+    CREATE_TIME datetime                    null comment 'åˆ›å»ºæ—¶é—´',
+    UPDATE_TIME datetime                    null comment 'æ›´æ–°æ—¶é—´',
+    EXPIRE_TIME datetime                    null comment 'è¿‡æœŸæ—¶é—´',
+    OPERATOR    varchar(30)    default ''   null comment 'æœ€åæ“ä½œäºº',
+    UUID        varchar(50)    default ''   null comment 'å¯¼å…¥UUID',
+    ORDER_ID    int            default 0    null comment 'è®¢å•ID'
 )
-    comment '»áÔ±¿¨È¯±í' charset = utf8mb3;
+    comment 'ä¼šå‘˜å¡åˆ¸è¡¨' charset = utf8mb3;
 
 create index index_code
     on mt_user_coupon (CODE);

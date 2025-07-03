@@ -1,36 +1,87 @@
-# Windows 10 ÏÂÅúÁ¿½«GBK±àÂëÎÄ¼ş×ª»»ÎªUTF-8²Ù×÷Á÷³Ì£¨ÊÊÓÃÓÚIntelliJ IDEAÏîÄ¿£©
+# Windows ä¸‹æ‰¹é‡å°†GBKç¼–ç æ–‡ä»¶å®‰å…¨è½¬æ¢ä¸ºUTF-8æ“ä½œæµç¨‹
 
-## 1. ±¸·İÏîÄ¿
-ÔÚ½øĞĞÅúÁ¿×ª»»Ç°£¬½¨ÒéÏÈ±¸·İÄãµÄÏîÄ¿ÎÄ¼ş£¬ÒÔ·ÀÖ¹ÒâÍâÇé¿öµ¼ÖÂÊı¾İ¶ªÊ§¡£
-
-## 2. ´ò¿ªPowerShell
-ÔÚÏîÄ¿¸ùÄ¿Â¼ÏÂ£¬°´×¡Shift¼ü²¢ÓÒ¼üµã»÷¿Õ°×´¦£¬Ñ¡Ôñ¡°ÔÚ´Ë´¦´ò¿ªPowerShell´°¿Ú¡±¡£
-
-## 3. Ö´ĞĞÅúÁ¿×ª»»½Å±¾
-ÒÔÏÂ½Å±¾»á½«µ±Ç°Ä¿Â¼¼°ËùÓĞ×ÓÄ¿Â¼ÏÂµÄ`.java`¡¢`.txt`¡¢`.md`ÎÄ¼ş´ÓGBK±àÂë×ª»»ÎªUTF-8±àÂë£º
-
-```powershell
-Get-ChildItem -Recurse -Include *.java,*.txt,*.md | ForEach-Object {
-    $content = Get-Content $_.FullName -Encoding Default
-    Set-Content $_.FullName -Value $content -Encoding UTF8
-}
-```
-
-- `-Include` ºó¿É¸ù¾İĞèÒªÌí¼Ó»òÉ¾³ıÎÄ¼şÀàĞÍ¡£
-- `-Encoding Default` ÔÚÖĞÎÄWindowsÏÂÍ¨³£¶ÔÓ¦GBK±àÂë¡£
-- ¸Ã½Å±¾»á**¸²¸ÇÔ­ÎÄ¼ş**£¬ÇëÈ·±£ÒÑ×öºÃ±¸·İ¡£
-
-## 4. IDEAÖĞÍ³Ò»±àÂëÉèÖÃÎªUTF-8
-1. ´ò¿ª IntelliJ IDEA¡£
-2. ÒÀ´Î½øÈë `File` ¡ú `Settings` ¡ú `Editor` ¡ú `File Encodings`¡£
-3. ½«¡°Global Encoding¡±¡¢¡°Project Encoding¡±¡¢¡°Default encoding for properties files¡±¶¼ÉèÖÃÎª `UTF-8`¡£
-4. ¹´Ñ¡¡°Transparent native-to-ascii conversion¡±¡£
-5. ÖØÆôIDEA¡£
-
-## 5. ÑéÖ¤
-- Ëæ»ú´ò¿ªÔ­±¾ÎªGBKµÄÎÄ¼ş£¬È·ÈÏÖĞÎÄÎ´³öÏÖÂÒÂë¡£
-- ÈçÓĞÂÒÂë£¬ËµÃ÷¸ÃÎÄ¼şÔ­±¾²»ÊÇGBK±àÂë£¬ĞèÊÖ¶¯ĞŞ¸´¡£
+## é—®é¢˜è¯´æ˜
+ç›´æ¥ç”¨ PowerShell è„šæœ¬æ‰¹é‡è½¬ç ä¼šå¯¼è‡´åŸæœ¬æ˜¯UTF-8çš„æ–‡ä»¶ä¹±ç ã€‚æ­£ç¡®åšæ³•æ˜¯ï¼š**åªè½¬æ¢GBKæ–‡ä»¶ï¼Œè·³è¿‡UTF-8æ–‡ä»¶**ã€‚
 
 ---
 
-ÈçĞè´¦ÀíÆäËûÎÄ¼şÀàĞÍ»òÓĞÌØÊâĞèÇó£¬¿ÉĞŞ¸Ä½Å±¾ÖĞµÄÎÄ¼şÀàĞÍ¡£
+## æ–¹æ³•ä¸€ï¼šPowerShell è„šæœ¬ï¼ˆä»…è·³è¿‡å¸¦BOMçš„UTF-8æ–‡ä»¶ï¼‰
+
+1. åœ¨é¡¹ç›®æ ¹ç›®å½•ä¸‹ï¼ŒæŒ‰ä½Shiftå³é”®ï¼Œé€‰æ‹©"åœ¨æ­¤å¤„æ‰“å¼€PowerShellçª—å£"ã€‚
+2. æ‰§è¡Œä»¥ä¸‹è„šæœ¬ï¼š
+
+```powershell
+Get-ChildItem -Recurse -Include *.java,*.txt,*.md,*.sql | ForEach-Object {
+    $bytes = [System.IO.File]::ReadAllBytes($_.FullName)
+    # æ£€æŸ¥UTF-8 BOMå¤´
+    if ($bytes.Length -ge 3 -and $bytes[0] -eq 0xEF -and $bytes[1] -eq 0xBB -and $bytes[2] -eq 0xBF) {
+        Write-Host "è·³è¿‡UTF-8å¸¦BOMæ–‡ä»¶ï¼š$($_.FullName)"
+    } else {
+        try {
+            $content = Get-Content $_.FullName -Encoding Default
+            Set-Content $_.FullName -Value $content -Encoding UTF8
+            Write-Host "å·²è½¬æ¢ï¼š$($_.FullName)"
+        } catch {
+            Write-Host "è·³è¿‡æ–‡ä»¶ï¼š$($_.FullName)ï¼ˆæ— æƒé™æˆ–è¢«å ç”¨ï¼‰"
+        }
+    }
+}
+```
+
+> æ³¨æ„ï¼šæ­¤æ–¹æ³•åªèƒ½è·³è¿‡å¸¦BOMçš„UTF-8æ–‡ä»¶ï¼Œä¸èƒ½100%è¯†åˆ«æ— BOMçš„UTF-8æ–‡ä»¶ã€‚
+
+---
+
+## æ–¹æ³•äºŒï¼šPython è„šæœ¬ï¼ˆæ¨èï¼Œè‡ªåŠ¨è¯†åˆ«ç¼–ç ï¼Œä¿ç•™æ¢è¡Œæ ¼å¼ï¼‰
+
+1. å®‰è£…ä¾èµ–ï¼ˆéœ€å®‰è£…Pythonå’Œchardetåº“ï¼‰ï¼š
+   ```bash
+   pip install chardet
+   ```
+2. åœ¨é¡¹ç›®æ ¹ç›®å½•ä¸‹æ–°å»º `convert_gbk_to_utf8.py`ï¼Œå†™å…¥ä»¥ä¸‹å†…å®¹ï¼š
+
+   ```python
+   import chardet
+   import os
+
+   def convert_file(filepath):
+       with open(filepath, 'rb') as f:
+           raw = f.read()
+       result = chardet.detect(raw)
+       encoding = result['encoding']
+       if encoding and encoding.lower() in ['gbk', 'gb2312', 'gb18030']:
+           try:
+               text = raw.decode(encoding)
+               # ä¿æŒWindowsæ¢è¡Œç¬¦æ ¼å¼
+               with open(filepath, 'w', encoding='utf-8', newline='') as f:
+                   f.write(text)
+               print(f"å·²è½¬æ¢: {filepath}")
+           except Exception as e:
+               print(f"è·³è¿‡: {filepath}ï¼ŒåŸå› : {e}")
+
+   for root, dirs, files in os.walk('.'):
+       for name in files:
+           if name.endswith(('.java', '.txt', '.md', '.sql')):
+               convert_file(os.path.join(root, name))
+   ```
+
+   - å…³é”®ç‚¹ï¼š`open(filepath, 'w', encoding='utf-8', newline='')` ä¿è¯æ¢è¡Œç¬¦ä¸è¢«è‡ªåŠ¨è½¬æ¢ï¼Œæœ€å¤§ç¨‹åº¦ä¿ç•™åŸæ–‡ä»¶æ ¼å¼ã€‚
+
+3. åœ¨å‘½ä»¤è¡Œè¿è¡Œï¼š
+   ```bash
+   python convert_gbk_to_utf8.py
+   ```
+
+---
+
+## æ–¹æ³•ä¸‰ï¼šNotepad++ æ‰¹é‡æ£€æµ‹å’Œè½¬æ¢
+1. ç”¨ Notepad++ æ‰“å¼€æ–‡ä»¶å¤¹ï¼Œæ‰¹é‡æŸ¥æ‰¾"ç¼–ç "åˆ—ä¸º"ANSI"çš„æ–‡ä»¶ï¼ˆé€šå¸¸æ˜¯GBKï¼‰ã€‚
+2. é€‰ä¸­è¿™äº›æ–‡ä»¶ï¼Œæ‰¹é‡è½¬æ¢ä¸ºUTF-8ã€‚
+
+---
+
+## æ€»ç»“
+- æ¨èç”¨Pythonè„šæœ¬è‡ªåŠ¨è¯†åˆ«ç¼–ç ï¼Œæœ€å®‰å…¨ã€‚
+- PowerShellæ–¹æ³•åªèƒ½è·³è¿‡å¸¦BOMçš„UTF-8ï¼Œä¸èƒ½100%é¿å…è¯¯è½¬ç ã€‚
+- è½¬æ¢å‰è¯·åŠ¡å¿…å¤‡ä»½æ–‡ä»¶ã€‚
+- Pythonè„šæœ¬å»ºè®®ç”¨ä¸Šé¢ä¿®æ­£ç‰ˆï¼Œä¿è¯è½¬ç åæ–‡ä»¶æ ¼å¼ä¸ä¹±ã€‚

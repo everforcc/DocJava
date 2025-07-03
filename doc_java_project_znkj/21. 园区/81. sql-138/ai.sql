@@ -10,10 +10,10 @@ order by zpor.create_time desc ;
 
 
 select * from zn_pay_order_record zpor
-where zpor.goods_desc = 'ÖªÊ¶¿âÐø·Ñ'
+where zpor.goods_desc = 'çŸ¥è¯†åº“ç»­è´¹'
 order by zpor.create_time desc ;
 
 
 select * from zn_pay_order_record zpor
-where zpor.goods_desc = 'ÖªÊ¶¿âÐø·Ñ'
+where zpor.goods_desc = 'çŸ¥è¯†åº“ç»­è´¹'
 order by zpor.create_time desc ;

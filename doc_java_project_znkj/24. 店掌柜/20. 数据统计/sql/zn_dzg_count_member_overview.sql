@@ -1,13 +1,13 @@
 -- zn_dzg_count_member_overview
 
--- ĞÂÔö»áÔ±Êı
+-- æ–°å¢ä¼šå‘˜æ•°
 select *
 from zn_dzg_member zdm
 where zdm.del_flag = 0
   and zdm.create_time between '2025-04-07 17:00:00' and '2025-04-08 19:00:00'
 ;
 
--- ½»Ò×¶î, ½»Ò×¶©µ¥ÊıÁ¿
+-- äº¤æ˜“é¢, äº¤æ˜“è®¢å•æ•°é‡
 select sum(1) count_order_num,
        sum(zdom.amount) count_amount
 from zn_dzg_order zdo

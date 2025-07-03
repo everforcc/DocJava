@@ -1,5 +1,5 @@
 
--- ÉÌÆ·
+-- å•†å“
 select *
 from zn_dzg_product e
 where e.id = 1894221408124956674
@@ -8,11 +8,11 @@ where e.id = 1894221408124956674
 select * from zn_dzg_card_member e ;
 SELECT *
 FROM zn_dzg_product e
-WHERE e.name like '%¿ÉÀÖ%';
+WHERE e.name like '%å¯ä¹%';
 
 select * from zn_dzg_card_member_product e ;
 
--- ¼ÛÇ©
+-- ä»·ç­¾
 -- 8795687210500
 select *
 from zn_dzg_price_tag e
@@ -22,21 +22,21 @@ where e.code = 1;
 -- 1894217210645868545 1894217458202079234 1894217471640629249
 -- 234
 -- 1894217513076158466
--- ¹ºÎï³µ
+-- è´­ç‰©è½¦
 select *
 from zn_dzg_cart e;
 
--- ĞÂÔö¹ºÎï³µ±àºÅ
+-- æ–°å¢è´­ç‰©è½¦ç¼–å·
 select e.num
 from zn_dzg_cart e
 where e.num not in (1, 2, 3, 4);
 
 
--- ¹ºÎï³µÉÌÆ·
+-- è´­ç‰©è½¦å•†å“
 select *
 from zn_dzg_cart_goods e;
 
--- ĞÂÔö¹ºÎï³µÉÌÆ·£¬¼ÆËã¼Û¸ñ
+-- æ–°å¢è´­ç‰©è½¦å•†å“ï¼Œè®¡ç®—ä»·æ ¼
 UPDATE zn_dzg_cart_goods
 SET goods_end_price = goods_unit_price * (goods_num + 1),
     goods_num   = goods_num + 1

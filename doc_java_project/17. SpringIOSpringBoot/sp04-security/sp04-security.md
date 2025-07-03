@@ -3,7 +3,7 @@
 ### sp04-security
 
 ~~~
-- springsecurityµÄ¼òµ¥Ó¦ÓÃ
+- springsecurityçš„ç®€å•åº”ç”¨
 ~~~
 
 </span>

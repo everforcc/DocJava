@@ -1,5 +1,5 @@
 
--- Ëã·¨ÀàĞÍ(1Ä¿±êÊ¶±ğ¡¢2ÌØÕ÷¼ì²â)
+-- ç®—æ³•ç±»å‹(1ç›®æ ‡è¯†åˆ«ã€2ç‰¹å¾æ£€æµ‹)
 select e.id,e.algorithm_type,e.* from zn_algorithms_model e ;
 
 -- 27
@@ -8,10 +8,10 @@ select e.core_id,e.* from zn_algorithms_model e ;
 select * from zn_algorithms_config e
 where e.core_id = 27;
 
--- ¿É½ÓÈëËã·¨´ÎÊı
--- Êı¾İÀ´Ô´²»Ò»Ñù
+-- å¯æ¥å…¥ç®—æ³•æ¬¡æ•°
+-- æ•°æ®æ¥æºä¸ä¸€æ ·
 SELECT e.algorithms_allow,e.algorithm_type,e.* FROM zn_algorithms_model e
 WHERE e.del_flag=0
   AND e.algorithm_type = 1 AND e.id <> 1866378124951154688;
--- ¿É½ÓÈëËã·¨´ÎÊı
--- Ëã·¨²¿Êğ´ÎÊı: /×ó±ßÁĞ±íµÄÖµ
+-- å¯æ¥å…¥ç®—æ³•æ¬¡æ•°
+-- ç®—æ³•éƒ¨ç½²æ¬¡æ•°: /å·¦è¾¹åˆ—è¡¨çš„å€¼

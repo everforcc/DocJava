@@ -11,6 +11,6 @@
 </dependency>
 ~~~
 
-- µ×²ãÄ¬ÈÏµÄ¾ÍÊÇ spring-rabbit
+- åº•å±‚é»˜è®¤çš„å°±æ˜¯ spring-rabbit
 
 </span> 

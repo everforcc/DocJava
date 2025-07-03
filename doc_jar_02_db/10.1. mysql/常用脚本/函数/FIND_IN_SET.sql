@@ -1,7 +1,7 @@
--- 查找字符串在set中的位置
+-- 鏌ユ壘瀛楃涓插湪set涓殑浣嶇疆
 -- 3
 SELECT FIND_IN_SET('1', '2,21,1,4');
 -- 0
 SELECT FIND_IN_SET('1', '2,21,0,4');
--- 两个参数任意一个为null，就返回null
+-- 涓や釜鍙傛暟浠绘剰涓�涓负null锛屽氨杩斿洖null
 SELECT FIND_IN_SET('1', NULL);

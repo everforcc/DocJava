@@ -4,18 +4,18 @@ select * from zn_event_process_rule e ;
 select e.group_id,e.manual_watch,e.del_flag,e.* from zn_device_lease e
 where e.zn_device_sn_var = 'csff001';
 
--- ÖØÖÃ²âÊÔÊı¾İÎª¿É²éÑ¯
+-- é‡ç½®æµ‹è¯•æ•°æ®ä¸ºå¯æŸ¥è¯¢
 select zaedd.status,zaedd.create_time,zaedd.process_id,zaedd.* from zn_ais_event_data_details_operate zaedd
 where zaedd.zn_device_sn_var = 'csff001';
 
--- ÖØÖÃÄ³¸öÉè±¸ÏÂµÄËùÓĞÊÂ¼ş
+-- é‡ç½®æŸä¸ªè®¾å¤‡ä¸‹çš„æ‰€æœ‰äº‹ä»¶
 update zn_ais_event_data_details_operate
 set process_id=null,
     status = 0,
     create_time=now()
 where zn_device_sn_var = 'csff001';
 
--- ÇÀµ¥Êı¾İ
+-- æŠ¢å•æ•°æ®
 update zn_ais_event_data_details_operate
 set zn_device_sn_var = 'csqd001',
     status = 0,
@@ -29,7 +29,7 @@ set process_id= null,
     create_time=now()
 where id in (11,12,13,14,15,16,17,18,19,20,21);
 
--- ÖØÖÃÊÂ¼ş
+-- é‡ç½®äº‹ä»¶
 update zn_ais_event_data_details_operate
 set zn_device_sn_var = 'csff001',
     process_id=null,
@@ -41,7 +41,7 @@ set zn_device_sn_var = 'csff001',
     create_time=now()
 where id in  (87,88,89,90,91,92,93,94,95,96);
 
--- ·Ö·¢Êı¾İ
+-- åˆ†å‘æ•°æ®
 update zn_ais_event_data_details_operate
 set process_id=null,
     zn_device_sn_var = 'csff001',
@@ -55,23 +55,23 @@ where e.user_phone in
                        '11111111114', '11111111115','13133333331','14444444444');
 select e.* from zn_event_process_staff_group e;
 
--- ²âÊÔÊı¾İ
+-- æµ‹è¯•æ•°æ®
 -- dealer_id
--- 123456789 ÅÉµ¥
--- ÈËÔ±
+-- 123456789 æ´¾å•
+-- äººå‘˜
     -- 11111111111
     -- 11111111112
     -- 11111111113
--- 987654321 ÇÀµ¥
--- ÈËÔ±
+-- 987654321 æŠ¢å•
+-- äººå‘˜
     -- 11111111114
     -- 11111111115
--- ÇÀµ¥×é
+-- æŠ¢å•ç»„
     -- 1875392811901046784
     -- 1875392811901046785
     -- sn
     -- 202409141746018331
 
--- ÔÆ¶Ë Èë¿âÇ°Ğ£Ñé
+-- äº‘ç«¯ å…¥åº“å‰æ ¡éªŒ
 select * from zn_device_sn e where e.zn_device_sn_var = 'csqd001';
 select * from zn_channel e where e.zn_device_sn_var = 'csqd001';

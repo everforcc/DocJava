@@ -1,16 +1,16 @@
 select e.COUPON_ID,e.USER_ID,e.ORDER_ID,e.STATUS,e.* from mt_confirm_log e
 where e.ORDER_ID = 180;
 
--- ¿¨È¯ºËÏúÁ÷Ë®£¬°´ÕÕÊ±¼äµ¹ÐòÅÅÁÐ
-select e.CREATE_TIME, e.USER_COUPON_ID, e.ORDER_ID as '¶©µ¥ID', e.*
+-- å¡åˆ¸æ ¸é”€æµæ°´ï¼ŒæŒ‰ç…§æ—¶é—´å€’åºæŽ’åˆ—
+select e.CREATE_TIME, e.USER_COUPON_ID, e.ORDER_ID as 'è®¢å•ID', e.*
 from mt_confirm_log e
 order by e.CREATE_TIME desc;
 
--- Í³¼ÆºËÏú´ÎÊý
+-- ç»Ÿè®¡æ ¸é”€æ¬¡æ•°
 select count(e.ORDER_ID), e.ORDER_ID from mt_confirm_log e
 group by e.ORDER_ID;
 
--- ²éÑ¯¾ßÌåµÄ¶©µ¥
+-- æŸ¥è¯¢å…·ä½“çš„è®¢å•
 select e.PAY_STATUS, e.COUPON_ID, e.*
 from mt_order e
 where e.ID = 178;

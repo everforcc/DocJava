@@ -1,9 +1,9 @@
 <span  style="font-family: Simsun,serif; font-size: 17px; ">
 
-- ͳһ����
-- ubuntu ��װָ���汾 nodejs
+- 统一领吗
+- ubuntu 安装指定版本 nodejs
 
-### ��װ nvm
+### 安装 nvm
 
 ~~~
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
@@ -13,15 +13,15 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash     
 ~~~
 
-### ���� nvm
+### 加载 nvm
 
-- Ϊ��ʹ nvm �����ڵ�ǰ�Ự�п��ã���Ҫ������������
+- 为了使 nvm 命令在当前会话中可用，需要运行以下命令
 ~~~
      export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
      [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
      
 ~~~
-- ��Ҳ���Խ������������ӵ���� ~/.bashrc �� ~/.zshrc �ļ��У��Ա�ÿ�δ��ն�ʱ�Զ����� nvm��
+- 你也可以将上述命令添加到你的 ~/.bashrc 或 ~/.zshrc 文件中，以便每次打开终端时自动加载 nvm：
 ~~~
      echo 'export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"' >> ~/.bashrc
      echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> ~/.bashrc
@@ -29,28 +29,28 @@ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
      
 ~~~
 
-### �г����õ� Node.js �汾
+### 列出可用的 Node.js 版本
 
-- ���������������鿴���п��õ� Node.js �汾��
+- 运行以下命令来查看所有可用的 Node.js 版本：
 
 ~~~
 nvm ls-remote     
 ~~~
 
-### ��װָ���汾�� Node.js
+### 安装指定版本的 Node.js
 
-- ѡ������Ҫ�İ汾����װ�����磬Ҫ��װ Node.js 14.17.0�����У�
+- 选择你需要的版本并安装。例如，要安装 Node.js 14.17.0，运行：
 ~~~
 nvm install 14.17.0
 ~~~
-- ����
+- 例如
 ~~~
 nvm install 20.19.1
 ~~~
 
-### ʹ��ָ���汾�� Node.js
+### 使用指定版本的 Node.js
 
-- ��װ��ɺ������ʹ�������������л���ָ���汾��
+- 安装完成后，你可以使用以下命令来切换到指定版本：
 
 ~~~
  nvm use 14.17.0
@@ -59,7 +59,7 @@ nvm install 20.19.1
  nvm use 20.19.1
 ~~~
 
-### 6. ��֤��װ
+### 6. 验证安装
 
 ~~~
      node -v

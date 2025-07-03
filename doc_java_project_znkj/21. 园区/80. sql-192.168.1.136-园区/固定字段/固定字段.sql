@@ -1,9 +1,9 @@
-ALTER TABLE `zn_pay_apply_progress` ADD        remark          varchar(255)                           null comment '±¸×¢';
-ALTER TABLE `zn_pay_apply_progress` ADD         create_id       bigint                                 null comment '´´½¨ÕßID';
-ALTER TABLE `zn_pay_apply_progress` ADD         create_by       varchar(64) charset utf8mb4 default '' null comment '´´½¨Õß';
-ALTER TABLE `zn_pay_apply_progress` ADD         create_time     datetime                               null comment '´´½¨Ê±¼ä';
-ALTER TABLE `zn_pay_apply_progress` ADD         create_dept     bigint                                 null comment '´´½¨²¿ÃÅ';
-ALTER TABLE `zn_pay_apply_progress` ADD         update_id       bigint                                 null comment '¸üÐÂÕßID';
-ALTER TABLE `zn_pay_apply_progress` ADD         update_by       varchar(64) charset utf8mb4 default '' null comment '¸üÐÂÕß';
-ALTER TABLE `zn_pay_apply_progress` ADD         update_time     datetime                               null comment '¸üÐÂÊ±¼ä';
+ALTER TABLE `zn_pay_apply_progress` ADD        remark          varchar(255)                           null comment 'å¤‡æ³¨';
+ALTER TABLE `zn_pay_apply_progress` ADD         create_id       bigint                                 null comment 'åˆ›å»ºè€…ID';
+ALTER TABLE `zn_pay_apply_progress` ADD         create_by       varchar(64) charset utf8mb4 default '' null comment 'åˆ›å»ºè€…';
+ALTER TABLE `zn_pay_apply_progress` ADD         create_time     datetime                               null comment 'åˆ›å»ºæ—¶é—´';
+ALTER TABLE `zn_pay_apply_progress` ADD         create_dept     bigint                                 null comment 'åˆ›å»ºéƒ¨é—¨';
+ALTER TABLE `zn_pay_apply_progress` ADD         update_id       bigint                                 null comment 'æ›´æ–°è€…ID';
+ALTER TABLE `zn_pay_apply_progress` ADD         update_by       varchar(64) charset utf8mb4 default '' null comment 'æ›´æ–°è€…';
+ALTER TABLE `zn_pay_apply_progress` ADD         update_time     datetime                               null comment 'æ›´æ–°æ—¶é—´';
 ALTER TABLE `zn_pay_apply_progress` ADD         del_flag        tinyint(1)                  default 0  null;

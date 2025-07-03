@@ -1,13 +1,13 @@
 
--- ¹ã¸æ±í
+-- å¹¿å‘Šè¡¨
 SELECT e.del_flag,e.status,e.* FROM zn_cashier_adver e;
--- ÓÅ»İÈ¯±í
+-- ä¼˜æƒ åˆ¸è¡¨
 SELECT e.del_flag,e.status,e.* FROM zn_cashier_card e ORDER BY e.id DESC;
--- ÓÅ»İÈ¯ºÍµêÆÌ¹ØÁª±í
+-- ä¼˜æƒ åˆ¸å’Œåº—é“ºå…³è”è¡¨
 SELECT e.* FROM zn_cashier_card_store e ORDER BY e.id DESC;
 
--- Í¬²½±í
--- ÓÃ»§±í
+-- åŒæ­¥è¡¨
+-- ç”¨æˆ·è¡¨
 SELECT * FROM mt_user ;
 SELECT * FROM mt_store ;
 SELECT * FROM mt_user_coupon ;

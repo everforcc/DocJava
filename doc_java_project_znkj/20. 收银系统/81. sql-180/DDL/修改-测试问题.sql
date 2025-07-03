@@ -1,2 +1,2 @@
--- VARCHAR(20) ĞŞ¸ÄÎª 100
-ALTER TABLE t_account MODIFY account_name   varchar(100)  default '' not null comment 'ÕË»§Ãû³Æ';
+-- VARCHAR(20) ä¿®æ”¹ä¸º 100
+ALTER TABLE t_account MODIFY account_name   varchar(100)  default '' not null comment 'è´¦æˆ·åç§°';

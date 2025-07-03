@@ -1,10 +1,10 @@
 <span  style="font-family: Simsun,serif; font-size: 17px; ">
 
-- ²Î¿¼ oneforall´úÂë
+- å‚è€ƒ oneforallä»£ç 
 
 ~~~
     /**
-     * 1. ¼¯Èº
+     * 1. é›†ç¾¤
      */
     @Bean
     public RedissonClient redissonClientCluster() {

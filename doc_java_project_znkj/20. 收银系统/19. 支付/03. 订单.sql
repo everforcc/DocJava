@@ -1,17 +1,17 @@
 
--- ÔÆ¶Ë136
+-- äº‘ç«¯136
 select e.order_json,e.* from zn_pay_order e
 where e.order_type = 4;
 
 select e.order_json,JSON_UNQUOTE(JSON_EXTRACT(e.order_json,'$.authCode')),e.order_type,e.* from zn_pay_order e
 where e.status = 1 and e.order_json is not null;
 
--- ½»Ò×ÀàĞÍT_MICROPAY: Î¢ĞÅ·´É¨
--- A_MICROPAY: Ö§¸¶±¦·´É¨
--- U_MICROPAY: ÒøÁª·´É¨
--- D_MICROPAY: Êı×ÖÈËÃñ±Ò·´É¨
--- Ê¾ÀıÖµ£ºA_NATIVE Ö§¸¶±¦·´É¨
+-- äº¤æ˜“ç±»å‹T_MICROPAY: å¾®ä¿¡åæ‰«
+-- A_MICROPAY: æ”¯ä»˜å®åæ‰«
+-- U_MICROPAY: é“¶è”åæ‰«
+-- D_MICROPAY: æ•°å­—äººæ°‘å¸åæ‰«
+-- ç¤ºä¾‹å€¼ï¼šA_NATIVE æ”¯ä»˜å®åæ‰«
 select e.trade_type,e.other_data,e.* from zn_pay_order_record e ;
 
--- ÍË¿î
+-- é€€æ¬¾
 select * from zn_pay_order_refund e ;

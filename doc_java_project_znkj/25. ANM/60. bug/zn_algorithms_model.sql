@@ -1,4 +1,4 @@
--- ¿É½ÓÈëËã·¨´ÎÊı
+-- å¯æ¥å…¥ç®—æ³•æ¬¡æ•°
 -- 128
 SELECT e.`algorithms_allow`,e.algorithm_type,e.core_type, e.*
 FROM zn_algorithms_model e

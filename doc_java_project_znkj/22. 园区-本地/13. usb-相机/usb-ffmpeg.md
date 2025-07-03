@@ -2,8 +2,8 @@
 
 ### nginx
 
-- ÔÚwindows»·¾³ÖÐ
-- Ê¹ÓÃÕâÐÐ½Å±¾ÍÆÁ÷ºó£¬ÑÓ³Ù³¬¹ý10s£¬ÓÅ»¯½Å±¾»òÕßnginx£¬Ê¹ÆäÑÓ³ÙÔÚ1sÒÔÄÚ
-- Èç¹ûÐèÒªÆäËû °æ±¾µÄnginx£¬ÇëÌá¹©ÅäÖÃÎÄ¼þºÍÏÂÔØÁ´½Ó
+- åœ¨windowsçŽ¯å¢ƒä¸­
+- ä½¿ç”¨è¿™è¡Œè„šæœ¬æŽ¨æµåŽï¼Œå»¶è¿Ÿè¶…è¿‡10sï¼Œä¼˜åŒ–è„šæœ¬æˆ–è€…nginxï¼Œä½¿å…¶å»¶è¿Ÿåœ¨1sä»¥å†…
+- å¦‚æžœéœ€è¦å…¶ä»– ç‰ˆæœ¬çš„nginxï¼Œè¯·æä¾›é…ç½®æ–‡ä»¶å’Œä¸‹è½½é“¾æŽ¥
 
 </span>

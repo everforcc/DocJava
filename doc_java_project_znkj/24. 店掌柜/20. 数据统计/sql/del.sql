@@ -24,7 +24,7 @@ where zdo.status in (2, 4) -- and zdo.del_flag = 0
   and zdo.member_id is not null
   and zdo.create_time between '2025-04-28 00:00:00' and '2025-04-29 00:00:00';
 
--- 云端数据同步
+-- 浜戠鏁版嵁鍚屾
 update zn_dzg_count_card_sale set up_flag = 0 , up_count = 0;
 update zn_dzg_count_product_sale set up_flag = 0 , up_count = 0;
 update zn_dzg_count_sale_total set up_flag = 0 , up_count = 0;

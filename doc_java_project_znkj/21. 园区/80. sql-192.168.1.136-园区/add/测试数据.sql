@@ -7,8 +7,8 @@ where e.sn = '666688887777';
 select * from mt_store e
 where e.sn = '666688887777';
 
--- ¼Æ´Î¿¨
+-- è®¡æ¬¡å¡
 select * from mt_coupon e ;
 select * from mt_user_coupon e ;
--- ¿¨È¯ºËÏú¼ÇÂ¼
+-- å¡åˆ¸æ ¸é”€è®°å½•
 select * from mt_confirm_log e ;

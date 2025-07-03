@@ -3,17 +3,17 @@ create table zn_dzg_user_protocol
 (
     id          bigint               not null comment 'id'
         primary key,
-    type        int                  null comment '1 ÓÃ»§Ğ­Òé 2 ÒşË½Ğ­Òé',
-    content     text                 null comment 'ÄÚÈİ',
-    remark      varchar(255)         null comment '±¸×¢',
-    create_id   bigint               null comment '´´½¨ÈËid',
-    create_by   varchar(32)          null comment '´´½¨ÈË',
-    create_time datetime             null comment '´´½¨Ê±¼ä',
-    create_dept bigint               null comment '´´½¨²¿ÃÅ',
-    update_id   bigint               null comment '¸üĞÂÈËid',
-    update_by   varchar(32)          null comment '¸üĞÂÈË',
-    update_time datetime             null comment '¸üĞÂÊ±¼ä',
-    del_flag    tinyint(1) default 0 null comment 'É¾³ı±êÖ¾£¨0´ú±í´æÔÚ 2´ú±íÉ¾³ı£©'
+    type        int                  null comment '1 ç”¨æˆ·åè®® 2 éšç§åè®®',
+    content     text                 null comment 'å†…å®¹',
+    remark      varchar(255)         null comment 'å¤‡æ³¨',
+    create_id   bigint               null comment 'åˆ›å»ºäººid',
+    create_by   varchar(32)          null comment 'åˆ›å»ºäºº',
+    create_time datetime             null comment 'åˆ›å»ºæ—¶é—´',
+    create_dept bigint               null comment 'åˆ›å»ºéƒ¨é—¨',
+    update_id   bigint               null comment 'æ›´æ–°äººid',
+    update_by   varchar(32)          null comment 'æ›´æ–°äºº',
+    update_time datetime             null comment 'æ›´æ–°æ—¶é—´',
+    del_flag    tinyint(1) default 0 null comment 'åˆ é™¤æ ‡å¿—ï¼ˆ0ä»£è¡¨å­˜åœ¨ 2ä»£è¡¨åˆ é™¤ï¼‰'
 )
-    comment 'µêÕÆ¹ñÓÃ»§Ğ­Òé';
+    comment 'åº—æŒæŸœç”¨æˆ·åè®®';
 

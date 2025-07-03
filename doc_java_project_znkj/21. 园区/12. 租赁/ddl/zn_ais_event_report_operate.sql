@@ -1,11 +1,11 @@
 -- del
--- ´íÁË²»ÓÃÕâ¸ö
+-- é”™äº†ä¸ç”¨è¿™ä¸ª
 
 
--- Í¬²½±í
+-- åŒæ­¥è¡¨
 select * from zn_ais_event_report e ;
 -- show create table zn_ais_event_report;
--- ²Ù×÷±í
+-- æ“ä½œè¡¨
 # select * from zn_ais_event_report_operate;
 # drop table zn_ais_event_report_operate;
 --
@@ -16,33 +16,33 @@ select id, zn_device_sn_var, group_name, report_type, report_content_json, repor
 -- auto-generated definition
 CREATE TABLE `zn_ais_event_report_operate`
 (
-    `id`                           bigint(20) NOT NULL COMMENT 'Ö÷¼ü±àºÅ',
-    `zn_device_sn_var`             varchar(255) DEFAULT NULL COMMENT 'Éè±¸±àºÅ',
-    `group_name`                   varchar(255) DEFAULT NULL COMMENT '¸æ¾¯×éÃû³Æ',
-    `report_type`                  tinyint(1)   DEFAULT NULL COMMENT 'ÉÏ±¨ÀàĞÍ£¨0ÊÂ¼ş¸æ¾¯£¬1Í³¼ÆÉÏ±¨£©',
-    `report_content_json`          json         DEFAULT NULL COMMENT 'ÉÏ±¨ÄÚÈİjson´®',
-    `report_camera_json`           json         DEFAULT NULL COMMENT 'ÉÏ±¨Ñ¡ÔñµÄÏà»újson´®',
-    `report_algorithm_json`        json         DEFAULT NULL COMMENT 'ÉÏ±¨Ñ¡ÔñµÄËã·¨json´®',
-    `report_algorithm_camera_json` varchar(255) DEFAULT NULL COMMENT 'ÉÏ±¨Ñ¡ÔñµÄËã·¨¡¢Ïà»újson´®[{"algorithmId":"123123","cameraId":[123,111]}]',
-    `report_user_json`             json         DEFAULT NULL COMMENT 'ÉÏ±¨ÈËÔ±json´®[{"userId":1,"userName":"¹ÜÀíÔ±"}]',
-    `statistics_interval`          int(11)      DEFAULT NULL COMMENT 'Í³¼ÆÉÏ±¨¼ä¸ô£¨x·ÖÖÓÉÏ±¨Ò»´Î£©',
-    `statistics_time_json`         json         DEFAULT NULL COMMENT 'Í³¼ÆÉÏ±¨Ê±¼ä',
-    `remark`                       varchar(255) DEFAULT NULL COMMENT '±¸×¢',
-    `create_id`                    bigint(20)   DEFAULT NULL COMMENT '´´½¨ÕßID',
-    `create_by`                    varchar(64)  DEFAULT '' COMMENT '´´½¨Õß',
-    `create_time`                  datetime     DEFAULT NULL COMMENT '´´½¨Ê±¼ä',
-    `create_dept`                  bigint(20)   DEFAULT NULL COMMENT '´´½¨²¿ÃÅ',
-    `update_id`                    bigint(20)   DEFAULT NULL COMMENT '¸üĞÂÕßID',
-    `update_by`                    varchar(64)  DEFAULT '' COMMENT '¸üĞÂÕß',
-    `update_time`                  datetime     DEFAULT NULL COMMENT '¸üĞÂÊ±¼ä',
-    `del_flag`                     tinyint(1)   DEFAULT '0' COMMENT 'É¾³ı±êÖ¾£¨0´ú±í´æÔÚ 1´ú±íÉ¾³ı£©',
-    `up_flag`                      int(11)      DEFAULT '0' COMMENT '0 Î´ÉÏ´« 1 ÉÏ´«ÖĞ 2 ÒÑÉÏ´«',
-    `up_count`                     int(11)      DEFAULT '0' COMMENT 'ÉÏ´«´ÎÊı',
-    `up_msg`                       varchar(255) DEFAULT NULL COMMENT 'ÉÏ´«ĞÅÏ¢',
-    `up_id`                        varchar(200) DEFAULT NULL COMMENT 'ÉÏ´«ID',
+    `id`                           bigint(20) NOT NULL COMMENT 'ä¸»é”®ç¼–å·',
+    `zn_device_sn_var`             varchar(255) DEFAULT NULL COMMENT 'è®¾å¤‡ç¼–å·',
+    `group_name`                   varchar(255) DEFAULT NULL COMMENT 'å‘Šè­¦ç»„åç§°',
+    `report_type`                  tinyint(1)   DEFAULT NULL COMMENT 'ä¸ŠæŠ¥ç±»å‹ï¼ˆ0äº‹ä»¶å‘Šè­¦ï¼Œ1ç»Ÿè®¡ä¸ŠæŠ¥ï¼‰',
+    `report_content_json`          json         DEFAULT NULL COMMENT 'ä¸ŠæŠ¥å†…å®¹jsonä¸²',
+    `report_camera_json`           json         DEFAULT NULL COMMENT 'ä¸ŠæŠ¥é€‰æ‹©çš„ç›¸æœºjsonä¸²',
+    `report_algorithm_json`        json         DEFAULT NULL COMMENT 'ä¸ŠæŠ¥é€‰æ‹©çš„ç®—æ³•jsonä¸²',
+    `report_algorithm_camera_json` varchar(255) DEFAULT NULL COMMENT 'ä¸ŠæŠ¥é€‰æ‹©çš„ç®—æ³•ã€ç›¸æœºjsonä¸²[{"algorithmId":"123123","cameraId":[123,111]}]',
+    `report_user_json`             json         DEFAULT NULL COMMENT 'ä¸ŠæŠ¥äººå‘˜jsonä¸²[{"userId":1,"userName":"ç®¡ç†å‘˜"}]',
+    `statistics_interval`          int(11)      DEFAULT NULL COMMENT 'ç»Ÿè®¡ä¸ŠæŠ¥é—´éš”ï¼ˆxåˆ†é’Ÿä¸ŠæŠ¥ä¸€æ¬¡ï¼‰',
+    `statistics_time_json`         json         DEFAULT NULL COMMENT 'ç»Ÿè®¡ä¸ŠæŠ¥æ—¶é—´',
+    `remark`                       varchar(255) DEFAULT NULL COMMENT 'å¤‡æ³¨',
+    `create_id`                    bigint(20)   DEFAULT NULL COMMENT 'åˆ›å»ºè€…ID',
+    `create_by`                    varchar(64)  DEFAULT '' COMMENT 'åˆ›å»ºè€…',
+    `create_time`                  datetime     DEFAULT NULL COMMENT 'åˆ›å»ºæ—¶é—´',
+    `create_dept`                  bigint(20)   DEFAULT NULL COMMENT 'åˆ›å»ºéƒ¨é—¨',
+    `update_id`                    bigint(20)   DEFAULT NULL COMMENT 'æ›´æ–°è€…ID',
+    `update_by`                    varchar(64)  DEFAULT '' COMMENT 'æ›´æ–°è€…',
+    `update_time`                  datetime     DEFAULT NULL COMMENT 'æ›´æ–°æ—¶é—´',
+    `del_flag`                     tinyint(1)   DEFAULT '0' COMMENT 'åˆ é™¤æ ‡å¿—ï¼ˆ0ä»£è¡¨å­˜åœ¨ 1ä»£è¡¨åˆ é™¤ï¼‰',
+    `up_flag`                      int(11)      DEFAULT '0' COMMENT '0 æœªä¸Šä¼  1 ä¸Šä¼ ä¸­ 2 å·²ä¸Šä¼ ',
+    `up_count`                     int(11)      DEFAULT '0' COMMENT 'ä¸Šä¼ æ¬¡æ•°',
+    `up_msg`                       varchar(255) DEFAULT NULL COMMENT 'ä¸Šä¼ ä¿¡æ¯',
+    `up_id`                        varchar(200) DEFAULT NULL COMMENT 'ä¸Šä¼ ID',
     PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4
-    comment 'ÊÂ¼şĞÅÏ¢ÉÏ±¨¾ßÌå²Ù×÷¶ÔÏó';
+    comment 'äº‹ä»¶ä¿¡æ¯ä¸ŠæŠ¥å…·ä½“æ“ä½œå¯¹è±¡';
 
 

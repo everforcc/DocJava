@@ -1,10 +1,10 @@
--- mysqlÐÐ×ªÁÐ
--- group_concat( [DISTINCT] ÐèÒªÁ¬½ÓµÄ×Ö¶Î [Order BY ÅÅÐò×Ö¶Î ASC/DESC] [Separator ¡®·Ö¸ô·û¡¯] )
+-- mysqlè¡Œè½¬åˆ—
+-- group_concat( [DISTINCT] éœ€è¦è¿žæŽ¥çš„å­—æ®µ [Order BY æŽ’åºå­—æ®µ ASC/DESC] [Separator â€˜åˆ†éš”ç¬¦â€™] )
 -- SEPARATOR
--- ²âÊÔÓï·¨
+-- æµ‹è¯•è¯­æ³•
 SELECT GROUP_CONCAT(DISTINCT e.dict_name ORDER BY e.`dict_id` DESC SEPARATOR'\n\n')
 FROM sys_dict_type e;
 
--- ×é×°×Ö·û´®
+-- ç»„è£…å­—ç¬¦ä¸²
 SELECT GROUP_CONCAT(CONCAT('// ', e.dict_name,'\n','public static final String ', UPPER(e.dict_type), " = \"", e.`dict_type`, "\" ;")SEPARATOR'\n\n')
 FROM sys_dict_type e;

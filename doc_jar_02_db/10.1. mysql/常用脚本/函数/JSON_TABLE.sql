@@ -16,7 +16,7 @@ SELECT
 FROM zn_user,
      (SELECT 0 AS idx UNION ALL SELECT 1 UNION ALL SELECT 2 UNION ALL SELECT 3 UNION ALL SELECT 4
       UNION ALL SELECT 5 UNION ALL SELECT 6 UNION ALL SELECT 7 UNION ALL SELECT 8 UNION ALL SELECT 9
-         -- ... ¿É¸ù¾ÝÐèÒªÀ©Õ¹¸ü¶àÊý×Ö (×î¶à99)
+         -- ... å¯æ ¹æ®éœ€è¦æ‰©å±•æ›´å¤šæ•°å­— (æœ€å¤š99)
      ) AS indexes
 WHERE
         idx < JSON_LENGTH(zn_user.labels_json)

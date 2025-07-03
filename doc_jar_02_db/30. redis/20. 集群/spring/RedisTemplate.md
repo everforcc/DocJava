@@ -1,7 +1,7 @@
 <span  style="font-family: Simsun,serif; font-size: 17px; ">
 
-- ²Î¿¼ oneforall´úÂë
-- µ¥»úºÍ¼¯Èº²»ĞèÒª¸Ä¶¯´úÂë
+- å‚è€ƒ oneforallä»£ç 
+- å•æœºå’Œé›†ç¾¤ä¸éœ€è¦æ”¹åŠ¨ä»£ç 
 
 ~~~java
 import com.alibaba.fastjson.support.spring.FastJsonRedisSerializer;
@@ -19,12 +19,12 @@ public class RedisTemplateConfig {
     @ConditionalOnMissingBean
     public RedisTemplate<Object,Object> redisTemplate(RedisConnectionFactory redisConnectionFactory){
         RedisTemplate<Object,Object> template = new RedisTemplate<>();
-        // Ê¹ÓÃfastjsonĞòÁĞ»¯
+        // ä½¿ç”¨fastjsonåºåˆ—åŒ–
         FastJsonRedisSerializer fastJsonRedisSerializer = new FastJsonRedisSerializer(Object.class);
-        // valueµÄÖµĞòÁĞ»¯²ÉÓÃfastJsonRedisSerializer
+        // valueçš„å€¼åºåˆ—åŒ–é‡‡ç”¨fastJsonRedisSerializer
         template.setValueSerializer(fastJsonRedisSerializer);
         template.setHashValueSerializer(fastJsonRedisSerializer);
-        // keyµÄĞòÁĞ»¯²ÉÓÃ
+        // keyçš„åºåˆ—åŒ–é‡‡ç”¨
         template.setKeySerializer(new StringRedisSerializer());
         template.setHashKeySerializer(new StringRedisSerializer());
         template.setConnectionFactory(redisConnectionFactory);

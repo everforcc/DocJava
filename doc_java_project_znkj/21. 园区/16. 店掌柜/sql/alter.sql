@@ -1,12 +1,12 @@
--- 3. Ôö¼Ó×Ö¶Î
+-- 3. å¢žåŠ å­—æ®µ
 
 
-ALTER TABLE `zn_dzg_user_protocol` ADD    remark           varchar(255)                            null comment '±¸×¢';
-ALTER TABLE `zn_dzg_user_protocol` ADD    create_id        bigint                                  null comment '´´½¨ÈËid';
-ALTER TABLE `zn_dzg_user_protocol` ADD    create_by        varchar(32)                             null comment '´´½¨ÈË';
-ALTER TABLE `zn_dzg_user_protocol` ADD    create_time      datetime                                null comment '´´½¨Ê±¼ä';
-ALTER TABLE `zn_dzg_user_protocol` ADD    create_dept      bigint                                  null comment '´´½¨²¿ÃÅ';
-ALTER TABLE `zn_dzg_user_protocol` ADD    update_id        bigint                                  null comment '¸üÐÂÈËid';
-ALTER TABLE `zn_dzg_user_protocol` ADD    update_by        varchar(32)                             null comment '¸üÐÂÈË';
-ALTER TABLE `zn_dzg_user_protocol` ADD    update_time      datetime                                null comment '¸üÐÂÊ±¼ä';
-ALTER TABLE `zn_dzg_user_protocol` ADD    del_flag         tinyint(1) default 0                    null comment 'É¾³ý±êÖ¾£¨0´ú±í´æÔÚ 2´ú±íÉ¾³ý£©';
+ALTER TABLE `zn_dzg_user_protocol` ADD    remark           varchar(255)                            null comment 'å¤‡æ³¨';
+ALTER TABLE `zn_dzg_user_protocol` ADD    create_id        bigint                                  null comment 'åˆ›å»ºäººid';
+ALTER TABLE `zn_dzg_user_protocol` ADD    create_by        varchar(32)                             null comment 'åˆ›å»ºäºº';
+ALTER TABLE `zn_dzg_user_protocol` ADD    create_time      datetime                                null comment 'åˆ›å»ºæ—¶é—´';
+ALTER TABLE `zn_dzg_user_protocol` ADD    create_dept      bigint                                  null comment 'åˆ›å»ºéƒ¨é—¨';
+ALTER TABLE `zn_dzg_user_protocol` ADD    update_id        bigint                                  null comment 'æ›´æ–°äººid';
+ALTER TABLE `zn_dzg_user_protocol` ADD    update_by        varchar(32)                             null comment 'æ›´æ–°äºº';
+ALTER TABLE `zn_dzg_user_protocol` ADD    update_time      datetime                                null comment 'æ›´æ–°æ—¶é—´';
+ALTER TABLE `zn_dzg_user_protocol` ADD    del_flag         tinyint(1) default 0                    null comment 'åˆ é™¤æ ‡å¿—ï¼ˆ0ä»£è¡¨å­˜åœ¨ 2ä»£è¡¨åˆ é™¤ï¼‰';

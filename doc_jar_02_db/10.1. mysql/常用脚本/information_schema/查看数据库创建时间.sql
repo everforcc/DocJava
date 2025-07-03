@@ -1,4 +1,4 @@
--- �鿴���ݿⴴ��ʱ��
+-- 查看数据库创建时间
 SELECT *
 FROM INFORMATION_SCHEMA.TABLES
 WHERE TABLE_NAME = 'mt_coupon'

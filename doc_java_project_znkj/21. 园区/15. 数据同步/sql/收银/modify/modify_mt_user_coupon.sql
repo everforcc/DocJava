@@ -1,4 +1,4 @@
--- 1. 查看创建脚本
+-- 1. 鏌ョ湅鍒涘缓鑴氭湰
 show create table mt_user_coupon;
 
 -- 2.

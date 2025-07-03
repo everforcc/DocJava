@@ -11,11 +11,11 @@ CREATE PROCEDURE InsertTestData2()
 BEGIN
     DECLARE i INT DEFAULT 1;
     WHILE i <= 10000 DO
-            INSERT INTO test_sync(id,name) VALUES (i+200000,CONCAT('s2Ñ­»·', i));
+            INSERT INTO test_sync(id,name) VALUES (i+200000,CONCAT('s2å¾ªçŽ¯', i));
             SET i = i + 1;
         END WHILE;
 END$$
 DELIMITER ;
 
--- Ö´ÐÐ´æ´¢¹ý³Ì
+-- æ‰§è¡Œå­˜å‚¨è¿‡ç¨‹
 CALL InsertTestData2();

@@ -2,19 +2,19 @@
 
 ### @RestControllerAdvice
 
-- ��������404���ȷ��ʵ����⣬�ӹ�spring�Զ���
+- 用来处理404，等访问的问题，接管spring自定义
 
 ### @ExceptionHandler(Exception.class)
 
-- ��������ȫ�ֵ��쳣
-- ��Ҫ��Ϸ���ע��
-- yml��������
+- 用来捕获全局的异常
+- 需要配合方法注解
+- yml调整配置
 
 ~~~yml
-# �Զ���404
-# ���ִ���ʱ, ֱ���׳��쳣
+# 自定义404
+# 出现错误时, 直接抛出异常
 spring.mvc.throw-exception-if-no-handler-found=true
-  # ��ҪΪ���ǹ����е���Դ�ļ�����ӳ��
+  # 不要为我们工程中的资源文件建立映射
 spring.resources.add-mappings=false
 ~~~
 

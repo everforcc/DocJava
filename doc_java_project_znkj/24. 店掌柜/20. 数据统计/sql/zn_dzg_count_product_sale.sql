@@ -1,21 +1,21 @@
--- ÉÌÆ·ÏúÊÛ¼ÇÂ¼
+-- å•†å“é”€å”®è®°å½•
 -- zn_dzg_count_product_sale
 
--- ¶©µ¥
+-- è®¢å•
 select * from zn_dzg_order zdo
 where zdo.status = 2;
 
--- ¶©µ¥ÉÌÆ·
+-- è®¢å•å•†å“
 select * from zn_dzg_order_goods zdog
 where zdog.order_id in
       (select zdo.id
        from zn_dzg_order zdo
        where zdo.status = 2 and zdo.del_flag = 0 and zdo.type = 1
          and zdo.create_time between '2025-04-07 17:00:00' and '2025-04-08 19:00:00');
--- ¶©µ¥½ğ¶î
+-- è®¢å•é‡‘é¢
 select * from zn_dzg_order_money zdom;
 
--- ¶©µ¥ºÍÉÌÆ·¹ØÁª
+-- è®¢å•å’Œå•†å“å…³è”
 select zdog.*
 from zn_dzg_order_goods zdog
 where zdog.order_id in
@@ -24,14 +24,14 @@ where zdog.order_id in
        where zdo.status = 2)
 group by zdog.goods_id;
 
--- ¶©µ¥ºÍ½ğ¶î¹ØÁª
+-- è®¢å•å’Œé‡‘é¢å…³è”
 select *
 from zn_dzg_order_goods zdog
          left join zn_dzg_order_money zdom on zdog.order_id = zdom.order_id
 where zdom.order_type = 2;
 
 
--- ¿¨È¯£¬ÏßÉÏ£¬ÏßÏÂ CASE when
+-- å¡åˆ¸ï¼Œçº¿ä¸Šï¼Œçº¿ä¸‹ CASE when
 select zdog.goods_name product_name,
        zdog.goods_id product_id,
        zdp.inventory as inventory,
@@ -61,7 +61,7 @@ where zdog.order_id in
           )
 group by zdog.goods_id;
 
--- ¿â´æ£¬ ¹æ¸ñ£¬
+-- åº“å­˜ï¼Œ è§„æ ¼ï¼Œ
 
 select zdcps.*
 from zn_dzg_count_product_sale zdcps;

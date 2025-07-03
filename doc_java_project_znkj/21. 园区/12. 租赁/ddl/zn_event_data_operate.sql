@@ -1,62 +1,62 @@
 -- del
--- ´íÁË²»ÓÃÕâ¸ö
+-- é”™äº†ä¸ç”¨è¿™ä¸ª
 
 
 select * from zn_event_data e ;
 show create table zn_event_data;
 
--- Êı¾İÇ¨ÒÆ
+-- æ•°æ®è¿ç§»
 # drop table zn_event_data_operate;
 # select * from zn_event_data_operate e ;
 insert into zn_event_data_operate (id, zn_device_sn_var, algorithm_id, algorithm_name, camera_id, event_begin_end, position_x, position_y, position_w, position_h, probability, object_num, model_type, event_address, event_info, image_path, videl_path, core_id, status, deal_back_type, process_id, process_name, process_time, process_price, process_voice, process_text, mistake_flag, transparent, deal_user_ids, create_time, del_flag, create_id, create_by, create_dept, update_id, update_by, update_time, remark, up_flag, up_count, up_msg, up_id)
 select id, zn_device_sn_var, algorithm_id, algorithm_name, camera_id, event_begin_end, position_x, position_y, position_w, position_h, probability, object_num, model_type, event_address, event_info, image_path, videl_path, core_id, status, deal_back_type, process_id, process_name, process_time, process_price, process_voice, process_text, mistake_flag, transparent, deal_user_ids, create_time, del_flag, create_id, create_by, create_dept, update_id, update_by, update_time, remark, up_flag, up_count, up_msg, up_id from zn_event_data;
 
 
--- ´´½¨½Å±¾
+-- åˆ›å»ºè„šæœ¬
 CREATE TABLE `zn_event_data_operate`
 (
-    `id`               bigint(20)   NOT NULL COMMENT 'Ö÷¼ü',
-    `zn_device_sn_var` varchar(255) NOT NULL COMMENT 'Éè±¸±àºÅ',
-    `algorithm_id`     bigint(20)   DEFAULT NULL COMMENT 'Ëã·¨±àºÅ',
-    `algorithm_name`   varchar(255) DEFAULT NULL COMMENT 'Ëã·¨Ãû³Æ',
-    `camera_id`        bigint(20)   DEFAULT NULL COMMENT 'Ïà»ú±àºÅ',
-    `event_begin_end`  tinyint(1)   DEFAULT NULL COMMENT 'ÊÂ¼ş¿ªÊ¼½áÊø±êÊ¶£¨1¿ªÊ¼£¬2½áÊø£©',
-    `position_x`       varchar(32)  DEFAULT NULL COMMENT 'ÏñËØÎ»ÖÃX×ø±ê',
-    `position_y`       varchar(32)  DEFAULT NULL COMMENT 'ÏñËØÎ»ÖÃY×ø±ê',
-    `position_w`       varchar(32)  DEFAULT NULL COMMENT 'Ä¿±êÏñËØ¿í',
-    `position_h`       varchar(32)  DEFAULT NULL COMMENT 'Ä¿±êÏñËØ¸ß',
-    `probability`      varchar(64)  DEFAULT NULL COMMENT '¸ÅÂÊ',
-    `object_num`       int(11)      DEFAULT NULL COMMENT 'Ä¿±êÊıÁ¿',
-    `model_type`       tinyint(1)   DEFAULT NULL COMMENT 'Ä£ĞÍÀàĞÍ',
-    `event_address`    varchar(200) DEFAULT NULL COMMENT 'ÊÂ¼şµØµã',
-    `event_info`       text COMMENT 'ÊÂ¼şÏêÇé',
-    `image_path`       text COMMENT 'Í¼Æ¬ÎÄ¼şµØÖ·',
-    `videl_path`       varchar(500) DEFAULT NULL COMMENT 'ÊÓÆµÎÄ¼şµØÖ·',
-    `core_id`          bigint(20)   DEFAULT NULL COMMENT 'ºËĞÄ±àºÅ',
-    `status`           tinyint(1)   DEFAULT NULL COMMENT 'ÊÂ¼ş×´Ì¬£¨0´ı´¦ÖÃ¡¢1´¦ÖÃÖĞ¡¢2ÒÑ´¦ÖÃ£©',
-    `deal_back_type`   char(1)      DEFAULT '0' COMMENT '´¦ÖÃ»ØÖ´·½Ê½£º0ÎÄ×Ö¡¢1Í¼Æ¬¡¢2ÓïÒô',
-    `process_id`       bigint(20)   DEFAULT NULL COMMENT '´¦ÀíÈË±àºÅ',
-    `process_name`     varchar(64)  DEFAULT NULL COMMENT '´¦ÀíÈËÃû³Æ',
-    `process_time`     datetime     DEFAULT NULL COMMENT '´¦ÀíÊ±¼ä',
-    `process_price`    varchar(255) DEFAULT NULL COMMENT '´¦ÖÃÍ¼Æ¬',
-    `process_voice`    text COMMENT '´¦ÖÃÓïÒô',
-    `process_text`     varchar(255) DEFAULT NULL COMMENT 'ÁôÑÔ',
-    `mistake_flag`     tinyint(1)   DEFAULT NULL COMMENT 'Îó±¨±ê¼Ç£¨0ÕıÈ·ÊÂ¼ş£¬1Îó±¨ÊÂ¼ş£©',
-    `transparent`      text COMMENT 'Í¸´«×Ö¶Î',
-    `deal_user_ids`    text COMMENT '¿É´¦ÀíÈËID£¨¶ººÅ·Ö¸ô£©',
-    `create_time`      datetime     DEFAULT NULL COMMENT 'Èë¿âÊ±¼ä',
-    `del_flag`         tinyint(1)   DEFAULT NULL COMMENT 'É¾³ı±ê¼Ç',
-    `create_id`        bigint(20)   DEFAULT NULL COMMENT '´´½¨Õßid',
-    `create_by`        varchar(32)  DEFAULT NULL COMMENT '´´½¨Õß',
-    `create_dept`      bigint(20)   DEFAULT NULL COMMENT '´´½¨²¿ÃÅ',
-    `update_id`        bigint(20)   DEFAULT NULL COMMENT '¸üĞÂÕßid',
-    `update_by`        varchar(32)  DEFAULT NULL COMMENT '¸üĞÂÕß',
-    `update_time`      datetime     DEFAULT NULL COMMENT '¸üĞÂÊ±¼ä',
-    `remark`           varchar(500) DEFAULT NULL COMMENT '±¸×¢',
-    `up_flag`          int(11)      DEFAULT NULL COMMENT '0Î´ÉÏ´«¡¢1ÉÏ´«ÖĞ¡¢2ÒÑÉÏ´«',
-    `up_count`         int(11)      DEFAULT NULL COMMENT 'ÉÏ´«´ÎÊı',
-    `up_msg`           varchar(255) DEFAULT NULL COMMENT 'ÉÏ´«ĞÅÏ¢',
-    `up_id`            varchar(255) DEFAULT NULL COMMENT 'ÉÏ´«ID',
+    `id`               bigint(20)   NOT NULL COMMENT 'ä¸»é”®',
+    `zn_device_sn_var` varchar(255) NOT NULL COMMENT 'è®¾å¤‡ç¼–å·',
+    `algorithm_id`     bigint(20)   DEFAULT NULL COMMENT 'ç®—æ³•ç¼–å·',
+    `algorithm_name`   varchar(255) DEFAULT NULL COMMENT 'ç®—æ³•åç§°',
+    `camera_id`        bigint(20)   DEFAULT NULL COMMENT 'ç›¸æœºç¼–å·',
+    `event_begin_end`  tinyint(1)   DEFAULT NULL COMMENT 'äº‹ä»¶å¼€å§‹ç»“æŸæ ‡è¯†ï¼ˆ1å¼€å§‹ï¼Œ2ç»“æŸï¼‰',
+    `position_x`       varchar(32)  DEFAULT NULL COMMENT 'åƒç´ ä½ç½®Xåæ ‡',
+    `position_y`       varchar(32)  DEFAULT NULL COMMENT 'åƒç´ ä½ç½®Yåæ ‡',
+    `position_w`       varchar(32)  DEFAULT NULL COMMENT 'ç›®æ ‡åƒç´ å®½',
+    `position_h`       varchar(32)  DEFAULT NULL COMMENT 'ç›®æ ‡åƒç´ é«˜',
+    `probability`      varchar(64)  DEFAULT NULL COMMENT 'æ¦‚ç‡',
+    `object_num`       int(11)      DEFAULT NULL COMMENT 'ç›®æ ‡æ•°é‡',
+    `model_type`       tinyint(1)   DEFAULT NULL COMMENT 'æ¨¡å‹ç±»å‹',
+    `event_address`    varchar(200) DEFAULT NULL COMMENT 'äº‹ä»¶åœ°ç‚¹',
+    `event_info`       text COMMENT 'äº‹ä»¶è¯¦æƒ…',
+    `image_path`       text COMMENT 'å›¾ç‰‡æ–‡ä»¶åœ°å€',
+    `videl_path`       varchar(500) DEFAULT NULL COMMENT 'è§†é¢‘æ–‡ä»¶åœ°å€',
+    `core_id`          bigint(20)   DEFAULT NULL COMMENT 'æ ¸å¿ƒç¼–å·',
+    `status`           tinyint(1)   DEFAULT NULL COMMENT 'äº‹ä»¶çŠ¶æ€ï¼ˆ0å¾…å¤„ç½®ã€1å¤„ç½®ä¸­ã€2å·²å¤„ç½®ï¼‰',
+    `deal_back_type`   char(1)      DEFAULT '0' COMMENT 'å¤„ç½®å›æ‰§æ–¹å¼ï¼š0æ–‡å­—ã€1å›¾ç‰‡ã€2è¯­éŸ³',
+    `process_id`       bigint(20)   DEFAULT NULL COMMENT 'å¤„ç†äººç¼–å·',
+    `process_name`     varchar(64)  DEFAULT NULL COMMENT 'å¤„ç†äººåç§°',
+    `process_time`     datetime     DEFAULT NULL COMMENT 'å¤„ç†æ—¶é—´',
+    `process_price`    varchar(255) DEFAULT NULL COMMENT 'å¤„ç½®å›¾ç‰‡',
+    `process_voice`    text COMMENT 'å¤„ç½®è¯­éŸ³',
+    `process_text`     varchar(255) DEFAULT NULL COMMENT 'ç•™è¨€',
+    `mistake_flag`     tinyint(1)   DEFAULT NULL COMMENT 'è¯¯æŠ¥æ ‡è®°ï¼ˆ0æ­£ç¡®äº‹ä»¶ï¼Œ1è¯¯æŠ¥äº‹ä»¶ï¼‰',
+    `transparent`      text COMMENT 'é€ä¼ å­—æ®µ',
+    `deal_user_ids`    text COMMENT 'å¯å¤„ç†äººIDï¼ˆé€—å·åˆ†éš”ï¼‰',
+    `create_time`      datetime     DEFAULT NULL COMMENT 'å…¥åº“æ—¶é—´',
+    `del_flag`         tinyint(1)   DEFAULT NULL COMMENT 'åˆ é™¤æ ‡è®°',
+    `create_id`        bigint(20)   DEFAULT NULL COMMENT 'åˆ›å»ºè€…id',
+    `create_by`        varchar(32)  DEFAULT NULL COMMENT 'åˆ›å»ºè€…',
+    `create_dept`      bigint(20)   DEFAULT NULL COMMENT 'åˆ›å»ºéƒ¨é—¨',
+    `update_id`        bigint(20)   DEFAULT NULL COMMENT 'æ›´æ–°è€…id',
+    `update_by`        varchar(32)  DEFAULT NULL COMMENT 'æ›´æ–°è€…',
+    `update_time`      datetime     DEFAULT NULL COMMENT 'æ›´æ–°æ—¶é—´',
+    `remark`           varchar(500) DEFAULT NULL COMMENT 'å¤‡æ³¨',
+    `up_flag`          int(11)      DEFAULT NULL COMMENT '0æœªä¸Šä¼ ã€1ä¸Šä¼ ä¸­ã€2å·²ä¸Šä¼ ',
+    `up_count`         int(11)      DEFAULT NULL COMMENT 'ä¸Šä¼ æ¬¡æ•°',
+    `up_msg`           varchar(255) DEFAULT NULL COMMENT 'ä¸Šä¼ ä¿¡æ¯',
+    `up_id`            varchar(255) DEFAULT NULL COMMENT 'ä¸Šä¼ ID',
     PRIMARY KEY (`id`)
 ) ENGINE = InnoDB
-  DEFAULT CHARSET = utf8mb4 COMMENT ='¸æ¾¯ÊÂ¼ş±í';
+  DEFAULT CHARSET = utf8mb4 COMMENT ='å‘Šè­¦äº‹ä»¶è¡¨';

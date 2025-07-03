@@ -1,9 +1,9 @@
 
--- »áÔ±ĞÅÏ¢
+-- ä¼šå‘˜ä¿¡æ¯
 select * from mt_user t where t.STATUS != 'D' AND t.GROUP_ID IN ( 1 );
 
--- µÇÂ¼ÕËºÅ¹ØÁªµÄ»áÔ±id
--- adminÓÃ»§ 16
+-- ç™»å½•è´¦å·å…³è”çš„ä¼šå‘˜id
+-- adminç”¨æˆ· 16
 select e.staff_id,e.* from t_account e
 where e.acct_id = 2;
 select e.staff_id,e.* from t_account e
@@ -13,13 +13,13 @@ where e.staff_id = 16;
 select e.USER_ID,e.* from mt_staff e
 where e.ID = 16;
 
--- ¹ØÁª¹ØÏµ
+-- å…³è”å…³ç³»
 -- t_account.staff_id = mt_staff.id
 -- mt_staff.USER_ID = mt_user.id
 -- mt_cart.USER_ID = mt_user.id
 
--- ÕËºÅ shouyin
--- ÊÇ·ñÔ±¹¤
+-- è´¦å· shouyin
+-- æ˜¯å¦å‘˜å·¥
 select e.IS_STAFF,e.ID,e.* from mt_user e
 where e.ID = 57;
 select e.id,e.* from mt_staff e
@@ -32,15 +32,15 @@ where e.USER_ID = 57;
 
 select e.USER_ID,e.* from mt_cart e;
 
--- Èç¹û´©ÁË goodIdsµÄÇé¿öÏÂ
--- Èç¹û´« userid£¬¾ÍÇĞ»»¸øÕâ¸öÓÃ»§£¬·ñÔò¾ÍÇĞ»»¸øÊÕÒøÔ±
--- Èç¹û²»´«£¬²»ÇĞ»»£¬µ¥´¿²éÑ¯
+-- å¦‚æœç©¿äº† goodIdsçš„æƒ…å†µä¸‹
+-- å¦‚æœä¼  useridï¼Œå°±åˆ‡æ¢ç»™è¿™ä¸ªç”¨æˆ·ï¼Œå¦åˆ™å°±åˆ‡æ¢ç»™æ”¶é“¶å‘˜
+-- å¦‚æœä¸ä¼ ï¼Œä¸åˆ‡æ¢ï¼Œå•çº¯æŸ¥è¯¢
 select * from mt_user e where e.ID = 56;
 
 select e.MERCHANT_ID, e.* from mt_user e
 where e.MERCHANT_ID = 1;
 
--- ¹«¹²ËùÓĞ
+-- å…¬å…±æ‰€æœ‰
 select e.STATUS,e.* from mt_user e
 where e.STORE_ID = 0;
 -- update mt_user set STATUS = 'D' WHERE STORE_ID = 0;

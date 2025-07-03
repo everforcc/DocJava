@@ -1,66 +1,66 @@
 
 -- zn_dzg_order
-ALTER TABLE `zn_dzg_order` ADD     remark     varchar(200)       null comment '±¸×¢';
-ALTER TABLE `zn_dzg_order` ADD     create_id     bigint       null comment '´´½¨ÈËid';
-ALTER TABLE `zn_dzg_order` ADD     create_by     varchar(60)  null comment '´´½¨ÈË';
-ALTER TABLE `zn_dzg_order` ADD     create_dept   bigint       null comment '´´½¨²¿ÃÅ';
-ALTER TABLE `zn_dzg_order` ADD     create_time   datetime     null comment '´´½¨Ê±¼ä';
-ALTER TABLE `zn_dzg_order` ADD     update_id     bigint       null comment '¸üÐÂÈËid';
-ALTER TABLE `zn_dzg_order` ADD     update_by     varchar(60)  null comment '¸üÐÂÈË';
-ALTER TABLE `zn_dzg_order` ADD     update_time   datetime     null comment '¸üÐÂÊ±¼ä';
-ALTER TABLE `zn_dzg_order` ADD     del_flag      tinyint(1)   null comment 'É¾³ý±ê¼Ç';
+ALTER TABLE `zn_dzg_order` ADD     remark     varchar(200)       null comment 'å¤‡æ³¨';
+ALTER TABLE `zn_dzg_order` ADD     create_id     bigint       null comment 'åˆ›å»ºäººid';
+ALTER TABLE `zn_dzg_order` ADD     create_by     varchar(60)  null comment 'åˆ›å»ºäºº';
+ALTER TABLE `zn_dzg_order` ADD     create_dept   bigint       null comment 'åˆ›å»ºéƒ¨é—¨';
+ALTER TABLE `zn_dzg_order` ADD     create_time   datetime     null comment 'åˆ›å»ºæ—¶é—´';
+ALTER TABLE `zn_dzg_order` ADD     update_id     bigint       null comment 'æ›´æ–°äººid';
+ALTER TABLE `zn_dzg_order` ADD     update_by     varchar(60)  null comment 'æ›´æ–°äºº';
+ALTER TABLE `zn_dzg_order` ADD     update_time   datetime     null comment 'æ›´æ–°æ—¶é—´';
+ALTER TABLE `zn_dzg_order` ADD     del_flag      tinyint(1)   null comment 'åˆ é™¤æ ‡è®°';
 
 -- zn_dzg_order_money
-ALTER TABLE `zn_dzg_order_money` ADD     remark     varchar(200)       null comment '±¸×¢';
-ALTER TABLE `zn_dzg_order_money` ADD     create_id     bigint       null comment '´´½¨ÈËid';
-ALTER TABLE `zn_dzg_order_money` ADD     create_by     varchar(60)  null comment '´´½¨ÈË';
-ALTER TABLE `zn_dzg_order_money` ADD     create_dept   bigint       null comment '´´½¨²¿ÃÅ';
-ALTER TABLE `zn_dzg_order_money` ADD     create_time   datetime     null comment '´´½¨Ê±¼ä';
-ALTER TABLE `zn_dzg_order_money` ADD     update_id     bigint       null comment '¸üÐÂÈËid';
-ALTER TABLE `zn_dzg_order_money` ADD     update_by     varchar(60)  null comment '¸üÐÂÈË';
-ALTER TABLE `zn_dzg_order_money` ADD     update_time   datetime     null comment '¸üÐÂÊ±¼ä';
-ALTER TABLE `zn_dzg_order_money` ADD     del_flag      tinyint(1)   null comment 'É¾³ý±ê¼Ç';
+ALTER TABLE `zn_dzg_order_money` ADD     remark     varchar(200)       null comment 'å¤‡æ³¨';
+ALTER TABLE `zn_dzg_order_money` ADD     create_id     bigint       null comment 'åˆ›å»ºäººid';
+ALTER TABLE `zn_dzg_order_money` ADD     create_by     varchar(60)  null comment 'åˆ›å»ºäºº';
+ALTER TABLE `zn_dzg_order_money` ADD     create_dept   bigint       null comment 'åˆ›å»ºéƒ¨é—¨';
+ALTER TABLE `zn_dzg_order_money` ADD     create_time   datetime     null comment 'åˆ›å»ºæ—¶é—´';
+ALTER TABLE `zn_dzg_order_money` ADD     update_id     bigint       null comment 'æ›´æ–°äººid';
+ALTER TABLE `zn_dzg_order_money` ADD     update_by     varchar(60)  null comment 'æ›´æ–°äºº';
+ALTER TABLE `zn_dzg_order_money` ADD     update_time   datetime     null comment 'æ›´æ–°æ—¶é—´';
+ALTER TABLE `zn_dzg_order_money` ADD     del_flag      tinyint(1)   null comment 'åˆ é™¤æ ‡è®°';
 
 -- zn_dzg_order_goods
-ALTER TABLE `zn_dzg_order_goods` ADD     remark     varchar(200)       null comment '±¸×¢';
-ALTER TABLE `zn_dzg_order_goods` ADD     create_id     bigint       null comment '´´½¨ÈËid';
-ALTER TABLE `zn_dzg_order_goods` ADD     create_by     varchar(60)  null comment '´´½¨ÈË';
-ALTER TABLE `zn_dzg_order_goods` ADD     create_dept   bigint       null comment '´´½¨²¿ÃÅ';
-ALTER TABLE `zn_dzg_order_goods` ADD     create_time   datetime     null comment '´´½¨Ê±¼ä';
-ALTER TABLE `zn_dzg_order_goods` ADD     update_id     bigint       null comment '¸üÐÂÈËid';
-ALTER TABLE `zn_dzg_order_goods` ADD     update_by     varchar(60)  null comment '¸üÐÂÈË';
-ALTER TABLE `zn_dzg_order_goods` ADD     update_time   datetime     null comment '¸üÐÂÊ±¼ä';
-ALTER TABLE `zn_dzg_order_goods` ADD     del_flag      tinyint(1)   null comment 'É¾³ý±ê¼Ç';
+ALTER TABLE `zn_dzg_order_goods` ADD     remark     varchar(200)       null comment 'å¤‡æ³¨';
+ALTER TABLE `zn_dzg_order_goods` ADD     create_id     bigint       null comment 'åˆ›å»ºäººid';
+ALTER TABLE `zn_dzg_order_goods` ADD     create_by     varchar(60)  null comment 'åˆ›å»ºäºº';
+ALTER TABLE `zn_dzg_order_goods` ADD     create_dept   bigint       null comment 'åˆ›å»ºéƒ¨é—¨';
+ALTER TABLE `zn_dzg_order_goods` ADD     create_time   datetime     null comment 'åˆ›å»ºæ—¶é—´';
+ALTER TABLE `zn_dzg_order_goods` ADD     update_id     bigint       null comment 'æ›´æ–°äººid';
+ALTER TABLE `zn_dzg_order_goods` ADD     update_by     varchar(60)  null comment 'æ›´æ–°äºº';
+ALTER TABLE `zn_dzg_order_goods` ADD     update_time   datetime     null comment 'æ›´æ–°æ—¶é—´';
+ALTER TABLE `zn_dzg_order_goods` ADD     del_flag      tinyint(1)   null comment 'åˆ é™¤æ ‡è®°';
 
 -- zn_dzg_order_refund
--- ALTER TABLE `zn_dzg_order_refund` ADD     remark     varchar(200)       null comment '±¸×¢';
-ALTER TABLE `zn_dzg_order_refund` ADD     create_id     bigint       null comment '´´½¨ÈËid';
-ALTER TABLE `zn_dzg_order_refund` ADD     create_by     varchar(60)  null comment '´´½¨ÈË';
-ALTER TABLE `zn_dzg_order_refund` ADD     create_dept   bigint       null comment '´´½¨²¿ÃÅ';
-ALTER TABLE `zn_dzg_order_refund` ADD     create_time   datetime     null comment '´´½¨Ê±¼ä';
-ALTER TABLE `zn_dzg_order_refund` ADD     update_id     bigint       null comment '¸üÐÂÈËid';
-ALTER TABLE `zn_dzg_order_refund` ADD     update_by     varchar(60)  null comment '¸üÐÂÈË';
-ALTER TABLE `zn_dzg_order_refund` ADD     update_time   datetime     null comment '¸üÐÂÊ±¼ä';
-ALTER TABLE `zn_dzg_order_refund` ADD     del_flag      tinyint(1)   null comment 'É¾³ý±ê¼Ç';
+-- ALTER TABLE `zn_dzg_order_refund` ADD     remark     varchar(200)       null comment 'å¤‡æ³¨';
+ALTER TABLE `zn_dzg_order_refund` ADD     create_id     bigint       null comment 'åˆ›å»ºäººid';
+ALTER TABLE `zn_dzg_order_refund` ADD     create_by     varchar(60)  null comment 'åˆ›å»ºäºº';
+ALTER TABLE `zn_dzg_order_refund` ADD     create_dept   bigint       null comment 'åˆ›å»ºéƒ¨é—¨';
+ALTER TABLE `zn_dzg_order_refund` ADD     create_time   datetime     null comment 'åˆ›å»ºæ—¶é—´';
+ALTER TABLE `zn_dzg_order_refund` ADD     update_id     bigint       null comment 'æ›´æ–°äººid';
+ALTER TABLE `zn_dzg_order_refund` ADD     update_by     varchar(60)  null comment 'æ›´æ–°äºº';
+ALTER TABLE `zn_dzg_order_refund` ADD     update_time   datetime     null comment 'æ›´æ–°æ—¶é—´';
+ALTER TABLE `zn_dzg_order_refund` ADD     del_flag      tinyint(1)   null comment 'åˆ é™¤æ ‡è®°';
 
 -- zn_dzg_cart
-ALTER TABLE `zn_dzg_cart` ADD     remark     varchar(200)       null comment '±¸×¢';
-ALTER TABLE `zn_dzg_cart` ADD     create_id     bigint       null comment '´´½¨ÈËid';
-ALTER TABLE `zn_dzg_cart` ADD     create_by     varchar(60)  null comment '´´½¨ÈË';
-ALTER TABLE `zn_dzg_cart` ADD     create_dept   bigint       null comment '´´½¨²¿ÃÅ';
-ALTER TABLE `zn_dzg_cart` ADD     create_time   datetime     null comment '´´½¨Ê±¼ä';
-ALTER TABLE `zn_dzg_cart` ADD     update_id     bigint       null comment '¸üÐÂÈËid';
-ALTER TABLE `zn_dzg_cart` ADD     update_by     varchar(60)  null comment '¸üÐÂÈË';
-ALTER TABLE `zn_dzg_cart` ADD     update_time   datetime     null comment '¸üÐÂÊ±¼ä';
-ALTER TABLE `zn_dzg_cart` ADD     del_flag      tinyint(1)   null comment 'É¾³ý±ê¼Ç';
+ALTER TABLE `zn_dzg_cart` ADD     remark     varchar(200)       null comment 'å¤‡æ³¨';
+ALTER TABLE `zn_dzg_cart` ADD     create_id     bigint       null comment 'åˆ›å»ºäººid';
+ALTER TABLE `zn_dzg_cart` ADD     create_by     varchar(60)  null comment 'åˆ›å»ºäºº';
+ALTER TABLE `zn_dzg_cart` ADD     create_dept   bigint       null comment 'åˆ›å»ºéƒ¨é—¨';
+ALTER TABLE `zn_dzg_cart` ADD     create_time   datetime     null comment 'åˆ›å»ºæ—¶é—´';
+ALTER TABLE `zn_dzg_cart` ADD     update_id     bigint       null comment 'æ›´æ–°äººid';
+ALTER TABLE `zn_dzg_cart` ADD     update_by     varchar(60)  null comment 'æ›´æ–°äºº';
+ALTER TABLE `zn_dzg_cart` ADD     update_time   datetime     null comment 'æ›´æ–°æ—¶é—´';
+ALTER TABLE `zn_dzg_cart` ADD     del_flag      tinyint(1)   null comment 'åˆ é™¤æ ‡è®°';
 
 -- zn_dzg_cart_goods
-ALTER TABLE `zn_dzg_cart_goods` ADD     remark     varchar(200)       null comment '±¸×¢';
-ALTER TABLE `zn_dzg_cart_goods` ADD     create_id     bigint       null comment '´´½¨ÈËid';
-ALTER TABLE `zn_dzg_cart_goods` ADD     create_by     varchar(60)  null comment '´´½¨ÈË';
-ALTER TABLE `zn_dzg_cart_goods` ADD     create_dept   bigint       null comment '´´½¨²¿ÃÅ';
-ALTER TABLE `zn_dzg_cart_goods` ADD     create_time   datetime     null comment '´´½¨Ê±¼ä';
-ALTER TABLE `zn_dzg_cart_goods` ADD     update_id     bigint       null comment '¸üÐÂÈËid';
-ALTER TABLE `zn_dzg_cart_goods` ADD     update_by     varchar(60)  null comment '¸üÐÂÈË';
-ALTER TABLE `zn_dzg_cart_goods` ADD     update_time   datetime     null comment '¸üÐÂÊ±¼ä';
-ALTER TABLE `zn_dzg_cart_goods` ADD     del_flag      tinyint(1)   null comment 'É¾³ý±ê¼Ç';
+ALTER TABLE `zn_dzg_cart_goods` ADD     remark     varchar(200)       null comment 'å¤‡æ³¨';
+ALTER TABLE `zn_dzg_cart_goods` ADD     create_id     bigint       null comment 'åˆ›å»ºäººid';
+ALTER TABLE `zn_dzg_cart_goods` ADD     create_by     varchar(60)  null comment 'åˆ›å»ºäºº';
+ALTER TABLE `zn_dzg_cart_goods` ADD     create_dept   bigint       null comment 'åˆ›å»ºéƒ¨é—¨';
+ALTER TABLE `zn_dzg_cart_goods` ADD     create_time   datetime     null comment 'åˆ›å»ºæ—¶é—´';
+ALTER TABLE `zn_dzg_cart_goods` ADD     update_id     bigint       null comment 'æ›´æ–°äººid';
+ALTER TABLE `zn_dzg_cart_goods` ADD     update_by     varchar(60)  null comment 'æ›´æ–°äºº';
+ALTER TABLE `zn_dzg_cart_goods` ADD     update_time   datetime     null comment 'æ›´æ–°æ—¶é—´';
+ALTER TABLE `zn_dzg_cart_goods` ADD     del_flag      tinyint(1)   null comment 'åˆ é™¤æ ‡è®°';

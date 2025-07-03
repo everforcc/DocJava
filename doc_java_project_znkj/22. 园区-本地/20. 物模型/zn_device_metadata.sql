@@ -1,6 +1,6 @@
 select * from zn_device_metadata zdm;
 
--- Ò£¿ØÆ÷
--- ÃÅ´Å´«¸ĞÆ÷
--- ÎÂÊª¶È´«¸ĞÆ÷
+-- é¥æ§å™¨
+-- é—¨ç£ä¼ æ„Ÿå™¨
+-- æ¸©æ¹¿åº¦ä¼ æ„Ÿå™¨
 select distinct zdm.device_code_name from zn_device_metadata zdm;

@@ -19,8 +19,8 @@ public class Sp32MqttSpringApplication {
 }
 ~~~
 
-- 配合 @Value注解
-- 配置文件的值会直接显示在类里面
+- 閰嶅悎 @Value娉ㄨВ
+- 閰嶇疆鏂囦欢鐨勫�间細鐩存帴鏄剧ず鍦ㄧ被閲岄潰
 
 ~~~java
 import org.springframework.beans.factory.annotation.Value;

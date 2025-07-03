@@ -1,22 +1,22 @@
--- 0Î´´¦ÖÃ£¬2ÒÑ´¦ÖÃ
+-- 0æœªå¤„ç½®ï¼Œ2å·²å¤„ç½®
 select e.status,e.* from zn_ais_event_data e where e.status = 0 ;
 select e.status,e.* from zn_ais_event_data e where e.status = 2 ;
 
--- ¸üĞÂÎ´´¦ÖÃÊÂ¼şµÄÏà»úid
+-- æ›´æ–°æœªå¤„ç½®äº‹ä»¶çš„ç›¸æœºid
 
--- ¸üĞÂÒÑ´¦ÖÃÊÂ¼şµÄÏà»úid
+-- æ›´æ–°å·²å¤„ç½®äº‹ä»¶çš„ç›¸æœºid
 
 -- aiot
--- 82 Ïà»ú
+-- 82 ç›¸æœº
 select * from zn_machine_camera where id =1927632423394275330;
--- 84 Ïà»ú
+-- 84 ç›¸æœº
 select * from zn_machine_camera where id =1927632423411052545;
--- ÊÂ¼şid
+-- äº‹ä»¶id
 -- 1921134990448910336
 select zaed.*
 from zn_ais_event_data zaed where zaed.id = 1926988435716640768;
 
--- µ±Ç°ÊÂ¼şÓĞÄÄĞ©Ïà»ú
+-- å½“å‰äº‹ä»¶æœ‰å“ªäº›ç›¸æœº
 select distinct e.camera_id from zn_ais_event_data e;
 -- 1927632423394275330
 -- 1927632423411052545

@@ -1,7 +1,7 @@
 <span  style="font-family: Simsun,serif; font-size: 17px; ">
 
 - @Validated
-- 在这个包下面
+- 鍦ㄨ繖涓寘涓嬮潰
 - javax.validation.constraints
 
 ~~~xml
@@ -12,7 +12,7 @@
 </dependency>
 ~~~
 
-### 数据校验
+### 鏁版嵁鏍￠獙
 
 - @Email
 

@@ -1,7 +1,7 @@
 -- zn_dzg_count_sale_total
 
--- ½ñÈÕ
--- ÏúÊÛ¶î
+-- ä»Šæ—¥
+-- é”€å”®é¢
 select sum(zdom.amount)
 from zn_dzg_order_money zdom
 where zdom.order_id in
@@ -10,17 +10,17 @@ where zdom.order_id in
        where zdo.status = 2)
 and zdom.order_type in (1,2);
 
--- ¶©µ¥Êı
+-- è®¢å•æ•°
 select count(1)
 from zn_dzg_order zdo
 where zdo.status = 2;
 
--- »áÔ±×ÜÊı
+-- ä¼šå‘˜æ€»æ•°
 select count(1)
 from zn_dzg_member zdm
 where zdm.del_flag = 0;
 
--- ¿¨×ÜÓà¶î
+-- å¡æ€»ä½™é¢
 select sum(zdcm.amounts)
 from zn_dzg_card_member zdcm
 where zdcm.del_flag = 0 and zdcm.status = 1 ;

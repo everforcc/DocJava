@@ -2,5 +2,5 @@
 select * from znkj_product_config e
 where e.id = 1829418364905197569 ;
 
-update znkj_product_config e set e.config_name = 'ÔùËÍIoTÔÆ·şÎñ£¨Ì¨-ÔÂ£©'
+update znkj_product_config e set e.config_name = 'èµ é€IoTäº‘æœåŠ¡ï¼ˆå°-æœˆï¼‰'
 where e.id = 1829418364905197569 ;

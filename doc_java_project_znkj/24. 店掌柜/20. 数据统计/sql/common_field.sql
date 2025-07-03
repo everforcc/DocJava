@@ -1,116 +1,116 @@
 
-ALTER TABLE `zn_dzg_member_point` ADD     remark     varchar(200)       null comment '±¸×¢';
-ALTER TABLE `zn_dzg_member_point` ADD     create_id     bigint       null comment '´´½¨ÈËid';
-ALTER TABLE `zn_dzg_member_point` ADD     create_by     varchar(60)  null comment '´´½¨ÈË';
-ALTER TABLE `zn_dzg_member_point` ADD     create_dept   bigint       null comment '´´½¨²¿ÃÅ';
-ALTER TABLE `zn_dzg_member_point` ADD     create_time   datetime     null comment '´´½¨Ê±¼ä';
-ALTER TABLE `zn_dzg_member_point` ADD     update_id     bigint       null comment '¸üÐÂÈËid';
-ALTER TABLE `zn_dzg_member_point` ADD     update_by     varchar(60)  null comment '¸üÐÂÈË';
-ALTER TABLE `zn_dzg_member_point` ADD     update_time   datetime     null comment '¸üÐÂÊ±¼ä';
-ALTER TABLE `zn_dzg_member_point` ADD     del_flag      tinyint(1)   null comment 'É¾³ý±ê¼Ç';
+ALTER TABLE `zn_dzg_member_point` ADD     remark     varchar(200)       null comment 'å¤‡æ³¨';
+ALTER TABLE `zn_dzg_member_point` ADD     create_id     bigint       null comment 'åˆ›å»ºäººid';
+ALTER TABLE `zn_dzg_member_point` ADD     create_by     varchar(60)  null comment 'åˆ›å»ºäºº';
+ALTER TABLE `zn_dzg_member_point` ADD     create_dept   bigint       null comment 'åˆ›å»ºéƒ¨é—¨';
+ALTER TABLE `zn_dzg_member_point` ADD     create_time   datetime     null comment 'åˆ›å»ºæ—¶é—´';
+ALTER TABLE `zn_dzg_member_point` ADD     update_id     bigint       null comment 'æ›´æ–°äººid';
+ALTER TABLE `zn_dzg_member_point` ADD     update_by     varchar(60)  null comment 'æ›´æ–°äºº';
+ALTER TABLE `zn_dzg_member_point` ADD     update_time   datetime     null comment 'æ›´æ–°æ—¶é—´';
+ALTER TABLE `zn_dzg_member_point` ADD     del_flag      tinyint(1)   null comment 'åˆ é™¤æ ‡è®°';
 
 -- zn_dzg_count_card_sale
 
-ALTER TABLE zn_dzg_count_card_sale ADD     remark     varchar(200)       null comment '±¸×¢';
-ALTER TABLE zn_dzg_count_card_sale ADD     create_id     bigint       null comment '´´½¨ÈËid';
-ALTER TABLE zn_dzg_count_card_sale ADD     create_by     varchar(60)  null comment '´´½¨ÈË';
-ALTER TABLE zn_dzg_count_card_sale ADD     create_dept   bigint       null comment '´´½¨²¿ÃÅ';
-ALTER TABLE zn_dzg_count_card_sale ADD     create_time   datetime     null comment '´´½¨Ê±¼ä';
-ALTER TABLE zn_dzg_count_card_sale ADD     update_id     bigint       null comment '¸üÐÂÈËid';
-ALTER TABLE zn_dzg_count_card_sale ADD     update_by     varchar(60)  null comment '¸üÐÂÈË';
-ALTER TABLE zn_dzg_count_card_sale ADD     update_time   datetime     null comment '¸üÐÂÊ±¼ä';
-ALTER TABLE zn_dzg_count_card_sale ADD     del_flag      tinyint(1)   null comment 'É¾³ý±ê¼Ç';
+ALTER TABLE zn_dzg_count_card_sale ADD     remark     varchar(200)       null comment 'å¤‡æ³¨';
+ALTER TABLE zn_dzg_count_card_sale ADD     create_id     bigint       null comment 'åˆ›å»ºäººid';
+ALTER TABLE zn_dzg_count_card_sale ADD     create_by     varchar(60)  null comment 'åˆ›å»ºäºº';
+ALTER TABLE zn_dzg_count_card_sale ADD     create_dept   bigint       null comment 'åˆ›å»ºéƒ¨é—¨';
+ALTER TABLE zn_dzg_count_card_sale ADD     create_time   datetime     null comment 'åˆ›å»ºæ—¶é—´';
+ALTER TABLE zn_dzg_count_card_sale ADD     update_id     bigint       null comment 'æ›´æ–°äººid';
+ALTER TABLE zn_dzg_count_card_sale ADD     update_by     varchar(60)  null comment 'æ›´æ–°äºº';
+ALTER TABLE zn_dzg_count_card_sale ADD     update_time   datetime     null comment 'æ›´æ–°æ—¶é—´';
+ALTER TABLE zn_dzg_count_card_sale ADD     del_flag      tinyint(1)   null comment 'åˆ é™¤æ ‡è®°';
 
 -- zn_dzg_count_member_consume
 
-ALTER TABLE zn_dzg_count_member_consume ADD     remark     varchar(200)       null comment '±¸×¢';
-ALTER TABLE zn_dzg_count_member_consume ADD     create_id     bigint       null comment '´´½¨ÈËid';
-ALTER TABLE zn_dzg_count_member_consume ADD     create_by     varchar(60)  null comment '´´½¨ÈË';
-ALTER TABLE zn_dzg_count_member_consume ADD     create_dept   bigint       null comment '´´½¨²¿ÃÅ';
-ALTER TABLE zn_dzg_count_member_consume ADD     create_time   datetime     null comment '´´½¨Ê±¼ä';
-ALTER TABLE zn_dzg_count_member_consume ADD     update_id     bigint       null comment '¸üÐÂÈËid';
-ALTER TABLE zn_dzg_count_member_consume ADD     update_by     varchar(60)  null comment '¸üÐÂÈË';
-ALTER TABLE zn_dzg_count_member_consume ADD     update_time   datetime     null comment '¸üÐÂÊ±¼ä';
-ALTER TABLE zn_dzg_count_member_consume ADD     del_flag      tinyint(1)   null comment 'É¾³ý±ê¼Ç';
+ALTER TABLE zn_dzg_count_member_consume ADD     remark     varchar(200)       null comment 'å¤‡æ³¨';
+ALTER TABLE zn_dzg_count_member_consume ADD     create_id     bigint       null comment 'åˆ›å»ºäººid';
+ALTER TABLE zn_dzg_count_member_consume ADD     create_by     varchar(60)  null comment 'åˆ›å»ºäºº';
+ALTER TABLE zn_dzg_count_member_consume ADD     create_dept   bigint       null comment 'åˆ›å»ºéƒ¨é—¨';
+ALTER TABLE zn_dzg_count_member_consume ADD     create_time   datetime     null comment 'åˆ›å»ºæ—¶é—´';
+ALTER TABLE zn_dzg_count_member_consume ADD     update_id     bigint       null comment 'æ›´æ–°äººid';
+ALTER TABLE zn_dzg_count_member_consume ADD     update_by     varchar(60)  null comment 'æ›´æ–°äºº';
+ALTER TABLE zn_dzg_count_member_consume ADD     update_time   datetime     null comment 'æ›´æ–°æ—¶é—´';
+ALTER TABLE zn_dzg_count_member_consume ADD     del_flag      tinyint(1)   null comment 'åˆ é™¤æ ‡è®°';
 
 -- zn_dzg_count_member_overview
 
-ALTER TABLE zn_dzg_count_member_overview ADD     remark     varchar(200)       null comment '±¸×¢';
-ALTER TABLE zn_dzg_count_member_overview ADD     create_id     bigint       null comment '´´½¨ÈËid';
-ALTER TABLE zn_dzg_count_member_overview ADD     create_by     varchar(60)  null comment '´´½¨ÈË';
-ALTER TABLE zn_dzg_count_member_overview ADD     create_dept   bigint       null comment '´´½¨²¿ÃÅ';
-ALTER TABLE zn_dzg_count_member_overview ADD     create_time   datetime     null comment '´´½¨Ê±¼ä';
-ALTER TABLE zn_dzg_count_member_overview ADD     update_id     bigint       null comment '¸üÐÂÈËid';
-ALTER TABLE zn_dzg_count_member_overview ADD     update_by     varchar(60)  null comment '¸üÐÂÈË';
-ALTER TABLE zn_dzg_count_member_overview ADD     update_time   datetime     null comment '¸üÐÂÊ±¼ä';
-ALTER TABLE zn_dzg_count_member_overview ADD     del_flag      tinyint(1)   null comment 'É¾³ý±ê¼Ç';
+ALTER TABLE zn_dzg_count_member_overview ADD     remark     varchar(200)       null comment 'å¤‡æ³¨';
+ALTER TABLE zn_dzg_count_member_overview ADD     create_id     bigint       null comment 'åˆ›å»ºäººid';
+ALTER TABLE zn_dzg_count_member_overview ADD     create_by     varchar(60)  null comment 'åˆ›å»ºäºº';
+ALTER TABLE zn_dzg_count_member_overview ADD     create_dept   bigint       null comment 'åˆ›å»ºéƒ¨é—¨';
+ALTER TABLE zn_dzg_count_member_overview ADD     create_time   datetime     null comment 'åˆ›å»ºæ—¶é—´';
+ALTER TABLE zn_dzg_count_member_overview ADD     update_id     bigint       null comment 'æ›´æ–°äººid';
+ALTER TABLE zn_dzg_count_member_overview ADD     update_by     varchar(60)  null comment 'æ›´æ–°äºº';
+ALTER TABLE zn_dzg_count_member_overview ADD     update_time   datetime     null comment 'æ›´æ–°æ—¶é—´';
+ALTER TABLE zn_dzg_count_member_overview ADD     del_flag      tinyint(1)   null comment 'åˆ é™¤æ ‡è®°';
 
 -- zn_dzg_count_product_sale
 
-ALTER TABLE zn_dzg_count_product_sale ADD     remark     varchar(200)       null comment '±¸×¢';
-ALTER TABLE zn_dzg_count_product_sale ADD     create_id     bigint       null comment '´´½¨ÈËid';
-ALTER TABLE zn_dzg_count_product_sale ADD     create_by     varchar(60)  null comment '´´½¨ÈË';
-ALTER TABLE zn_dzg_count_product_sale ADD     create_dept   bigint       null comment '´´½¨²¿ÃÅ';
-ALTER TABLE zn_dzg_count_product_sale ADD     create_time   datetime     null comment '´´½¨Ê±¼ä';
-ALTER TABLE zn_dzg_count_product_sale ADD     update_id     bigint       null comment '¸üÐÂÈËid';
-ALTER TABLE zn_dzg_count_product_sale ADD     update_by     varchar(60)  null comment '¸üÐÂÈË';
-ALTER TABLE zn_dzg_count_product_sale ADD     update_time   datetime     null comment '¸üÐÂÊ±¼ä';
-ALTER TABLE zn_dzg_count_product_sale ADD     del_flag      tinyint(1)   null comment 'É¾³ý±ê¼Ç';
+ALTER TABLE zn_dzg_count_product_sale ADD     remark     varchar(200)       null comment 'å¤‡æ³¨';
+ALTER TABLE zn_dzg_count_product_sale ADD     create_id     bigint       null comment 'åˆ›å»ºäººid';
+ALTER TABLE zn_dzg_count_product_sale ADD     create_by     varchar(60)  null comment 'åˆ›å»ºäºº';
+ALTER TABLE zn_dzg_count_product_sale ADD     create_dept   bigint       null comment 'åˆ›å»ºéƒ¨é—¨';
+ALTER TABLE zn_dzg_count_product_sale ADD     create_time   datetime     null comment 'åˆ›å»ºæ—¶é—´';
+ALTER TABLE zn_dzg_count_product_sale ADD     update_id     bigint       null comment 'æ›´æ–°äººid';
+ALTER TABLE zn_dzg_count_product_sale ADD     update_by     varchar(60)  null comment 'æ›´æ–°äºº';
+ALTER TABLE zn_dzg_count_product_sale ADD     update_time   datetime     null comment 'æ›´æ–°æ—¶é—´';
+ALTER TABLE zn_dzg_count_product_sale ADD     del_flag      tinyint(1)   null comment 'åˆ é™¤æ ‡è®°';
 
 -- zn_dzg_count_sale_overview
 
-ALTER TABLE zn_dzg_count_sale_overview ADD     remark     varchar(200)       null comment '±¸×¢';
-ALTER TABLE zn_dzg_count_sale_overview ADD     create_id     bigint       null comment '´´½¨ÈËid';
-ALTER TABLE zn_dzg_count_sale_overview ADD     create_by     varchar(60)  null comment '´´½¨ÈË';
-ALTER TABLE zn_dzg_count_sale_overview ADD     create_dept   bigint       null comment '´´½¨²¿ÃÅ';
-ALTER TABLE zn_dzg_count_sale_overview ADD     create_time   datetime     null comment '´´½¨Ê±¼ä';
-ALTER TABLE zn_dzg_count_sale_overview ADD     update_id     bigint       null comment '¸üÐÂÈËid';
-ALTER TABLE zn_dzg_count_sale_overview ADD     update_by     varchar(60)  null comment '¸üÐÂÈË';
-ALTER TABLE zn_dzg_count_sale_overview ADD     update_time   datetime     null comment '¸üÐÂÊ±¼ä';
-ALTER TABLE zn_dzg_count_sale_overview ADD     del_flag      tinyint(1)   null comment 'É¾³ý±ê¼Ç';
+ALTER TABLE zn_dzg_count_sale_overview ADD     remark     varchar(200)       null comment 'å¤‡æ³¨';
+ALTER TABLE zn_dzg_count_sale_overview ADD     create_id     bigint       null comment 'åˆ›å»ºäººid';
+ALTER TABLE zn_dzg_count_sale_overview ADD     create_by     varchar(60)  null comment 'åˆ›å»ºäºº';
+ALTER TABLE zn_dzg_count_sale_overview ADD     create_dept   bigint       null comment 'åˆ›å»ºéƒ¨é—¨';
+ALTER TABLE zn_dzg_count_sale_overview ADD     create_time   datetime     null comment 'åˆ›å»ºæ—¶é—´';
+ALTER TABLE zn_dzg_count_sale_overview ADD     update_id     bigint       null comment 'æ›´æ–°äººid';
+ALTER TABLE zn_dzg_count_sale_overview ADD     update_by     varchar(60)  null comment 'æ›´æ–°äºº';
+ALTER TABLE zn_dzg_count_sale_overview ADD     update_time   datetime     null comment 'æ›´æ–°æ—¶é—´';
+ALTER TABLE zn_dzg_count_sale_overview ADD     del_flag      tinyint(1)   null comment 'åˆ é™¤æ ‡è®°';
 
 -- zn_dzg_count_sale_total
 
-ALTER TABLE zn_dzg_count_sale_total ADD     remark     varchar(200)       null comment '±¸×¢';
-ALTER TABLE zn_dzg_count_sale_total ADD     create_id     bigint       null comment '´´½¨ÈËid';
-ALTER TABLE zn_dzg_count_sale_total ADD     create_by     varchar(60)  null comment '´´½¨ÈË';
-ALTER TABLE zn_dzg_count_sale_total ADD     create_dept   bigint       null comment '´´½¨²¿ÃÅ';
-ALTER TABLE zn_dzg_count_sale_total ADD     create_time   datetime     null comment '´´½¨Ê±¼ä';
-ALTER TABLE zn_dzg_count_sale_total ADD     update_id     bigint       null comment '¸üÐÂÈËid';
-ALTER TABLE zn_dzg_count_sale_total ADD     update_by     varchar(60)  null comment '¸üÐÂÈË';
-ALTER TABLE zn_dzg_count_sale_total ADD     update_time   datetime     null comment '¸üÐÂÊ±¼ä';
-ALTER TABLE zn_dzg_count_sale_total ADD     del_flag      tinyint(1)   null comment 'É¾³ý±ê¼Ç';
+ALTER TABLE zn_dzg_count_sale_total ADD     remark     varchar(200)       null comment 'å¤‡æ³¨';
+ALTER TABLE zn_dzg_count_sale_total ADD     create_id     bigint       null comment 'åˆ›å»ºäººid';
+ALTER TABLE zn_dzg_count_sale_total ADD     create_by     varchar(60)  null comment 'åˆ›å»ºäºº';
+ALTER TABLE zn_dzg_count_sale_total ADD     create_dept   bigint       null comment 'åˆ›å»ºéƒ¨é—¨';
+ALTER TABLE zn_dzg_count_sale_total ADD     create_time   datetime     null comment 'åˆ›å»ºæ—¶é—´';
+ALTER TABLE zn_dzg_count_sale_total ADD     update_id     bigint       null comment 'æ›´æ–°äººid';
+ALTER TABLE zn_dzg_count_sale_total ADD     update_by     varchar(60)  null comment 'æ›´æ–°äºº';
+ALTER TABLE zn_dzg_count_sale_total ADD     update_time   datetime     null comment 'æ›´æ–°æ—¶é—´';
+ALTER TABLE zn_dzg_count_sale_total ADD     del_flag      tinyint(1)   null comment 'åˆ é™¤æ ‡è®°';
 
 -- zn_dzg_count_product_stock
 
-ALTER TABLE zn_dzg_count_product_stock ADD     remark     varchar(200)       null comment '±¸×¢';
-ALTER TABLE zn_dzg_count_product_stock ADD     create_id     bigint       null comment '´´½¨ÈËid';
-ALTER TABLE zn_dzg_count_product_stock ADD     create_by     varchar(60)  null comment '´´½¨ÈË';
-ALTER TABLE zn_dzg_count_product_stock ADD     create_dept   bigint       null comment '´´½¨²¿ÃÅ';
-ALTER TABLE zn_dzg_count_product_stock ADD     create_time   datetime     null comment '´´½¨Ê±¼ä';
-ALTER TABLE zn_dzg_count_product_stock ADD     update_id     bigint       null comment '¸üÐÂÈËid';
-ALTER TABLE zn_dzg_count_product_stock ADD     update_by     varchar(60)  null comment '¸üÐÂÈË';
-ALTER TABLE zn_dzg_count_product_stock ADD     update_time   datetime     null comment '¸üÐÂÊ±¼ä';
-ALTER TABLE zn_dzg_count_product_stock ADD     del_flag      tinyint(1)   null comment 'É¾³ý±ê¼Ç';
+ALTER TABLE zn_dzg_count_product_stock ADD     remark     varchar(200)       null comment 'å¤‡æ³¨';
+ALTER TABLE zn_dzg_count_product_stock ADD     create_id     bigint       null comment 'åˆ›å»ºäººid';
+ALTER TABLE zn_dzg_count_product_stock ADD     create_by     varchar(60)  null comment 'åˆ›å»ºäºº';
+ALTER TABLE zn_dzg_count_product_stock ADD     create_dept   bigint       null comment 'åˆ›å»ºéƒ¨é—¨';
+ALTER TABLE zn_dzg_count_product_stock ADD     create_time   datetime     null comment 'åˆ›å»ºæ—¶é—´';
+ALTER TABLE zn_dzg_count_product_stock ADD     update_id     bigint       null comment 'æ›´æ–°äººid';
+ALTER TABLE zn_dzg_count_product_stock ADD     update_by     varchar(60)  null comment 'æ›´æ–°äºº';
+ALTER TABLE zn_dzg_count_product_stock ADD     update_time   datetime     null comment 'æ›´æ–°æ—¶é—´';
+ALTER TABLE zn_dzg_count_product_stock ADD     del_flag      tinyint(1)   null comment 'åˆ é™¤æ ‡è®°';
 
 -- zn_dzg_count_product_category
-ALTER TABLE zn_dzg_count_product_category ADD     remark     varchar(200)       null comment '±¸×¢';
-ALTER TABLE zn_dzg_count_product_category ADD     create_id     bigint       null comment '´´½¨ÈËid';
-ALTER TABLE zn_dzg_count_product_category ADD     create_by     varchar(60)  null comment '´´½¨ÈË';
-ALTER TABLE zn_dzg_count_product_category ADD     create_dept   bigint       null comment '´´½¨²¿ÃÅ';
-ALTER TABLE zn_dzg_count_product_category ADD     create_time   datetime     null comment '´´½¨Ê±¼ä';
-ALTER TABLE zn_dzg_count_product_category ADD     update_id     bigint       null comment '¸üÐÂÈËid';
-ALTER TABLE zn_dzg_count_product_category ADD     update_by     varchar(60)  null comment '¸üÐÂÈË';
-ALTER TABLE zn_dzg_count_product_category ADD     update_time   datetime     null comment '¸üÐÂÊ±¼ä';
-ALTER TABLE zn_dzg_count_product_category ADD     del_flag      tinyint(1)   null comment 'É¾³ý±ê¼Ç';
+ALTER TABLE zn_dzg_count_product_category ADD     remark     varchar(200)       null comment 'å¤‡æ³¨';
+ALTER TABLE zn_dzg_count_product_category ADD     create_id     bigint       null comment 'åˆ›å»ºäººid';
+ALTER TABLE zn_dzg_count_product_category ADD     create_by     varchar(60)  null comment 'åˆ›å»ºäºº';
+ALTER TABLE zn_dzg_count_product_category ADD     create_dept   bigint       null comment 'åˆ›å»ºéƒ¨é—¨';
+ALTER TABLE zn_dzg_count_product_category ADD     create_time   datetime     null comment 'åˆ›å»ºæ—¶é—´';
+ALTER TABLE zn_dzg_count_product_category ADD     update_id     bigint       null comment 'æ›´æ–°äººid';
+ALTER TABLE zn_dzg_count_product_category ADD     update_by     varchar(60)  null comment 'æ›´æ–°äºº';
+ALTER TABLE zn_dzg_count_product_category ADD     update_time   datetime     null comment 'æ›´æ–°æ—¶é—´';
+ALTER TABLE zn_dzg_count_product_category ADD     del_flag      tinyint(1)   null comment 'åˆ é™¤æ ‡è®°';
 
 -- zn_dzg_count_time
-ALTER TABLE zn_dzg_count_time ADD     remark     varchar(200)       null comment '±¸×¢';
-ALTER TABLE zn_dzg_count_time ADD     create_id     bigint       null comment '´´½¨ÈËid';
-ALTER TABLE zn_dzg_count_time ADD     create_by     varchar(60)  null comment '´´½¨ÈË';
-ALTER TABLE zn_dzg_count_time ADD     create_dept   bigint       null comment '´´½¨²¿ÃÅ';
-ALTER TABLE zn_dzg_count_time ADD     create_time   datetime     null comment '´´½¨Ê±¼ä';
-ALTER TABLE zn_dzg_count_time ADD     update_id     bigint       null comment '¸üÐÂÈËid';
-ALTER TABLE zn_dzg_count_time ADD     update_by     varchar(60)  null comment '¸üÐÂÈË';
-ALTER TABLE zn_dzg_count_time ADD     update_time   datetime     null comment '¸üÐÂÊ±¼ä';
-ALTER TABLE zn_dzg_count_time ADD     del_flag      tinyint(1)   null comment 'É¾³ý±ê¼Ç';
+ALTER TABLE zn_dzg_count_time ADD     remark     varchar(200)       null comment 'å¤‡æ³¨';
+ALTER TABLE zn_dzg_count_time ADD     create_id     bigint       null comment 'åˆ›å»ºäººid';
+ALTER TABLE zn_dzg_count_time ADD     create_by     varchar(60)  null comment 'åˆ›å»ºäºº';
+ALTER TABLE zn_dzg_count_time ADD     create_dept   bigint       null comment 'åˆ›å»ºéƒ¨é—¨';
+ALTER TABLE zn_dzg_count_time ADD     create_time   datetime     null comment 'åˆ›å»ºæ—¶é—´';
+ALTER TABLE zn_dzg_count_time ADD     update_id     bigint       null comment 'æ›´æ–°äººid';
+ALTER TABLE zn_dzg_count_time ADD     update_by     varchar(60)  null comment 'æ›´æ–°äºº';
+ALTER TABLE zn_dzg_count_time ADD     update_time   datetime     null comment 'æ›´æ–°æ—¶é—´';
+ALTER TABLE zn_dzg_count_time ADD     del_flag      tinyint(1)   null comment 'åˆ é™¤æ ‡è®°';

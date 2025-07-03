@@ -1,22 +1,22 @@
 -- auto-generated definition
 create table zn_upper
 (
-    id          bigint       not null comment 'Í¬²½Êı¾İ'
+    id          bigint       not null comment 'åŒæ­¥æ•°æ®'
         primary key,
-    t_name      varchar(255) not null comment '±íÃû',
+    t_name      varchar(255) not null comment 'è¡¨å',
     t_id        bigint       not null comment 'ID',
-    t_count     bigint       not null comment '´ÎÊı',
-    code        int          null comment '·µ»ØÂë',
-    message     varchar(255) null comment '·µ»ØĞÅÏ¢',
-    create_id   bigint       null comment '´´½¨ÕßID',
-    create_by   varchar(50)  null comment '´´½¨Õß',
-    create_time datetime     null comment '´´½¨Ê±¼ä',
-    create_dept bigint       null comment '´´½¨Õß²¿ÃÅ',
-    update_id   bigint       null comment '¸üĞÂÕßID',
-    update_by   varchar(50)  null comment '¸üĞÂÕß',
-    update_time datetime     null comment '¸üĞÂÊ±¼ä',
-    del_flag    tinyint(1)   null comment 'É¾³ı±êÊ¶',
-    remark      varchar(100) null comment '±¸×¢'
+    t_count     bigint       not null comment 'æ¬¡æ•°',
+    code        int          null comment 'è¿”å›ç ',
+    message     varchar(255) null comment 'è¿”å›ä¿¡æ¯',
+    create_id   bigint       null comment 'åˆ›å»ºè€…ID',
+    create_by   varchar(50)  null comment 'åˆ›å»ºè€…',
+    create_time datetime     null comment 'åˆ›å»ºæ—¶é—´',
+    create_dept bigint       null comment 'åˆ›å»ºè€…éƒ¨é—¨',
+    update_id   bigint       null comment 'æ›´æ–°è€…ID',
+    update_by   varchar(50)  null comment 'æ›´æ–°è€…',
+    update_time datetime     null comment 'æ›´æ–°æ—¶é—´',
+    del_flag    tinyint(1)   null comment 'åˆ é™¤æ ‡è¯†',
+    remark      varchar(100) null comment 'å¤‡æ³¨'
 )
-    comment 'Í¬²½';
+    comment 'åŒæ­¥';
 

@@ -1,24 +1,24 @@
 -- auto-generated definition
 create table mt_confirm_log
 (
-    ID               int								comment '×ÔÔöID',
-    sn      varchar(255) collate utf8mb4_unicode_ci null comment 'Éè±¸±àºÅ',
-    CODE             varchar(32)    default ''        not null comment '±àÂë',
-    AMOUNT           decimal(10, 2) default 0.00      null comment 'ºËÏú½ğ¶î',
-    COUPON_ID        int            default 0         null comment '¿¨È¯ID',
-    USER_COUPON_ID   int            default 0         not null comment 'ÓÃ»§È¯ID',
-    ORDER_ID         int            default 0         null comment '¶©µ¥ID',
-    CREATE_TIME      datetime                         null comment '´´½¨Ê±¼ä',
-    UPDATE_TIME      datetime                         null comment '¸üĞÂÊ±¼ä',
-    USER_ID          int            default 0         not null comment '¿¨È¯ËùÊôÓÃ»§ID',
-    OPERATOR_USER_ID int                              null comment 'ºËÏúÕßÓÃ»§ID',
-    MERCHANT_ID      int            default 0         null comment 'ÉÌ»§ID',
-    STORE_ID         int            default 0         not null comment 'ºËÏúµêÆÌID',
-    STATUS           varchar(1)                       not null comment '×´Ì¬£¬AÕı³£ºËÏú£»D£º³·ÏúÊ¹ÓÃ',
-    CANCEL_TIME      datetime                         null comment '³·ÏúÊ±¼ä',
-    OPERATOR         varchar(30)                      null comment '×îºó²Ù×÷ÈË',
-    OPERATOR_FROM    varchar(30)    default 'mt_user' null comment '²Ù×÷À´Ô´user_id¶ÔÓ¦±ít_account »¹ÊÇ mt_user',
-    REMARK           varchar(500)   default ''        null comment '±¸×¢ĞÅÏ¢'
+    ID               int								comment 'è‡ªå¢ID',
+    sn      varchar(255) collate utf8mb4_unicode_ci null comment 'è®¾å¤‡ç¼–å·',
+    CODE             varchar(32)    default ''        not null comment 'ç¼–ç ',
+    AMOUNT           decimal(10, 2) default 0.00      null comment 'æ ¸é”€é‡‘é¢',
+    COUPON_ID        int            default 0         null comment 'å¡åˆ¸ID',
+    USER_COUPON_ID   int            default 0         not null comment 'ç”¨æˆ·åˆ¸ID',
+    ORDER_ID         int            default 0         null comment 'è®¢å•ID',
+    CREATE_TIME      datetime                         null comment 'åˆ›å»ºæ—¶é—´',
+    UPDATE_TIME      datetime                         null comment 'æ›´æ–°æ—¶é—´',
+    USER_ID          int            default 0         not null comment 'å¡åˆ¸æ‰€å±ç”¨æˆ·ID',
+    OPERATOR_USER_ID int                              null comment 'æ ¸é”€è€…ç”¨æˆ·ID',
+    MERCHANT_ID      int            default 0         null comment 'å•†æˆ·ID',
+    STORE_ID         int            default 0         not null comment 'æ ¸é”€åº—é“ºID',
+    STATUS           varchar(1)                       not null comment 'çŠ¶æ€ï¼ŒAæ­£å¸¸æ ¸é”€ï¼›Dï¼šæ’¤é”€ä½¿ç”¨',
+    CANCEL_TIME      datetime                         null comment 'æ’¤é”€æ—¶é—´',
+    OPERATOR         varchar(30)                      null comment 'æœ€åæ“ä½œäºº',
+    OPERATOR_FROM    varchar(30)    default 'mt_user' null comment 'æ“ä½œæ¥æºuser_idå¯¹åº”è¡¨t_account è¿˜æ˜¯ mt_user',
+    REMARK           varchar(500)   default ''        null comment 'å¤‡æ³¨ä¿¡æ¯'
 )
-    comment 'ºËÏú¼ÇÂ¼±í' charset = utf8mb3;
+    comment 'æ ¸é”€è®°å½•è¡¨' charset = utf8mb3;
 

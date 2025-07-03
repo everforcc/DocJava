@@ -6,7 +6,7 @@ select * from test_sync;
 
 delete from test_sync;
 
--- 存储过程也会同步
+-- 瀛樺偍杩囩▼涔熶細鍚屾
 
 DROP PROCEDURE IF EXISTS InsertTestData1;
 
@@ -15,11 +15,11 @@ CREATE PROCEDURE InsertTestData1()
 BEGIN
     DECLARE i INT DEFAULT 1;
     WHILE i <= 10000 DO
-            INSERT INTO test_sync(id,name) VALUES (i+100000,CONCAT('s1循环', i));
+            INSERT INTO test_sync(id,name) VALUES (i+100000,CONCAT('s1寰幆', i));
             SET i = i + 1;
         END WHILE;
 END$$
 DELIMITER ;
 
--- 执行存储过程
+-- 鎵ц瀛樺偍杩囩▼
 CALL InsertTestData1();

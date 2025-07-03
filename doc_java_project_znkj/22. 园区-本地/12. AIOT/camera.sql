@@ -18,7 +18,7 @@ where zmc.id in (
 
 --
 
--- careme id ÊÂ¼ş
+-- careme id äº‹ä»¶
 
 select *
 from zn_ais_event_data zaed;
@@ -49,9 +49,9 @@ where zmc.id in (
 
 
 -- plateid
--- °ó¶¨iotÉè±¸ºÍÏà»ú
--- Ïà»úÊÂ¼ş£¬device_id camera_id
--- ¹ØÁª¹ØÏµ±í£¬ plateid
+-- ç»‘å®šiotè®¾å¤‡å’Œç›¸æœº
+-- ç›¸æœºäº‹ä»¶ï¼Œdevice_id camera_id
+-- å…³è”å…³ç³»è¡¨ï¼Œ plateid
 -- aiot
--- ¹ØÁª¹ØÏµ±í£¬ plateid
+-- å…³è”å…³ç³»è¡¨ï¼Œ plateid
 

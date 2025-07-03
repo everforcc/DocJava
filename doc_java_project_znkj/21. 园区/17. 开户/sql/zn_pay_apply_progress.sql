@@ -2,20 +2,20 @@
 create table zn_pay_apply_progress
 (
     id          bigint                 not null comment 'sys_user id',
-    progress    int         default 0  null comment 'µ±Ç°½ø¶È 1¿ª»§ÀàĞÍ 2×ÊÁÏÌá½» 3ÏßÏÂµçÇ© 4 ÊµÃûÈÏÖ¤',
-    remark      varchar(255)           null comment '±¸×¢',
-    create_id   bigint                 null comment '´´½¨ÕßID',
-    create_by   varchar(64) default '' null comment '´´½¨Õß',
-    create_time datetime               null comment '´´½¨Ê±¼ä',
-    create_dept bigint                 null comment '´´½¨²¿ÃÅ',
-    update_id   bigint                 null comment '¸üĞÂÕßID',
-    update_by   varchar(64) default '' null comment '¸üĞÂÕß',
-    update_time datetime               null comment '¸üĞÂÊ±¼ä',
+    progress    int         default 0  null comment 'å½“å‰è¿›åº¦ 1å¼€æˆ·ç±»å‹ 2èµ„æ–™æäº¤ 3çº¿ä¸‹ç”µç­¾ 4 å®åè®¤è¯',
+    remark      varchar(255)           null comment 'å¤‡æ³¨',
+    create_id   bigint                 null comment 'åˆ›å»ºè€…ID',
+    create_by   varchar(64) default '' null comment 'åˆ›å»ºè€…',
+    create_time datetime               null comment 'åˆ›å»ºæ—¶é—´',
+    create_dept bigint                 null comment 'åˆ›å»ºéƒ¨é—¨',
+    update_id   bigint                 null comment 'æ›´æ–°è€…ID',
+    update_by   varchar(64) default '' null comment 'æ›´æ–°è€…',
+    update_time datetime               null comment 'æ›´æ–°æ—¶é—´',
     del_flag    tinyint(1)  default 0  null,
     constraint zn_pay_apply_progress_id_uindex
         unique (id)
 )
-    comment 'ÈÏÖ¤½ø¶È';
+    comment 'è®¤è¯è¿›åº¦';
 
 alter table zn_pay_apply_progress
     add primary key (id);

@@ -1,13 +1,13 @@
 
--- Ôö¼Ó Ö¸¶¨sn Ö§¸¶ÓÃ»§
+-- å¢åŠ  æŒ‡å®šsn æ”¯ä»˜ç”¨æˆ·
 
--- 1. ¸ù¾İsn²é³öÀ´manager_phone
+-- 1. æ ¹æ®snæŸ¥å‡ºæ¥manager_phone
 select e.manager_phone,e.* from zn_device_sn e where e.zn_device_sn_var = 'PRE670182493';
 
--- 2. ¸ù¾İÊÖ»úºÅ²é³öÀ´ user_id
+-- 2. æ ¹æ®æ‰‹æœºå·æŸ¥å‡ºæ¥ user_id
 select e.user_id,e.* from sys_user e where e.user_name like '%17597998777';
 
 -- 1122937010332508160
--- 3. ¸´ÖÆ huifu_id ÊÇ 6666000151824676 µÄ£¬ĞŞ¸Äid Îª sys_user.user_id
+-- 3. å¤åˆ¶ huifu_id æ˜¯ 6666000151824676 çš„ï¼Œä¿®æ”¹id ä¸º sys_user.user_id
 select * from zn_pay_user e where e.id = 1121557053677117440 ;
 

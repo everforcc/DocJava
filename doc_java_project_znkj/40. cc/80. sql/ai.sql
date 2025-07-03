@@ -1,5 +1,5 @@
 
--- 创建小说简介表
+-- 鍒涘缓灏忚绠�浠嬭〃
 CREATE TABLE cc_craw_book_info (
                                    id BIGINT PRIMARY KEY,
                                    auther_id VARCHAR(500),
@@ -8,7 +8,7 @@ CREATE TABLE cc_craw_book_info (
                                    description TEXT
 );
 
--- 创建小说章节列表
+-- 鍒涘缓灏忚绔犺妭鍒楄〃
 CREATE TABLE cc_craw_book_capter (
                                      id BIGINT PRIMARY KEY,
                                      book_id BIGINT,
@@ -18,7 +18,7 @@ CREATE TABLE cc_craw_book_capter (
                                      FOREIGN KEY (book_id) REFERENCES cc_craw_book_info(id)
 );
 
--- 创建小说章节内容
+-- 鍒涘缓灏忚绔犺妭鍐呭
 CREATE TABLE cc_craw_book_content (
                                       id BIGINT PRIMARY KEY,
                                       chapter_id BIGINT,

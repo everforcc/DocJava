@@ -1,4 +1,4 @@
--- 设备 本地配置
+-- 璁惧 鏈湴閰嶇疆
 -- 2024-05-07 17:52:23
 SELECT e.activation_date,e.*
 FROM zn_local e;

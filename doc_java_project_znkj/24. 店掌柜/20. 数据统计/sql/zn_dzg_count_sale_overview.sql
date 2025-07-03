@@ -1,6 +1,6 @@
 -- zn_dzg_count_sale_overview
 
--- ÓªÒµ¸Å¿ö Ã¿ÌìÍ³¼ÆÒ»´Î
+-- è¥ä¸šæ¦‚å†µ æ¯å¤©ç»Ÿè®¡ä¸€æ¬¡
 
 select *
 from zn_dzg_order zdo
@@ -42,25 +42,25 @@ from zn_dzg_order_money zdom
          left join zn_dzg_order zdo on zdo.id = zdom.order_id
 where zdo.status = 2 and zdom.pay_type in (1,2,3);
 
--- ¿¨ÏúÊÛÊıÁ¿
+-- å¡é”€å”®æ•°é‡
 select count(1)
 from zn_dzg_order_money zdom
          left join zn_dzg_order zdo on zdo.id = zdom.order_id
 where zdo.status = 2 and zdom.order_type = 2;
 
--- ¿¨ÏúÊÛ½ğ¶î
+-- å¡é”€å”®é‡‘é¢
 select sum(zdom.amount)
 from zn_dzg_order_money zdom
          left join zn_dzg_order zdo on zdo.id = zdom.order_id
 where zdo.status = 2 and zdom.order_type = 2;
 
--- ¿¨Ğø·Ñ½ğ¶î
+-- å¡ç»­è´¹é‡‘é¢
 select sum(zdom.amount)
 from zn_dzg_order_money zdom
          left join zn_dzg_order zdo on zdo.id = zdom.order_id
 where zdo.status = 2 and zdom.order_type = 4;
 
--- todo È±ÉÙÍË¿î»ã×Ü
+-- todo ç¼ºå°‘é€€æ¬¾æ±‡æ€»
 -- zn_dzg_count_sale_overview
 select
        sum(zdom.amount) as pay_count,

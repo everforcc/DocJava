@@ -1,6 +1,6 @@
 SHOW VARIABLES;
 
--- 等待时间
+-- 绛夊緟鏃堕棿
 SHOW VARIABLES LIKE 'wait_timeout';
--- 交互时间
+-- 浜や簰鏃堕棿
 SHOW VARIABLES LIKE 'interactive_timeout';

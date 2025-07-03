@@ -9,7 +9,7 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-dependencies</artifactId>
         <version>${spring.boot}</version>
-        <!-- ¸¸Àà¹¤³Ì´ò°üĞÎÊ½ -->
+        <!-- çˆ¶ç±»å·¥ç¨‹æ‰“åŒ…å½¢å¼ -->
         <type>pom</type>
 
         <scope>import</scope>
@@ -21,7 +21,7 @@
 ~~~
 import
 This scope is only supported on a dependency of type pom in the <dependencyManagement> section. It indicates the dependency is to be replaced with the effective list of dependencies in the specified POM's <dependencyManagement> section. Since they are replaced, dependencies with a scope of import do not actually participate in limiting the transitivity of a dependency.
-¸¸ÏîÄ¿ÒıÈëµÄÕâ¸öÒÀÀµ Ê¹ÓÃÕâ¸öÒÀÀµÖĞµÄdependencyµÄ°æ±¾
+çˆ¶é¡¹ç›®å¼•å…¥çš„è¿™ä¸ªä¾èµ– ä½¿ç”¨è¿™ä¸ªä¾èµ–ä¸­çš„dependencyçš„ç‰ˆæœ¬
 ~~~
 
 </span>

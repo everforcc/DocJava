@@ -4,40 +4,40 @@
 # show create table mt_balance;
 
 -- modify
--- 更新错了恢复数据
+-- 鏇存柊閿欎簡鎭㈠鏁版嵁
 # ALTER TABLE mt_address
-#     MODIFY `ID` int(11) auto_increment comment '自增ID';
+#     MODIFY `ID` int(11) auto_increment comment '鑷ID';
 # ALTER TABLE mt_balance
-#     MODIFY `ID` int(11) auto_increment comment '自增ID';
+#     MODIFY `ID` int(11) auto_increment comment '鑷ID';
 # ALTER TABLE mt_cart
-#     MODIFY `ID` int(11) auto_increment comment '自增ID';
+#     MODIFY `ID` int(11) auto_increment comment '鑷ID';
 # ALTER TABLE mt_commission_cash
-#     MODIFY `ID` int(11) auto_increment comment '自增ID';
+#     MODIFY `ID` int(11) auto_increment comment '鑷ID';
 # ALTER TABLE mt_commission_log
-#     MODIFY `ID` int(11) auto_increment comment '自增ID';
+#     MODIFY `ID` int(11) auto_increment comment '鑷ID';
 # ALTER TABLE mt_commission_relation
-#     MODIFY `ID` int(11) auto_increment comment '自增ID';
+#     MODIFY `ID` int(11) auto_increment comment '鑷ID';
 # ALTER TABLE mt_confirm_log
-#     MODIFY `ID` int(11) auto_increment comment '自增ID';
+#     MODIFY `ID` int(11) auto_increment comment '鑷ID';
 # ALTER TABLE mt_give
-#     MODIFY `ID` int(11) auto_increment comment '自增ID';
+#     MODIFY `ID` int(11) auto_increment comment '鑷ID';
 # ALTER TABLE mt_message
-#     MODIFY `ID` int(11) auto_increment comment '自增ID';
+#     MODIFY `ID` int(11) auto_increment comment '鑷ID';
 # ALTER TABLE mt_open_gift_item
-#     MODIFY `ID` int(11) auto_increment comment '自增ID';
+#     MODIFY `ID` int(11) auto_increment comment '鑷ID';
 # ALTER TABLE mt_order
-#     MODIFY `ID` int(11) auto_increment comment '自增ID';
+#     MODIFY `ID` int(11) auto_increment comment '鑷ID';
 # ALTER TABLE mt_order_address
-#     MODIFY `ID` int(11) auto_increment comment '自增ID';
+#     MODIFY `ID` int(11) auto_increment comment '鑷ID';
 # ALTER TABLE mt_point
-#     MODIFY `ID` int(11) auto_increment comment '自增ID';
+#     MODIFY `ID` int(11) auto_increment comment '鑷ID';
 # ALTER TABLE mt_refund
-#     MODIFY `ID` int(11) auto_increment comment '自增ID';
+#     MODIFY `ID` int(11) auto_increment comment '鑷ID';
 # ALTER TABLE mt_send_log
-#     MODIFY `ID` int(11) auto_increment comment '自增ID';
+#     MODIFY `ID` int(11) auto_increment comment '鑷ID';
 # ALTER TABLE mt_staff
-#     MODIFY `ID` int(11) auto_increment comment '自增ID';
+#     MODIFY `ID` int(11) auto_increment comment '鑷ID';
 # ALTER TABLE mt_user_action
-#     MODIFY `ID` int(11) auto_increment comment '自增ID';
+#     MODIFY `ID` int(11) auto_increment comment '鑷ID';
 # ALTER TABLE mt_user_coupon
-#     MODIFY `ID` int(11) auto_increment comment '自增ID';
+#     MODIFY `ID` int(11) auto_increment comment '鑷ID';

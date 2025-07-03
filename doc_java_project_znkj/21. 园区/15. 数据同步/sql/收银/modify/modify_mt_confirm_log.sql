@@ -1,7 +1,7 @@
--- 1. 查看创建脚本
+-- 1. 鏌ョ湅鍒涘缓鑴氭湰
 show create table mt_confirm_log;
 
--- 2. 组装关联商户id脚本
---                                                 COUPON_ID        int            default 0         null comment '卡券ID',
+-- 2. 缁勮鍏宠仈鍟嗘埛id鑴氭湰
+--                                                 COUPON_ID        int            default 0         null comment '鍗″埜ID',
 
--- 3. modify脚本
+-- 3. modify鑴氭湰

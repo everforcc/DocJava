@@ -1,44 +1,44 @@
 
--- 1. ²é³öËùÓĞµÄ¾­ÏúÉÌ
+-- 1. æŸ¥å‡ºæ‰€æœ‰çš„ç»é”€å•†
 select su.* from sys_user su
 left join sys_user_role sur on su.user_id= sur.user_id
 where sur.role_id = 3;
--- ½ÇÉ«
+-- è§’è‰²
 select * from sys_user_role sur
 where sur.role_id = 3;
 select * from sys_role;
 
--- ¾­ÏúÉÌ±í
+-- ç»é”€å•†è¡¨
 select su.user_id,su.* from sys_user su ;
 select su.nick_name,zdl.dealer_id,zdl.* from zn_device_lease zdl
 left join sys_user su on zdl.dealer_id = su.user_id;
 
--- 2. ¾­ÏúÉÌÃûÏÂµÄËùÓĞsn
--- ¿ÉÄÜÎ´¼¤»î
+-- 2. ç»é”€å•†åä¸‹çš„æ‰€æœ‰sn
+-- å¯èƒ½æœªæ¿€æ´»
 -- group_id
-select e.group_id,e.zn_device_sn_var,e.dealer_id,e.contact_person 'ÁªÏµÈË',e.phone 'ÊÖ»úºÅ',e.* from zn_device_lease e;
+select e.group_id,e.zn_device_sn_var,e.dealer_id,e.contact_person 'è”ç³»äºº',e.phone 'æ‰‹æœºå·',e.* from zn_device_lease e;
 select e.group_id,e.* from zn_device_lease e;
--- ÒÑ¼¤»î
+-- å·²æ¿€æ´»
 -- select e.* from zn_device_sn e;
 -- select * from sys_user e ;
 
--- 3. ÊÂ¼ş´¦ÀíÈËÔ±±í
--- Ê¹ÓÃsnÏà¹ØÁª
+-- 3. äº‹ä»¶å¤„ç†äººå‘˜è¡¨
+-- ä½¿ç”¨snç›¸å…³è”
 -- ,zeps.group_id
 select zeps.* from zn_event_process_staff zeps ;
 
 select zeps.group_id,zeps.dealer_Id,zeps.* from zn_event_process_staff zeps
 order by rand();
 
--- ÒÆ³ıÉè±¸sn
+-- ç§»é™¤è®¾å¤‡sn
 select zepsg.* from zn_event_process_staff_group zepsg ;
 -- select * from zn_device_lease;
 
--- 4. ÊÂ¼ş±í
+-- 4. äº‹ä»¶è¡¨
 select zaedd.zn_device_sn_var,zaedd.* from zn_ais_event_data_details_operate zaedd
 where zaedd.process_id = 1;
 
--- ÖØÖÃ²âÊÔÊı¾İÎª¿É²éÑ¯
+-- é‡ç½®æµ‹è¯•æ•°æ®ä¸ºå¯æŸ¥è¯¢
 update zn_ais_event_data_details_operate
 set status = 0,
     create_time=now()
@@ -47,25 +47,25 @@ where id in (1,2,3,4,5,6,7,8,9,10,11,12,13);
 -- zn_ais_event_data_details_operate
 --
 -- select zed.algorithm_id,zed.* from zn_event_data zed;
--- copy ±í
+-- copy è¡¨
 -- select zedo.algorithm_id,zedo.* from zn_event_data_operate zedo;
 
--- Éè±¸×âÁŞÏà¹Ø
+-- è®¾å¤‡ç§Ÿèµç›¸å…³
 -- select zdl.dealer_id,zdl.* from zn_device_lease zdl ;
 -- select zdlr.* from zn_device_lease_record zdlr ;
 
 select * from zn_event_process_rule e ;
 select 60*24 from dual;
 
--- ²âÊÔÊı¾İ
+-- æµ‹è¯•æ•°æ®
 -- dealer_id
--- 123456789 ÅÉµ¥
--- ÈËÔ±
+-- 123456789 æ´¾å•
+-- äººå‘˜
     -- 11111111111
     -- 11111111112
     -- 11111111113
--- 987654321 ÇÀµ¥
--- ÈËÔ±
+-- 987654321 æŠ¢å•
+-- äººå‘˜
     -- 11111111114
     -- 11111111115
 

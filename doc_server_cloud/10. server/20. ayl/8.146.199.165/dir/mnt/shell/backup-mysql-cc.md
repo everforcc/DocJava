@@ -1,4 +1,4 @@
-- ���Խű�
+- 测试脚本
 - backup-mysql-everforcc.sh
 
 ~~~shell
@@ -6,13 +6,13 @@
 
 BACKUP_DIR="/mnt/cc/mysql/backup"
 
-# ����Ϊ���µ�Ŀ¼
-# Ŀ¼ ��/��
+# 调整为按月的目录
+# 目录 年/月
 YEAR=$(date +%Y)
 MONTH=$(date +%m)
-# �ļ���
+# 文件名
 DATE=$(date +%Y-%m-%d_%H:%M:%S)
-# �����Ӽ�Ŀ¼
+# 创建子级目录
 mkdir -p ${BACKUP_DIR}/${YEAR}/${MONTH}
 FILE="${BACKUP_DIR}/${YEAR}/${MONTH}/${DATE}.sql"
 FILELOG="${BACKUP_DIR}/${YEAR}/${MONTH}/${DATE}.log"

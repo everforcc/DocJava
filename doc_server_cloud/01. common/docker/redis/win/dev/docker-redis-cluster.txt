@@ -1,5 +1,5 @@
 
-# 构件容器
+# 鏋勪欢瀹瑰櫒
 docker-compose -f docker-redis-cluster.yml up -d --build
-# 构件集群
+# 鏋勪欢闆嗙兢
 docker exec -it redis5201 redis-cli -p 5201 -a everforcc --cluster create 192.168.1.15:5201 192.168.1.15:5202 192.168.1.15:5203 192.168.1.15:5204 192.168.1.15:5205 192.168.1.15:5206 --cluster-replicas 1

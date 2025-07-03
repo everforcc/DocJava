@@ -1,17 +1,17 @@
-select sum(JSON_UNQUOTE(JSON_EXTRACT(data,'$.\"缴费金额\"')))
+select sum(JSON_UNQUOTE(JSON_EXTRACT(data,'$.\"缂磋垂閲戦\"')))
 from zn_fee_dynamic_data
 where id = 1915755135479365634;
 
-select JSON_UNQUOTE(JSON_EXTRACT(data,'$.\"缴费金额\"'))
+select JSON_UNQUOTE(JSON_EXTRACT(data,'$.\"缂磋垂閲戦\"'))
 from zn_fee_dynamic_data;
 
 select *
-from zn_fee_dynamic_data  where JSON_UNQUOTE(JSON_EXTRACT(data,'$.\"电话号码\"')) = 15515636569;
+from zn_fee_dynamic_data  where JSON_UNQUOTE(JSON_EXTRACT(data,'$.\"鐢佃瘽鍙风爜\"')) = 15515636569;
 
 select *
-from zn_fee_dynamic_data where data like '%\"缴费金额\": \"30\"%';
+from zn_fee_dynamic_data where data like '%\"缂磋垂閲戦\": \"30\"%';
 
-/*某一天卡券的销售记录（销售额不包含卡续费的钱*/
+/*鏌愪竴澶╁崱鍒哥殑閿�鍞褰曪紙閿�鍞涓嶅寘鍚崱缁垂鐨勯挶*/
 select zdc.name card_name,
        zdcm.card_id card_id,
        count(1) sale_num,

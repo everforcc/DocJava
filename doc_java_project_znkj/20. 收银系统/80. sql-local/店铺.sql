@@ -10,7 +10,7 @@ SELECT * FROM mt_merchant E
 where e.STATUS = 'A'
 AND e.ID = 1;
 
--- Ö÷¼ü×ÔÔö´Ó¼¸¿ªÊ¼
+-- ä¸»é”®è‡ªå¢žä»Žå‡ å¼€å§‹
 SELECT AUTO_INCREMENT
 FROM information_schema.TABLES
 WHERE TABLE_SCHEMA = 'fuint_food'

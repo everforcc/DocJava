@@ -1,14 +1,14 @@
--- ×ÀÂë¹ÜÀí
+-- æ¡Œç ç®¡ç†
 update t_source set status = 'D'
 where source_id = 193;
 
--- »ı·Ö¹ÜÀí
+-- ç§¯åˆ†ç®¡ç†
 update t_source set status = 'D'
 where source_id = 104;
 update t_source set status = 'D'
 where parent_id = 104;
 
--- Éú³É´úÂë
+-- ç”Ÿæˆä»£ç 
 update t_source set status = 'D'
 where source_id = 187;
 
@@ -16,9 +16,9 @@ where source_id = 187;
 update t_account set merchant_id = 0,store_id = 0
 where acct_id = 2;
 
--- ÊÕÒø²Ëµ¥
+-- æ”¶é“¶èœå•
 select * from t_source e
-where e.source_name like '%ÊÕÒø%' ;
+where e.source_name like '%æ”¶é“¶%' ;
 select e.status,e.* from t_source e
 where e.source_id = 125;
 select e.status,e.* from t_source e
@@ -26,5 +26,5 @@ where e.parent_id = 125;
 
 update t_source e set e.status = 'D'
 where e.parent_id = 125;
-update t_source e set e.source_name = 'ÊÕÒøÌ¨'
+update t_source e set e.source_name = 'æ”¶é“¶å°'
 where e.source_id = 125;

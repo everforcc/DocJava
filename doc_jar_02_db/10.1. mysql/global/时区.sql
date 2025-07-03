@@ -1,5 +1,5 @@
--- 设置时区
+-- 璁剧疆鏃跺尯
 set global time_zone ='Asia/Shanghai';
 
--- 查看当前时间 校验
+-- 鏌ョ湅褰撳墠鏃堕棿 鏍￠獙
 select now() from dual;

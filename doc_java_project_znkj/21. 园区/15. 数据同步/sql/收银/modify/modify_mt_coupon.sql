@@ -1,15 +1,15 @@
--- 1. 查看创建脚本
+-- 1. 鏌ョ湅鍒涘缓鑴氭湰
 show create table mt_coupon;
 
--- 2. 组装关联商户id脚本
---                                                 COUPON_ID        int            default 0         null comment '卡券ID',
-SELECT concat('ALTER TABLE ', TABLE_NAME, ' MODIFY `coupon_id` bigint  DEFAULT ''0'' null COMMENT ''卡券ID'';') as s
+-- 2. 缁勮鍏宠仈鍟嗘埛id鑴氭湰
+--                                                 COUPON_ID        int            default 0         null comment '鍗″埜ID',
+SELECT concat('ALTER TABLE ', TABLE_NAME, ' MODIFY `coupon_id` bigint  DEFAULT ''0'' null COMMENT ''鍗″埜ID'';') as s
 FROM INFORMATION_SCHEMA.Columns
 WHERE COLUMN_NAME = 'coupon_id';
 
--- 3. modify脚本
-ALTER TABLE mt_confirm_log MODIFY `coupon_id` bigint  DEFAULT '0' null COMMENT '卡券ID';
-ALTER TABLE mt_coupon_goods MODIFY `coupon_id` bigint  not null COMMENT '卡券ID';
-ALTER TABLE mt_open_gift MODIFY `coupon_id` bigint  DEFAULT '0' not null COMMENT '卡券ID';
-ALTER TABLE mt_send_log MODIFY `coupon_id` bigint  DEFAULT '0' null COMMENT '卡券ID';
-ALTER TABLE mt_user_coupon MODIFY `coupon_id` bigint  DEFAULT '0' not null COMMENT '卡券ID';
+-- 3. modify鑴氭湰
+ALTER TABLE mt_confirm_log MODIFY `coupon_id` bigint  DEFAULT '0' null COMMENT '鍗″埜ID';
+ALTER TABLE mt_coupon_goods MODIFY `coupon_id` bigint  not null COMMENT '鍗″埜ID';
+ALTER TABLE mt_open_gift MODIFY `coupon_id` bigint  DEFAULT '0' not null COMMENT '鍗″埜ID';
+ALTER TABLE mt_send_log MODIFY `coupon_id` bigint  DEFAULT '0' null COMMENT '鍗″埜ID';
+ALTER TABLE mt_user_coupon MODIFY `coupon_id` bigint  DEFAULT '0' not null COMMENT '鍗″埜ID';

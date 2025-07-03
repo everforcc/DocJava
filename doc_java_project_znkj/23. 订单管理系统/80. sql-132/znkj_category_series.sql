@@ -16,22 +16,22 @@ where e.del_flag = 0
   and e.series_id = 1829419449262804994;
 
 
--- ²úÆ·Àà±ğÏµÁĞ
+-- äº§å“ç±»åˆ«ç³»åˆ—
 select * from znkj_category_series e
 where e.id = 1829419517248278530;
--- ĞÍºÅ kind_name ¿ÉÒÔºÍ¸¸¼¶ÖØ¸´
+-- å‹å· kind_name å¯ä»¥å’Œçˆ¶çº§é‡å¤
 select e.kind_name,e.* from znkj_kind e
 where e.del_flag = 0
   and e.series_id = 1829419517248278530;
 
--- µİ¹é
+-- é€’å½’
 select * from znkj_category_series e
 where e.id = 1829419407923744769;
 select e.del_flag,e.* from znkj_category_series e
 where e.parent_id = 1829419407923744769;
 SELECT * FROM znkj_category_series WHERE del_flag=0 AND (parent_id = 1829419407923744769 AND del_flag = 0);
 
--- ¸ù¾İÏµÁĞÀà±ğid£¬¹ØÁª
+-- æ ¹æ®ç³»åˆ—ç±»åˆ«idï¼Œå…³è”
 -- 0
 select * from znkj_kind e where e.series_id = 1831864987178504194;
 -- 1

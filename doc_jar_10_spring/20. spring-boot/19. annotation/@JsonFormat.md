@@ -1,8 +1,8 @@
 <span  style="font-family: Simsun,serif; font-size: 17px; ">
 
 - @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-- Èë²Î¸ñÊ½»¯
+- å…¥å‚æ ¼å¼åŒ–
 - @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-- Êı¾İ¿â²éÑ¯£¬³ö²Î¸ñÊ½»¯
+- æ•°æ®åº“æŸ¥è¯¢ï¼Œå‡ºå‚æ ¼å¼åŒ–
 
 </span>

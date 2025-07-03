@@ -1,10 +1,10 @@
 
--- 库位
+-- 搴撲綅
 select e.* from zn_dzg_warehouse e ;
 select e.* from zn_dzg_warehouse_log e ;
--- 分类
+-- 鍒嗙被
 select e.* from zn_dzg_goods_type e ;
--- 物品
+-- 鐗╁搧
 select e.del_flag,e.* from zn_dzg_goods e ;
 -- 1890322409819144194
 select e.warehouse_id,e.* from zn_dzg_stock e
@@ -16,7 +16,7 @@ select e.*,w.absolute_path from zn_dzg_warehouse_log e
 left join zn_dzg_warehouse w on e.warehouse_id = w.id
 where e.del_flag = 0 and e.warehouse_id = 1891690416600412161;
 
-select e.id,e.name 物品名称,e.specification 物品规格,zdw.absolute_path 库位,e.stock_num 盘点数量
+select e.id,e.name 鐗╁搧鍚嶇О,e.specification 鐗╁搧瑙勬牸,zdw.absolute_path 搴撲綅,e.stock_num 鐩樼偣鏁伴噺
 from zn_dzg_goods e
 left join zn_dzg_stock s on e.id = s.goods_id
 left join zn_dzg_warehouse zdw on s.warehouse_id = zdw.id

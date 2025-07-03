@@ -1,5 +1,5 @@
--- Ê¹ÓÃ JSON_UNQUOTE º¯ÊýÈ¥³ýË«ÒýºÅ
+-- ä½¿ç”¨ JSON_UNQUOTE å‡½æ•°åŽ»é™¤åŒå¼•å·
 SELECT JSON_UNQUOTE('\"abc\"');
 
--- ÅäºÏJSON_EXTRACTÊ¹ÓÃ
+-- é…åˆJSON_EXTRACTä½¿ç”¨
 SELECT JSON_UNQUOTE(JSON_EXTRACT(column, '$.mark')) AS address FROM dual;

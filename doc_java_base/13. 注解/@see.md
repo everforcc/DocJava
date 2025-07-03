@@ -2,14 +2,14 @@
 
 ### @see
 
-- 格式
+- 鏍煎紡
 
 ~~~java
 /**
- * @param message 消息内容
- * @return 返回
- * @see <a href="https://segmentfault.com/a/1190000017811919">原文地址</a>
- * 发送MQTT消息
+ * @param message 娑堟伅鍐呭
+ * @return 杩斿洖
+ * @see <a href="https://segmentfault.com/a/1190000017811919">鍘熸枃鍦板潃</a>
+ * 鍙戦�丮QTT娑堟伅
  */
 ~~~
 

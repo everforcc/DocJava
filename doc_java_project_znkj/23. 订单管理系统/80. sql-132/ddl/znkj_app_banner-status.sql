@@ -1,7 +1,7 @@
-# znkj_app_banner Ôö¼Ó×Ö¶Î status
+# znkj_app_banner å¢åŠ å­—æ®µ status
 
 select *
 from znkj_app_banner;
 
 ALTER TABLE `znkj_app_banner`
-    ADD status char collate utf8mb4_general_ci default '0' null comment '²Ëµ¥×´Ì¬£¨0Õı³£ 1Í£ÓÃ£©';
+    ADD status char collate utf8mb4_general_ci default '0' null comment 'èœå•çŠ¶æ€ï¼ˆ0æ­£å¸¸ 1åœç”¨ï¼‰';

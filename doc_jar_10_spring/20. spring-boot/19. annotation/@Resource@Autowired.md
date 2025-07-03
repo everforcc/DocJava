@@ -1,27 +1,27 @@
 <span  style="font-family: Simsun,serif; font-size: 17px; ">
 
-### ×Ô¶¯×¢Èë-@Resource-@Autowired
+### è‡ªåŠ¨æ³¨å…¥-@Resource-@Autowired
 
 - @Autowired
 
 ~~~
-@Qualifier Ö¸¶¨beanÃû
-@Primary Ö¸¶¨ÄÄ¸öclassÊÇÖ÷ÒªµÄbean
+@Qualifier æŒ‡å®šbeanå
+@Primary æŒ‡å®šå“ªä¸ªclassæ˜¯ä¸»è¦çš„bean
 ~~~
 
 - @Resource
 
 ~~~
-- name ¿ÉÒÔÊÖ¶¯Ö¸¶¨¸ù¾İÄÇ¸ö
+- name å¯ä»¥æ‰‹åŠ¨æŒ‡å®šæ ¹æ®é‚£ä¸ª
 - type
 ~~~
 
 ~~~
 @Resource@Autowired
-    1. ¸ù¾İÃû³ÆÀ´ÕÒ
-    2. Èç¹ûÕÒ²»µ½£¬¾ÍÈ¥ÕÒËùÓĞµÄÊµÏÖÀà
+    1. æ ¹æ®åç§°æ¥æ‰¾
+    2. å¦‚æœæ‰¾ä¸åˆ°ï¼Œå°±å»æ‰¾æ‰€æœ‰çš„å®ç°ç±»
 @Autowired
-    1. ÀàĞÍ
+    1. ç±»å‹
     2. name  
 ~~~
 

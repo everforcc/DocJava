@@ -1,21 +1,21 @@
--- 1. »áÔ±
+-- 1. ä¼šå‘˜
 -- show create table mt_user_coupon;
 select * from mt_user_coupon;
 
--- 2. ĞŞ¸ÄÖ÷¼üÊı¾İÀàĞÍ
---                                  `ID` int    NOT NULL COMMENT '×ÔÔöID',
+-- 2. ä¿®æ”¹ä¸»é”®æ•°æ®ç±»å‹
+--                                  `ID` int    NOT NULL COMMENT 'è‡ªå¢ID',
 ALTER TABLE `mt_user_coupon` MODIFY `ID` bigint NOT NULL COMMENT 'ID';
 
--- 3. Ôö¼Ó×Ö¶Î
-ALTER TABLE `mt_user_coupon` ADD `up_flag` int DEFAULT '0' COMMENT '0 Î´ÉÏ´« 1 ÉÏ´«ÖĞ 2 ÒÑÉÏ´«';
-ALTER TABLE `mt_user_coupon` ADD `up_count` int DEFAULT '0' COMMENT 'ÉÏ´«´ÎÊı';
-ALTER TABLE `mt_user_coupon` ADD `up_msg` varchar(255) DEFAULT NULL COMMENT 'ÉÏ´«ĞÅÏ¢';
-ALTER TABLE `mt_user_coupon` ADD `up_id` varchar(255) DEFAULT NULL COMMENT 'ÉÏ´«ID';
-ALTER TABLE `mt_user_coupon` ADD `zn_device_sn_var` varchar(255) DEFAULT NULL COMMENT 'Éè±¸±àºÅ';
-ALTER TABLE `mt_user_coupon` ADD `remark` varchar(100) DEFAULT NULL COMMENT '±¸×¢';
-ALTER TABLE `mt_user_coupon` ADD `del_flag` tinyint DEFAULT '0' COMMENT 'É¾³ı±êÊ¶';
-ALTER TABLE `mt_user_coupon` ADD `create_id` BIGINT(20) DEFAULT NULL COMMENT '´´½¨ÕßID';
-ALTER TABLE `mt_user_coupon` ADD  `create_by` VARCHAR(50) DEFAULT NULL COMMENT '´´½¨Õß';
-ALTER TABLE `mt_user_coupon` ADD  `update_id` BIGINT(20) DEFAULT NULL COMMENT '¸üĞÂÕßID';
-ALTER TABLE `mt_user_coupon` ADD  `update_by` VARCHAR(50) DEFAULT NULL COMMENT '¸üĞÂÕß';
-ALTER TABLE `mt_user_coupon` ADD  `create_dept` BIGINT(20) DEFAULT NULL COMMENT '´´½¨Õß²¿ÃÅ';
+-- 3. å¢åŠ å­—æ®µ
+ALTER TABLE `mt_user_coupon` ADD `up_flag` int DEFAULT '0' COMMENT '0 æœªä¸Šä¼  1 ä¸Šä¼ ä¸­ 2 å·²ä¸Šä¼ ';
+ALTER TABLE `mt_user_coupon` ADD `up_count` int DEFAULT '0' COMMENT 'ä¸Šä¼ æ¬¡æ•°';
+ALTER TABLE `mt_user_coupon` ADD `up_msg` varchar(255) DEFAULT NULL COMMENT 'ä¸Šä¼ ä¿¡æ¯';
+ALTER TABLE `mt_user_coupon` ADD `up_id` varchar(255) DEFAULT NULL COMMENT 'ä¸Šä¼ ID';
+ALTER TABLE `mt_user_coupon` ADD `zn_device_sn_var` varchar(255) DEFAULT NULL COMMENT 'è®¾å¤‡ç¼–å·';
+ALTER TABLE `mt_user_coupon` ADD `remark` varchar(100) DEFAULT NULL COMMENT 'å¤‡æ³¨';
+ALTER TABLE `mt_user_coupon` ADD `del_flag` tinyint DEFAULT '0' COMMENT 'åˆ é™¤æ ‡è¯†';
+ALTER TABLE `mt_user_coupon` ADD `create_id` BIGINT(20) DEFAULT NULL COMMENT 'åˆ›å»ºè€…ID';
+ALTER TABLE `mt_user_coupon` ADD  `create_by` VARCHAR(50) DEFAULT NULL COMMENT 'åˆ›å»ºè€…';
+ALTER TABLE `mt_user_coupon` ADD  `update_id` BIGINT(20) DEFAULT NULL COMMENT 'æ›´æ–°è€…ID';
+ALTER TABLE `mt_user_coupon` ADD  `update_by` VARCHAR(50) DEFAULT NULL COMMENT 'æ›´æ–°è€…';
+ALTER TABLE `mt_user_coupon` ADD  `create_dept` BIGINT(20) DEFAULT NULL COMMENT 'åˆ›å»ºè€…éƒ¨é—¨';

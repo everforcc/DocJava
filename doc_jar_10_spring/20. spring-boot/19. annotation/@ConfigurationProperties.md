@@ -3,7 +3,7 @@
 - @ConfigurationProperties
 
 ~~~
-¶ÁÈ¡ÅäÖÃÎÄ¼þµÄÅäÖÃ,¸øÊôÐÔ¸³Öµ
+è¯»å–é…ç½®æ–‡ä»¶çš„é…ç½®,ç»™å±žæ€§èµ‹å€¼
 ~~~
 
 </span>

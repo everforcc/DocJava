@@ -1,4 +1,4 @@
--- ´´½¨±í
+-- åˆ›å»ºè¡¨
 CREATE TABLE `t_t1` (
   `a` bigint NOT NULL AUTO_INCREMENT,
   `b` bigint DEFAULT NULL,
@@ -6,31 +6,31 @@ CREATE TABLE `t_t1` (
   `d` bigint DEFAULT NULL,
   `e` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`a`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='²âÊÔmysql innodb'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='æµ‹è¯•mysql innodb'
 
 -- t1
 select * from t_t1;
 
--- ´´½¨ÁªºÏË÷Òý
-CREATE INDEX idx_t1_bcd ON t_t1(b,c,d);¡¢
+-- åˆ›å»ºè”åˆç´¢å¼•
+CREATE INDEX idx_t1_bcd ON t_t1(b,c,d);ã€
 CREATE INDEX idx_t1_e ON t_t1(e);
 EXPLAIN SELECT * FROM t_t1 WHERE b=1 AND c=1 AND d=1;
 EXPLAIN SELECT * FROM t_t1 WHERE b=1 AND d=1;
 
--- Ê¹ÓÃÁªºÏË÷Òý
+-- ä½¿ç”¨è”åˆç´¢å¼•
 select * from t_t1 where b=1 and c=1 and d=1;
 
--- Ê¹ÓÃµ½Ë÷Òý
+-- ä½¿ç”¨åˆ°ç´¢å¼•
 EXPLAIN SELECT * FROM t_t1 WHERE b=1 AND c=1 AND d=1;
--- Using index condition Ë÷ÒýÏÂÍÆ
+-- Using index condition ç´¢å¼•ä¸‹æŽ¨
 EXPLAIN SELECT * FROM t_t1 WHERE b=1 AND d=1;
 
--- Êý¾Ý×ª»»
--- ½«×Ö·û¶¼×ªÎª0
+-- æ•°æ®è½¬æ¢
+-- å°†å­—ç¬¦éƒ½è½¬ä¸º0
 SELECT 'a' = 0;
 SELECT 'b' = 1;
 SELECT 'b' = 0;
--- µ«ÊÇ¼ÙÈç×Ö·ûÊÇÊý×ÖµÄ»°£¬¾Í×ªÎªÏàÓ¦µÄÊý×Ö
+-- ä½†æ˜¯å‡å¦‚å­—ç¬¦æ˜¯æ•°å­—çš„è¯ï¼Œå°±è½¬ä¸ºç›¸åº”çš„æ•°å­—
 SELECT '123' = 123;
--- ÆäÊµ²éµÄ¾ÍÊÇ a=0
+-- å…¶å®žæŸ¥çš„å°±æ˜¯ a=0
 SELECT * FROM t_t1 WHERE a = 'c';

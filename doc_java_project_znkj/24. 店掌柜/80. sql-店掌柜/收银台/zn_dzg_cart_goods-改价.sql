@@ -1,30 +1,30 @@
 
--- ������Ʒ����ļ�
--- ���ﳵ�����ĸ���Ʒ
+-- 测试商品结算改价
+-- 购物车新增四个商品
 -- 111111111 111111112 233456789
--- ���� 1 1 2
--- �۸� 3 3 5
--- �ֿۺ� 3 3 5 = 11
--- �ļ� 10 Ԫ 3����Ʒ
+-- 数量 1 1 2
+-- 价格 3 3 5
+-- 抵扣后 3 3 5 = 11
+-- 改价 10 元 3个商品
 
--- ���ս���۸�Ϊ
--- 3����Ʒ 10Ԫ
+-- 最终结算价格为
+-- 3个商品 10元
 
 SELECT *
 FROM zn_dzg_product e
-WHERE e.name like '%����%';
+WHERE e.name like '%可乐%';
 
--- ��Ա��
+-- 会员卡
 select * from zn_dzg_card_member e ;
--- ��Ա����Ʒ
+-- 会员卡商品
 select * from zn_dzg_card_member_product e ;
 
 
--- ���ﳵ
+-- 购物车
 select * from zn_dzg_cart_goods e
 where e.cart_id = 1897214504005689346;
 
--- ����
+-- 眼贴
 -- 2.66
 select 93.1/35 from dual;
 -- 2.8

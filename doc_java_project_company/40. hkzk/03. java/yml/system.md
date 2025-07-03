@@ -5,25 +5,25 @@ server:
 # Spring
 spring:
   application:
-    # 应用名称
+    # 搴旂敤鍚嶇О
     name: cc-system
   profiles:
-    # 环境配置
+    # 鐜閰嶇疆
     active: dev
   cloud:
     nacos:
       discovery:
-        # 服务注册地址
+        # 鏈嶅姟娉ㄥ唽鍦板潃
         server-addr: 47.120.35.101:8848
 #        ip: 192.168.1.15
 #        port: ${server.port}
         #namespace: 199e675d-7f8b-417c-a32a-706e22c95712
       config:
-        # 配置中心地址
+        # 閰嶇疆涓績鍦板潃
         server-addr: 47.120.35.101:8848
-        # 配置文件格式
+        # 閰嶇疆鏂囦欢鏍煎紡
         file-extension: yml
-        # 共享配置
+        # 鍏变韩閰嶇疆
         shared-configs:
           - application-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
         #namespace: 199e675d-7f8b-417c-a32a-706e22c95712
@@ -34,7 +34,7 @@ spring:
 mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
-    map-underscore-to-camel-case: true # 驼峰命名法问题，等效配置文件
+    map-underscore-to-camel-case: true # 椹煎嘲鍛藉悕娉曢棶棰橈紝绛夋晥閰嶇疆鏂囦欢
 flowable:
   async-executor-activate: false
 ~~~

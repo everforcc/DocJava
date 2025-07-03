@@ -5,13 +5,13 @@
 ~~~nginx
     location /file/ {
         autoindex on;
-        # ����ļ���Ŀ¼�����ģ���ʹ���ַ�����ʹ��utf-8
+        # 如果文件或目录有中文，则使用字符编码使用utf-8
         charset utf-8;
-        #Ĭ��Ϊon����ʾ���ļ���ȷ�д�С����λ��bytes��   
-        #��Ϊoff����ʾ���ļ��Ĵ�Ŵ�С����λ��kB����MB����GB
+        #默认为on，显示出文件的确切大小，单位是bytes。   
+        #改为off后，显示出文件的大概大小，单位是kB或者MB或者GB
         autoindex_exact_size off;
-        #Ĭ��Ϊoff����ʾ���ļ�ʱ��ΪGMTʱ�䡣
-        #��Ϊon����ʾ���ļ�ʱ��Ϊ�ļ��ķ�����ʱ��
+        #默认为off，显示的文件时间为GMT时间。
+        #改为on后，显示的文件时间为文件的服务器时间
         autoindex_localtime on;
         alias D:/cache/test/;
     }

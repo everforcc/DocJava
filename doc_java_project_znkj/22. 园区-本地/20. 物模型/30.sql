@@ -5,7 +5,7 @@
 select * from smartparklocal.zn_device_metadata e;
 
 select json_unquote(JSON_EXTRACT(e.meta_data,'$.gw.rxpk[0].pkdt')),e.meta_data,e.* from smartparklocal.zn_device_metadata e
-where e.device_code_name = 'ÃÅ´Å´«¸ĞÆ÷';
+where e.device_code_name = 'é—¨ç£ä¼ æ„Ÿå™¨';
 
 select json_unquote(JSON_EXTRACT(e.meta_data,'$.gw.rxpk[0].pkdt')),e.meta_data,e.* from smartparklocal.zn_device_metadata e
-where e.device_code_name = 'ÎÂÊª¶È´«¸ĞÆ÷ ';
+where e.device_code_name = 'æ¸©æ¹¿åº¦ä¼ æ„Ÿå™¨ ';
