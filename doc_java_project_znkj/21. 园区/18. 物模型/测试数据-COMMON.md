@@ -3,9 +3,9 @@
 [TOC]
 
 - zn_device_metadata
-- ²âÊÔÊı¾İ
+- æµ‹è¯•æ•°æ®
 
-### Éè±¸×¢²á
+### è®¾å¤‡æ³¨å†Œ
 
 ~~~json
 {
@@ -34,14 +34,14 @@
 znkj/zn_odt/device/report/iotCommon/ccdeviceId/ccreport
 ~~~
 
-### ¹«¹²
+### å…¬å…±
 
 - type
-    - Éè±¸ÀàĞÍ
-    - 1 Ò£¿ØÆ÷
+  - è®¾å¤‡ç±»å‹
+  - 1 é¥æ§å™¨
 - textid
-    - 3 ±¨¾¯
-    - 1 ²¼·À
+  - 3 æŠ¥è­¦
+  - 1 å¸ƒé˜²
 
 ~~~json
 {

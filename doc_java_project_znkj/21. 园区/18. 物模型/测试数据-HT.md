@@ -3,9 +3,9 @@
 [TOC]
 
 - zn_device_metadata
-- ²âÊÔÊı¾İ
+- æµ‹è¯•æ•°æ®
 
-### Éè±¸×¢²á
+### è®¾å¤‡æ³¨å†Œ
 
 ~~~json
 {
@@ -34,7 +34,7 @@
 znkj/zn_odt/device/report/iotHumidnessTemperature/ccdeviceId/ccreport
 ~~~
 
-### ÎÂ¶È
+### æ¸©åº¦
 
 ~~~json
 {
@@ -67,9 +67,9 @@ znkj/zn_odt/device/report/iotHumidnessTemperature/ccdeviceId/ccreport
 }
 ~~~
 
-- ½âÎöÖµ
+- è§£æå€¼
 - 0330000809004234007B10040111052AA2D5
-- ½«ÉÏÃæµÄÁ½¸öÊı×ÖÎªÒ»×é£¬Éú³ÉÒ»¸ö±í¸ñ£¬±íÍ·ÊÇindex
+- å°†ä¸Šé¢çš„ä¸¤ä¸ªæ•°å­—ä¸ºä¸€ç»„ï¼Œç”Ÿæˆä¸€ä¸ªè¡¨æ ¼ï¼Œè¡¨å¤´æ˜¯index
 
 | index | value |
 |-------|-------|
@@ -92,10 +92,10 @@ znkj/zn_odt/device/report/iotHumidnessTemperature/ccdeviceId/ccreport
 | 16    | A2    |
 | 17    | D5    |
 
-- ÎÂ¶È
+- æ¸©åº¦
 - 12-13
 - 0x0111 = 273
-- Êª¶È
+- æ¹¿åº¦
 - 15
 - 0x2A = 42
 
@@ -103,7 +103,7 @@ znkj/zn_odt/device/report/iotHumidnessTemperature/ccdeviceId/ccreport
 {"temperature":273,"humidness":42}
 ~~~
 
-### Êª¶È
+### æ¹¿åº¦
 
 ~~~
 ~~~
