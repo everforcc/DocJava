@@ -30,17 +30,25 @@ function updateRules(sourceUrl, targetUrl, headerRules) {
     const rules = [];
 
     // 添加重定向规则
+    let targetPath = targetUrlObj.pathname;
+    if (!targetPath.endsWith('/')) {
+      targetPath += '/';
+    }
+    let sourcePath = sourceUrlObj.pathname;
+    if (!sourcePath.endsWith('/')) {
+      sourcePath += '/';
+    }
     rules.push({
       id: 1,
       priority: 1,
       action: {
         type: 'redirect',
         redirect: {
-          regexSubstitution: targetUrlObj.origin + '/\\1'
+          regexSubstitution: targetUrlObj.origin + targetPath + '\\1'
         }
       },
       condition: {
-        regexFilter: sourceUrlObj.origin + sourceUrlObj.pathname + '(.*)',
+        regexFilter: sourceUrlObj.origin + sourcePath + '(.*)',
         resourceTypes: ['main_frame', 'sub_frame', 'stylesheet', 'script', 'image', 'font', 'object', 'xmlhttprequest', 'ping', 'csp_report', 'media', 'websocket', 'other']
       }
     });
