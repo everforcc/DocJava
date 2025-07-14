@@ -1,29 +1,3 @@
-[
-  {
-    "userid": 1834419293488418817,
-    "huifuid": "6666000154267351",
-    "amt": 400,
-    "root": false,
-    "mark": "jxs"
-  },
-  {
-    "userid": 1834418264814391298,
-    "huifuid": "6666000155050910",
-    "amt": 0,
-    "root": false,
-    "mark": "cs"
-  },
-  {
-    "userid": 1834413073364946945,
-    "huifuid": "6666000155049410",
-    "amt": 0,
-    "root": false,
-    "mark": "scjl"
-  },
-  {
-    "huifuid": "6666000151824676",
-    "amt": 3600,
-    "root": true,
-    "mark": "zn"
-  }
-]
+{
+  "code": 200
+}
