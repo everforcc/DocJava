@@ -3,14 +3,14 @@
 ### rtmp -> server -> application
 
 - 后面跟的是推流的地址，如果推流地址错误会报错
+
 ~~~
 rtmp://localhost:1935/hls/qsmy01: I/O error
 ~~~
 
 ### 示例
 
-~~~conf
-
+~~~nginx.conf
 rtmp {
   server {
     #端口
@@ -36,6 +36,24 @@ rtmp {
     }
   }
 }
+~~~
+
+#### application 优化
+
+- -tune zerolatency：极大降低编码延迟
+- -g 30 -keyint_min 30 -sc_threshold 0 -bf 0：保证每秒一个关键帧，减少B帧，提升实时性
+- -fflags nobuffer：采集端无缓冲
+
+~~~nginx.conf
+        application live {
+            live on;
+            record off;
+            # gop_cache off;    # 关闭GOP缓存，减少延迟
+            # drop_idle_publisher 5s; # 及时清理无效推流
+            # sync 1ms;         # 尽量同步
+            idle_streams off;
+            # buflen 10ms;     # 已设置
+        }
 ~~~
 
 </span>
