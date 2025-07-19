@@ -139,7 +139,7 @@ alter table zn_pay_order
     add dls_price bigint(20) null comment '代理商收单费(单位分)';
 
 alter table zn_pay_order
-    add profit_price bigint(20) null comment '利润(单位分)';
+    add profit_price bigint( 20) null comment '利润(单位分)';
 
 
 
