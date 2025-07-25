@@ -16,7 +16,7 @@ SELECT json_unquote(JSON_EXTRACT(e.other_data, '$.hf_seq_id')) as otherDataHfSeq
        e.other_data,
        e.*
 FROM zn_pay_order_record e
-where e.pay_amt is not null
+where e.status = 1
 order by e.create_time desc;
 
 -- orderJson
