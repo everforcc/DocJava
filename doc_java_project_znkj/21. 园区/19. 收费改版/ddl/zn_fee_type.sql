@@ -16,3 +16,6 @@ INSERT INTO `zn_fee_type` (code, name, remark, del_flag) VALUES ('10-11', '摄�
 INSERT INTO `zn_fee_type` (code, name, remark, del_flag) VALUES ('10-12', 'AI事件', null, 0);
 -- bug-9229
 update zn_fee_type set name = '暖气费' where code = '1-6661';
+
+INSERT INTO `zn_fee_type` (code, name, remark, del_flag) VALUES ('1-5552', '水费', null, 0);
+INSERT INTO `zn_fee_type` (code, name, remark, del_flag) VALUES ('1-5553', '电费', null, 0);
