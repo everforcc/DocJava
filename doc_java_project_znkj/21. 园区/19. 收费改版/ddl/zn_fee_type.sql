@@ -19,3 +19,13 @@ update zn_fee_type set name = '暖气费' where code = '1-6661';
 
 INSERT INTO `zn_fee_type` (code, name, remark, del_flag) VALUES ('1-5552', '水费', null, 0);
 INSERT INTO `zn_fee_type` (code, name, remark, del_flag) VALUES ('1-5553', '电费', null, 0);
+
+select * from zn_fee_type zft
+where code in ('1-5552','1-5553','1-200','1-100', '1-600', '1-700', '1-401', '1-402', '1-501', '1-502');
+select * from zn_fee_type zft where code = '1-5551';
+select * from zn_fee_type zft where code = '1-999';
+
+delete from zn_fee_type
+where code in ('1-5552','1-5553','1-200','1-100', '1-600', '1-700', '1-401', '1-402', '1-501', '1-502');
+update zn_fee_type set name = '充卡收费' where code = '1-5551';
+update zn_fee_type set name = '固定收费' where code = '1-999';
