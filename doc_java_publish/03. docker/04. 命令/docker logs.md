@@ -40,6 +40,7 @@ docker logs <container_id> > output.log 2>&1
 ### 示例
 
 ~~~shell
+docker logs --tail 99999 -f 003ecc958662 | grep '云通道短时间内两次订单回调'
 # 输出最新100行日志并保存到文件
 docker logs --tail 100 -f 2c7052a94736 > 5.log 2>&1 &
 docker logs --tail 100 -f 2c7052a94736 | grep 河南中南信息科技有限公司 > 6.log 2>&1 &
