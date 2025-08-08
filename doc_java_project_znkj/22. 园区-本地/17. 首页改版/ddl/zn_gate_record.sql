@@ -1,0 +1,1 @@
+ALTER TABLE zn_gate_record ADD     focus_Flag   tinyint     null comment '0 重点人员 1 非重点';

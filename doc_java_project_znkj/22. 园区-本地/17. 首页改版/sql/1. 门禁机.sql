@@ -28,5 +28,9 @@ where zgr.del_flag = 0
   and zgr.create_time < concat(curdate(), ' 00:00:00')
 order by zgr.create_time desc;
 
+
+select count(*) from zn_gate_record zgr
+where zgr.del_flag = 0;
+
 -- 4. 重点人员
 
