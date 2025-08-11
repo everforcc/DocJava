@@ -30,5 +30,10 @@ where zlr.del_flag = 0
   and zlr.create_time < concat(curdate(), ' 00:00:00')
 ;
 
+select *
+from zn_lift_record zlr
+where zlr.del_flag = 0
+limit 40;
+
 -- 4. 重点人员
 

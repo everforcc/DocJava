@@ -8,6 +8,7 @@ where zg.del_flag = 0;
 -- 2. 累计通行总人次
 select * from zn_gate_record zgr
 where zgr.del_flag = 0
+order by zgr.create_time desc
 --  and zgr.pass_direction = 1
 --  and zgr.staff_id = 1925823097675255810
 ;

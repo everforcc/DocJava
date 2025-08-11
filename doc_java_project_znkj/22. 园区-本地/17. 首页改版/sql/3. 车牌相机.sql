@@ -57,3 +57,8 @@ where zcpvr.del_flag = 0
   and zcpvr.create_time >= concat(curdate(), ' 00:00:00')
 ;
 
+select zcpvr.*
+from zn_car_park_vehicle_record zcpvr
+where zcpvr.del_flag = 0
+limit 100;
+
