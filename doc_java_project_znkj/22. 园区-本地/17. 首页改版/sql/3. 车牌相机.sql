@@ -43,6 +43,7 @@ select zcpvr.pay_money,zcpvr.*
 from zn_car_park_vehicle_record zcpvr
 where zcpvr.del_flag = 0
   and zcpvr.in_out = 1
+  and zcpvr.status = 2
   and zcpvr.create_time >= concat(date_sub(curdate(), interval 1 day), ' 00:00:00')
   and zcpvr.create_time < concat(curdate(), ' 00:00:00')
 ;
@@ -52,6 +53,7 @@ select zcpvr.pay_money,zcpvr.*
 from zn_car_park_vehicle_record zcpvr
 where zcpvr.del_flag = 0
   and zcpvr.in_out = 1
+  and zcpvr.status = 2
   and zcpvr.create_time >= concat(curdate(), ' 00:00:00')
 ;
 
