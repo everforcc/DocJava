@@ -1,0 +1,3 @@
+-- 这不是乱码，是二进制在工具里被“按文本预览”的效果。你列是 VARBINARY(42)，右侧 ASCII 预览把 0xFF 等字节渲染成“ÿ”等字符，看起来像乱码；左侧十六进制 FF FF 00 0F F0 FF 才是正确内容，正好就是你每天的 6 字节模式。
+SELECT HEX(week_bits), OCTET_LENGTH(week_bits) FROM arming_group_schedule WHERE group_id in (1,2);
+-- FFFF000FF0FFFFFF000FF0FFFFFF000FF0FFFFFF000FF0FFFFFF000FF0FFFFFF000FF0FFFFFF000FF0FF
