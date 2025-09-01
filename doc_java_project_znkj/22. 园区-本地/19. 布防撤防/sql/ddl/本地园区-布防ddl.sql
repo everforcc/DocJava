@@ -1,3 +1,7 @@
+-- 本地和云端
+ALTER TABLE zn_ais_third_party
+    ADD group_id bigint null comment 'zn_rearm_group.id';
+
 -- auto-generated definition
 create table zn_rearm_group
 (
@@ -42,10 +46,10 @@ create table zn_rearm_group_device
     update_by   varchar(60)  null comment '更新人',
     update_time datetime     null comment '更新时间',
     del_flag    tinyint(1)   null comment '删除标记',
-    up_flag                  int           null comment '0 未上传 1 上传中 2 已上传',
-    up_count                 int           null comment '上传次数',
-    up_msg                   varchar(255)  null comment '上传信息',
-    up_id                    varchar(255)  null comment '上传ID'
+    up_flag     int          null comment '0 未上传 1 上传中 2 已上传',
+    up_count    int          null comment '上传次数',
+    up_msg      varchar(255) null comment '上传信息',
+    up_id       varchar(255) null comment '上传ID'
 )
     comment '设备关联告警组';
 
@@ -69,10 +73,10 @@ create table zn_rearm_group_record
     update_by      varchar(60)  null comment '更新人',
     update_time    datetime     null comment '更新时间',
     del_flag       tinyint(1)   null comment '删除标记',
-    up_flag                  int           null comment '0 未上传 1 上传中 2 已上传',
-    up_count                 int           null comment '上传次数',
-    up_msg                   varchar(255)  null comment '上传信息',
-    up_id                    varchar(255)  null comment '上传ID'
+    up_flag        int          null comment '0 未上传 1 上传中 2 已上传',
+    up_count       int          null comment '上传次数',
+    up_msg         varchar(255) null comment '上传信息',
+    up_id          varchar(255) null comment '上传ID'
 )
     comment '布防撤防记录';
 
@@ -94,10 +98,13 @@ create table zn_rearm_group_temp
     update_by     varchar(60)  null comment '更新人',
     update_time   datetime     null comment '更新时间',
     del_flag      tinyint(1)   null comment '删除标记',
-    up_flag                  int           null comment '0 未上传 1 上传中 2 已上传',
-    up_count                 int           null comment '上传次数',
-    up_msg                   varchar(255)  null comment '上传信息',
-    up_id                    varchar(255)  null comment '上传ID'
+    up_flag       int          null comment '0 未上传 1 上传中 2 已上传',
+    up_count      int          null comment '上传次数',
+    up_msg        varchar(255) null comment '上传信息',
+    up_id         varchar(255) null comment '上传ID'
 )
     comment '今日临时撤防';
+
+
+
 

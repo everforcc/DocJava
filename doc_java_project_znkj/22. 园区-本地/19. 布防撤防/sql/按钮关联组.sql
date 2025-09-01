@@ -1,4 +1,6 @@
+
 select *
 from zn_rearm_group zrg
 where zrg.switch_json IS NOT NULL
-  AND JSON_CONTAINS(zrg.switch_json, '3');
+  AND JSON_CONTAINS(zrg.switch_json, '"1960315409117675522"');
+
