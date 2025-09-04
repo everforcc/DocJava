@@ -2,10 +2,10 @@
 
 ### 基础设置
 
-| 属性                                                                                         | 说明      |
-|--------------------------------------------------------------------------------------------|---------|
-| D:\app\360\360Chrome\Chrome\Application\360chrome.exe http://s1.dh151.com/?s               | 主页劫持    |
-| "C:\Program Files (x86)\Google\Chrome Dev\Application\chrome.exe" --test-type --no-sandbox | 打开崩溃设置  |
+| 属性                                                                                         | 说明     |
+|--------------------------------------------------------------------------------------------|--------|
+| D:\app\360\360Chrome\Chrome\Application\360chrome.exe http://s1.dh151.com/?s               | 主页劫持   |
+| "C:\Program Files (x86)\Google\Chrome Dev\Application\chrome.exe" --test-type --no-sandbox | 打开崩溃设置 |
 
 ### 快捷键
 
@@ -16,9 +16,10 @@
 
 ### 插件
 
-| 插件                           | 说明      |
-|------------------------------|---------|
-| Clipboard Permission Manager | 复制黏贴插件  |
+| 插件                           | 说明     |
+|------------------------------|--------|
+| Clipboard Permission Manager | 复制黏贴插件 |
+| GoFullPage                   | 全屏截图插件 |
 
 ### debug
 
