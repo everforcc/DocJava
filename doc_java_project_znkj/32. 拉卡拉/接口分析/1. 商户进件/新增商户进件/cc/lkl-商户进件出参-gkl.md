@@ -1,0 +1,298 @@
+- 错误
+
+~~~json
+{
+  "merchant_no": "100143780",
+  "state": "1",
+  "status": "WAIT_AUDI"
+}
+~~~
+
+- 错误
+
+~~~json
+{
+  "merchant_no": "100143782",
+  "state": "1",
+  "status": "WAIT_AUDI"
+}
+~~~
+
+- 正确
+
+~~~json
+{
+  "merchant_no": "100143785",
+  "state": "1",
+  "status": "WAIT_AUDI"
+}
+~~~
+
+~~~json
+{
+  "settle_card": {
+    "bank_code": "01040000",
+    "clearing_bank_no": "104100000004",
+    "create_time": 1757405702000,
+    "id_card": "4****************X",
+    "is_legal_person": true,
+    "city_code": "4910",
+    "audit_status": "SUCCESS",
+    "province_code": "41",
+    "bank_no": "104491068066",
+    "account_no": "6217****7322",
+    "able_status": "ENABLE",
+    "province_name": "河南省",
+    "account_kind": "58",
+    "optimistic": 0,
+    "own_no": "100143785",
+    "city_name": "郑州市",
+    "account_name": "郭**",
+    "bank_name": "河南中南科技",
+    "id": 36193
+  },
+  "shop_info_list": [
+    {
+      "shop_contact_mobile": "157******01",
+      "shop_id": 36362,
+      "city_name": "郑州市",
+      "shop_contact_name": "郭**",
+      "city_code": "4910",
+      "shop_dist_code": "984910",
+      "province_code": "4900",
+      "shop_name": "CC转发进件测试",
+      "shop_dist_name": "郑州市",
+      "shop_address": "河南省郑州市管城回族区紫辰路正商华祥国际大厦B座19楼",
+      "province_name": "河南省"
+    }
+  ],
+  "product_vos": [
+    {
+      "product": "WECHAT_PAY",
+      "product_name": "专业化扫码"
+    }
+  ],
+  "terminal_info": [
+    {
+      "term_type_name": "专业化扫码",
+      "term_type_code": 106,
+      "core_term_id": 1017830520909021184,
+      "active_no_vo_list": [
+        {
+          "term_no": "A9363911",
+          "active_no": "659363911982",
+          "busi_type_code": "QR_CODE_CARD"
+        }
+      ],
+      "term_no_list": [
+        "A9363911"
+      ]
+    }
+  ],
+  "customer_fee": [
+    {
+      "customer_no": 100143785,
+      "create_time": 1757405703000,
+      "trans_settle_type": "D1",
+      "day_limit": 300000.0,
+      "card_application_id": 17046950,
+      "term_id": 11242174,
+      "card_type": "DEBIT_CARD",
+      "customer_managementd_fee": 0.0,
+      "fee_rate": 0.0038,
+      "customer_managementf_fee": 0.0,
+      "optimistic": 0,
+      "customer_managemente_fee": 0.0,
+      "month_limit": 3000000.0,
+      "per_limi": 100000.0,
+      "min_amt": 0.1,
+      "max_amt": 20.0,
+      "customer_management_fee": 0.0,
+      "id": 232966729,
+      "trans_type": "POS"
+    },
+    {
+      "customer_no": 100143785,
+      "create_time": 1757405703000,
+      "trans_settle_type": "D1",
+      "day_limit": 300000.0,
+      "card_application_id": 17046950,
+      "term_id": 11242174,
+      "card_type": "CREDIT_CARD",
+      "customer_managementd_fee": 0.0,
+      "fee_rate": 0.006,
+      "customer_managementf_fee": 0.0,
+      "optimistic": 0,
+      "customer_managemente_fee": 0.0,
+      "month_limit": 3000000.0,
+      "per_limi": 50000.0,
+      "min_amt": 0.1,
+      "max_amt": 9999.0,
+      "customer_management_fee": 0.0,
+      "id": 232966730,
+      "trans_type": "POS"
+    },
+    {
+      "customer_no": 100143785,
+      "create_time": 1757405703000,
+      "trans_settle_type": "D1",
+      "day_limit": 10000.0,
+      "card_application_id": 17046951,
+      "term_id": 11242174,
+      "card_type": "WECHAT",
+      "customer_managementd_fee": 0.0,
+      "fee_rate": 0.006,
+      "customer_managementf_fee": 0.0,
+      "optimistic": 1,
+      "customer_managemente_fee": 0.0,
+      "term_no": "A9363911",
+      "update_time": 1757405708000,
+      "month_limit": 200000.0,
+      "per_limi": 5000.0,
+      "min_amt": 0.1,
+      "max_amt": 9999.0,
+      "customer_management_fee": 0.0,
+      "id": 232966731,
+      "trans_type": "SCAN"
+    },
+    {
+      "customer_no": 100143785,
+      "create_time": 1757405703000,
+      "trans_settle_type": "D1",
+      "day_limit": 10000.0,
+      "card_application_id": 17046951,
+      "term_id": 11242174,
+      "card_type": "ALIPAY",
+      "customer_managementd_fee": 0.0,
+      "fee_rate": 0.006,
+      "customer_managementf_fee": 0.0,
+      "optimistic": 1,
+      "customer_managemente_fee": 0.0,
+      "term_no": "A9363911",
+      "update_time": 1757405709000,
+      "month_limit": 200000.0,
+      "per_limi": 5000.0,
+      "min_amt": 0.1,
+      "max_amt": 9999.0,
+      "customer_management_fee": 0.0,
+      "id": 232966732,
+      "trans_type": "SCAN"
+    },
+    {
+      "customer_no": 100143785,
+      "create_time": 1757405703000,
+      "trans_settle_type": "D1",
+      "day_limit": 10000.0,
+      "card_application_id": 17046951,
+      "term_id": 11242174,
+      "card_type": "QR_CORD",
+      "customer_managementd_fee": 0.0,
+      "fee_rate": 0.006,
+      "customer_managementf_fee": 0.0,
+      "optimistic": 1,
+      "customer_managemente_fee": 0.0,
+      "term_no": "A9363911",
+      "update_time": 1757405709000,
+      "month_limit": 200000.0,
+      "per_limi": 5000.0,
+      "min_amt": 0.1,
+      "max_amt": 9999.0,
+      "customer_management_fee": 0.0,
+      "id": 232966733,
+      "trans_type": "SCAN"
+    },
+    {
+      "customer_no": 100143785,
+      "create_time": 1757405703000,
+      "trans_settle_type": "D1",
+      "day_limit": 10000.0,
+      "card_application_id": 17046951,
+      "term_id": 11242174,
+      "card_type": "UNIONPAY_WALLET_DEBIT_FEE",
+      "customer_managementd_fee": 0.0,
+      "fee_rate": 0.0038,
+      "customer_managementf_fee": 0.0,
+      "optimistic": 1,
+      "customer_managemente_fee": 0.0,
+      "term_no": "A9363911",
+      "update_time": 1757405709000,
+      "month_limit": 200000.0,
+      "per_limi": 5000.0,
+      "min_amt": 0.1,
+      "max_amt": 9999.0,
+      "customer_management_fee": 0.0,
+      "id": 232966734,
+      "trans_type": "SCAN"
+    },
+    {
+      "customer_no": 100143785,
+      "create_time": 1757405703000,
+      "trans_settle_type": "D1",
+      "day_limit": 10000.0,
+      "card_application_id": 17046951,
+      "term_id": 11242174,
+      "card_type": "UNIONPAY_WALLET_CREDIT_FEE",
+      "customer_managementd_fee": 0.0,
+      "fee_rate": 0.006,
+      "customer_managementf_fee": 0.0,
+      "optimistic": 1,
+      "customer_managemente_fee": 0.0,
+      "term_no": "A9363911",
+      "update_time": 1757405709000,
+      "month_limit": 200000.0,
+      "per_limi": 5000.0,
+      "min_amt": 0.1,
+      "max_amt": 9999.0,
+      "customer_management_fee": 0.0,
+      "id": 232966735,
+      "trans_type": "SCAN"
+    }
+  ],
+  "customer": {
+    "phone_no": "157******01",
+    "agency_no": 30342995,
+    "open_time": 1757405709000,
+    "platform": "LKL",
+    "license_no": "",
+    "optimistic": 4,
+    "activity_type_name": "汇拓客专业化扫码活动",
+    "term_no": "A9363911",
+    "city_name": "郑州市",
+    "update_time": 1757405709000,
+    "receive_detail": "河南省郑州市管城回族区紫辰路正商华祥国际大厦B座19楼",
+    "pos_sn": "",
+    "standard_fee": 0.0,
+    "merchant_source": "H5",
+    "activity_type": "H_W_PAY",
+    "agreement_status": "TRUE",
+    "mer_license_expire": "",
+    "legal_name": "郭**",
+    "channel_type": "TP_PERSONAL",
+    "mcc_code": "5812",
+    "is_standard": "FALSE",
+    "mer_reg_name": "CC转发进件测试",
+    "term_num": 1,
+    "identity_no_expire": "2027-06-19",
+    "merchant_no": "8224910581208RL",
+    "customer_no": 100143785,
+    "create_time": 1757405702000,
+    "phone_no_enc": "f+uk5Z3ALW3fhHyZY2uErQ==",
+    "identity_no_st_dt": "2017-06-19",
+    "agent_no": 29153396,
+    "active_no": "659363911982",
+    "contact_man_name": "郭**",
+    "county_name": "郑州市",
+    "province_name": "河南省",
+    "ysf_discount": "FALSE",
+    "bz_pos": "WECHAT_PAY",
+    "phone_no_hash": "fcb3b38ecab89545fc264d112fbd2def",
+    "mailbox": "71***7@qq.com",
+    "customer_status": "OPEN",
+    "mer_license_st_dt": "",
+    "reward_mode": "TO_AGENT",
+    "identity_no": "410182********531X",
+    "customer_name": "CC转发进件测试",
+    "mer_name": "CC转发进件测试"
+  }
+}
+~~~
