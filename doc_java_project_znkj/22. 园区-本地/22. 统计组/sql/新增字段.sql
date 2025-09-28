@@ -19,3 +19,4 @@ ALTER TABLE zn_rearm_group_device ADD device_id2 bigint null comment '（type=2�
 ALTER TABLE zn_rearm_group_device MODIFY device_type tinyint null comment '0,IOT 1,AI算法 2相机划线';
 
 
+update zn_rearm_group set type = 0;
