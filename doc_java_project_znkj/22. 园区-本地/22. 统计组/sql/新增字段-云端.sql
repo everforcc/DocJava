@@ -20,3 +20,5 @@ ALTER TABLE zn_rearm_group_device MODIFY device_type tinyint null comment '0,IOT
 
 
 update zn_rearm_group set type = 0;
+
+
