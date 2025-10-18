@@ -18,7 +18,7 @@ ALTER TABLE zn_rearm_group_device ADD device_id2 bigint null comment '（type=2�
 --                                       device_type tinyint null comment '0,IOT 1,AI算法';
 ALTER TABLE zn_rearm_group_device MODIFY device_type tinyint null comment '0,IOT 1,AI算法 2相机划线';
 
-
 update zn_rearm_group set type = 0;
 
-
+ALTER TABLE `zn_ais_algorithms_config`
+    ADD COLUMN `road_rules_json` text NULL COMMENT '设置道路规则的描述' ;

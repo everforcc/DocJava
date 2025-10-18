@@ -20,4 +20,47 @@ ALTER TABLE zn_rearm_group_device MODIFY device_type tinyint null comment '0,IOT
 
 update zn_rearm_group set type = 0;
 
+ALTER TABLE `zn_ais_algorithms_config`
+    ADD COLUMN `road_rules_json` text NULL COMMENT '设置道路规则的描述' ;
+
+-- auto-generated definition
+create table zn_camera_line_event_num_metadata
+(
+    id          bigint                                 not null comment '主键'
+        primary key,
+    meta_data   json                                   null comment '原始数据',
+    remark      varchar(255)                           null comment '备注',
+    create_id   bigint                                 null comment '创建者ID',
+    create_by   varchar(64) charset utf8mb4 default '' null comment '创建者',
+    create_time datetime                               null comment '创建时间',
+    create_dept bigint                                 null comment '创建部门',
+    update_id   bigint                                 null comment '更新者ID',
+    update_by   varchar(64) charset utf8mb4 default '' null comment '更新者',
+    update_time datetime                               null comment '更新时间',
+    del_flag    tinyint(1)                  default 0  null
+)
+    comment '相机划线原始数据表';
+
+-- auto-generated definition
+create table zn_camera_line_event_num_record
+(
+    id             bigint                                 not null
+        primary key,
+    camera_id      bigint                                 null comment '相机id',
+    camera_line_id bigint                                 null comment '相机划线id',
+    group_id       bigint                                 null comment '统计组id',
+    flow           int                                    null comment '流量',
+    alarm_time     datetime                               null comment '报警时间',
+    remark         varchar(255)                           null comment '备注',
+    create_id      bigint                                 null comment '创建者ID',
+    create_by      varchar(64) charset utf8mb4 default '' null comment '创建者',
+    create_time    datetime                               null comment '创建时间',
+    create_dept    bigint                                 null comment '创建部门',
+    update_id      bigint                                 null comment '更新者ID',
+    update_by      varchar(64) charset utf8mb4 default '' null comment '更新者',
+    update_time    datetime                               null comment '更新时间',
+    del_flag       tinyint(1)                  default 0  null
+)
+    comment '相机划线数据表';
+
 
