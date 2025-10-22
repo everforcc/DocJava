@@ -1,0 +1,54 @@
+{
+  "orgCode": "986557",
+  "orderNo": "2025102221252538997173",
+  "list": [
+    {
+      "merInnerNo": "4002025102254621375",
+      "subMchId": "2088080318924384",
+      "subMchIdBank": "2088080318924384",
+      "receOrgNo": "",
+      "registerChannel": "ALIPAY_FLOWER",
+      "registerType": "ZFBZF",
+      "registerTm": "2025-10-22 20:59:47",
+      "registerStatus": "FAIL",
+      "resultCode": "10000",
+      "resultMessage": "Success"
+    },
+    {
+      "merInnerNo": "4002025102254621375",
+      "subMchId": "2088080318924384",
+      "subMchIdBank": "2088080318924384",
+      "receOrgNo": "2088421809493486",
+      "registerChannel": "UNIONPAY",
+      "registerType": "ZFBZF",
+      "registerTm": "2025-10-22 20:59:46",
+      "registerStatus": "SUCCESS",
+      "resultCode": "000000",
+      "resultMessage": "成功"
+    },
+    {
+      "merInnerNo": "4002025102254621375",
+      "subMchId": "820612759",
+      "subMchIdBank": "820612759",
+      "receOrgNo": "1501265851",
+      "registerChannel": "UNIONPAY",
+      "registerType": "WXZF",
+      "registerTm": "2025-10-22 20:59:42",
+      "registerStatus": "SUCCESS",
+      "resultCode": "000000",
+      "resultMessage": "成功"
+    },
+    {
+      "merInnerNo": "4002025102254621375",
+      "subMchId": "822491058123KH6",
+      "subMchIdBank": "822491058123KH6",
+      "receOrgNo": "100001",
+      "registerChannel": "NUCC",
+      "registerType": "NUCC",
+      "registerTm": "2025-10-22 20:59:41",
+      "registerStatus": "SUCCESS",
+      "resultCode": "BBS00000",
+      "resultMessage": "成功"
+    }
+  ]
+}
