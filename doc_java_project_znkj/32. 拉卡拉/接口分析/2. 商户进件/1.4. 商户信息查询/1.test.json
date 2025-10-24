@@ -1,0 +1,193 @@
+{
+  "customer": {
+    "active_no": "768692411936",
+    "agency_no": 31315468,
+    "agent_no": 24437857,
+    "agreement_status": "TRUE",
+    "bz_pos": "WECHAT_PAY",
+    "channel_type": "TP_PERSONAL",
+    "contact_man_name": "郭**",
+    "create_time": "1761282617000",
+    "customer_name": "河南郑州中南科技食品",
+    "customer_no": 144163231,
+    "customer_status": "OPEN",
+    "merchant_no": "8224910581402AM",
+    "identity_no": "410182********531X",
+    "identity_no_expire": "2027-06-19",
+    "is_standard": "FALSE",
+    "legal_name": "郭**",
+    "mailbox": "71***7@qq.com",
+    "mcc_code": "5814",
+    "mer_name": "河南郑州中南科技食品",
+    "merchant_source": "H5",
+    "open_time": "1761282623000",
+    "optimistic": 4,
+    "phone_no": "157******01",
+    "platform": "LKL",
+    "pos_sn": "",
+    "reward_mode": "TO_AGENT",
+    "standard_fee": 0.0,
+    "term_no": "L8692411",
+    "term_num": 2,
+    "update_time": "1761282623000",
+    "ysf_discount": "FALSE",
+    "province_name": "河南省",
+    "city_name": "郑州市",
+    "county_name": "郑州市",
+    "receive_detail": "河南省郑州市管城回族区紫辰路华祥国际大厦B座18楼"
+  },
+  "customer_fee": [
+    {
+      "card_type": "WECHAT",
+      "create_time": "1761282618000",
+      "customer_no": 144163231,
+      "day_limit": 10000.0,
+      "fee_rate": 0.006,
+      "id": 258575469,
+      "max_amt": 9999.0,
+      "min_amt": 0.1,
+      "month_limit": 200000.0,
+      "optimistic": 1,
+      "per_limi": 5000.0,
+      "trans_settle_type": "D1",
+      "trans_type": "SCAN",
+      "update_time": "1761282623000",
+      "customer_management_fee": 0.0,
+      "customer_managementd_fee": 0.0,
+      "customer_managemente_fee": 0.0,
+      "customer_managementf_fee": 0.0
+    },
+    {
+      "card_type": "ALIPAY",
+      "create_time": "1761282618000",
+      "customer_no": 144163231,
+      "day_limit": 10000.0,
+      "fee_rate": 0.006,
+      "id": 258575470,
+      "max_amt": 9999.0,
+      "min_amt": 0.1,
+      "month_limit": 200000.0,
+      "optimistic": 1,
+      "per_limi": 5000.0,
+      "trans_settle_type": "D1",
+      "trans_type": "SCAN",
+      "update_time": "1761282623000",
+      "customer_management_fee": 0.0,
+      "customer_managementd_fee": 0.0,
+      "customer_managemente_fee": 0.0,
+      "customer_managementf_fee": 0.0
+    },
+    {
+      "card_type": "WECHAT",
+      "create_time": "1761282618000",
+      "customer_no": 144163231,
+      "day_limit": 10000.0,
+      "fee_rate": 0.006,
+      "id": 258575471,
+      "max_amt": 9999.0,
+      "min_amt": 0.1,
+      "month_limit": 200000.0,
+      "optimistic": 1,
+      "per_limi": 5000.0,
+      "trans_settle_type": "D1",
+      "trans_type": "SCAN",
+      "update_time": "1761282623000",
+      "customer_management_fee": 0.0,
+      "customer_managementd_fee": 0.0,
+      "customer_managemente_fee": 0.0,
+      "customer_managementf_fee": 0.0
+    },
+    {
+      "card_type": "ALIPAY",
+      "create_time": "1761282618000",
+      "customer_no": 144163231,
+      "day_limit": 10000.0,
+      "fee_rate": 0.006,
+      "id": 258575472,
+      "max_amt": 9999.0,
+      "min_amt": 0.1,
+      "month_limit": 200000.0,
+      "optimistic": 1,
+      "per_limi": 5000.0,
+      "trans_settle_type": "D1",
+      "trans_type": "SCAN",
+      "update_time": "1761282623000",
+      "customer_management_fee": 0.0,
+      "customer_managementd_fee": 0.0,
+      "customer_managemente_fee": 0.0,
+      "customer_managementf_fee": 0.0
+    }
+  ],
+  "product_vos": [
+    {
+      "product": "WECHAT_PAY",
+      "product_name": "专业化扫码"
+    }
+  ],
+  "settle_card": {
+    "able_status": "ENABLE",
+    "account_kind": "58",
+    "account_name": "郭**",
+    "account_no": "6217****7322",
+    "audit_status": "SUCCESS",
+    "bank_name": "中国银行股份有限公司郑州航海东路支行",
+    "bank_no": "104491068066",
+    "city_code": "4910",
+    "city_name": "郑州市",
+    "clearing_bank_no": "104100000004",
+    "create_time": "1761282618000",
+    "id": 40661071,
+    "id_card": "4****************X",
+    "optimistic": 0,
+    "own_no": "144163231",
+    "province_code": "41",
+    "province_name": "河南省"
+  },
+  "shop_info_list": [
+    {
+      "shop_id": 28874752,
+      "shop_name": "河南郑州中南科技食品",
+      "shop_address": "河南省郑州市管城回族区紫辰路华祥国际大厦B座18楼",
+      "province_code": "4900",
+      "province_name": "河南省",
+      "city_code": "4910",
+      "city_name": "郑州市",
+      "shop_dist_code": "984910",
+      "shop_dist_name": "郑州市",
+      "shop_contact_name": "郭**",
+      "shop_contact_mobile": "157******01"
+    }
+  ],
+  "terminal_info": [
+    {
+      "core_term_id": 1034091481462124544,
+      "term_type_code": 106,
+      "term_type_name": "专业化扫码",
+      "term_no_list": [
+        "L8692411"
+      ],
+      "active_no_vo_list": [
+        {
+          "busi_type_code": "QR_CODE_CARD",
+          "term_no": "L8692411",
+          "active_no": "768692411936"
+        }
+      ]
+    },
+    {
+      "core_term_id": 1034091481973829632,
+      "term_type_code": 106,
+      "term_type_name": "专业化扫码",
+      "term_no_list": [
+        "L8692412"
+      ],
+      "active_no_vo_list": [
+        {
+          "busi_type_code": "QR_CODE_CARD",
+          "term_no": "L8692412",
+          "active_no": "768692412164"
+        }
+      ]
+    }
+  ]
+}

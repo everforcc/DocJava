@@ -1,0 +1,10 @@
+{
+  "code": "000000",
+  "msg": "成功",
+  "resp_data": {
+    "order_no": "d367bfe93d634238a3fc7906ea5b1045",
+    "ec_status": "COMPLETED",
+    "ec_apply_id": 1033767775095672832,
+    "ec_no": "QY20251023580035585"
+  }
+}

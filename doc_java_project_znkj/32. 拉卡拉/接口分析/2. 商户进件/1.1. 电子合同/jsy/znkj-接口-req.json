@@ -1,0 +1,41 @@
+{
+  "type": "1",
+  "userName": "郭凯龙",
+  "userCardNo": "410224198708033639",
+  "userCardStartTime": "2016-01-04",
+  "userCardEndTime": "2036-01-04",
+  "userPhone": "18706828536",
+  "userEmail": "623104270@qq.com",
+
+
+  "bankCardNo": "6217853600054310213",
+  "bankCardOpenCityName": "中国银行西安逸翠园支行",
+  "bankCardOpenCityCode": "104791005988",
+  "bankCardClearingCode": "104100000004",
+  "bankCardProvinceCode": "61",
+  "bankCardProvinceName": "陕西省",
+  "bankCardCityCode": "7910",
+  "bankCardCityName": "西安市",
+
+  "companyName": "河南郑州中南科技食品公司2",
+  "provinceCode": "4900",
+  "cityCode": "4910",
+  "countyCode": "984910",
+  "businessContent": "熟食",
+  "companyAddressDetail": "河南省郑州市管城回族区紫辰路华祥国际大厦B座18楼",
+
+  "userCardFrontUrl": "httpurl",
+  "userCardFrontUrlLkl": "",
+  "userCardBackUrl": "httpurl",
+  "userCardBackUrlLkl": "",
+  "companyCashierUrl": "httpurl",
+  "companyCashierUrlLkl": "",
+  "companyHeaderUrl": "httpurl",
+  "companyHeaderUrlLkl": "",
+  "companyInDoorUrl": "httpurl",
+  "companyInDoorUrlLkl": "",
+  "companyOtherUrl": "httpurl",
+  "companyOtherUrlLkl": "",
+
+  "ecNo": "1034053690590433280"
+}

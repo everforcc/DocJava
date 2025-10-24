@@ -1,0 +1,9 @@
+{
+  "code": "000000",
+  "msg": "成功",
+  "resp_data": {
+    "order_no": "766bc7483f214e44ae4edc6ac1d5d01d",
+    "ec_apply_id": 1034068762477924352,
+    "result_url": "https://esign.lakala.com/signature/s/spig978dtdasop0b?rdm=1761277205699"
+  }
+}

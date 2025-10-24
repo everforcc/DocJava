@@ -1,0 +1,20 @@
+{
+  "retCode": "000000",
+  "retMsg": "成功",
+  "respData": {
+    "applymentState": "AUDIT_PASS",
+    "applymentId": "202510011129471061",
+    "rowCreateTm": "2025-10-24 13:10:30",
+    "merInnerNo": "4002025102484657818",
+    "channelId": "2088421809493486",
+    "resultId": 56279927,
+    "rowModifyLstTm": "2025-10-24 15:59:04",
+    "subMchId": "2088080355047093",
+    "receOrgNo": "1501265851",
+    "authorizeState": "AUTHORIZED",
+    "registerChannel": "UNIONPAY",
+    "rowStatus": "VALID",
+    "qrcodeData": "https://mobilecodec.alipay.com/show.htm?code=2ie10659dungpwtuzvwiq6e",
+    "realNameType": "ZFBZF"
+  }
+}

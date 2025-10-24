@@ -1,0 +1,33 @@
+-- auto-generated definition
+create table zn_lkl_param
+(
+    id                          bigint auto_increment comment '唯一标识'
+        primary key,
+    user_id                     bigint                                 null comment '用户id 每个用户一行数据参数',
+    ec_apply_req                json                                   null comment '1.1.1. 合同参数 请求 json',
+    ec_apply_res                json                                   null comment '1.1.2. 合同参数 响应 json',
+    ec_apply_order_no           varchar(100)                           null comment '1.1.3. 电子合同申请订单号 匹配数据用',
+    ec_apply_ec_no              varchar(100)                           null comment '1.1.4. 电子合同编号（ecNo） 响应合同编号 ContractNo',
+    ec_callback_res             json                                   null comment '1.1.5. 电子合同回调 参数',
+    ec_status                   varchar(50)                            null comment '1.1.6. 合同状态 响应合同状态',
+    merchant_encry_req          json                                   null comment '1.2.1. 商户进件参数 json',
+    merchant_encry_res          json                                   null comment '1.2.2. 商户进件响应参数 json',
+    merchant_no                 varchar(100)                           null comment '1.2.3. 商户进件响应 内部商户编号',
+    query_sub_mer_info_req      json                                   null comment '3.1.1 获取子商户号 请求 json',
+    query_sub_mer_info_res      json                                   null comment '3.1.2 获取子商户号 响应 json',
+    sub_mch_id_zfb              varchar(100)                           null comment '3.1.3 子商户号 支付宝',
+    sub_mch_id_wx               varchar(100)                           null comment '3.1.3 子商户号 微信',
+    alipay_real_name_query_req  json                                   null comment '4.1.1 支付宝实名认证信息查询 请求 json',
+    alipay_real_name_query_res  json                                   null comment '4.1.2 支付宝实名认证信息查询 响应 包含图片 url json',
+    wechat_real_name_query_req  json                                   null comment '4.2.1 微信实名认证信息查询 请求 json',
+    wechat_real_name_query_res  json                                   null comment '4.2.2 微信实名认证信息查询 响应 包含图片 base64 json',
+    create_id                   bigint                                 null comment '创建者ID',
+    create_by                   varchar(64) charset utf8mb4 default '' null comment '创建者',
+    create_time                 datetime                               null comment '创建时间',
+    create_dept                 bigint                                 null comment '创建部门',
+    update_id                   bigint                                 null comment '更新者ID',
+    update_by                   varchar(64) charset utf8mb4 default '' null comment '更新者',
+    update_time                 datetime                               null comment '更新时间',
+    del_flag                    tinyint(1)                  default 0  null comment '删除标志（0代表存在 1代表删除）'
+)
+    comment 'lkl 开户参数对象' collate = utf8mb4_unicode_ci;

@@ -1,0 +1,9 @@
+{
+  "code": "000000",
+  "msg": "成功",
+  "resp_data": {
+    "order_no": "4d0c92bf4c2d40ec844f8cea86bb4e24",
+    "ec_apply_id": 1034077126100475904,
+    "result_url": "https://esign.lakala.com/signature/s/wmd1h0wvb6lgvnfb?rdm=1761279199682"
+  }
+}
