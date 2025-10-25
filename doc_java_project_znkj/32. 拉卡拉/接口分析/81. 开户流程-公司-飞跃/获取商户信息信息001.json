@@ -1,0 +1,160 @@
+{
+  "code": "000000",
+  "msg": "SUCCESS",
+  "resp_data": {
+    "settle_card": {
+      "clearing_bank_no": "313491099267",
+      "create_time": 1761381611000,
+      "id_card": "4****************7",
+      "is_legal_person": true,
+      "city_code": "4910",
+      "audit_status": "SUCCESS",
+      "province_code": "41",
+      "bank_no": "313491099267",
+      "account_no": "4101****4109",
+      "able_status": "ENABLE",
+      "province_name": "河南省",
+      "account_kind": "57",
+      "optimistic": 0,
+      "own_no": "144189503",
+      "city_name": "郑州市",
+      "account_name": "河**",
+      "bank_name": "中国银行股份有限公司郑州航海东路支行",
+      "id": 40686151
+    },
+    "shop_info_list": [
+      {
+        "shop_contact_mobile": "176******59",
+        "shop_id": 28900070,
+        "city_name": "郑州市",
+        "shop_contact_name": "薄**",
+        "city_code": "4910",
+        "shop_dist_code": "984910",
+        "province_code": "4900",
+        "shop_name": "河南霄瞰信息科技有限公司",
+        "shop_dist_name": "郑州市",
+        "shop_address": "河南省郑州市高新技术产业开发区红松路52号2号楼2层201号B区066",
+        "province_name": "河南省"
+      }
+    ],
+    "product_vos": [
+      {
+        "product": "WECHAT_PAY",
+        "product_name": "专业化扫码"
+      }
+    ],
+    "terminal_info": [
+      {
+        "term_type_name": "专业化扫码",
+        "term_type_code": 106,
+        "core_term_id": 1034506689577922560,
+        "active_no_vo_list": [
+          {
+            "term_no": "L8756104",
+            "active_no": "768756104706",
+            "busi_type_code": "QR_CODE_CARD"
+          }
+        ],
+        "term_no_list": [
+          "L8756104"
+        ]
+      }
+    ],
+    "customer_fee": [
+      {
+        "customer_no": 144189503,
+        "create_time": 1761381611000,
+        "trans_settle_type": "D1",
+        "day_limit": 10000.0,
+        "card_application_id": 31254555,
+        "term_id": 25435865,
+        "card_type": "WECHAT",
+        "customer_managementd_fee": 0.0,
+        "fee_rate": 0.006,
+        "customer_managementf_fee": 0.0,
+        "optimistic": 1,
+        "customer_managemente_fee": 0.0,
+        "term_no": "L8756104",
+        "update_time": 1761381616000,
+        "month_limit": 200000.0,
+        "per_limi": 5000.0,
+        "min_amt": 0.1,
+        "max_amt": 9999.0,
+        "customer_management_fee": 0.0,
+        "id": 258776989,
+        "settlement_type": "AUTOMATIC",
+        "trans_type": "SCAN"
+      },
+      {
+        "customer_no": 144189503,
+        "create_time": 1761381611000,
+        "trans_settle_type": "D1",
+        "day_limit": 10000.0,
+        "card_application_id": 31254555,
+        "term_id": 25435865,
+        "card_type": "ALIPAY",
+        "customer_managementd_fee": 0.0,
+        "fee_rate": 0.006,
+        "customer_managementf_fee": 0.0,
+        "optimistic": 1,
+        "customer_managemente_fee": 0.0,
+        "term_no": "L8756104",
+        "update_time": 1761381616000,
+        "month_limit": 200000.0,
+        "per_limi": 5000.0,
+        "min_amt": 0.1,
+        "max_amt": 9999.0,
+        "customer_management_fee": 0.0,
+        "id": 258776990,
+        "settlement_type": "AUTOMATIC",
+        "trans_type": "SCAN"
+      }
+    ],
+    "customer": {
+      "phone_no": "176******59",
+      "agency_no": 31315468,
+      "open_time": 1761381616000,
+      "platform": "LKL",
+      "license_no": "91410100MAEM8Y8Y8K",
+      "optimistic": 5,
+      "activity_type_name": "拉生意扫码自投政策",
+      "term_no": "L8756104",
+      "city_name": "郑州市",
+      "update_time": 1761381616000,
+      "receive_detail": "河南省郑州市高新技术产业开发区红松路52号2号楼2层201号B区066",
+      "pos_sn": "",
+      "standard_fee": 0.0,
+      "merchant_source": "H5",
+      "activity_type": "LSYSMZTZC_WECHAT_PAY",
+      "agreement_status": "TRUE",
+      "mer_license_expire": "9999-12-31",
+      "legal_name": "薄**",
+      "channel_type": "TP_MERCHANT",
+      "mcc_code": "4816",
+      "is_standard": "FALSE",
+      "mer_reg_name": "河南霄瞰信息科技有限公司",
+      "term_num": 1,
+      "identity_no_expire": "2045-09-25",
+      "merchant_no": "822491048160FN1",
+      "customer_no": 144189503,
+      "create_time": 1761381611000,
+      "phone_no_enc": "uIEIFOd02Xg9KLKKiL7Fbw==",
+      "identity_no_st_dt": "2025-09-25",
+      "agent_no": 24437857,
+      "active_no": "768756104706",
+      "contact_man_name": "薄**",
+      "county_name": "郑州市",
+      "province_name": "河南省",
+      "ysf_discount": "FALSE",
+      "bz_pos": "WECHAT_PAY",
+      "phone_no_hash": "a8ac3d4b43f5ede5d0062f96ef264843",
+      "mailbox": "ji***e@zgzhongnan.com",
+      "customer_status": "OPEN",
+      "mer_license_st_dt": "2025-06-03",
+      "reward_mode": "TO_AGENT",
+      "identity_no": "412721********4617",
+      "customer_name": "河南霄瞰信息科技有限公司",
+      "mer_name": "河南霄瞰信息科技有限公司"
+    }
+  }
+}

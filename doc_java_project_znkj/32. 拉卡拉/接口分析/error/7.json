@@ -1,0 +1,84 @@
+{
+  "req_data": {
+    "email": "718497737@qq.com",
+    "latitude": "113.533172",
+    "longtude": "34.779900",
+    "source": "H5",
+    "org_code": "986557",
+    "user_no": 24437857,
+    "busi_code": "WECHAT_PAY",
+    "mer_reg_name": "河南郑州中南科技食品",
+    "mer_type": "TP_PERSONAL",
+    "mer_name": "河南郑州中南科技食品",
+    "mer_addr": "河南省郑州市管城回族区紫辰路华祥国际大厦B座18楼",
+    "province_code": "4900",
+    "city_code": "4910",
+    "county_code": "984910",
+    "business_content": "熟食",
+    "lar_name": "郭凯龙",
+    "lar_id_type": "01",
+    "lar_id_card": "41018219960126531X",
+    "lar_id_card_start": "2017-06-19",
+    "lar_id_card_end": "2027-06-19",
+    "contact_mobile": "15738573601",
+    "contact_name": "郭凯龙",
+    "openning_bank_code": "104491068066",
+    "openning_bank_name": "中国银行股份有限公司郑州航海东路支行",
+    "clearing_bank_code": "104100000004",
+    "settle_province_code": "41",
+    "settle_province_name": "河南省",
+    "settle_city_code": "4910",
+    "settle_city_name": "郑州市",
+    "account_no": "6217898000003447322",
+    "account_name": "郭凯龙",
+    "account_type": "58",
+    "account_id_card": "41018219960126531X",
+    "account_id_dt_start": "2017-06-19",
+    "account_id_dt_end": "2027-06-19",
+    "biz_content": {
+      "mcc": "5814",
+      "term_num": "1",
+      "fees": [
+        {
+          "fee_code": "ALIPAY",
+          "fee_value": 0.038
+        },
+        {
+          "fee_code": "WECHAT",
+          "fee_value": 0.038
+        }
+      ],
+      "activity_id": 208
+    },
+    "attchments": [
+      {
+        "id": "merchant/imgages/20251024104344363390ID_CARD_FRONT.jpeg",
+        "type": "ID_CARD_FRONT"
+      },
+      {
+        "id": "merchant/imgages/20251024104605018819ID_CARD_BEHIND.jpeg",
+        "type": "ID_CARD_BEHIND"
+      },
+      {
+        "type": "BANK_CARD"
+      },
+      {
+        "id": "merchant/imgages/20251024105131809348SHOP_INSIDE_IMG.jpeg",
+        "type": "SHOP_INSIDE_IMG"
+      },
+      {
+        "id": "merchant/imgages/20251024104704761450CHECKSTAND_IMG.jpeg",
+        "type": "CHECKSTAND_IMG"
+      },
+      {
+        "id": "merchant/imgages/20251024104818811055SHOP_OUTSIDE_IMG.jpeg",
+        "type": "SHOP_OUTSIDE_IMG"
+      }
+    ],
+    "settle_type": "D1",
+    "settlement_type": "AUTOMATIC",
+    "contract_no": "1034434128030945280"
+  },
+  "version": "3.0",
+  "req_time": "20251025115238"
+}

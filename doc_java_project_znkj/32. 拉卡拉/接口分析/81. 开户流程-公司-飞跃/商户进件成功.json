@@ -1,0 +1,9 @@
+{
+  "code": "000000",
+  "msg": "SUCCESS",
+  "respData": {
+    "merchant_no": "144186256",
+    "state": "1",
+    "status": "WAIT_AUDI"
+  }
+}

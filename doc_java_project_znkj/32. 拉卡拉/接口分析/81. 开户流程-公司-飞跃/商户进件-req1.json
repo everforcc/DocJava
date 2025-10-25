@@ -1,0 +1,89 @@
+{
+  "email": "jiangshouye@zgzhongnan.com",
+  "source": "H5",
+  "user_no": 24437857,
+  "lar_name": "薄飞跃",
+  "latitude": "113.584578",
+  "longtude": "34.515620",
+  "mer_addr": "河南省郑州市高新技术产业开发区红松路52号2号楼2层201号B区066",
+  "mer_name": "河南霄瞰信息科技有限公司",
+  "mer_type": "TP_MERCHANT",
+  "org_code": "986557",
+  "busi_code": "WECHAT_PAY",
+  "city_code": "4910",
+  "account_no": "410126010190094109",
+  "attchments": [
+    {
+      "id": "merchant/imgages/20251025143827535855ID_CARD_FRONT.jpeg",
+      "type": "ID_CARD_FRONT"
+    },
+    {
+      "id": "merchant/imgages/20251025143918228874ID_CARD_BEHIND.jpeg",
+      "type": "ID_CARD_BEHIND"
+    },
+    {
+      "id": "merchant/imgages/20251025160708586996BUSINESS_LICENCE.jpeg",
+      "type": "BUSINESS_LICENCE"
+    },
+    {
+      "id": "merchant/imgages/20251025160624667882OPENING_PERMIT.jpeg",
+      "type": "OPENING_PERMIT"
+    },
+    {
+      "id": "merchant/imgages/20251024105131809348SHOP_INSIDE_IMG.jpeg",
+      "type": "SHOP_INSIDE_IMG"
+    },
+    {
+      "id": "merchant/imgages/20251024104704761450CHECKSTAND_IMG.jpeg",
+      "type": "CHECKSTAND_IMG"
+    },
+    {
+      "id": "merchant/imgages/20251024104818811055SHOP_OUTSIDE_IMG.jpeg",
+      "type": "SHOP_OUTSIDE_IMG"
+    }
+  ],
+  "license_no": "91410100MAEM8Y8Y8K",
+  "biz_content": {
+    "mcc": "4816",
+    "fees": [
+      {
+        "fee_code": "WECHAT",
+        "fee_value": 0.6
+      },
+      {
+        "fee_code": "ALIPAY",
+        "fee_value": 0.6
+      }
+    ],
+    "term_num": "1",
+    "activity_id": 208
+  },
+  "contract_no": "1034498473339346944",
+  "county_code": "984910",
+  "lar_id_card": "412721199204214617",
+  "lar_id_type": "01",
+  "settle_type": "D1",
+  "account_name": "薄飞跃",
+  "account_type": "57",
+  "contact_name": "薄飞跃",
+  "license_name": "河南霄瞰信息科技有限公司",
+  "mer_reg_name": "河南霄瞰信息科技有限公司",
+  "province_code": "4900",
+  "contact_mobile": "17600260259",
+  "license_dt_end": "9999-12-31",
+  "account_id_card": "412721199204214617",
+  "lar_id_card_end": "2045-09-25",
+  "settlement_type": "AUTOMATIC",
+  "business_content": "信息系统集成服务",
+  "license_dt_start": "2025-06-03",
+  "settle_city_code": "4910",
+  "settle_city_name": "郑州市",
+  "account_id_dt_end": "2045-09-25",
+  "lar_id_card_start": "2025-09-25",
+  "clearing_bank_code": "313491099267",
+  "openning_bank_code": "313491099267",
+  "openning_bank_name": "中国银行股份有限公司郑州航海东路支行",
+  "account_id_dt_start": "2025-09-25",
+  "settle_province_code": "41",
+  "settle_province_name": "河南省"
+}
