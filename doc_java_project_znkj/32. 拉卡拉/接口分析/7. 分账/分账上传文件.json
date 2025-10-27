@@ -1,0 +1,10 @@
+{
+  "retCode": "000000",
+  "retMsg": "成功",
+  "respData": {
+    "attType": "SPLIT_ENTRUST_FILE",
+    "orderNo": "2025102716101394030757",
+    "orgCode": "986557",
+    "attFileId": "MMS/20251027/161014-39c9ee5bca994de78b79326b34979471.pdf"
+  }
+}
