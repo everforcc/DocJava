@@ -1,0 +1,19 @@
+{
+  "reqData": {
+    "version": "1.0",
+    "orderNo": "2025102815140966591969",
+    "orgCode": "986557",
+    "merInnerNo": "4002025102254621375",
+    "contactMobile": "13022110823",
+    "splitLowestRatio": 70.0,
+    "splitEntrustFileName": "清分结算授权委托书.pdf",
+    "splitEntrustFilePath": "MMS/20251027/161014-39c9ee5bca994de78b79326b34979471.pdf",
+    "splitRange": "MARK",
+    "sepFundSource": "TR",
+    "eleContractNo": "QY20251025612937473",
+    "retUrl": "https://test-znyd.zgzhongnan.com/cc/system/lkl/open/auth/split/apply"
+  },
+  "reqTime": "20251028151410",
+  "version": "2.0",
+  "reqId": "455497e792224bbca98ec707e501944a"
+}

@@ -1,0 +1,12 @@
+{
+  "applyId": 1035293912129028096,
+  "merCupNo": "822491048160FN1",
+  "retUrl": "https://test-znyd.zgzhongnan.com/cc/system/auth/split/apply",
+  "entrustFileName": "清分结算授权委托书.pdf",
+  "auditStatus": "2",
+  "merInnerNo": "4002025102584686558",
+  "remark": "与立项不符：1、入驻模式不分账；2、分账场景应为：分出方：河南中南信息科技有限公司，分入方：城市合伙人，分出方最低比例70%\n",
+  "auditStatusText": "审核拒绝",
+  "uploadAttachType": "SPLIT_ENTRUST_FILE",
+  "entrustFilePath": "MMS/20251025/164009-27e6b9b29ff843fea65cd1f78c797f6e.pdf"
+}
