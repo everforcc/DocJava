@@ -1,0 +1,14 @@
+{
+  "optType": "ADD",
+  "applyId": 1035968715290796032,
+  "merCupNo": "8224910737200MK",
+  "retUrl": "https://test-znyd.zgzhongnan.com/cc/system/lkl/open/auth/split/bind",
+  "entrustFileName": "收款方与分账方合作协议.png",
+  "auditStatus": "1",
+  "merInnerNo": "4002025102814755551",
+  "receiverNo": "SR2024000165390",
+  "remark": "无机构审核配置自动审核通过",
+  "auditStatusText": "审核通过",
+  "uploadAttachType": "SPLIT_ENTRUST_FILE",
+  "entrustFilePath": "MMS/20251029/171837-769a0883b9ab44fdbe90c2d083165316.png"
+}
