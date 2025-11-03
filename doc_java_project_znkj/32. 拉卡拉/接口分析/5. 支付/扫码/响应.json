@@ -1,0 +1,42 @@
+{
+  "code": "BBS00000",
+  "msg": "成功",
+  "resp_time": "20251103172124",
+  "resp_data": {
+    "need_query": "0",
+    "merchant_no": "822491059431B12",
+    "account_type": "ALIPAY",
+    "acc_resp_fields": {
+      "store_id": "",
+      "promotion_detail": "",
+      "open_id": "157******01",
+      "up_coupon_info": "",
+      "alipay_store_id": "",
+      "sub_mch_id": "2088080552126872",
+      "trade_info": "",
+      "fund_bill_list": "[{\"amount\":\"0.02\",\"fund_channel\":\"COUPON\"}]",
+      "up_iss_addn_data": "",
+      "voucher_detail_list": "",
+      "channel_serial_number": "",
+      "user_id": "2088712066878865",
+      "discount_goods_detail": "",
+      "acc_activity_id": "",
+      "payer_info": ""
+    },
+    "payer_amount": "2",
+    "acc_discount_amount": "",
+    "trade_time": "20251103172123",
+    "bank_type": "COUPON||",
+    "acc_settle_amount": "2",
+    "acc_trade_no": "2025110323001478861429458364",
+    "remark": "",
+    "log_no": "66202209479230",
+    "card_type": "04",
+    "acc_mdiscount_amount": "",
+    "out_trade_no": "1182773648826703872",
+    "acc_other_discount_amount": "",
+    "total_amount": "2",
+    "trade_no": "20251103110113230166202209479230",
+    "trade_req_date": "20251103"
+  }
+}
