@@ -18,5 +18,5 @@ def convert_file(filepath):
 
 for root, dirs, files in os.walk('.'):
     for name in files:
-        if name.endswith(('.java', '.txt', '.md', '.sql')):
+        if name.endswith(('.java', '.txt', '.md', '.sql', '.json')):
             convert_file(os.path.join(root, name))
