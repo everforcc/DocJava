@@ -1,2 +1,0 @@
-﻿
-select 1 + 10 sumadd from dual;
