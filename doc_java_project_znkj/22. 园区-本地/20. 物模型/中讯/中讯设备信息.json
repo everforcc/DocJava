@@ -1,0 +1,52 @@
+{
+	"devIOTChildInfoGet": {
+		"IOTChildNum": 5,
+		"IOTChildInfo": [
+			{
+				"did": 2304,
+				"type": 4,
+				"delay": 0,
+				"siren": 1,
+				"name": "",
+				"lang": 0,
+				"alive": 1
+			},
+			{
+				"did": 860161,
+				"type": 3,
+				"delay": 1,
+				"siren": 1,
+				"name": "",
+				"lang": 0,
+				"alive": 1
+			},
+			{
+				"did": 62465,
+				"type": 2,
+				"delay": 0,
+				"siren": 1,
+				"name": "",
+				"lang": 0,
+				"alive": 1
+			},
+			{
+				"did": 489731,
+				"type": 2,
+				"delay": 0,
+				"siren": 1,
+				"name": "",
+				"lang": 0,
+				"alive": 1cC
+			},
+			{
+				"did": 345347,
+				"type": 1,
+				"delay": 0,
+				"siren": 1,
+				"name": "",
+				"lang": 0,
+				"alive": 1
+			}
+		]
+	}
+}

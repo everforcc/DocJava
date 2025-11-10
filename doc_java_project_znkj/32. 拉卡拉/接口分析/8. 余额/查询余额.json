@@ -1,0 +1,15 @@
+{
+  "retCode": "000000",
+  "retMsg": "成功",
+  "respData": {
+    "payNo": "02001012990000425636",
+    "payType": "01",
+    "forceBalance": "0.00",
+    "freezeBalance": "0.00",
+    "hisBalance": "0.00",
+    "reBalance": "0.00",
+    "curBalance": "0.00",
+    "acctSt": "NORMAL",
+    "ewalletId": "210075044241"
+  }
+}

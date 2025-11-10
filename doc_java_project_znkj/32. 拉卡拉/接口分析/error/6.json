@@ -1,0 +1,19 @@
+{
+  "retCode": "000000",
+  "retMsg": "成功",
+  "respData": {
+    "applymentState": "APPLYMENT_STATE_COMMIT",
+    "applymentId": "202510011129548547",
+    "rowCreateTm": "2025-10-24 18:19:12",
+    "merInnerNo": "4002025102424669712",
+    "channelId": "2088421809493486",
+    "resultId": 56311123,
+    "rowModifyLstTm": "2025-10-24 18:19:12",
+    "subMchId": "2088080362311349",
+    "receOrgNo": "1501265851",
+    "authorizeState": "UNAUTHORIZED",
+    "registerChannel": "UNIONPAY",
+    "rowStatus": "VALID",
+    "realNameType": "ZFBZF"
+  }
+}

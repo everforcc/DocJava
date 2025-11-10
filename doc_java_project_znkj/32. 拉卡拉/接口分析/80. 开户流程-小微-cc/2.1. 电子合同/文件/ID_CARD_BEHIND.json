@@ -1,0 +1,10 @@
+{
+  "code": "000000",
+  "msg": "SUCCESS",
+  "resp_data": {
+    "batch_no": null,
+    "status": "00",
+    "url": "merchant/imgages/20251024104605018819ID_CARD_BEHIND.jpeg",
+    "show_url": "https://lkl-zf-cdmp.oss-cn-shanghai.aliyuncs.com/pd/huituoke/merchant/imgages/20251024104605018819ID_CARD_BEHIND.jpeg?Expires=1761275165&OSSAccessKeyId=LTAI5t5oj5mLungWxhWsa6h9&Signature=YchkBLLiefMQp3HzRfDAiNrjZKo%3D"
+  }
+}

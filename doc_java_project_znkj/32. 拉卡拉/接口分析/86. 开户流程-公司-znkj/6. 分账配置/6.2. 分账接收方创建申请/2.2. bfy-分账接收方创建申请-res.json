@@ -1,0 +1,13 @@
+{
+  "retCode": "000000",
+  "retMsg": "分账接收方创建成功",
+  "respData": {
+    "version": "1.0",
+    "orderNo": "2025102814545054039946",
+    "orgCode": "986557",
+    "openAppid": "OP10001833",
+    "orgId": "986557",
+    "orgName": "中南科技",
+    "receiverNo": "SR2024000165546"
+  }
+}

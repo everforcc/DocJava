@@ -1,0 +1,40 @@
+{
+  "type": "1",
+  "userName": "郭凯龙",
+  "userCardNo": "41018219960126531X",
+  "userCardStartTime": "2017-06-19",
+  "userCardEndTime": "2027-06-19",
+  "userPhone": "15738573601",
+  "userEmail": "718497737@qq.com",
+
+
+  "bankCardNo": "6217898000003447322",
+  "bankCardOpenCityName": "中国银行股份有限公司郑州航海东路支行",
+  "bankCardOpenCityCode": "104491068066",
+  "bankCardClearingCode": "104100000004",
+  "bankCardProvinceCode": "41",
+  "bankCardProvinceName": "河南省",
+  "bankCardCityCode": "4910",
+  "bankCardCityName": "郑州市",
+
+  "companyName": "河南郑州中南科技食品公司2",
+  "provinceCode": "4900",
+  "cityCode": "4910",
+  "countyCode": "984910",
+  "businessContent": "熟食",
+  "companyAddressDetail": "河南省郑州市管城回族区紫辰路华祥国际大厦B座18楼",
+
+  "userCardFrontUrl": "httpurl",
+  "userCardFrontUrlLkl": "merchant/imgages/20251024104344363390ID_CARD_FRONT.jpeg",
+  "userCardBackUrl": "httpurl",
+  "userCardBackUrlLkl": "merchant/imgages/20251024104605018819ID_CARD_BEHIND.jpeg",
+  "companyCashierUrl": "httpurl",
+  "companyCashierUrlLkl": "merchant/imgages/20251024104704761450CHECKSTAND_IMG.jpeg",
+  "companyHeaderUrl": "httpurl",
+  "companyHeaderUrlLkl": "merchant/imgages/20251024104818811055SHOP_OUTSIDE_IMG.jpeg",
+  "companyInDoorUrl": "httpurl",
+  "companyInDoorUrlLkl": "merchant/imgages/20251024105131809348SHOP_INSIDE_IMG.jpeg",
+  "companyOtherUrl": "httpurl",
+  "companyOtherUrlLkl": "",
+  "ecNo": "1034068762477924352"
+}

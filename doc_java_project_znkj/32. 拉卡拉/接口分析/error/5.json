@@ -1,0 +1,106 @@
+{
+  "customer": {
+    "bz_pos": "WECHAT_PAY",
+    "pos_sn": "",
+    "mailbox": "71***7@qq.com",
+    "agent_no": 24437857,
+    "mcc_code": "5814",
+    "mer_name": "河南郑州中南科技食品",
+    "phone_no": "157******01",
+    "platform": "LKL",
+    "term_num": 1,
+    "agency_no": 31315468,
+    "city_name": "郑州市",
+    "legal_name": "郭**",
+    "optimistic": 2,
+    "county_name": "郑州市",
+    "create_time": "1761301138000",
+    "customer_no": 144173725,
+    "identity_no": "410182********531X",
+    "is_standard": "FALSE",
+    "reward_mode": "TO_AGENT",
+    "update_time": "1761301139000",
+    "channel_type": "TP_PERSONAL",
+    "standard_fee": 0,
+    "ysf_discount": "FALSE",
+    "customer_name": "河南郑州中南科技食品",
+    "province_name": "河南省",
+    "receive_detail": "河南省郑州市管城回族区紫辰路华祥国际大厦B座18楼",
+    "customer_status": "WAIT_AUDI",
+    "merchant_source": "H5",
+    "agreement_status": "TRUE",
+    "contact_man_name": "郭**",
+    "identity_no_expire": "2027-06-19"
+  },
+  "product_vos": [
+    {
+      "product": "WECHAT_PAY",
+      "product_name": "专业化扫码"
+    }
+  ],
+  "settle_card": {
+    "id": 40671125,
+    "own_no": "144173725",
+    "bank_no": "104491068066",
+    "id_card": "4****************X",
+    "bank_name": "中国银行股份有限公司郑州航海东路支行",
+    "city_code": "4910",
+    "city_name": "郑州市",
+    "account_no": "6217****7322",
+    "optimistic": 0,
+    "able_status": "ENABLE",
+    "create_time": "1761301138000",
+    "account_kind": "58",
+    "account_name": "郭**",
+    "audit_status": "SUCCESS",
+    "province_code": "41",
+    "province_name": "河南省",
+    "clearing_bank_no": "104100000004"
+  },
+  "customer_fee": [
+    {
+      "id": 258656782,
+      "max_amt": 9999,
+      "min_amt": 0.1,
+      "fee_rate": 0.006,
+      "per_limi": 5000,
+      "card_type": "WECHAT",
+      "day_limit": 10000,
+      "optimistic": 0,
+      "trans_type": "SCAN",
+      "create_time": "1761301139000",
+      "customer_no": 144173725,
+      "month_limit": 200000,
+      "trans_settle_type": "D1",
+      "customer_management_fee": 0,
+      "customer_managementd_fee": 0,
+      "customer_managemente_fee": 0,
+      "customer_managementf_fee": 0
+    },
+    {
+      "id": 258656783,
+      "max_amt": 9999,
+      "min_amt": 0.1,
+      "fee_rate": 0.006,
+      "per_limi": 5000,
+      "card_type": "ALIPAY",
+      "day_limit": 10000,
+      "optimistic": 0,
+      "trans_type": "SCAN",
+      "create_time": "1761301139000",
+      "customer_no": 144173725,
+      "month_limit": 200000,
+      "trans_settle_type": "D1",
+      "customer_management_fee": 0,
+      "customer_managementd_fee": 0,
+      "customer_managemente_fee": 0,
+      "customer_managementf_fee": 0
+    }
+  ],
+  "terminal_info": [
+    {
+      "term_type_code": 106,
+      "term_type_name": "专业化扫码"
+    }
+  ]
+}
