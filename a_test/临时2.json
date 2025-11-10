@@ -1,0 +1,11 @@
+{
+  "merchant_no": "8224910737200MK",
+  "out_separate_no": "2025110715332561480457",
+  "total_amt": "3",
+  "origin_recv_datas": [
+    {
+      "recv_no": "SR2024000171654",
+      "amt": "3"
+    }
+  ]
+}
