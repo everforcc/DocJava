@@ -17,3 +17,6 @@ create table zn_pay_auth_type
 )
     comment '支付开户类型 汇付拉卡拉' collate = utf8mb4_unicode_ci;
 
+INSERT INTO zn_pay_auth_type
+    (id, user_id, type, create_id, create_by, create_time, create_dept, update_id, update_by, update_time, del_flag, remark)
+VALUES (1, 0, 2, 0, '0', '2025-10-25 10:58:31', 0, 0, '0', '2025-10-25 10:58:31', 0, '默认值');
