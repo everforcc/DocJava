@@ -3,6 +3,6 @@ FROM zn_user_label WHERE del_flag = 0 AND (type = 0) ORDER BY create_time DESC L
 
 -- 表头字段
 -- 管理员，手机号，追加下面的字段
-select name
+select *
 from zn_user_label zul
 where zul.del_flag = 0 and zul.type = 0 and zul.choosed = 1;
