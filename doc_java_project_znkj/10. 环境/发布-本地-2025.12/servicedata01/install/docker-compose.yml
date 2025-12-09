@@ -1,0 +1,451 @@
+# 各服务健康检查配置
+x-healthcheck:
+  iccs: &iccs_hc
+    test: ["CMD", "curl", "-f", "http://localhost:8080"]
+    interval: 45s
+    timeout: 10s
+    retries: 3
+    start_period: 45s
+
+  anm: &anm_hc
+    test: ["CMD", "curl", "-f", "http://localhost:9101"]
+    interval: 35s
+    timeout: 10s
+    retries: 3
+    start_period: 35s
+
+  face: &face_hc
+    test: ["CMD", "curl", "127.0.0.1:8333"]
+    interval: 3s
+    timeout: 3s
+    retries: 3
+    start_period: 5s
+
+  aic: &aic_hc
+    test: ["CMD", "curl", "127.0.0.1:8000"]
+    interval: 25s
+    timeout: 10s
+    retries: 3
+    start_period: 25s
+
+  mysql: &mysql_hc
+    test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-p$$MYSQL_ROOT_PASSWORD"]
+    interval: 10s
+    timeout: 10s
+    retries: 3
+    start_period: 90s
+
+  nginx: &nginx_hc
+    test: ["CMD", "curl", "-f", "http://localhost"]
+    interval: 5s
+    timeout: 10s
+    retries: 3
+    start_period: 5s
+
+  iccs-dist: &iccs_dist_hc
+    test: ["CMD", "curl", "-f", "http://localhost:8010"]
+    interval: 5s
+    timeout: 10s
+    retries: 3
+    start_period: 5s
+
+  anm-dist: &anm_dist_hc
+    test: ["CMD", "curl", "-f", "http://localhost:8011"]
+    interval: 5s
+    timeout: 10s
+    retries: 3
+    start_period: 5s
+
+  redis: &redis_hc
+    test: ["CMD", "redis-cli", "-h", "localhost", "-p", "6379", "-a", "$redisPasswd", "ping", "--quiet"]
+    interval: 5s
+    timeout: 10s
+    retries: 3
+    start_period: 5s
+
+  nanomq: &nanomq_hc
+    test: ["CMD", "nanomq_cli", "ping", "-h", "localhost", "-p", "1883"]
+    interval: 5s
+    timeout: 10s
+    retries: 3
+    start_period: 5s
+
+  nvr: &nvr_hc
+    test: ["CMD", "bash", "-c", "cat < /dev/tcp/localhost/10800"]
+    interval: 10s
+    timeout: 10s
+    retries: 3
+    start_period: 60s
+
+services:
+  iccs:
+    image: folib.zgzhongnan.com/public/docker/zn-local/zn-iccs:${iccsTAG}
+    container_name: zn-iccs
+    profiles: [ "rk","rkm","a1","a2" ]
+    init: true
+    privileged: true
+    pull_policy: if_not_present
+    network_mode: "host"
+    restart: "unless-stopped"
+    logging:
+      driver: json-file
+      options:
+        max-size: "30M"
+        max-file: "3"
+    environment:
+      TZ: "Asia/Shanghai"
+    volumes:
+      #- /root/znkj:/root/znkj
+      - /dev:/dev
+      - /tmp:/tmp
+      - auth:/opt/znkj/auth
+      - /mnt/data:/mnt/data:shared
+      - /opt/znkj/zn_head:/opt/znkj/zn_head:ro
+      - /data/logs/iccs:/ruoyi/server/logs
+      - /data/servicedata/config/iccs.yml:/ruoyi/server/application-hezi.yml:ro
+    healthcheck: *iccs_hc
+    depends_on:
+      mysql:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      nanomq:
+        condition: service_healthy
+      anm:
+        condition: service_healthy
+
+  anm:
+    image: folib.zgzhongnan.com/public/docker/zn-local/zn-anm:${anmTAG}
+    container_name: zn-anm
+    profiles: [ "rk","rkm","a1","a2" ]
+    init: true
+    privileged: true
+    pull_policy: if_not_present
+    network_mode: "host"
+    restart: "unless-stopped"
+    logging:
+      driver: json-file
+      options:
+        max-size: "30M"
+        max-file: "3"
+    environment:
+      TZ: "Asia/Shanghai"
+    volumes:
+      #- /mnt/data:/home/nvm/uploadPath:shared
+      #- /root/znkj/base_info_json:/home/nvm/base_info_json
+      - /dev:/dev
+      - /tmp:/tmp
+      - auth:/opt/znkj/auth
+      - /mnt/data:/mnt/data:shared
+      - /opt/znkj/zn_head:/opt/znkj/zn_head:ro
+      - /etc/localtime:/etc/localtime:ro
+      - /data/logs/anm:/home/nvm/logs
+      - /data/servicedata/config/anm.yml:/home/nvm/application.yml:ro
+    healthcheck: *anm_hc
+    depends_on:
+      mysql:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      nanomq:
+        condition: service_healthy
+
+  face:
+    image: folib.zgzhongnan.com/public/docker/zn-local/zn-face:${faceTAG}
+    container_name: zn-face
+    profiles: [ "rk","rkm","a1","a2" ]
+    init: true
+    privileged: true
+    pull_policy: if_not_present
+    network_mode: "host"
+    restart: "no"
+    logging:
+      driver: json-file
+      options:
+        max-size: "30M"
+        max-file: "3"
+    environment:
+      TZ: "Asia/Shanghai"
+    volumes:
+      - /mnt/data:/mnt/data:shared
+    healthcheck: *face_hc
+
+  aic:
+    image: folib.zgzhongnan.com/public/docker/zn-local/zn-aic:${aicTAG}
+    container_name: zn-aic
+    profiles: [ "a1","a1","ss" ]
+    init: true
+    privileged: true
+    pull_policy: if_not_present
+    network_mode: "host"
+    restart: "no"
+    logging:
+      driver: json-file
+      options:
+        max-size: "30M"
+        max-file: "3"
+    environment:
+      TZ: "Asia/Shanghai"
+    volumes:
+      #- /data/servicedata/zn_aic/zn_aic:/code
+      - /dev:/dev
+      - /tmp:/tmp
+      - /run:/run
+      - /etc/hosts:/etc/hosts
+      - /opt/sophon:/opt/sophon
+      - /etc/profile:/etc/profile
+      - /etc/profile.d:/etc/profile.d
+      - /lib/firmware:/lib/firmware
+      - /etc/ld.so.conf.d:/etc/ld.so.conf.d
+      - /data/logs/aic:/data/aic/logs
+      - /data/servicedata/config/aic.env:/code/config.env:ro
+      - /mnt/data:/mnt/data:shared
+    working_dir: /code
+    entrypoint: ["/code/ldconfig.sh"]
+    command: ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+    healthcheck: *aic_hc
+
+  mysql:
+    image: folib.zgzhongnan.com/public/docker/zn-local/mysql:${mysqlTAG}
+    container_name: mysql
+    profiles: [ "rk","rkm","a1","a2" ]
+    init: true
+    privileged: true
+    pull_policy: if_not_present
+    network_mode: "host"
+    restart: "unless-stopped"
+    logging:
+      driver: json-file
+      options:
+        max-size: "30M"
+        max-file: "3"
+    environment:
+      TZ: "Asia/Shanghai"
+      MYSQL_ROOT_PASSWORD: "${mysqlPasswd}"
+    volumes:
+      - /tmp:/tmp
+      - db:/var/lib/mysql
+      - /data/logs/mysql:/var/log/mysql
+      - /data/servicedata/db/my.cnf:/etc/mysql/conf.d/my.cnf:ro
+    command: --default-authentication-plugin=mysql_native_password --character-set-server=utf8mb4 --collation-server=utf8mb4_general_ci --explicit_defaults_for_timestamp=true --lower_case_table_names=1
+    healthcheck: *mysql_hc
+
+  nginx:
+    image: folib.zgzhongnan.com/public/docker/arm64/nginx:latest
+    container_name: nginx
+    profiles: [ "rk","rkm","a1","a2" ]
+    init: true
+    privileged: true
+    pull_policy: if_not_present
+    network_mode: "host"
+    restart: "unless-stopped"
+    logging:
+      driver: json-file
+      options:
+        max-size: "30M"
+        max-file: "3"
+    environment:
+      TZ: "Asia/Shanghai"
+    volumes:
+      - /mnt/data:/mnt/data:shared
+      - /data/logs/nginx/local:/var/log/nginx
+      - /data/servicedata/nginx/local/certs:/etc/nginx/certs
+      - /data/servicedata/nginx/local/conf.d:/etc/nginx/conf.d
+      #- /data/servicedata/nginx/local/html:/usr/share/nginx/html
+      - /data/servicedata/nginx/local/nginx.conf:/etc/nginx/nginx.conf:ro
+      - /data/servicedata/nginx/local/proxy_params:/etc/nginx/proxy_params
+      - /data/servicedata/nginx/local/security_headers:/etc/nginx/security_headers
+    healthcheck: *nginx_hc
+
+  iccs-dist:
+    image: folib.zgzhongnan.com/public/docker/zn-local/zn-iccs-dist:${iccsdistTAG}
+    container_name: zn-iccs-dist
+    profiles: [ "rk","rkm","a1","a2" ]
+    init: true
+    privileged: true
+    pull_policy: if_not_present
+    network_mode: "host"
+    restart: "unless-stopped"
+    logging:
+      driver: json-file
+      options:
+        max-size: "30M"
+        max-file: "3"
+    environment:
+      TZ: "Asia/Shanghai"
+    volumes:
+      - /mnt/data:/mnt/data:shared
+      - /data/logs/nginx/iccs:/var/log/nginx
+      - /data/servicedata/nginx/iccs/certs:/etc/nginx/certs
+      - /data/servicedata/nginx/iccs/conf.d:/etc/nginx/conf.d
+      #- /data/servicedata/nginx/iccs/html:/usr/share/nginx/html
+      - /data/servicedata/nginx/iccs/nginx.conf:/etc/nginx/nginx.conf:ro
+      - /data/servicedata/nginx/iccs/proxy_params:/etc/nginx/proxy_params
+      - /data/servicedata/nginx/iccs/security_headers:/etc/nginx/security_headers
+    healthcheck: *iccs_dist_hc
+
+  anm-dist:
+    image: folib.zgzhongnan.com/public/docker/zn-local/zn-anm-dist:${anmdistTAG}
+    container_name: zn-anm-dist
+    profiles: [ "rk","rkm","a1","a2" ]
+    init: true
+    privileged: true
+    pull_policy: if_not_present
+    network_mode: "host"
+    restart: "unless-stopped"
+    logging:
+      driver: json-file
+      options:
+        max-size: "30M"
+        max-file: "3"
+    environment:
+      TZ: "Asia/Shanghai"
+    volumes:
+      - /mnt/data:/mnt/data:shared
+      - /data/logs/nginx/anm:/var/log/nginx
+      - /data/servicedata/nginx/anm/certs:/etc/nginx/certs
+      - /data/servicedata/nginx/anm/conf.d:/etc/nginx/conf.d
+      #- /data/servicedata/nginx/anm/html:/usr/share/nginx/html
+      - /data/servicedata/nginx/anm/nginx.conf:/etc/nginx/nginx.conf:ro
+      - /data/servicedata/nginx/anm/proxy_params:/etc/nginx/proxy_params
+      - /data/servicedata/nginx/anm/security_headers:/etc/nginx/security_headers
+    healthcheck: *anm_dist_hc
+
+  redis:
+    image: folib.zgzhongnan.com/public/docker/arm64/redis:6.2.7
+    container_name: redis
+    profiles: [ "rk","rkm","a1","a2" ]
+    init: true
+    privileged: true
+    pull_policy: if_not_present
+    network_mode: "host"
+    restart: "unless-stopped"
+    logging:
+      driver: json-file
+      options:
+        max-size: "30M"
+        max-file: "3"
+    environment:
+      TZ: "Asia/Shanghai"
+      REDIS_PASSWORD: "${redisPasswd}"
+    volumes:
+      - db:/data
+      - /data/servicedata/db/redis.conf:/redis/config/redis.conf:ro
+    command: "redis-server /redis/config/redis.conf"
+    healthcheck: *redis_hc
+
+  nanomq:
+    image: folib.zgzhongnan.com/public/docker/arm64/emqx/nanomq:latest
+    container_name: nanomq
+    profiles: [ "rk","rkm","a1","a2" ]
+    init: true
+    privileged: true
+    pull_policy: if_not_present
+    network_mode: "host"
+    restart: "unless-stopped"
+    logging:
+      driver: json-file
+      options:
+        max-size: "30M"
+        max-file: "3"
+    environment:
+      TZ: "Asia/Shanghai"
+      NANOMQ_HTTP_SERVER_ENABLE: "true"
+    healthcheck: *nanomq_hc
+
+  nvr-rk:
+    image: folib.zgzhongnan.com/public/docker/zn-local/zn-nvr:${rknvrTAG}
+    container_name: zn-nvr
+    profiles: [ "rk","rks" ]
+    init: true
+    privileged: true
+    pull_policy: if_not_present
+    network_mode: "host"
+    restart: "no"
+    logging:
+      driver: json-file
+      options:
+        max-size: "30M"
+        max-file: "3"
+    volumes:
+      - /dev:/dev
+      - /tmp:/tmp
+      - /run:/run
+      - /usr/lib:/usr/lib
+      - /usr/lib64:/usr/lib64
+      - /etc/profile:/etc/profile
+      - /etc/profile.d:/etc/profile.d
+      - /etc/localtime:/etc/localtime:ro
+      - /data/logs/nvr:/opt/NVR/logs
+      - /data/servicedata/nvr/rk.ini:/opt/NVR/znkjnvr.ini
+      - /mnt/nvr:/mnt/nvr:shared
+      - /mnt/data:/mnt/data:shared
+    healthcheck: *nvr_hc
+
+  nvr-a1:
+    image: folib.zgzhongnan.com/public/docker/zn-local/zn-nvr:${A1nvrTAG}
+    container_name: zn-nvr
+    profiles: [ "a1" ]
+    init: true
+    privileged: true
+    pull_policy: if_not_present
+    network_mode: "host"
+    restart: "no"
+    logging:
+      driver: json-file
+      options:
+        max-size: "30M"
+        max-file: "3"
+    volumes:
+      - /dev:/dev
+      - /tmp:/tmp
+      - /run:/run
+      - /usr/lib:/usr/lib
+      - /usr/lib64:/usr/lib64
+      - /opt/sophon:/opt/sophon
+      - /etc/profile:/etc/profile
+      - /etc/profile.d:/etc/profile.d
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/ld.so.conf.d:/etc/ld.so.conf.d
+      - /data/logs/nvr:/opt/NVR/logs
+      - /data/servicedata/nvr/a1.ini:/opt/NVR/znkjnvr.ini
+      - /mnt/nvr:/mnt/nvr:shared
+      - /mnt/data:/mnt/data:shared
+    healthcheck: *nvr_hc
+
+  nvr-a2:
+    image: folib.zgzhongnan.com/public/docker/zn-local/zn-nvr:${A2nvrTAG}
+    container_name: zn-nvr
+    profiles: [ "a2" ]
+    init: true
+    privileged: true
+    pull_policy: if_not_present
+    network_mode: "host"
+    restart: "no"
+    logging:
+      driver: json-file
+      options:
+        max-size: "30M"
+        max-file: "3"
+    volumes:
+      - /dev:/dev
+      - /tmp:/tmp
+      - /run:/run
+      - /usr/lib:/usr/lib
+      - /usr/lib64:/usr/lib64
+      - /opt/sophon:/opt/sophon
+      - /etc/profile:/etc/profile
+      - /etc/profile.d:/etc/profile.d
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/ld.so.conf.d:/etc/ld.so.conf.d
+      - /data/logs/nvr:/opt/NVR/logs
+      - /data/servicedata/nvr/a2.ini:/opt/NVR/znkjnvr.ini
+      - /mnt/nvr:/mnt/nvr:shared
+      - /mnt/data:/mnt/data:shared
+    healthcheck: *nvr_hc
+
+volumes:
+  auth:
+    driver: local
+  db:
+    driver: local

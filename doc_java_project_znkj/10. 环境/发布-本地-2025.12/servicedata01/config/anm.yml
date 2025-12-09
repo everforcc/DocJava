@@ -1,0 +1,68 @@
+# 视频汇聚地址后期可以换位---------------------127.0.0.1
+# platform.call的端口号 1.3.2的配置 call和callNew
+platform:
+  call: http://127.0.0.1:5568/
+  callNew: http://127.0.0.1:8555/
+  baseInfo: /opt/znkj/zn_head/base_info_json.json
+  isMain: false    #多RK为true，单RK为false
+
+# MySQL数据源配置-----------------------------
+spring:
+    datasource:
+        type: com.alibaba.druid.pool.DruidDataSource
+        driverClassName: com.mysql.cj.jdbc.Driver
+        druid:
+            # 主库数据源
+
+            master:
+                url: jdbc:mysql://127.0.0.1:3306/anm_db?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
+                username: root
+                password: znkj123456
+
+# Redis数据库配置----------------
+    redis:
+        host: 127.0.0.1
+        password: ruoyi123
+        database: 1
+
+# 数据同步MQTT地址---------------
+iphost:
+    mqtt: 127.0.0.1
+server:
+    port: 9101
+nvr:
+    sip:
+        sipIp: 36.133.38.59
+# 算法审核同步消息到云端服务
+audit:
+  mqtt:
+    brokerUrl: tcp://36.133.38.59:1883
+    username:
+    password:
+    eventProcess: /znkj/eventprocess
+    eventProcessBack: /znkj/eventprocessback/
+
+yisa:
+  defaultIp: 192.168.120.3
+  httpPort: 9999
+
+ai:
+  port: 8000
+  deployUrl: /api/ai/eventConfig
+  similarityUrl: /api/ai/sim
+  resPort: 8686
+  resourcePath: /mnt/data/aic/event
+
+disk:
+  recordPathUrl: /nvr
+  initCamera: true # 默认true为初始化相机列表 false为设备无NVR 无NVR需检查zn_camera表中如有数据需格式化
+ANM:
+  Authorization: false #默认不开启授权码 true开启授权验证码需配auth.file
+auth:
+  file: /opt/znkj/auth/anm/reg #授权码存放位置
+#算力核心映射主核心路径
+aic:
+  mapFolders: /mnt/data
+  face:
+    batchSize: 500
+    maximumsSize: 30000
