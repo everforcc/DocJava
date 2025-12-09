@@ -1,0 +1,168 @@
+iphost:
+  mysql: 127.0.0.1
+  redis: 127.0.0.1
+  mqtt: 127.0.0.1
+  ccc: 127.0.0.1
+  cloudMqtts: tcp://192.168.1.136:11883
+  cloudaddr: 192.168.1.136/prod-api/system
+  cloudMqtt: tcp://192.168.1.136:1883
+---
+up:
+  fixedDelayString: 300000
+---
+cloudmqtt:
+  server: ${iphost.cloudMqtt}
+  username: guest
+  password: guest
+
+--- # 数据源配置
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    # 动态数据源文档 https://www.kancloud.cn/tracy5546/dynamic-datasource/content
+    dynamic:
+      # 性能分析插件(有性能损耗 不建议生产环境使用)
+      p6spy: false
+      # 设置默认的数据源或者数据源组,默认值即为 master
+      primary: master
+      # 严格模式 匹配不到数据源则报错
+      strict: true
+      datasource:
+        # 主库数据源
+        master:
+          type: ${spring.datasource.type}
+          driverClassName: com.mysql.cj.jdbc.Driver
+          # jdbc 所有参数配置参考 https://lionli.blog.csdn.net/article/details/122018562
+          # rewriteBatchedStatements=true 批处理优化 大幅提升批量插入更新删除性能(对数据库有性能损耗 使用批量操作应考虑性能问题)
+          url: jdbc:mysql://${iphost.mysql}:3306/smartparklocal?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8&autoReconnect=true&rewriteBatchedStatements=true&allowPublicKeyRetrieval=true
+          username: root
+          password: znkj123456
+        # 从库数据源
+        slave:
+          lazy: true
+          type: ${spring.datasource.type}
+          driverClassName: com.mysql.cj.jdbc.Driver
+          url: jdbc:mysql://${iphost.mysql}:3306/smartparklocal?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8&autoReconnect=true&rewriteBatchedStatements=true&allowPublicKeyRetrieval=true
+          username:
+          password:
+      hikari:
+        # 最大连接池数量
+        maxPoolSize: 100
+        # 最小空闲线程数量
+        minIdle: 10
+        # 配置获取连接等待超时的时间
+        connectionTimeout: 30000
+        # 校验超时时间
+        validationTimeout: 5000
+        # 空闲连接存活最大时间，默认10分钟
+        idleTimeout: 600000
+        # 此属性控制池中连接的最长生命周期，值0表示无限生命周期，默认30分钟
+        maxLifetime: 1800000
+        # 多久检查一次连接的活性
+        keepaliveTime: 30000
+
+--- # redis 单机配置(单机与集群只能开启一个另一个需要注释掉)
+spring.data:
+  redis:
+    # 地址
+    host: ${iphost.redis}
+    # 端口，默认为6379
+    port: 6379
+    # 数据库索引
+    database: 0
+    # 密码(如没有密码请注释掉)
+    password: ruoyi123
+    # 连接超时时间
+    timeout: 10s
+    # 是否开启ssl
+    ssl.enabled: false
+
+redisson:
+  # redis key前缀
+  keyPrefix:
+  # 线程池数量
+  threads: 4
+  # Netty线程池数量
+  nettyThreads: 8
+  # 单节点配置
+  singleServerConfig:
+    # 客户端名称
+    clientName: ${ruoyi.name}
+    # 最小空闲连接数
+    connectionMinimumIdleSize: 8
+    # 连接池大小
+    connectionPoolSize: 32
+    # 连接空闲超时，单位：毫秒
+    idleConnectionTimeout: 10000
+    # 命令等待超时，单位：毫秒
+    timeout: 3000
+    # 发布和订阅连接池大小
+    subscriptionConnectionPoolSize: 50
+
+zn:
+  thisPath: /anm
+  hik:
+    # windows开发下可以指向本地路径ruoyi-admin下lib包
+    lib: /ruoyi/server/hik
+  mqtt:
+    brokerUrl: tcp://${iphost.mqtt}:1883
+    username: admin
+    password: admin123
+  cloudMqtt:
+    brokerUrl: ${iphost.cloudMqtts}
+    username: admin
+    password: admin123
+  local:
+    localSnPath: /opt/znkj/zn_head/base_info_json.json
+    # c++访问的http接口url
+    cccUrl: http://${iphost.ccc}:5568
+    disk:
+      delRate: 90
+      info:
+        root-dir: /mnt/data/system
+        device-dir: device
+        device-pic-dir: device-pic
+        device-mp4-dir: device-mp4
+        device-data-attendance-table: zn_attendance_task_record
+        device-data-car-table: zn_car_park_vehicle_record,zn_car_park_vehicle_record_history
+        device-data-gate-table: zn_gate_record
+        device-data-iot-table: zn_device_metadata
+        device-data-lift-table: zn_lift_record
+        device-data-meter-table: zn_meter_water_metadata,zn_meter_electric_metadata,zn_meter_electric_count,zn_meter_water_count
+        device-data-rfid-table: zn_rfid_sweep_record,zn_rfid_sweep_user_record
+        device-data-consumption-table:
+        device-data-ip-broadcast-table: zn_audio_task_record
+        device-mp4-attendance-dir: device-mp4-attendance-dir
+        device-mp4-car-dir: device-mp4-car-dir
+        device-mp4-gate-dir: device-mp4-gate-dir
+        device-mp4-iot-dir: device-mp4-iot-dir
+        device-mp4-lift-dir: device-mp4-lift-dir
+        device-mp4-meter-dir: device-mp4-meter-dir
+        device-mp4-rfid-dir: device-mp4-rfid-dir
+        device-pic-attendance-dir: attendance-pic
+        device-pic-car-dir: car-pic
+        device-pic-gate-dir: gate-pic
+        device-pic-iot-dir: iot-pic
+        device-pic-lift-dir: lift-pic
+        device-pic-meter-dir: meter-pic
+        device-pic-rfid-dir: rfid-pic
+        ai-dir: aimaicdata/zn_aic/event
+        ai-content-dir: image
+        ai-mp4-dir: video
+        ai-pic-dir: snapshot
+        face-dir: face
+        face-content-dir: face-content-dir
+        face-res-dir: face-database
+        structured-dir: structured
+        structured-content-dir: structured-content-dir
+        structured-mp4-dir: structured-mp4-dir
+        structured-pic-dir: structured-pic
+  syncAim: 1
+
+auth:
+  file: /opt/znkj/auth/ics/reg
+  #file: D:\pic\reg
+file:
+  prefix: /smartpark2file
+  prefixAic: /smartpark2aic
+  port: 10950

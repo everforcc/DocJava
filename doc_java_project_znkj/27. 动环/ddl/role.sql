@@ -1,0 +1,1 @@
+INSERT INTO smart_park.sys_role (role_id, role_name, role_key, role_sort, data_scope, menu_check_strictly, dept_check_strictly, status, del_flag, create_by, create_time, update_by, update_time, remark) VALUES (10, '动环管理员', 'dhgly', 10, '1', 1, 1, '0', '0', 'admin', '2025-06-20 17:02:56', 'admin', '2025-08-18 19:51:01', '动环管理员');
