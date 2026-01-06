@@ -1,0 +1,19 @@
+{
+  "req_data": {
+    "merchant_no": "8224910737200MK",
+    "term_no": "N8905587",
+    "out_trade_no": "217547304671002452",
+    "account_type": "WECHAT",
+    "trans_type": "71",
+    "total_amount": "100",
+    "location_info": {
+      "request_ip": "192.168.1.188"
+    },
+    "acc_busi_fields": {
+      "sub_appid": "wxd1e456dc8095136a",
+      "user_id": "oQSRg7CFo36snwNJBzBVSTqbipwc"
+    }
+  },
+  "version": "3.0",
+  "req_time": "20260106163415"
+}
