@@ -40,4 +40,10 @@ D55D
 B33B
 ~~~
 
+### ASCLL码
+
+- NettyHexToAscii
+- ASCII码对应：当字节值在 0-127 范围内时，转换后的 char 确实对应相应的 ASCII 字符
+- 数值直接映射：字节值作为字符的 Unicode 码点，0-127 范围内与 ASCII 码相同
+
 </span>
