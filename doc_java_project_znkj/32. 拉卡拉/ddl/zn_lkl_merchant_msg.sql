@@ -1,3 +1,4 @@
+-- DROP DATABASE IF EXISTS `zn_lkl_merchant_msg`;
 -- auto-generated definition
 create table zn_lkl_merchant_msg
 (
@@ -58,7 +59,9 @@ create table zn_lkl_merchant_msg
     business_licence_url      varchar(512)                           null comment '营业执照url',
     business_licence_url_lkl  varchar(512)                           null comment '营业执照url lkl',
     opening_permit_url        varchar(512)                           null comment '开户许可证url',
-    opening_permit_url_lkl    varchar(512)                           null comment '开户许可证url lkl'
+    opening_permit_url_lkl    varchar(512)                           null comment '开户许可证url lkl',
+    latitude                  varchar(20)                            null comment '经纬度',
+    longtude                  varchar(20)                            null comment '纬度'
 )
     comment 'LKL 进件信息' collate = utf8mb4_unicode_ci;
 
