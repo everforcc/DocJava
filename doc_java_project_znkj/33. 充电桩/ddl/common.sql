@@ -50,3 +50,6 @@ ALTER TABLE `zn_charge_device_facturer` ADD         update_time     datetime    
 ALTER TABLE `zn_charge_device_facturer` ADD         del_flag        tinyint(1)                  default 0  null;
 
 
+alter table zn_charge_order
+    add serve_hour decimal(10,2) null comment '服务费率' after elec_hour;
+
