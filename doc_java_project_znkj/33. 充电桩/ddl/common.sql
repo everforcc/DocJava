@@ -1,4 +1,6 @@
 
+
+
 ALTER TABLE `zn_charge_user_balance_log` ADD        remark          varchar(255)                           null comment '备注';
 ALTER TABLE `zn_charge_user_balance_log` ADD         create_id       bigint                                 null comment '创建者ID';
 ALTER TABLE `zn_charge_user_balance_log` ADD         create_by       varchar(64) charset utf8mb4 default '' null comment '创建者';
